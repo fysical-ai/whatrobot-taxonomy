@@ -1,0 +1,18 @@
+name: Mapping fix
+description: Report a wrong or missing mapping to an external taxonomy (IFR, ISO 8373, Google, Shopify).
+labels: [integration]
+body:
+  - type: input
+    id: integration
+    attributes:
+      label: Integration and version
+      placeholder: ifr-industrial/2026
+    validations:
+      required: true
+  - type: textarea
+    id: rule
+    attributes:
+      label: Rule
+      description: "whatrobot id → external id, with a link to the external taxonomy source."
+    validations:
+      required: true

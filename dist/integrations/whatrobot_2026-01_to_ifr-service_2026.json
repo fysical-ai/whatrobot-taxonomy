@@ -1,0 +1,335 @@
+{
+  "version": "2026-01",
+  "mappings": [
+    {
+      "input_taxonomy": "whatrobot/2026-01",
+      "output_taxonomy": "ifr-service/2026",
+      "rules": [
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__agriculture",
+              "name": "Agriculture"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-agriculture",
+                "full_name": "Professional service > Agricultural robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__professional-cleaning",
+              "name": "Professional cleaning"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-cleaning",
+                "full_name": "Professional service > Professional cleaning"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__inspection-maintenance",
+              "name": "Inspection maintenance"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-inspection-maintenance",
+                "full_name": "Professional service > Inspection and maintenance"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__construction",
+              "name": "Construction"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-construction-demolition",
+                "full_name": "Professional service > Construction and demolition"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__warehouse-logistics",
+              "name": "Warehouse logistics"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-logistics-transportation",
+                "full_name": "Professional service > Logistics and transportation"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__delivery",
+              "name": "Delivery"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-logistics-transportation",
+                "full_name": "Professional service > Logistics and transportation"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__transport",
+              "name": "Transport"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-logistics-transportation",
+                "full_name": "Professional service > Logistics and transportation"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__search-rescue",
+              "name": "Search & rescue"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-search-rescue",
+                "full_name": "Professional service > Search and rescue"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__hospitality-retail",
+              "name": "Hospitality & retail"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-hospitality",
+                "full_name": "Professional service > Hospitality"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__security",
+              "name": "Security"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-other",
+                "full_name": "Professional service > Other professional service robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__domestic-cleaning",
+              "name": "Domestic cleaning"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-domestic-tasks",
+                "full_name": "Consumer > Domestic tasks"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__lawn-garden",
+              "name": "Lawn & garden"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-domestic-tasks",
+                "full_name": "Consumer > Domestic tasks"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__pool",
+              "name": "Pool"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-domestic-tasks",
+                "full_name": "Consumer > Domestic tasks"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__companionship",
+              "name": "Companionship"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-social-interaction-education",
+                "full_name": "Consumer > Social interaction and education"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__entertainment",
+              "name": "Entertainment"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-social-interaction-education",
+                "full_name": "Consumer > Social interaction and education"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__education",
+              "name": "Education"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-social-interaction-education",
+                "full_name": "Consumer > Social interaction and education"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__telepresence",
+              "name": "Telepresence"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-other",
+                "full_name": "Consumer > Other consumer robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__care-assistance",
+              "name": "Care assistance"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-care-at-home",
+                "full_name": "Consumer > Care at home"
+              },
+              {
+                "id": "medical",
+                "full_name": "Medical robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__surgery",
+              "name": "Surgery"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "medical",
+                "full_name": "Medical robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__rehabilitation",
+              "name": "Rehabilitation"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "medical",
+                "full_name": "Medical robots"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

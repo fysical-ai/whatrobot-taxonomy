@@ -1,0 +1,38 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "handle": {
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "title": "Handle",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "expected": {
+      "pattern": "^(rb|cp)(-[1-9]\\d*)*$",
+      "title": "Expected",
+      "type": "string"
+    },
+    "facts": {
+      "additionalProperties": true,
+      "title": "Facts",
+      "type": "object"
+    },
+    "attributes": {
+      "additionalProperties": true,
+      "default": {},
+      "title": "Attributes",
+      "type": "object"
+    }
+  },
+  "required": [
+    "handle",
+    "name",
+    "expected",
+    "facts"
+  ],
+  "title": "Example",
+  "type": "object"
+}

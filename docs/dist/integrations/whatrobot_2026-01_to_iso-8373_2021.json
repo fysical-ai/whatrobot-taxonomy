@@ -1,0 +1,59 @@
+{
+  "version": "2026-01",
+  "mappings": [
+    {
+      "input_taxonomy": "whatrobot/2026-01",
+      "output_taxonomy": "iso-8373/2021",
+      "rules": [
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "iso_category__industrial",
+              "name": "Industrial"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "industrial-robot",
+                "full_name": "ISO 8373:2021 3.6 industrial robot"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "iso_category__service",
+              "name": "Service"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "service-robot",
+                "full_name": "ISO 8373:2021 3.7 service robot"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "iso_category__medical",
+              "name": "Medical"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "medical-robot",
+                "full_name": "ISO 8373:2021 3.8 medical robot"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+- {id: industrial-robot, full_name: "ISO 8373:2021 3.6 industrial robot"}
+- {id: service-robot, full_name: "ISO 8373:2021 3.7 service robot"}
+- {id: medical-robot, full_name: "ISO 8373:2021 3.8 medical robot"}

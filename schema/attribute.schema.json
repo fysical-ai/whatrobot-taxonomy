@@ -1,0 +1,156 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "exclusiveMinimum": 0,
+      "title": "Id",
+      "type": "integer"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "friendly_id": {
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "title": "Friendly Id",
+      "type": "string"
+    },
+    "handle": {
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "title": "Handle",
+      "type": "string"
+    },
+    "description": {
+      "minLength": 1,
+      "title": "Description",
+      "type": "string"
+    },
+    "question": {
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "enum",
+        "number",
+        "bool",
+        "text",
+        "ref"
+      ],
+      "title": "Type",
+      "type": "string"
+    },
+    "multi": {
+      "default": false,
+      "title": "Multi",
+      "type": "boolean"
+    },
+    "unit": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Unit"
+    },
+    "format": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Format"
+    },
+    "values": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Values"
+    },
+    "ref_target": {
+      "anyOf": [
+        {
+          "enum": [
+            "robot",
+            "component",
+            "manufacturer"
+          ],
+          "type": "string"
+        },
+        {
+          "items": {
+            "enum": [
+              "robot",
+              "component",
+              "manufacturer"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ref Target"
+    },
+    "derived_from": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Derived From"
+    },
+    "companions": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Companions"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "friendly_id",
+    "handle",
+    "description",
+    "question",
+    "type"
+  ],
+  "title": "Attribute",
+  "type": "object"
+}

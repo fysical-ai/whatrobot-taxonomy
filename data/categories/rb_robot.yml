@@ -1,0 +1,378 @@
+# whatrobot taxonomy — robot hierarchy (root rb)
+# Source of truth. Licence: CC BY 4.0 (see data/LICENSE).
+# Rules: docs/design.md §1–§2. IDs are positional and permanent; never renumber.
+# Attributes listed on a node are bound there and inherited by all descendants.
+---
+- id: rb
+  name: Robot
+  friendly_id: robot
+  handle: robot
+  description: A programmed, actuated mechanism with a degree of autonomy that performs locomotion, manipulation or positioning (ISO 8373:2021).
+  aliases: [robots]
+  inclusion_rule: Sold as a complete, programmable robot. Parts sold separately are components (cp).
+  children: [rb-1, rb-2, rb-3, rb-4, rb-5, rb-6, rb-7, rb-8, rb-9, rb-10]
+  attributes:
+    - manufacturer
+    - model
+    - variant
+    - aliases
+    - segment
+    - application_group
+    - application
+    - iso_category
+    - environment
+    - autonomy
+    - collaborative
+    - availability
+    - price
+    - release_year
+    - country
+    - mass
+    - payload
+    - battery_runtime
+    - ip_rating
+    - open_source
+    - sdk
+    - compatible_with
+    - sources
+  examples: []
+
+# ---------------------------------------------------------------- rb-1 arm
+- id: rb-1
+  name: Arm
+  friendly_id: robot.arm
+  handle: arm
+  description: Fixed-base manipulator that positions an end-effector in space.
+  aliases: [robot arm, robotic arm, manipulator, industrial arm, cobot]
+  inclusion_rule: Fixed base (floor, table, wall, ceiling or a separately sold mobile base); manipulates; not humanoid in form.
+  children: [rb-1-1, rb-1-2, rb-1-3, rb-1-4, rb-1-5]
+  attributes: [axes, reach, repeatability, arm_count, mounting]
+  examples: []
+
+- id: rb-1-1
+  name: Articulated arm
+  friendly_id: robot.arm.articulated
+  handle: articulated
+  description: Serial arm with three or more rotary joints, including 6/7-axis industrial arms, cobots and desktop arms.
+  aliases: [6-axis arm, 7-axis arm, cobot, collaborative robot, desktop arm, anthropomorphic arm]
+  inclusion_rule: At least three rotary joints in series. Collaborative safety rating does not change the category (attribute collaborative).
+  children: []
+  attributes: []
+  examples: [universal-robots-ur5e, dobot-magician]
+
+- id: rb-1-2
+  name: SCARA arm
+  friendly_id: robot.arm.scara
+  handle: scara
+  description: Arm with two parallel vertical rotary joints and a vertical linear axis, compliant in the horizontal plane.
+  aliases: [SCARA, selective compliance arm]
+  inclusion_rule: Two parallel vertical rotary joints plus a vertical prismatic axis.
+  children: []
+  attributes: []
+  examples: [dobot-m1-pro]
+
+- id: rb-1-3
+  name: Parallel arm
+  friendly_id: robot.arm.parallel
+  handle: parallel
+  description: Parallel-kinematic manipulator such as a delta robot or hexapod / Stewart platform.
+  aliases: [delta robot, hexapod platform, Stewart platform, parallel robot]
+  inclusion_rule: End-effector carried by two or more kinematic chains acting in parallel.
+  children: []
+  attributes: []
+  examples: [abb-irb-360]
+
+- id: rb-1-4
+  name: Cartesian arm
+  friendly_id: robot.arm.cartesian
+  handle: cartesian
+  description: Manipulator with three prismatic axes aligned to a Cartesian coordinate system, including gantry and linear robots.
+  aliases: [gantry robot, linear robot, XYZ robot, cartesian robot]
+  inclusion_rule: Three prismatic (linear) main axes.
+  children: []
+  attributes: []
+  examples: [igus-drylin-gantry]
+
+- id: rb-1-5
+  name: Cylindrical arm
+  friendly_id: robot.arm.cylindrical
+  handle: cylindrical
+  description: Manipulator with a rotary base, a prismatic lift and a prismatic reach, including polar / spherical arms.
+  aliases: [polar robot, spherical robot, cylindrical robot]
+  inclusion_rule: Rotary base combined with prismatic lift and reach axes.
+  children: []
+  attributes: []
+  examples: [st-robotics-r19]
+
+# ----------------------------------------------------------- rb-2 humanoid
+- id: rb-2
+  name: Humanoid
+  friendly_id: robot.humanoid
+  handle: humanoid
+  description: Robot with a torso, two arms and a head in human proportion, intended for human environments.
+  aliases: [humanoid robot, android, general-purpose humanoid]
+  inclusion_rule: Torso plus two arms plus a head in human proportion. Locomotion decides the child category.
+  children: [rb-2-1, rb-2-2, rb-2-3]
+  attributes: [height, dof_total, hands_included, max_speed]
+  examples: []
+
+- id: rb-2-1
+  name: Bipedal humanoid
+  friendly_id: robot.humanoid.bipedal
+  handle: bipedal
+  description: Humanoid that walks on two legs.
+  aliases: [walking humanoid, legged humanoid]
+  inclusion_rule: Humanoid form with two articulated legs used for locomotion.
+  children: []
+  attributes: []
+  examples: [unitree-g1, agibot-x2]
+
+- id: rb-2-2
+  name: Wheeled-base humanoid
+  friendly_id: robot.humanoid.wheeled-base
+  handle: wheeled-base
+  description: Humanoid upper body on a wheeled or tracked base.
+  aliases: [wheeled humanoid, mobile humanoid]
+  inclusion_rule: Humanoid torso, arms and head mounted on a wheeled or tracked base instead of legs.
+  children: []
+  attributes: [drive_config]
+  examples: [1x-eve, agibot-a2-w]
+
+- id: rb-2-3
+  name: Fixed-base humanoid
+  friendly_id: robot.humanoid.fixed-base
+  handle: fixed-base
+  description: Humanoid upper body on a fixed mount, without locomotion.
+  aliases: [torso humanoid, half humanoid, dual-arm humanoid torso]
+  inclusion_rule: Humanoid torso, arms and head with no locomotion system.
+  children: []
+  attributes: []
+  examples: [abb-yumi]
+
+# -------------------------------------------------------------- rb-3 legged
+- id: rb-3
+  name: Legged robot
+  friendly_id: robot.legged
+  handle: legged
+  description: Robot that moves on articulated legs and is not humanoid in form.
+  aliases: [walking robot, legged robot]
+  inclusion_rule: Articulated legs; wheels on the feet or an add-on arm do not change the category.
+  children: [rb-3-1, rb-3-2, rb-3-3]
+  attributes: [height, dof_total, hands_included, max_speed, wheel_feet, has_arm]
+  examples: []
+
+- id: rb-3-1
+  name: Quadruped
+  friendly_id: robot.legged.quadruped
+  handle: quadruped
+  description: Legged robot with four legs.
+  aliases: [robot dog, quadrupedal robot, four-legged robot]
+  inclusion_rule: Four articulated legs. Wheel-feet (attribute wheel_feet) and add-on arms (attribute has_arm) stay in this category.
+  children: []
+  attributes: []
+  examples: [unitree-go2, unitree-b2-w, boston-dynamics-spot]
+
+- id: rb-3-2
+  name: Biped
+  friendly_id: robot.legged.biped
+  handle: biped
+  description: Two-legged robot without a humanoid torso, arms and head.
+  aliases: [bipedal robot, two-legged robot]
+  inclusion_rule: Two articulated legs; fails the humanoid test (no torso + two arms + head in human proportion).
+  children: []
+  attributes: []
+  examples: [agility-cassie]
+
+- id: rb-3-3
+  name: Multi-legged
+  friendly_id: robot.legged.multi-legged
+  handle: multi-legged
+  description: Legged robot with six or more legs.
+  aliases: [hexapod robot, six-legged robot, insect robot]
+  inclusion_rule: Six or more articulated legs.
+  children: []
+  attributes: []
+  examples: [freenove-hexapod]
+
+# -------------------------------------------------------------- rb-4 ground
+- id: rb-4
+  name: Ground robot
+  friendly_id: robot.ground
+  handle: ground
+  description: Robot that moves on wheels or tracks, with no legs and no integrated arm.
+  aliases: [mobile robot, mobile base, rover, AMR, AGV, UGV]
+  inclusion_rule: Wheels or tracks; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm).
+  children: [rb-4-1, rb-4-2]
+  attributes: [has_arm, drive_config, navigation]
+  examples: []
+
+- id: rb-4-1
+  name: Wheeled robot
+  friendly_id: robot.ground.wheeled
+  handle: wheeled
+  description: Ground robot driven by wheels.
+  aliases: [wheeled robot, robot vacuum, robot mower, delivery robot, telepresence robot]
+  inclusion_rule: Locomotion by wheels. Vacuum, mowing, delivery, telepresence and similar are applications, not categories.
+  children: []
+  attributes: []
+  examples: [irobot-roomba, clearpath-husky]
+
+- id: rb-4-2
+  name: Tracked robot
+  friendly_id: robot.ground.tracked
+  handle: tracked
+  description: Ground robot driven by continuous tracks.
+  aliases: [tracked robot, crawler robot, tank robot]
+  inclusion_rule: Locomotion by continuous tracks.
+  children: []
+  attributes: []
+  examples: [superdroid-lt2]
+
+# -------------------------------------------------- rb-5 mobile-manipulator
+- id: rb-5
+  name: Mobile manipulator
+  friendly_id: robot.mobile-manipulator
+  handle: mobile-manipulator
+  description: Wheeled or tracked base with one or more arms, sold as one product, non-humanoid in form.
+  aliases: [mobile manipulator, MoMa, arm on wheels]
+  inclusion_rule: Base and arm(s) sold together as one product. A base and an arm sold separately are two entries linked by compatible_with.
+  children: []
+  attributes: [drive_config, axes, reach, arm_count]   # arm specs apply; payload is already universal on rb
+  examples: [hello-robot-stretch-3, tiago-pro]
+
+# -------------------------------------------------------------- rb-6 aerial
+- id: rb-6
+  name: Aerial robot
+  friendly_id: robot.aerial
+  handle: aerial
+  description: Robot that flies.
+  aliases: [drone, UAV, UAS, unmanned aerial vehicle]
+  inclusion_rule: Primary operating medium is air.
+  children: [rb-6-1, rb-6-2, rb-6-3]
+  attributes: [flight_time, max_takeoff_weight]
+  examples: []
+
+- id: rb-6-1
+  name: Multirotor
+  friendly_id: robot.aerial.multirotor
+  handle: multirotor
+  description: Aerial robot lifted by multiple rotors.
+  aliases: [quadcopter, hexacopter, octocopter, multicopter]
+  inclusion_rule: Lift from two or more rotors; no fixed wing.
+  children: []
+  attributes: []
+  examples: [dji-mavic]
+
+- id: rb-6-2
+  name: Fixed-wing
+  friendly_id: robot.aerial.fixed-wing
+  handle: fixed-wing
+  description: Aerial robot lifted by a fixed wing.
+  aliases: [fixed-wing drone, UAV plane]
+  inclusion_rule: Lift from a fixed wing; cannot hover.
+  children: []
+  attributes: []
+  examples: [sensefly-ebee]
+
+- id: rb-6-3
+  name: Hybrid VTOL
+  friendly_id: robot.aerial.hybrid-vtol
+  handle: hybrid-vtol
+  description: Aerial robot combining rotor-borne vertical take-off with fixed-wing cruise.
+  aliases: [VTOL drone, tiltrotor drone, tail-sitter]
+  inclusion_rule: Both rotors for vertical flight and a fixed wing for cruise.
+  children: []
+  attributes: []
+  examples: [wingtra-one]
+
+# ------------------------------------------------------------- rb-7 aquatic
+- id: rb-7
+  name: Aquatic robot
+  friendly_id: robot.aquatic
+  handle: aquatic
+  description: Robot that operates on or in water.
+  aliases: [underwater robot, marine robot, water robot]
+  inclusion_rule: Primary operating medium is water. Amphibious products go to the medium they are marketed for.
+  children: [rb-7-1, rb-7-2, rb-7-3]
+  attributes: [depth_rating]
+  examples: []
+
+- id: rb-7-1
+  name: ROV
+  friendly_id: robot.aquatic.rov
+  handle: rov
+  description: Remotely operated underwater vehicle connected by a tether.
+  aliases: [remotely operated vehicle, tethered underwater drone, underwater drone]
+  inclusion_rule: Submersible; tethered; remotely operated.
+  children: []
+  attributes: []
+  examples: [bluerobotics-bluerov2]
+
+- id: rb-7-2
+  name: AUV
+  friendly_id: robot.aquatic.auv
+  handle: auv
+  description: Autonomous, untethered underwater vehicle.
+  aliases: [autonomous underwater vehicle, underwater glider]
+  inclusion_rule: Submersible; untethered; autonomous.
+  children: []
+  attributes: []
+  examples: [hydroid-remus]
+
+- id: rb-7-3
+  name: USV
+  friendly_id: robot.aquatic.usv
+  handle: usv
+  description: Unmanned surface vessel.
+  aliases: [unmanned surface vehicle, autonomous boat, robot boat]
+  inclusion_rule: Operates on the water surface.
+  children: []
+  attributes: []
+  examples: [saildrone-explorer]
+
+# ------------------------------------------------------------ rb-8 wearable
+- id: rb-8
+  name: Wearable robot
+  friendly_id: robot.wearable
+  handle: wearable
+  description: Robot worn on the human body.
+  aliases: [wearable robot, exosuit]
+  inclusion_rule: Worn on the body and powered (an unpowered exoskeleton is a robotic device, not a robot).
+  children: [rb-8-1]
+  attributes: [body_region]
+  examples: []
+
+- id: rb-8-1
+  name: Exoskeleton
+  friendly_id: robot.wearable.exoskeleton
+  handle: exoskeleton
+  description: Powered exoskeleton or exosuit that assists or augments human movement.
+  aliases: [powered exoskeleton, exosuit, exo]
+  inclusion_rule: Powered actuation applied to one or more body regions.
+  children: []
+  attributes: []
+  examples: [ekso-bionics-evo]
+
+# ---------------------------------------------------------- rb-9 stationary
+- id: rb-9
+  name: Stationary robot
+  friendly_id: robot.stationary
+  handle: stationary
+  description: Fixed-base robot that does not manipulate, such as a desktop companion or social robot without arms.
+  aliases: [desktop robot, companion robot, social robot, tabletop robot]
+  inclusion_rule: Fixed base; no locomotion; no manipulator. Last rule in the tie-break order.
+  children: []
+  attributes: []
+  examples: [jibo]
+
+# ----------------------------------------------------------------- rb-10 kit
+- id: rb-10
+  name: Kit
+  friendly_id: robot.kit
+  handle: kit
+  description: Modular construction kit with no fixed body plan that produces a programmable robot.
+  aliases: [robot kit, construction kit, STEM kit, educational robot kit]
+  inclusion_rule: Sold as parts to be assembled into user-chosen forms; the result is programmable. Generic electronics kits are excluded.
+  children: []
+  attributes: []
+  examples: [lego-spike-prime]

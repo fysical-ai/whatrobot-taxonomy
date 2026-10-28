@@ -1,0 +1,33 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "title": "Name",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "source": {
+      "title": "Source",
+      "type": "string"
+    },
+    "available_versions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Available Versions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "source",
+    "available_versions"
+  ],
+  "title": "Integration",
+  "type": "object"
+}

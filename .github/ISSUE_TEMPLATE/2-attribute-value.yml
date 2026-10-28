@@ -1,0 +1,22 @@
+name: Attribute or value request
+description: Propose a new attribute, a new enum value, or a change to an existing one.
+labels: [taxonomy, attribute]
+body:
+  - type: input
+    id: attribute
+    attributes:
+      label: Attribute friendly_id
+      placeholder: drive_config
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed change
+      description: "For a new attribute give type, unit or values, the defining question, and which categories it binds to."
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: "Why is this an attribute and not a category?"

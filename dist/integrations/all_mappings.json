@@ -1,0 +1,909 @@
+{
+  "version": "2026-01",
+  "mappings": [
+    {
+      "input_taxonomy": "whatrobot/2026-01",
+      "output_taxonomy": "ifr-industrial/2026",
+      "rules": [
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-1",
+              "full_name": "Robot > Arm > Articulated arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "10",
+                "full_name": "Articulated robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-4",
+              "full_name": "Robot > Arm > Cartesian arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "20",
+                "full_name": "Linear / cartesian / gantry robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-2",
+              "full_name": "Robot > Arm > SCARA arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "30",
+                "full_name": "SCARA robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-3",
+              "full_name": "Robot > Arm > Parallel arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "40",
+                "full_name": "Parallel robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
+              "full_name": "Robot > Arm > Cylindrical arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "50",
+                "full_name": "Cylindrical robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1",
+              "full_name": "Robot > Arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "90",
+                "full_name": "Others / not classified"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "input_taxonomy": "ifr-industrial/2026",
+      "output_taxonomy": "whatrobot/2026-01",
+      "rules": [
+        {
+          "input": {
+            "category": {
+              "id": "10",
+              "full_name": "Articulated robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-1",
+                "full_name": "Robot > Arm > Articulated arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "20",
+              "full_name": "Linear / cartesian / gantry robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-4",
+                "full_name": "Robot > Arm > Cartesian arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "30",
+              "full_name": "SCARA robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-2",
+                "full_name": "Robot > Arm > SCARA arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "40",
+              "full_name": "Parallel robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-3",
+                "full_name": "Robot > Arm > Parallel arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "50",
+              "full_name": "Cylindrical robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
+                "full_name": "Robot > Arm > Cylindrical arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "90",
+              "full_name": "Others / not classified"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1",
+                "full_name": "Robot > Arm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "input_taxonomy": "whatrobot/2026-01",
+      "output_taxonomy": "ifr-service/2026",
+      "rules": [
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__agriculture",
+              "name": "Agriculture"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-agriculture",
+                "full_name": "Professional service > Agricultural robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__professional-cleaning",
+              "name": "Professional cleaning"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-cleaning",
+                "full_name": "Professional service > Professional cleaning"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__inspection-maintenance",
+              "name": "Inspection maintenance"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-inspection-maintenance",
+                "full_name": "Professional service > Inspection and maintenance"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__construction",
+              "name": "Construction"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-construction-demolition",
+                "full_name": "Professional service > Construction and demolition"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__warehouse-logistics",
+              "name": "Warehouse logistics"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-logistics-transportation",
+                "full_name": "Professional service > Logistics and transportation"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__delivery",
+              "name": "Delivery"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-logistics-transportation",
+                "full_name": "Professional service > Logistics and transportation"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__transport",
+              "name": "Transport"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-logistics-transportation",
+                "full_name": "Professional service > Logistics and transportation"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__search-rescue",
+              "name": "Search & rescue"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-search-rescue",
+                "full_name": "Professional service > Search and rescue"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__hospitality-retail",
+              "name": "Hospitality & retail"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-hospitality",
+                "full_name": "Professional service > Hospitality"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__security",
+              "name": "Security"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-other",
+                "full_name": "Professional service > Other professional service robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__domestic-cleaning",
+              "name": "Domestic cleaning"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-domestic-tasks",
+                "full_name": "Consumer > Domestic tasks"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__lawn-garden",
+              "name": "Lawn & garden"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-domestic-tasks",
+                "full_name": "Consumer > Domestic tasks"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__pool",
+              "name": "Pool"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-domestic-tasks",
+                "full_name": "Consumer > Domestic tasks"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__companionship",
+              "name": "Companionship"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-social-interaction-education",
+                "full_name": "Consumer > Social interaction and education"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__entertainment",
+              "name": "Entertainment"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-social-interaction-education",
+                "full_name": "Consumer > Social interaction and education"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__education",
+              "name": "Education"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-social-interaction-education",
+                "full_name": "Consumer > Social interaction and education"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__telepresence",
+              "name": "Telepresence"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-other",
+                "full_name": "Consumer > Other consumer robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__care-assistance",
+              "name": "Care assistance"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "consumer-care-at-home",
+                "full_name": "Consumer > Care at home"
+              },
+              {
+                "id": "medical",
+                "full_name": "Medical robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__surgery",
+              "name": "Surgery"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "medical",
+                "full_name": "Medical robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__rehabilitation",
+              "name": "Rehabilitation"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "medical",
+                "full_name": "Medical robots"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "input_taxonomy": "whatrobot/2026-01",
+      "output_taxonomy": "iso-8373/2021",
+      "rules": [
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "iso_category__industrial",
+              "name": "Industrial"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "industrial-robot",
+                "full_name": "ISO 8373:2021 3.6 industrial robot"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "iso_category__service",
+              "name": "Service"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "service-robot",
+                "full_name": "ISO 8373:2021 3.7 service robot"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "iso_category__medical",
+              "name": "Medical"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "medical-robot",
+                "full_name": "ISO 8373:2021 3.8 medical robot"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "input_taxonomy": "whatrobot/2026-01",
+      "output_taxonomy": "google/2021-09-21",
+      "rules": [
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1",
+              "full_name": "Robot > Arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-1",
+              "full_name": "Robot > Arm > Articulated arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-2",
+              "full_name": "Robot > Arm > SCARA arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-3",
+              "full_name": "Robot > Arm > Parallel arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-4",
+              "full_name": "Robot > Arm > Cartesian arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
+              "full_name": "Robot > Arm > Cylindrical arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-4",
+              "full_name": "Component > Compute"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "222",
+                "full_name": "222"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2-3",
+              "full_name": "Component > Actuator > Motor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "7261",
+                "full_name": "7261"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-10",
+              "full_name": "Robot > Kit"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1239",
+                "full_name": "1239"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "input_taxonomy": "whatrobot/2026-01",
+      "output_taxonomy": "shopify/2026-08",
+      "rules": [
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1",
+              "full_name": "Robot > Arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-1",
+              "full_name": "Robot > Arm > Articulated arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-2",
+              "full_name": "Robot > Arm > SCARA arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-3",
+              "full_name": "Robot > Arm > Parallel arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-4",
+              "full_name": "Robot > Arm > Cartesian arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
+              "full_name": "Robot > Arm > Cylindrical arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2-3",
+              "full_name": "Component > Actuator > Motor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-3-1-9",
+                "full_name": "bi-3-1-9"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-4",
+              "full_name": "Robot > Ground robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-18",
+                "full_name": "bi-18"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-4-1",
+              "full_name": "Robot > Ground robot > Wheeled robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-18",
+                "full_name": "bi-18"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-4-2",
+              "full_name": "Robot > Ground robot > Tracked robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-18",
+                "full_name": "bi-18"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

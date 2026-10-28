@@ -1,0 +1,917 @@
+{
+  "version": "2026-01",
+  "values": [
+    {
+      "id": "gid://whatrobot/TaxonomyValue/1",
+      "name": "业余爱好",
+      "friendly_id": "segment__hobby",
+      "handle": "segment__hobby"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/2",
+      "name": "教育",
+      "friendly_id": "segment__education",
+      "handle": "segment__education"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/3",
+      "name": "科研",
+      "friendly_id": "segment__research",
+      "handle": "segment__research"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/4",
+      "name": "专业/商用",
+      "friendly_id": "segment__professional",
+      "handle": "segment__professional"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/5",
+      "name": "消费者",
+      "friendly_id": "segment__consumer",
+      "handle": "segment__consumer"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/6",
+      "name": "其他",
+      "friendly_id": "segment__other",
+      "handle": "segment__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/7",
+      "name": "制造",
+      "friendly_id": "application_group__manufacturing",
+      "handle": "application-group__manufacturing"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/8",
+      "name": "物流",
+      "friendly_id": "application_group__logistics",
+      "handle": "application-group__logistics"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/9",
+      "name": "专业服务",
+      "friendly_id": "application_group__professional-service",
+      "handle": "application-group__professional-service"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/10",
+      "name": "消费者",
+      "friendly_id": "application_group__consumer",
+      "handle": "application-group__consumer"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/11",
+      "name": "医疗健康",
+      "friendly_id": "application_group__health",
+      "handle": "application-group__health"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/12",
+      "name": "教育与科研",
+      "friendly_id": "application_group__knowledge",
+      "handle": "application-group__knowledge"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/13",
+      "name": "通用",
+      "friendly_id": "application_group__general",
+      "handle": "application-group__general"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/14",
+      "name": "其他",
+      "friendly_id": "application_group__other",
+      "handle": "application-group__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/15",
+      "name": "搬运",
+      "friendly_id": "application__handling",
+      "handle": "application__handling"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/16",
+      "name": "机床上下料",
+      "friendly_id": "application__machine-tending",
+      "handle": "application__machine-tending"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/17",
+      "name": "码垛",
+      "friendly_id": "application__palletizing",
+      "handle": "application__palletizing"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/18",
+      "name": "焊接",
+      "friendly_id": "application__welding",
+      "handle": "application__welding"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/19",
+      "name": "装配",
+      "friendly_id": "application__assembly",
+      "handle": "application__assembly"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/20",
+      "name": "喷涂与点胶",
+      "friendly_id": "application__painting-dispensing",
+      "handle": "application__painting-dispensing"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/21",
+      "name": "加工",
+      "friendly_id": "application__machining",
+      "handle": "application__machining"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/22",
+      "name": "检测与质检",
+      "friendly_id": "application__inspection-qc",
+      "handle": "application__inspection-qc"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/23",
+      "name": "仓储物流",
+      "friendly_id": "application__warehouse-logistics",
+      "handle": "application__warehouse-logistics"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/24",
+      "name": "配送",
+      "friendly_id": "application__delivery",
+      "handle": "application__delivery"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/25",
+      "name": "运输",
+      "friendly_id": "application__transport",
+      "handle": "application__transport"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/26",
+      "name": "专业清洁",
+      "friendly_id": "application__professional-cleaning",
+      "handle": "application__professional-cleaning"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/27",
+      "name": "巡检与维护",
+      "friendly_id": "application__inspection-maintenance",
+      "handle": "application__inspection-maintenance"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/28",
+      "name": "农业",
+      "friendly_id": "application__agriculture",
+      "handle": "application__agriculture"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/29",
+      "name": "建筑",
+      "friendly_id": "application__construction",
+      "handle": "application__construction"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/30",
+      "name": "安防",
+      "friendly_id": "application__security",
+      "handle": "application__security"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/31",
+      "name": "搜救",
+      "friendly_id": "application__search-rescue",
+      "handle": "application__search-rescue"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/32",
+      "name": "酒店与零售",
+      "friendly_id": "application__hospitality-retail",
+      "handle": "application__hospitality-retail"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/33",
+      "name": "家庭清洁",
+      "friendly_id": "application__domestic-cleaning",
+      "handle": "application__domestic-cleaning"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/34",
+      "name": "草坪与园艺",
+      "friendly_id": "application__lawn-garden",
+      "handle": "application__lawn-garden"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/35",
+      "name": "泳池",
+      "friendly_id": "application__pool",
+      "handle": "application__pool"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/36",
+      "name": "陪伴",
+      "friendly_id": "application__companionship",
+      "handle": "application__companionship"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/37",
+      "name": "娱乐",
+      "friendly_id": "application__entertainment",
+      "handle": "application__entertainment"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/38",
+      "name": "远程临场",
+      "friendly_id": "application__telepresence",
+      "handle": "application__telepresence"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/39",
+      "name": "手术",
+      "friendly_id": "application__surgery",
+      "handle": "application__surgery"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/40",
+      "name": "康复",
+      "friendly_id": "application__rehabilitation",
+      "handle": "application__rehabilitation"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/41",
+      "name": "护理辅助",
+      "friendly_id": "application__care-assistance",
+      "handle": "application__care-assistance"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/42",
+      "name": "教育",
+      "friendly_id": "application__education",
+      "handle": "application__education"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/43",
+      "name": "科研平台",
+      "friendly_id": "application__research-platform",
+      "handle": "application__research-platform"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/44",
+      "name": "通用",
+      "friendly_id": "application__general-purpose",
+      "handle": "application__general-purpose"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/45",
+      "name": "其他",
+      "friendly_id": "application__other",
+      "handle": "application__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/46",
+      "name": "工业机器人",
+      "friendly_id": "iso_category__industrial",
+      "handle": "iso-category__industrial"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/47",
+      "name": "服务机器人",
+      "friendly_id": "iso_category__service",
+      "handle": "iso-category__service"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/48",
+      "name": "医疗机器人",
+      "friendly_id": "iso_category__medical",
+      "handle": "iso-category__medical"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/49",
+      "name": "其他",
+      "friendly_id": "iso_category__other",
+      "handle": "iso-category__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/50",
+      "name": "室内",
+      "friendly_id": "environment__indoor",
+      "handle": "environment__indoor"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/51",
+      "name": "室外",
+      "friendly_id": "environment__outdoor",
+      "handle": "environment__outdoor"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/52",
+      "name": "水下",
+      "friendly_id": "environment__underwater",
+      "handle": "environment__underwater"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/53",
+      "name": "空中",
+      "friendly_id": "environment__airborne",
+      "handle": "environment__airborne"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/54",
+      "name": "危险环境",
+      "friendly_id": "environment__hazardous",
+      "handle": "environment__hazardous"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/55",
+      "name": "太空",
+      "friendly_id": "environment__space",
+      "handle": "environment__space"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/56",
+      "name": "其他",
+      "friendly_id": "environment__other",
+      "handle": "environment__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/57",
+      "name": "遥操作",
+      "friendly_id": "autonomy__teleoperated",
+      "handle": "autonomy__teleoperated"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/58",
+      "name": "辅助",
+      "friendly_id": "autonomy__assisted",
+      "handle": "autonomy__assisted"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/59",
+      "name": "半自主",
+      "friendly_id": "autonomy__semi-autonomous",
+      "handle": "autonomy__semi-autonomous"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/60",
+      "name": "全自主",
+      "friendly_id": "autonomy__autonomous",
+      "handle": "autonomy__autonomous"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/61",
+      "name": "其他",
+      "friendly_id": "autonomy__other",
+      "handle": "autonomy__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/62",
+      "name": "在售",
+      "friendly_id": "availability__shipping",
+      "handle": "availability__shipping"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/63",
+      "name": "预订",
+      "friendly_id": "availability__preorder",
+      "handle": "availability__preorder"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/64",
+      "name": "已发布",
+      "friendly_id": "availability__announced",
+      "handle": "availability__announced"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/65",
+      "name": "仅限科研",
+      "friendly_id": "availability__research-only",
+      "handle": "availability__research-only"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/66",
+      "name": "已停产",
+      "friendly_id": "availability__discontinued",
+      "handle": "availability__discontinued"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/67",
+      "name": "其他",
+      "friendly_id": "availability__other",
+      "handle": "availability__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/68",
+      "name": "硬件",
+      "friendly_id": "open_source__hardware",
+      "handle": "open-source__hardware"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/69",
+      "name": "软件",
+      "friendly_id": "open_source__software",
+      "handle": "open-source__software"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/70",
+      "name": "无",
+      "friendly_id": "open_source__none",
+      "handle": "open-source__none"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/71",
+      "name": "其他",
+      "friendly_id": "open_source__other",
+      "handle": "open-source__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/72",
+      "name": "ROS 1",
+      "friendly_id": "sdk__ros1",
+      "handle": "sdk__ros1"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/73",
+      "name": "ROS 2",
+      "friendly_id": "sdk__ros2",
+      "handle": "sdk__ros2"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/74",
+      "name": "Python",
+      "friendly_id": "sdk__python",
+      "handle": "sdk__python"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/75",
+      "name": "C++",
+      "friendly_id": "sdk__cpp",
+      "handle": "sdk__cpp"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/76",
+      "name": "专有",
+      "friendly_id": "sdk__proprietary",
+      "handle": "sdk__proprietary"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/77",
+      "name": "无",
+      "friendly_id": "sdk__none",
+      "handle": "sdk__none"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/78",
+      "name": "其他",
+      "friendly_id": "sdk__other",
+      "handle": "sdk__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/79",
+      "name": "地面",
+      "friendly_id": "mounting__floor",
+      "handle": "mounting__floor"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/80",
+      "name": "桌面",
+      "friendly_id": "mounting__table",
+      "handle": "mounting__table"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/81",
+      "name": "墙面",
+      "friendly_id": "mounting__wall",
+      "handle": "mounting__wall"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/82",
+      "name": "天花板",
+      "friendly_id": "mounting__ceiling",
+      "handle": "mounting__ceiling"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/83",
+      "name": "移动底盘",
+      "friendly_id": "mounting__mobile",
+      "handle": "mounting__mobile"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/84",
+      "name": "其他",
+      "friendly_id": "mounting__other",
+      "handle": "mounting__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/85",
+      "name": "无",
+      "friendly_id": "hands_included__none",
+      "handle": "hands-included__none"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/86",
+      "name": "夹爪",
+      "friendly_id": "hands_included__gripper",
+      "handle": "hands-included__gripper"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/87",
+      "name": "灵巧手",
+      "friendly_id": "hands_included__dexterous-hand",
+      "handle": "hands-included__dexterous-hand"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/88",
+      "name": "可选",
+      "friendly_id": "hands_included__optional",
+      "handle": "hands-included__optional"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/89",
+      "name": "其他",
+      "friendly_id": "hands_included__other",
+      "handle": "hands-included__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/90",
+      "name": "差速",
+      "friendly_id": "drive_config__differential",
+      "handle": "drive-config__differential"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/91",
+      "name": "全向",
+      "friendly_id": "drive_config__omnidirectional",
+      "handle": "drive-config__omnidirectional"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/92",
+      "name": "阿克曼",
+      "friendly_id": "drive_config__ackermann",
+      "handle": "drive-config__ackermann"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/93",
+      "name": "履带",
+      "friendly_id": "drive_config__tracked",
+      "handle": "drive-config__tracked"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/94",
+      "name": "其他",
+      "friendly_id": "drive_config__other",
+      "handle": "drive-config__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/95",
+      "name": "循线",
+      "friendly_id": "navigation__line-following",
+      "handle": "navigation__line-following"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/96",
+      "name": "标记导航",
+      "friendly_id": "navigation__marker-based",
+      "handle": "navigation__marker-based"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/97",
+      "name": "SLAM",
+      "friendly_id": "navigation__slam",
+      "handle": "navigation__slam"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/98",
+      "name": "无",
+      "friendly_id": "navigation__none",
+      "handle": "navigation__none"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/99",
+      "name": "其他",
+      "friendly_id": "navigation__other",
+      "handle": "navigation__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/100",
+      "name": "下肢",
+      "friendly_id": "body_region__lower-limb",
+      "handle": "body-region__lower-limb"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/101",
+      "name": "上肢",
+      "friendly_id": "body_region__upper-limb",
+      "handle": "body-region__upper-limb"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/102",
+      "name": "背部",
+      "friendly_id": "body_region__back",
+      "handle": "body-region__back"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/103",
+      "name": "全身",
+      "friendly_id": "body_region__full-body",
+      "handle": "body-region__full-body"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/104",
+      "name": "其他",
+      "friendly_id": "body_region__other",
+      "handle": "body-region__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/105",
+      "name": "ISO 9409-1-50",
+      "friendly_id": "flange_standard__iso-9409-1-50",
+      "handle": "flange-standard__iso-9409-1-50"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/106",
+      "name": "ISO 9409-1-31",
+      "friendly_id": "flange_standard__iso-9409-1-31",
+      "handle": "flange-standard__iso-9409-1-31"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/107",
+      "name": "定制",
+      "friendly_id": "flange_standard__custom",
+      "handle": "flange-standard__custom"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/108",
+      "name": "不适用",
+      "friendly_id": "flange_standard__na",
+      "handle": "flange-standard__na"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/109",
+      "name": "其他",
+      "friendly_id": "flange_standard__other",
+      "handle": "flange-standard__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/110",
+      "name": "EtherCAT",
+      "friendly_id": "interface__ethercat",
+      "handle": "interface__ethercat"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/111",
+      "name": "CAN",
+      "friendly_id": "interface__can",
+      "handle": "interface__can"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/112",
+      "name": "Modbus TCP",
+      "friendly_id": "interface__modbus-tcp",
+      "handle": "interface__modbus-tcp"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/113",
+      "name": "RS-485",
+      "friendly_id": "interface__rs485",
+      "handle": "interface__rs485"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/114",
+      "name": "USB",
+      "friendly_id": "interface__usb",
+      "handle": "interface__usb"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/115",
+      "name": "以太网",
+      "friendly_id": "interface__ethernet",
+      "handle": "interface__ethernet"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/116",
+      "name": "IO-Link",
+      "friendly_id": "interface__io-link",
+      "handle": "interface__io-link"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/117",
+      "name": "数字 I/O",
+      "friendly_id": "interface__digital-io",
+      "handle": "interface__digital-io"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/118",
+      "name": "气动",
+      "friendly_id": "interface__pneumatic",
+      "handle": "interface__pneumatic"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/119",
+      "name": "其他",
+      "friendly_id": "interface__other",
+      "handle": "interface__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/120",
+      "name": "电动",
+      "friendly_id": "actuation__electric",
+      "handle": "actuation__electric"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/121",
+      "name": "气动",
+      "friendly_id": "actuation__pneumatic",
+      "handle": "actuation__pneumatic"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/122",
+      "name": "液压",
+      "friendly_id": "actuation__hydraulic",
+      "handle": "actuation__hydraulic"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/123",
+      "name": "真空",
+      "friendly_id": "actuation__vacuum",
+      "handle": "actuation__vacuum"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/124",
+      "name": "被动",
+      "friendly_id": "actuation__passive",
+      "handle": "actuation__passive"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/125",
+      "name": "其他",
+      "friendly_id": "actuation__other",
+      "handle": "actuation__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/126",
+      "name": "谐波",
+      "friendly_id": "reducer_type__harmonic",
+      "handle": "reducer-type__harmonic"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/127",
+      "name": "摆线",
+      "friendly_id": "reducer_type__cycloidal",
+      "handle": "reducer-type__cycloidal"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/128",
+      "name": "RV",
+      "friendly_id": "reducer_type__rv",
+      "handle": "reducer-type__rv"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/129",
+      "name": "行星",
+      "friendly_id": "reducer_type__planetary",
+      "handle": "reducer-type__planetary"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/130",
+      "name": "准直驱",
+      "friendly_id": "reducer_type__quasi-direct",
+      "handle": "reducer-type__quasi-direct"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/131",
+      "name": "无",
+      "friendly_id": "reducer_type__none",
+      "handle": "reducer-type__none"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/132",
+      "name": "其他",
+      "friendly_id": "reducer_type__other",
+      "handle": "reducer-type__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/133",
+      "name": "TTL",
+      "friendly_id": "bus__ttl",
+      "handle": "bus__ttl"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/134",
+      "name": "RS-485",
+      "friendly_id": "bus__rs485",
+      "handle": "bus__rs485"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/135",
+      "name": "CAN",
+      "friendly_id": "bus__can",
+      "handle": "bus__can"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/136",
+      "name": "PWM",
+      "friendly_id": "bus__pwm",
+      "handle": "bus__pwm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/137",
+      "name": "其他",
+      "friendly_id": "bus__other",
+      "handle": "bus__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/138",
+      "name": "RGB",
+      "friendly_id": "modality__rgb",
+      "handle": "modality__rgb"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/139",
+      "name": "深度",
+      "friendly_id": "modality__depth",
+      "handle": "modality__depth"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/140",
+      "name": "双目",
+      "friendly_id": "modality__stereo",
+      "handle": "modality__stereo"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/141",
+      "name": "热成像",
+      "friendly_id": "modality__thermal",
+      "handle": "modality__thermal"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/142",
+      "name": "事件",
+      "friendly_id": "modality__event",
+      "handle": "modality__event"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/143",
+      "name": "其他",
+      "friendly_id": "modality__other",
+      "handle": "modality__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/144",
+      "name": "2D",
+      "friendly_id": "scan_dimensions__2d",
+      "handle": "scan-dimensions__2d"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/145",
+      "name": "3D",
+      "friendly_id": "scan_dimensions__3d",
+      "handle": "scan-dimensions__3d"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/146",
+      "name": "其他",
+      "friendly_id": "scan_dimensions__other",
+      "handle": "scan-dimensions__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/147",
+      "name": "主臂",
+      "friendly_id": "teleop_type__leader-arm",
+      "handle": "teleop-type__leader-arm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/148",
+      "name": "力反馈设备",
+      "friendly_id": "teleop_type__haptic-device",
+      "handle": "teleop-type__haptic-device"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/149",
+      "name": "VR 系统",
+      "friendly_id": "teleop_type__vr-rig",
+      "handle": "teleop-type__vr-rig"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/150",
+      "name": "动作捕捉",
+      "friendly_id": "teleop_type__mocap",
+      "handle": "teleop-type__mocap"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/151",
+      "name": "手柄",
+      "friendly_id": "teleop_type__gamepad",
+      "handle": "teleop-type__gamepad"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/152",
+      "name": "其他",
+      "friendly_id": "teleop_type__other",
+      "handle": "teleop-type__other"
+    }
+  ]
+}

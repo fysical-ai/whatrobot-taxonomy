@@ -1,0 +1,78 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "description": "Positional, permanent id, e.g. rb-3-1",
+      "pattern": "^(rb|cp)(-[1-9]\\d*)*$",
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "friendly_id": {
+      "pattern": "^[a-z][a-z0-9-]*(\\.[a-z][a-z0-9-]*)*$",
+      "title": "Friendly Id",
+      "type": "string"
+    },
+    "handle": {
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "title": "Handle",
+      "type": "string"
+    },
+    "description": {
+      "minLength": 1,
+      "title": "Description",
+      "type": "string"
+    },
+    "aliases": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Aliases",
+      "type": "array"
+    },
+    "inclusion_rule": {
+      "minLength": 1,
+      "title": "Inclusion Rule",
+      "type": "string"
+    },
+    "children": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Children",
+      "type": "array"
+    },
+    "attributes": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Attributes",
+      "type": "array"
+    },
+    "examples": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Examples",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "friendly_id",
+    "handle",
+    "description",
+    "inclusion_rule"
+  ],
+  "title": "Category",
+  "type": "object"
+}

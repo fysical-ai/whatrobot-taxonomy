@@ -1,0 +1,61 @@
+# whatrobot taxonomy — zh-Hans (Simplified Chinese) localisation of categories
+# Licence: CC BY 4.0. Status: LLM DRAFT 2026-10-27 — requires native-reader review before release (docs/design.md §9.9).
+# Keyed by category id. Only name and description are localised; inclusion_rule stays English.
+---
+rb: {name: 机器人, description: 具有一定自主性的可编程驱动机构，用于移动、操作或定位（ISO 8373:2021）。}
+rb-1: {name: 机械臂, description: 固定基座的机械手，用于在空间中定位末端执行器。}
+rb-1-1: {name: 关节式机械臂, description: 具有三个或以上串联旋转关节的机械臂，包括六轴/七轴工业机械臂、协作机器人和桌面机械臂。}
+rb-1-2: {name: SCARA 机械臂, description: 具有两个平行垂直旋转关节和一个垂直直线轴的机械臂，在水平面内具有柔顺性。}
+rb-1-3: {name: 并联机械臂, description: 并联运动学机械手，如 Delta 机器人或六足/Stewart 平台。}
+rb-1-4: {name: 直角坐标机械臂, description: 三个直线轴沿笛卡尔坐标系布置的机械手，包括龙门和直线机器人。}
+rb-1-5: {name: 圆柱坐标机械臂, description: 具有旋转基座、直线升降和直线伸缩的机械手，包括极坐标/球坐标机械臂。}
+rb-2: {name: 人形机器人, description: 具有按人体比例布置的躯干、双臂和头部的机器人，面向人类环境。}
+rb-2-1: {name: 双足人形机器人, description: 用双腿行走的人形机器人。}
+rb-2-2: {name: 轮式底盘人形机器人, description: 安装在轮式或履带式底盘上的人形上半身。}
+rb-2-3: {name: 固定基座人形机器人, description: 安装在固定底座上、不具备移动能力的人形上半身。}
+rb-3: {name: 足式机器人, description: 依靠关节式腿部移动、非人形的机器人。}
+rb-3-1: {name: 四足机器人, description: 具有四条腿的足式机器人。}
+rb-3-2: {name: 双足机器人, description: 没有人形躯干、手臂和头部的两腿机器人。}
+rb-3-3: {name: 多足机器人, description: 具有六条或以上腿的足式机器人。}
+rb-4: {name: 地面机器人, description: 依靠轮子或履带移动、无腿且无集成机械臂的机器人。}
+rb-4-1: {name: 轮式机器人, description: 由轮子驱动的地面机器人。}
+rb-4-2: {name: 履带式机器人, description: 由连续履带驱动的地面机器人。}
+rb-5: {name: 移动操作机器人, description: 轮式或履带式底盘配备一个或多个机械臂、作为单一产品销售的非人形机器人。}
+rb-6: {name: 空中机器人, description: 能够飞行的机器人。}
+rb-6-1: {name: 多旋翼, description: 由多个旋翼提供升力的空中机器人。}
+rb-6-2: {name: 固定翼, description: 由固定机翼提供升力的空中机器人。}
+rb-6-3: {name: 复合翼垂直起降, description: 结合旋翼垂直起降与固定翼巡航的空中机器人。}
+rb-7: {name: 水上/水下机器人, description: 在水面或水中作业的机器人。}
+rb-7-1: {name: ROV 遥控潜水器, description: 通过脐带缆连接的遥控水下航行器。}
+rb-7-2: {name: AUV 自主水下航行器, description: 无缆、自主的水下航行器。}
+rb-7-3: {name: USV 无人水面艇, description: 无人水面航行器。}
+rb-8: {name: 可穿戴机器人, description: 穿戴在人体上的机器人。}
+rb-8-1: {name: 外骨骼, description: 辅助或增强人体运动的动力外骨骼或外骨骼服。}
+rb-9: {name: 固定式机器人, description: 固定基座、不进行操作的机器人，如无臂的桌面陪伴或社交机器人。}
+rb-10: {name: 套件, description: 没有固定形态、可组装成可编程机器人的模块化构建套件。}
+cp: {name: 部件, description: 与整机分开销售的机器人零部件或配件。}
+cp-1: {name: 末端执行器, description: 安装在机械臂或手腕末端、作用于外界的装置。}
+cp-1-1: {name: 夹爪, description: 非拟人手形态的抓取末端执行器。}
+cp-1-1-1: {name: 手指式夹爪, description: 具有机械手指或钳口的夹爪，包括平行、角度和两/三指自适应设计。}
+cp-1-1-2: {name: 真空吸盘, description: 通过吸力抓取的夹爪，包括吸盘、海绵和面吸式。}
+cp-1-1-3: {name: 磁力夹爪, description: 通过磁力抓取铁磁物体的夹爪。}
+cp-1-1-4: {name: 柔性夹爪, description: 具有柔顺或充气手指的夹爪。}
+cp-1-2: {name: 灵巧手, description: 具有四个以上手指（含可对掌拇指）和多个自由度的拟人末端执行器。}
+cp-1-3: {name: 工艺工具, description: 执行工艺的末端执行器，如焊枪、主轴、螺丝刀、点胶头或相机头。}
+cp-1-4: {name: 快换装置, description: 机器人手腕与可更换末端执行器之间的快速换接接口。}
+cp-2: {name: 执行器, description: 为机器人关节或轴产生运动的装置。}
+cp-2-1: {name: 关节模组, description: 集成电机、减速器、编码器和驱动器的一体化旋转执行器。}
+cp-2-2: {name: 舵机, description: 内置控制并采用菊花链总线的业余级或智能舵机。}
+cp-2-3: {name: 电机, description: 不带减速器或集成控制的裸电机，如无刷直流、步进或无框电机。}
+cp-2-4: {name: 减速器, description: 谐波/柔轮、摆线/RV 或行星等减速单元。}
+cp-2-5: {name: 直线执行器, description: 产生直线运动的执行器，如滚柱丝杠、滚珠丝杠、气缸或液压缸。}
+cp-3: {name: 传感器, description: 测量机器人自身或其环境的装置。}
+cp-3-1: {name: 相机, description: 成像传感器，包括 RGB、深度、双目、热成像和事件相机。}
+cp-3-2: {name: 激光雷达, description: 2D 或 3D 激光测距传感器。}
+cp-3-3: {name: 力/力矩传感器, description: 测量手腕或关节处力和力矩的传感器，通常为三轴或六轴。}
+cp-3-4: {name: 触觉传感器, description: 测量表面接触、压力或纹理的传感器。}
+cp-3-5: {name: 惯性/编码器, description: 运动和位置传感器，如 IMU 和编码器。}
+cp-4: {name: 计算单元, description: 机器人控制器、单板计算机和边缘 AI 模块。}
+cp-5: {name: 电源, description: 电池组、充电器和充电桩。}
+cp-6: {name: 结构件, description: 框架、支架、外壳、法兰和线缆管理件。}
+cp-7: {name: 遥操作设备, description: 用于远程控制机器人或采集示教数据的装置，如主臂、力反馈设备、VR 或动作捕捉系统。}

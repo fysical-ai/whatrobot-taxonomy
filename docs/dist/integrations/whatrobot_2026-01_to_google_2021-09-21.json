@@ -1,0 +1,155 @@
+{
+  "version": "2026-01",
+  "mappings": [
+    {
+      "input_taxonomy": "whatrobot/2026-01",
+      "output_taxonomy": "google/2021-09-21",
+      "rules": [
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1",
+              "full_name": "Robot > Arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-1",
+              "full_name": "Robot > Arm > Articulated arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-2",
+              "full_name": "Robot > Arm > SCARA arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-3",
+              "full_name": "Robot > Arm > Parallel arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-4",
+              "full_name": "Robot > Arm > Cartesian arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
+              "full_name": "Robot > Arm > Cylindrical arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "1470"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-4",
+              "full_name": "Component > Compute"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "222",
+                "full_name": "222"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2-3",
+              "full_name": "Component > Actuator > Motor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "7261",
+                "full_name": "7261"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-10",
+              "full_name": "Robot > Kit"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1239",
+                "full_name": "1239"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

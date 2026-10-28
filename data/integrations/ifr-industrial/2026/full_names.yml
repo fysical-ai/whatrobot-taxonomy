@@ -1,0 +1,12 @@
+- id: "10"
+  full_name: Articulated robots
+- id: "20"
+  full_name: Linear / cartesian / gantry robots
+- id: "30"
+  full_name: SCARA robots
+- id: "40"
+  full_name: Parallel robots
+- id: "50"
+  full_name: Cylindrical robots
+- id: "90"
+  full_name: Others / not classified

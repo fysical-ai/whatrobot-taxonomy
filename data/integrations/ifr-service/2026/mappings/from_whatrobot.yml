@@ -1,0 +1,58 @@
+# whatrobot application value → IFR service robot application group.
+# IFR classifies service robots by APPLICATION, so the input here is an attribute value, not a category.
+# Group names from https://ifr.org/wr-service-robots (retrieved 2026-10-27); IFR code numbers (AP1…) not reproduced.
+---
+input_kind: attribute_value
+rules:
+  - input: {attribute_value: application__agriculture}
+    output: {category_id: [professional-agriculture]}
+  - input: {attribute_value: application__professional-cleaning}
+    output: {category_id: [professional-cleaning]}
+  - input: {attribute_value: application__inspection-maintenance}
+    output: {category_id: [professional-inspection-maintenance]}
+  - input: {attribute_value: application__construction}
+    output: {category_id: [professional-construction-demolition]}
+  - input: {attribute_value: application__warehouse-logistics}
+    output: {category_id: [professional-logistics-transportation]}
+  - input: {attribute_value: application__delivery}
+    output: {category_id: [professional-logistics-transportation]}
+  - input: {attribute_value: application__transport}
+    output: {category_id: [professional-logistics-transportation]}
+  - input: {attribute_value: application__search-rescue}
+    output: {category_id: [professional-search-rescue]}
+  - input: {attribute_value: application__hospitality-retail}
+    output: {category_id: [professional-hospitality]}
+  - input: {attribute_value: application__security}
+    output: {category_id: [professional-other]}
+  - input: {attribute_value: application__domestic-cleaning}
+    output: {category_id: [consumer-domestic-tasks]}
+  - input: {attribute_value: application__lawn-garden}
+    output: {category_id: [consumer-domestic-tasks]}
+  - input: {attribute_value: application__pool}
+    output: {category_id: [consumer-domestic-tasks]}
+  - input: {attribute_value: application__companionship}
+    output: {category_id: [consumer-social-interaction-education]}
+  - input: {attribute_value: application__entertainment}
+    output: {category_id: [consumer-social-interaction-education]}
+  - input: {attribute_value: application__education}
+    output: {category_id: [consumer-social-interaction-education]}
+  - input: {attribute_value: application__telepresence}
+    output: {category_id: [consumer-other]}
+  - input: {attribute_value: application__care-assistance}
+    output: {category_id: [consumer-care-at-home, medical]}
+  - input: {attribute_value: application__surgery}
+    output: {category_id: [medical]}
+  - input: {attribute_value: application__rehabilitation}
+    output: {category_id: [medical]}
+unmapped_attribute_values:
+  - application__handling           # industrial, not service
+  - application__machine-tending
+  - application__palletizing
+  - application__welding
+  - application__assembly
+  - application__painting-dispensing
+  - application__machining
+  - application__inspection-qc
+  - application__research-platform
+  - application__general-purpose
+  - application__other

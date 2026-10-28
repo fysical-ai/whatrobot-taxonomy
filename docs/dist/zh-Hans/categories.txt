@@ -1,0 +1,58 @@
+# whatrobot taxonomy 2026-01 — CC BY 4.0
+gid://whatrobot/TaxonomyCategory/cp : 部件
+gid://whatrobot/TaxonomyCategory/cp-1 : 部件 > 末端执行器
+gid://whatrobot/TaxonomyCategory/cp-1-1 : 部件 > 末端执行器 > 夹爪
+gid://whatrobot/TaxonomyCategory/cp-1-1-1 : 部件 > 末端执行器 > 夹爪 > 手指式夹爪
+gid://whatrobot/TaxonomyCategory/cp-1-1-2 : 部件 > 末端执行器 > 夹爪 > 真空吸盘
+gid://whatrobot/TaxonomyCategory/cp-1-1-3 : 部件 > 末端执行器 > 夹爪 > 磁力夹爪
+gid://whatrobot/TaxonomyCategory/cp-1-1-4 : 部件 > 末端执行器 > 夹爪 > 柔性夹爪
+gid://whatrobot/TaxonomyCategory/cp-1-2 : 部件 > 末端执行器 > 灵巧手
+gid://whatrobot/TaxonomyCategory/cp-1-3 : 部件 > 末端执行器 > 工艺工具
+gid://whatrobot/TaxonomyCategory/cp-1-4 : 部件 > 末端执行器 > 快换装置
+gid://whatrobot/TaxonomyCategory/cp-2 : 部件 > 执行器
+gid://whatrobot/TaxonomyCategory/cp-2-1 : 部件 > 执行器 > 关节模组
+gid://whatrobot/TaxonomyCategory/cp-2-2 : 部件 > 执行器 > 舵机
+gid://whatrobot/TaxonomyCategory/cp-2-3 : 部件 > 执行器 > 电机
+gid://whatrobot/TaxonomyCategory/cp-2-4 : 部件 > 执行器 > 减速器
+gid://whatrobot/TaxonomyCategory/cp-2-5 : 部件 > 执行器 > 直线执行器
+gid://whatrobot/TaxonomyCategory/cp-3 : 部件 > 传感器
+gid://whatrobot/TaxonomyCategory/cp-3-1 : 部件 > 传感器 > 相机
+gid://whatrobot/TaxonomyCategory/cp-3-2 : 部件 > 传感器 > 激光雷达
+gid://whatrobot/TaxonomyCategory/cp-3-3 : 部件 > 传感器 > 力/力矩传感器
+gid://whatrobot/TaxonomyCategory/cp-3-4 : 部件 > 传感器 > 触觉传感器
+gid://whatrobot/TaxonomyCategory/cp-3-5 : 部件 > 传感器 > 惯性/编码器
+gid://whatrobot/TaxonomyCategory/cp-4 : 部件 > 计算单元
+gid://whatrobot/TaxonomyCategory/cp-5 : 部件 > 电源
+gid://whatrobot/TaxonomyCategory/cp-6 : 部件 > 结构件
+gid://whatrobot/TaxonomyCategory/cp-7 : 部件 > 遥操作设备
+gid://whatrobot/TaxonomyCategory/rb : 机器人
+gid://whatrobot/TaxonomyCategory/rb-1 : 机器人 > 机械臂
+gid://whatrobot/TaxonomyCategory/rb-1-1 : 机器人 > 机械臂 > 关节式机械臂
+gid://whatrobot/TaxonomyCategory/rb-1-2 : 机器人 > 机械臂 > SCARA 机械臂
+gid://whatrobot/TaxonomyCategory/rb-1-3 : 机器人 > 机械臂 > 并联机械臂
+gid://whatrobot/TaxonomyCategory/rb-1-4 : 机器人 > 机械臂 > 直角坐标机械臂
+gid://whatrobot/TaxonomyCategory/rb-1-5 : 机器人 > 机械臂 > 圆柱坐标机械臂
+gid://whatrobot/TaxonomyCategory/rb-2 : 机器人 > 人形机器人
+gid://whatrobot/TaxonomyCategory/rb-2-1 : 机器人 > 人形机器人 > 双足人形机器人
+gid://whatrobot/TaxonomyCategory/rb-2-2 : 机器人 > 人形机器人 > 轮式底盘人形机器人
+gid://whatrobot/TaxonomyCategory/rb-2-3 : 机器人 > 人形机器人 > 固定基座人形机器人
+gid://whatrobot/TaxonomyCategory/rb-3 : 机器人 > 足式机器人
+gid://whatrobot/TaxonomyCategory/rb-3-1 : 机器人 > 足式机器人 > 四足机器人
+gid://whatrobot/TaxonomyCategory/rb-3-2 : 机器人 > 足式机器人 > 双足机器人
+gid://whatrobot/TaxonomyCategory/rb-3-3 : 机器人 > 足式机器人 > 多足机器人
+gid://whatrobot/TaxonomyCategory/rb-4 : 机器人 > 地面机器人
+gid://whatrobot/TaxonomyCategory/rb-4-1 : 机器人 > 地面机器人 > 轮式机器人
+gid://whatrobot/TaxonomyCategory/rb-4-2 : 机器人 > 地面机器人 > 履带式机器人
+gid://whatrobot/TaxonomyCategory/rb-5 : 机器人 > 移动操作机器人
+gid://whatrobot/TaxonomyCategory/rb-6 : 机器人 > 空中机器人
+gid://whatrobot/TaxonomyCategory/rb-6-1 : 机器人 > 空中机器人 > 多旋翼
+gid://whatrobot/TaxonomyCategory/rb-6-2 : 机器人 > 空中机器人 > 固定翼
+gid://whatrobot/TaxonomyCategory/rb-6-3 : 机器人 > 空中机器人 > 复合翼垂直起降
+gid://whatrobot/TaxonomyCategory/rb-7 : 机器人 > 水上/水下机器人
+gid://whatrobot/TaxonomyCategory/rb-7-1 : 机器人 > 水上/水下机器人 > ROV 遥控潜水器
+gid://whatrobot/TaxonomyCategory/rb-7-2 : 机器人 > 水上/水下机器人 > AUV 自主水下航行器
+gid://whatrobot/TaxonomyCategory/rb-7-3 : 机器人 > 水上/水下机器人 > USV 无人水面艇
+gid://whatrobot/TaxonomyCategory/rb-8 : 机器人 > 可穿戴机器人
+gid://whatrobot/TaxonomyCategory/rb-8-1 : 机器人 > 可穿戴机器人 > 外骨骼
+gid://whatrobot/TaxonomyCategory/rb-9 : 机器人 > 固定式机器人
+gid://whatrobot/TaxonomyCategory/rb-10 : 机器人 > 套件

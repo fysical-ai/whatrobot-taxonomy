@@ -1,0 +1,41 @@
+name: Category change request
+description: Propose a new, changed or retired category in the robot or component tree.
+labels: [taxonomy, category]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Change
+      options:
+        - Add a category
+        - Rename / re-describe a category
+        - Retire a category
+        - Change a tie-break rule
+    validations:
+      required: true
+  - type: input
+    id: parent
+    attributes:
+      label: Parent category id
+      placeholder: rb-3
+  - type: textarea
+    id: definition
+    attributes:
+      label: Proposed name, description and inclusion rule
+      description: "Names describe hardware, never use. Max depth 3."
+    validations:
+      required: true
+  - type: textarea
+    id: mece
+    attributes:
+      label: Four tests
+      description: "Explain how the node is exclusive, exhaustive, stable and navigable (see docs/design.md)."
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Purchasable products that would sit in this leaf
+      description: "At least three, with links."
+    validations:
+      required: true

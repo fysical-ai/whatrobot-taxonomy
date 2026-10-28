@@ -1,0 +1,246 @@
+# whatrobot taxonomy — classification test set (docs/design.md §6)
+# Source of truth. Licence: CC BY 4.0.
+#
+# Each entry is a product described by HARDWARE FACTS only. CI runs the tie-break rules
+# (whatrobot_taxonomy/classify.py) over `facts` and asserts the result equals `expected`.
+# `attributes` are illustrative examples of attribute values and are NOT verified product data;
+# facts, specs and prices will be confirmed with dated sources before the first stable release.
+#
+# Robot facts:   is_kit, worn_on_body, humanoid_form, legs, wheels_or_tracks (none|wheels|tracks),
+#                medium (ground|air|water), aerial_lift (multirotor|fixed-wing|hybrid-vtol),
+#                aquatic_mode (rov|auv|usv), integrated_arm, manipulates, fixed_base,
+#                arm_kinematics (articulated|scara|parallel|cartesian|cylindrical)
+# Component facts: component_kind (end-effector|actuator|sensor|compute|power|structure|teleoperation)
+#                plus per-kind facts documented in classify.py.
+---
+- handle: universal-robots-ur5e
+  name: Universal Robots UR5e
+  expected: rb-1-1
+  facts: {fixed_base: true, manipulates: true, arm_kinematics: articulated}
+  attributes: {collaborative: true, segment: [professional, research], application: [handling, machine-tending]}
+
+- handle: dobot-magician
+  name: Dobot Magician
+  expected: rb-1-1
+  facts: {fixed_base: true, manipulates: true, arm_kinematics: articulated}
+  attributes: {segment: [hobby, education]}
+
+- handle: dobot-m1-pro
+  name: Dobot M1 Pro
+  expected: rb-1-2
+  facts: {fixed_base: true, manipulates: true, arm_kinematics: scara}
+  attributes: {segment: [professional, education]}
+
+- handle: abb-irb-360
+  name: ABB IRB 360 FlexPicker
+  expected: rb-1-3
+  facts: {fixed_base: true, manipulates: true, arm_kinematics: parallel}
+  attributes: {segment: [professional], application: [handling]}
+
+- handle: unitree-go2
+  name: Unitree Go2
+  expected: rb-3-1
+  facts: {legs: 4, medium: ground}
+  attributes: {segment: [hobby, research, professional], application: [research-platform, inspection-maintenance]}
+
+- handle: unitree-b2-w
+  name: Unitree B2-W
+  expected: rb-3-1
+  facts: {legs: 4, wheels_or_tracks: wheels, medium: ground}
+  attributes: {wheel_feet: true}
+
+- handle: boston-dynamics-spot
+  name: Boston Dynamics Spot (with arm)
+  expected: rb-3-1
+  facts: {legs: 4, integrated_arm: true, manipulates: true, medium: ground}
+  attributes: {has_arm: true}
+
+- handle: unitree-g1
+  name: Unitree G1
+  expected: rb-2-1
+  facts: {humanoid_form: true, legs: 2, manipulates: true, medium: ground}
+  attributes: {hands_included: optional, application: [general-purpose]}
+
+- handle: 1x-eve
+  name: 1X EVE
+  expected: rb-2-2
+  facts: {humanoid_form: true, legs: 0, wheels_or_tracks: wheels, manipulates: true, medium: ground}
+  attributes: {application: [general-purpose]}
+
+- handle: abb-yumi
+  name: ABB YuMi IRB 14000
+  expected: rb-2-3
+  facts: {humanoid_form: true, legs: 0, fixed_base: true, manipulates: true}
+  attributes: {collaborative: true, hands_included: gripper}
+
+- handle: agility-cassie
+  name: Agility Robotics Cassie
+  expected: rb-3-2
+  facts: {legs: 2, humanoid_form: false, medium: ground}
+  attributes: {segment: [research]}
+
+- handle: irobot-roomba
+  name: iRobot Roomba
+  expected: rb-4-1
+  facts: {wheels_or_tracks: wheels, medium: ground}
+  attributes: {segment: [consumer], application: [domestic-cleaning]}
+
+- handle: hello-robot-stretch-3
+  name: Hello Robot Stretch 3
+  expected: rb-5
+  facts: {wheels_or_tracks: wheels, integrated_arm: true, manipulates: true, medium: ground}
+  attributes: {segment: [research]}
+
+- handle: dji-mavic
+  name: DJI Mavic
+  expected: rb-6-1
+  facts: {medium: air, aerial_lift: multirotor}
+  attributes: {segment: [consumer, professional]}
+
+- handle: bluerobotics-bluerov2
+  name: Blue Robotics BlueROV2
+  expected: rb-7-1
+  facts: {medium: water, aquatic_mode: rov}
+  attributes: {segment: [research, professional]}
+
+- handle: ekso-bionics-evo
+  name: Ekso Bionics EVO
+  expected: rb-8-1
+  facts: {worn_on_body: true}
+  attributes: {body_region: [upper-limb, back]}
+
+- handle: jibo
+  name: Jibo
+  expected: rb-9
+  facts: {fixed_base: true, manipulates: false}
+  attributes: {segment: [consumer], application: [companionship]}
+
+- handle: lego-spike-prime
+  name: LEGO Education SPIKE Prime
+  expected: rb-10
+  facts: {is_kit: true}
+  attributes: {segment: [education]}
+
+# ---------------------------------------------------------------- components
+- handle: robotiq-2f-85
+  name: Robotiq 2F-85
+  expected: cp-1-1-1
+  facts: {component_kind: end-effector, grasps: true, fingers: 2, opposable_thumb: false, dof: 1, gripping_principle: finger}
+  attributes: {actuation: electric, finger_count: 2, flange_standard: [iso-9409-1-50]}
+
+- handle: onrobot-vg10
+  name: OnRobot VG10
+  expected: cp-1-1-2
+  facts: {component_kind: end-effector, grasps: true, gripping_principle: vacuum}
+  attributes: {actuation: vacuum}
+
+- handle: shadow-dexterous-hand
+  name: Shadow Dexterous Hand
+  expected: cp-1-2
+  facts: {component_kind: end-effector, grasps: true, fingers: 5, opposable_thumb: true, dof: 20}
+  attributes: {finger_count: 5}
+
+- handle: onrobot-screwdriver
+  name: OnRobot Screwdriver
+  expected: cp-1-3
+  facts: {component_kind: end-effector, grasps: false, process_tool: true}
+  attributes: {}
+
+- handle: ati-qc-11
+  name: ATI QC-11 tool changer
+  expected: cp-1-4
+  facts: {component_kind: end-effector, grasps: false, tool_changer: true}
+  attributes: {}
+
+- handle: dynamixel-xm430
+  name: ROBOTIS Dynamixel XM430
+  expected: cp-2-2
+  facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: false}
+  attributes: {bus: ttl}
+
+- handle: robstride-04
+  name: RobStride 04
+  expected: cp-2-1
+  facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: true}
+  attributes: {reducer_type: planetary, interface: [can]}
+
+- handle: tmotor-u8
+  name: T-Motor U8
+  expected: cp-2-3
+  facts: {component_kind: actuator, motion: rotary, integrated_control: false, has_reducer: false}
+  attributes: {}
+
+- handle: harmonic-drive-csf
+  name: Harmonic Drive CSF
+  expected: cp-2-4
+  facts: {component_kind: actuator, motion: rotary, reducer_only: true}
+  attributes: {reducer_type: harmonic}
+
+- handle: ewellix-cahb
+  name: Ewellix CAHB linear actuator
+  expected: cp-2-5
+  facts: {component_kind: actuator, motion: linear}
+  attributes: {actuation: electric}
+
+- handle: intel-realsense-d435i
+  name: Intel RealSense D435i
+  expected: cp-3-1
+  facts: {component_kind: sensor, sensor_type: camera}
+  attributes: {modality: [rgb, depth, stereo]}
+
+- handle: livox-mid-360
+  name: Livox Mid-360
+  expected: cp-3-2
+  facts: {component_kind: sensor, sensor_type: lidar}
+  attributes: {scan_dimensions: 3d}
+
+- handle: nvidia-jetson-orin-nano
+  name: NVIDIA Jetson Orin Nano
+  expected: cp-4
+  facts: {component_kind: compute}
+  attributes: {}
+
+- handle: so-101-leader-arm
+  name: SO-101 leader arm
+  expected: cp-7
+  facts: {component_kind: teleoperation}
+  attributes: {teleop_type: leader-arm}
+
+# ------------------------------- remaining category examples (compact entries)
+- {handle: igus-drylin-gantry, name: igus drylin gantry, expected: rb-1-4, facts: {fixed_base: true, manipulates: true, arm_kinematics: cartesian}}
+- {handle: st-robotics-r19, name: ST Robotics R19, expected: rb-1-5, facts: {fixed_base: true, manipulates: true, arm_kinematics: cylindrical}}
+- {handle: agibot-x2, name: AgiBot X2, expected: rb-2-1, facts: {humanoid_form: true, legs: 2, manipulates: true, medium: ground}}
+- {handle: agibot-a2-w, name: AgiBot A2-W, expected: rb-2-2, facts: {humanoid_form: true, legs: 0, wheels_or_tracks: wheels, manipulates: true, medium: ground}}
+- {handle: freenove-hexapod, name: Freenove Hexapod, expected: rb-3-3, facts: {legs: 6, medium: ground}}
+- {handle: clearpath-husky, name: Clearpath Husky, expected: rb-4-1, facts: {wheels_or_tracks: wheels, medium: ground}, attributes: {has_arm: true}}
+- {handle: superdroid-lt2, name: SuperDroid LT2, expected: rb-4-2, facts: {wheels_or_tracks: tracks, medium: ground}}
+- {handle: tiago-pro, name: PAL Robotics TIAGo Pro, expected: rb-5, facts: {wheels_or_tracks: wheels, integrated_arm: true, manipulates: true, medium: ground}}
+- {handle: sensefly-ebee, name: senseFly eBee, expected: rb-6-2, facts: {medium: air, aerial_lift: fixed-wing}}
+- {handle: wingtra-one, name: WingtraOne, expected: rb-6-3, facts: {medium: air, aerial_lift: hybrid-vtol}}
+- {handle: hydroid-remus, name: HII REMUS, expected: rb-7-2, facts: {medium: water, aquatic_mode: auv}}
+- {handle: saildrone-explorer, name: Saildrone Explorer, expected: rb-7-3, facts: {medium: water, aquatic_mode: usv}}
+- {handle: onrobot-rg6, name: OnRobot RG6, expected: cp-1-1-1, facts: {component_kind: end-effector, grasps: true, fingers: 2, gripping_principle: finger}}
+- {handle: schmalz-fxcb, name: Schmalz FXCB area gripper, expected: cp-1-1-2, facts: {component_kind: end-effector, grasps: true, gripping_principle: vacuum}}
+- {handle: onrobot-mg10, name: OnRobot MG10, expected: cp-1-1-3, facts: {component_kind: end-effector, grasps: true, gripping_principle: magnetic}}
+- {handle: onrobot-soft-gripper, name: OnRobot Soft Gripper, expected: cp-1-1-4, facts: {component_kind: end-effector, grasps: true, gripping_principle: soft}}
+- {handle: soft-robotics-mgrip, name: Soft Robotics mGrip, expected: cp-1-1-4, facts: {component_kind: end-effector, grasps: true, gripping_principle: soft}}
+- {handle: inspire-rh56, name: Inspire RH56 dexterous hand, expected: cp-1-2, facts: {component_kind: end-effector, grasps: true, fingers: 5, opposable_thumb: true, dof: 6}}
+- {handle: onrobot-quick-changer, name: OnRobot Quick Changer, expected: cp-1-4, facts: {component_kind: end-effector, grasps: false, tool_changer: true}}
+- {handle: mab-md80, name: MAB Robotics MD80, expected: cp-2-1, facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: true}}
+- {handle: cubemars-ak80-9, name: CubeMars AK80-9, expected: cp-2-1, facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: true}}
+- {handle: feetech-sts3215, name: Feetech STS3215, expected: cp-2-2, facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: false}}
+- {handle: maxon-ec-flat, name: maxon EC flat, expected: cp-2-3, facts: {component_kind: actuator, motion: rotary, integrated_control: false, has_reducer: false}}
+- {handle: nabtesco-rv, name: Nabtesco RV reducer, expected: cp-2-4, facts: {component_kind: actuator, motion: rotary, reducer_only: true}}
+- {handle: festo-dnc, name: Festo DNC pneumatic cylinder, expected: cp-2-5, facts: {component_kind: actuator, motion: linear}}
+- {handle: zed-2i, name: Stereolabs ZED 2i, expected: cp-3-1, facts: {component_kind: sensor, sensor_type: camera}}
+- {handle: slamtec-rplidar-a1, name: Slamtec RPLIDAR A1, expected: cp-3-2, facts: {component_kind: sensor, sensor_type: lidar}}
+- {handle: ati-axia80, name: ATI Axia80, expected: cp-3-3, facts: {component_kind: sensor, sensor_type: force-torque}}
+- {handle: robotiq-ft-300, name: Robotiq FT 300-S, expected: cp-3-3, facts: {component_kind: sensor, sensor_type: force-torque}}
+- {handle: gelsight-mini, name: GelSight Mini, expected: cp-3-4, facts: {component_kind: sensor, sensor_type: tactile}}
+- {handle: xela-uskin, name: XELA uSkin, expected: cp-3-4, facts: {component_kind: sensor, sensor_type: tactile}}
+- {handle: xsens-mti-630, name: Xsens MTi-630, expected: cp-3-5, facts: {component_kind: sensor, sensor_type: inertial}}
+- {handle: renishaw-aksim, name: Renishaw AksIM, expected: cp-3-5, facts: {component_kind: sensor, sensor_type: inertial}}
+- {handle: raspberry-pi-5, name: Raspberry Pi 5, expected: cp-4, facts: {component_kind: compute}}
+- {handle: unitree-go2-battery, name: Unitree Go2 battery, expected: cp-5, facts: {component_kind: power}}
+- {handle: robotiq-wrist-camera-mount, name: Robotiq wrist camera mount, expected: cp-6, facts: {component_kind: structure}}
+- {handle: gello, name: GELLO leader arm, expected: cp-7, facts: {component_kind: teleoperation}}

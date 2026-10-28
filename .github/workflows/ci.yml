@@ -1,0 +1,19 @@
+name: CI
+on:
+  push: {branches: [main]}
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e ".[dev]"
+      - run: whatrobot-taxonomy validate
+      - run: pytest
+      - name: Check dist/, docs/ and schema/ are regenerated and committed
+        run: |
+          whatrobot-taxonomy dist && whatrobot-taxonomy docs && whatrobot-taxonomy schema
+          git add -A dist docs schema
+          git diff --cached --exit-code --stat -- dist docs schema || (echo "::error::generated files out of date — run: whatrobot-taxonomy dist && whatrobot-taxonomy docs && whatrobot-taxonomy schema, then commit" && exit 1)

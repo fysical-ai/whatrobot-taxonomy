@@ -1,0 +1,31 @@
+[project]
+name = "whatrobot-taxonomy"
+version = "2026.1"
+description = "whatro.bot robot and component taxonomy — source data, validators and distribution builder"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "fysical.ai"}]
+dependencies = ["pydantic>=2.6", "ruamel.yaml>=0.18"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://whatro.bot"
+Repository = "https://github.com/fysical-ai/whatrobot-taxonomy"
+Explorer = "https://fysical-ai.github.io/whatrobot-taxonomy/"
+
+[project.scripts]
+whatrobot-taxonomy = "whatrobot_taxonomy.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["whatrobot_taxonomy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

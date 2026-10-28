@@ -1,0 +1,67 @@
+# whatrobot taxonomy 2026-01 — CC BY 4.0
+gid://whatrobot/TaxonomyAttribute/1 : Manufacturer
+gid://whatrobot/TaxonomyAttribute/2 : Model
+gid://whatrobot/TaxonomyAttribute/3 : Variant
+gid://whatrobot/TaxonomyAttribute/4 : Aliases
+gid://whatrobot/TaxonomyAttribute/5 : Segment
+gid://whatrobot/TaxonomyAttribute/6 : Application group
+gid://whatrobot/TaxonomyAttribute/7 : Application
+gid://whatrobot/TaxonomyAttribute/8 : ISO 8373 category
+gid://whatrobot/TaxonomyAttribute/9 : Environment
+gid://whatrobot/TaxonomyAttribute/10 : Autonomy
+gid://whatrobot/TaxonomyAttribute/11 : Collaborative
+gid://whatrobot/TaxonomyAttribute/12 : Availability
+gid://whatrobot/TaxonomyAttribute/13 : Price
+gid://whatrobot/TaxonomyAttribute/14 : Currency
+gid://whatrobot/TaxonomyAttribute/15 : Price date
+gid://whatrobot/TaxonomyAttribute/16 : Price source
+gid://whatrobot/TaxonomyAttribute/17 : Release year
+gid://whatrobot/TaxonomyAttribute/18 : Country
+gid://whatrobot/TaxonomyAttribute/19 : Mass
+gid://whatrobot/TaxonomyAttribute/20 : Payload
+gid://whatrobot/TaxonomyAttribute/21 : Battery runtime
+gid://whatrobot/TaxonomyAttribute/22 : IP rating
+gid://whatrobot/TaxonomyAttribute/23 : Open source
+gid://whatrobot/TaxonomyAttribute/24 : SDK
+gid://whatrobot/TaxonomyAttribute/25 : Compatible with
+gid://whatrobot/TaxonomyAttribute/26 : Sources
+gid://whatrobot/TaxonomyAttribute/27 : Axes
+gid://whatrobot/TaxonomyAttribute/28 : Reach
+gid://whatrobot/TaxonomyAttribute/29 : Repeatability
+gid://whatrobot/TaxonomyAttribute/30 : Arm count
+gid://whatrobot/TaxonomyAttribute/31 : Mounting
+gid://whatrobot/TaxonomyAttribute/32 : Height
+gid://whatrobot/TaxonomyAttribute/33 : Total DOF
+gid://whatrobot/TaxonomyAttribute/34 : Hands included
+gid://whatrobot/TaxonomyAttribute/35 : Max speed
+gid://whatrobot/TaxonomyAttribute/36 : Wheel feet
+gid://whatrobot/TaxonomyAttribute/37 : Has arm
+gid://whatrobot/TaxonomyAttribute/38 : Drive configuration
+gid://whatrobot/TaxonomyAttribute/39 : Navigation
+gid://whatrobot/TaxonomyAttribute/40 : Flight time
+gid://whatrobot/TaxonomyAttribute/41 : Max take-off weight
+gid://whatrobot/TaxonomyAttribute/42 : Depth rating
+gid://whatrobot/TaxonomyAttribute/43 : Body region
+gid://whatrobot/TaxonomyAttribute/44 : Uses components
+gid://whatrobot/TaxonomyAttribute/45 : Flange standard
+gid://whatrobot/TaxonomyAttribute/46 : Interface
+gid://whatrobot/TaxonomyAttribute/47 : Voltage
+gid://whatrobot/TaxonomyAttribute/48 : Actuation
+gid://whatrobot/TaxonomyAttribute/49 : Grip force
+gid://whatrobot/TaxonomyAttribute/50 : Stroke
+gid://whatrobot/TaxonomyAttribute/51 : Finger count
+gid://whatrobot/TaxonomyAttribute/52 : DOF
+gid://whatrobot/TaxonomyAttribute/53 : Tactile sensing
+gid://whatrobot/TaxonomyAttribute/54 : Rated torque
+gid://whatrobot/TaxonomyAttribute/55 : Peak torque
+gid://whatrobot/TaxonomyAttribute/56 : Reducer type
+gid://whatrobot/TaxonomyAttribute/57 : Gear ratio
+gid://whatrobot/TaxonomyAttribute/58 : Rated force
+gid://whatrobot/TaxonomyAttribute/59 : Stall torque
+gid://whatrobot/TaxonomyAttribute/60 : Bus
+gid://whatrobot/TaxonomyAttribute/61 : Modality
+gid://whatrobot/TaxonomyAttribute/62 : Scan dimensions
+gid://whatrobot/TaxonomyAttribute/63 : Range
+gid://whatrobot/TaxonomyAttribute/64 : AI performance
+gid://whatrobot/TaxonomyAttribute/65 : Capacity
+gid://whatrobot/TaxonomyAttribute/66 : Teleoperation type

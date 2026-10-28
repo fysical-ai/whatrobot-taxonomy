@@ -1,0 +1,43 @@
+# whatrobot taxonomy — application → application_group map (docs/design.md §3.4)
+# Source of truth. Licence: CC BY 4.0. application_group is derived from this file; never set it by hand.
+# Every application value must appear exactly once.
+---
+application_group__manufacturing:
+  - application__handling
+  - application__machine-tending
+  - application__palletizing
+  - application__welding
+  - application__assembly
+  - application__painting-dispensing
+  - application__machining
+  - application__inspection-qc
+application_group__logistics:
+  - application__warehouse-logistics
+  - application__delivery
+  - application__transport
+application_group__professional-service:
+  - application__professional-cleaning
+  - application__inspection-maintenance
+  - application__agriculture
+  - application__construction
+  - application__security
+  - application__search-rescue
+  - application__hospitality-retail
+application_group__consumer:
+  - application__domestic-cleaning
+  - application__lawn-garden
+  - application__pool
+  - application__companionship
+  - application__entertainment
+  - application__telepresence
+application_group__health:
+  - application__surgery
+  - application__rehabilitation
+  - application__care-assistance
+application_group__knowledge:
+  - application__education
+  - application__research-platform
+application_group__general:
+  - application__general-purpose
+application_group__other:
+  - application__other

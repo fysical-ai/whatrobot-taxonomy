@@ -1,0 +1,815 @@
+# whatrobot taxonomy — attributes
+# Source of truth. Licence: CC BY 4.0 (see data/LICENSE).
+# Record = Shopify attribute record + type, multi, unit, ref_target, question.
+# Every enum lists its values by friendly_id and ends with <attr>__other.
+# Integer ids are permanent; never reuse.
+---
+# ------------------------------------------------ identity (rb + cp)
+- id: 1
+  name: Manufacturer
+  friendly_id: manufacturer
+  handle: manufacturer
+  description: The company that makes the product.
+  question: Who makes it?
+  type: ref
+  ref_target: manufacturer
+  multi: false
+
+- id: 2
+  name: Model
+  friendly_id: model
+  handle: model
+  description: Official model name as published by the manufacturer.
+  question: What is the official model name?
+  type: text
+  multi: false
+
+- id: 3
+  name: Variant
+  friendly_id: variant
+  handle: variant
+  description: Sub-model or configuration when listed separately by the manufacturer.
+  question: Which sub-model or configuration is this?
+  type: text
+  multi: false
+
+- id: 4
+  name: Aliases
+  friendly_id: aliases
+  handle: aliases
+  description: Other names people search for.
+  question: What else do people call it?
+  type: text
+  multi: true
+
+- id: 5
+  name: Segment
+  friendly_id: segment
+  handle: segment
+  description: Buyer groups that would plausibly buy this at list price.
+  question: Which of these groups would plausibly buy this at list price?
+  type: enum
+  multi: true
+  values:
+    - segment__hobby
+    - segment__education
+    - segment__research
+    - segment__professional
+    - segment__consumer
+    - segment__other
+
+- id: 6
+  name: Application group
+  friendly_id: application_group
+  handle: application-group
+  description: Top level of the two-level application vocabulary; derived from application values.
+  question: Derived — do not set by hand.
+  type: enum
+  multi: true
+  derived_from: application
+  values:
+    - application_group__manufacturing
+    - application_group__logistics
+    - application_group__professional-service
+    - application_group__consumer
+    - application_group__health
+    - application_group__knowledge
+    - application_group__general
+    - application_group__other
+
+- id: 7
+  name: Application
+  friendly_id: application
+  handle: application
+  description: What the product is marketed to do. Each value belongs to one application group.
+  question: What is it marketed to do?
+  type: enum
+  multi: true
+  values:
+    - application__handling
+    - application__machine-tending
+    - application__palletizing
+    - application__welding
+    - application__assembly
+    - application__painting-dispensing
+    - application__machining
+    - application__inspection-qc
+    - application__warehouse-logistics
+    - application__delivery
+    - application__transport
+    - application__professional-cleaning
+    - application__inspection-maintenance
+    - application__agriculture
+    - application__construction
+    - application__security
+    - application__search-rescue
+    - application__hospitality-retail
+    - application__domestic-cleaning
+    - application__lawn-garden
+    - application__pool
+    - application__companionship
+    - application__entertainment
+    - application__telepresence
+    - application__surgery
+    - application__rehabilitation
+    - application__care-assistance
+    - application__education
+    - application__research-platform
+    - application__general-purpose
+    - application__other
+
+- id: 8
+  name: ISO 8373 category
+  friendly_id: iso_category
+  handle: iso-category
+  description: Intended-use class under ISO 8373:2021, as positioned by the manufacturer.
+  question: Does the manufacturer position it as an industrial, service or medical robot?
+  type: enum
+  multi: false
+  values:
+    - iso_category__industrial
+    - iso_category__service
+    - iso_category__medical
+    - iso_category__other
+
+- id: 9
+  name: Environment
+  friendly_id: environment
+  handle: environment
+  description: Environments the product is rated to operate in.
+  question: Where is it rated to operate?
+  type: enum
+  multi: true
+  values:
+    - environment__indoor
+    - environment__outdoor
+    - environment__underwater
+    - environment__airborne
+    - environment__hazardous
+    - environment__space
+    - environment__other
+
+- id: 10
+  name: Autonomy
+  friendly_id: autonomy
+  handle: autonomy
+  description: Highest level of unsupervised operation supported out of the box.
+  question: What is the highest level of unsupervised operation out of the box?
+  type: enum
+  multi: false
+  values:
+    - autonomy__teleoperated
+    - autonomy__assisted
+    - autonomy__semi-autonomous
+    - autonomy__autonomous
+    - autonomy__other
+
+- id: 11
+  name: Collaborative
+  friendly_id: collaborative
+  handle: collaborative
+  description: Rated for unguarded operation alongside people (ISO 10218 / ISO/TS 15066).
+  question: Is it rated for unguarded operation alongside people?
+  type: bool
+  multi: false
+
+- id: 12
+  name: Availability
+  friendly_id: availability
+  handle: availability
+  description: Whether the product can be bought today.
+  question: Can you buy it today?
+  type: enum
+  multi: false
+  values:
+    - availability__shipping
+    - availability__preorder
+    - availability__announced
+    - availability__research-only
+    - availability__discontinued
+    - availability__other
+
+- id: 13
+  name: Price
+  friendly_id: price
+  handle: price
+  description: List price as published. Must be accompanied by currency, price_date and price_source.
+  question: What is the published list price?
+  type: number
+  unit: currency
+  multi: false
+  companions: [currency, price_date, price_source]
+
+- id: 14
+  name: Currency
+  friendly_id: currency
+  handle: currency
+  description: ISO 4217 code of the price.
+  question: In which currency is the price published?
+  type: text
+  format: iso-4217
+  multi: false
+
+- id: 15
+  name: Price date
+  friendly_id: price_date
+  handle: price-date
+  description: Date the price was observed (ISO 8601).
+  question: When was the price observed?
+  type: text
+  format: iso-8601-date
+  multi: false
+
+- id: 16
+  name: Price source
+  friendly_id: price_source
+  handle: price-source
+  description: URL where the price was observed.
+  question: Where was the price observed?
+  type: text
+  format: url
+  multi: false
+
+- id: 17
+  name: Release year
+  friendly_id: release_year
+  handle: release-year
+  description: Year of first commercial availability.
+  question: When was it first commercially available?
+  type: number
+  unit: year
+  multi: false
+
+- id: 18
+  name: Country
+  friendly_id: country
+  handle: country
+  description: Manufacturer headquarters, ISO 3166-1 alpha-2.
+  question: Where is the manufacturer headquartered?
+  type: text
+  format: iso-3166-1-alpha-2
+  multi: false
+
+- id: 19
+  name: Mass
+  friendly_id: mass
+  handle: mass
+  description: Product mass as specified.
+  question: What is the specified mass?
+  type: number
+  unit: kg
+  multi: false
+
+- id: 20
+  name: Payload
+  friendly_id: payload
+  handle: payload
+  description: "Rated payload. Arm: at the wrist. Mobile robot: on the deck. End-effector: held object."
+  question: What is the rated payload?
+  type: number
+  unit: kg
+  multi: false
+
+- id: 21
+  name: Battery runtime
+  friendly_id: battery_runtime
+  handle: battery-runtime
+  description: Manufacturer-rated runtime on one charge.
+  question: What is the manufacturer-rated battery runtime?
+  type: number
+  unit: min
+  multi: false
+
+- id: 22
+  name: IP rating
+  friendly_id: ip_rating
+  handle: ip-rating
+  description: Ingress protection rating (IEC 60529), e.g. IP54.
+  question: What IP rating does the spec sheet state?
+  type: text
+  format: ip-code
+  multi: false
+
+- id: 23
+  name: Open source
+  friendly_id: open_source
+  handle: open-source
+  description: Which parts of the product are published under an open licence.
+  question: Is the hardware and/or software open source?
+  type: enum
+  multi: true
+  values:
+    - open_source__hardware
+    - open_source__software
+    - open_source__none
+    - open_source__other
+
+- id: 24
+  name: SDK
+  friendly_id: sdk
+  handle: sdk
+  description: Officially supported programming interfaces.
+  question: Which SDKs or frameworks are officially supported?
+  type: enum
+  multi: true
+  values:
+    - sdk__ros1
+    - sdk__ros2
+    - sdk__python
+    - sdk__cpp
+    - sdk__proprietary
+    - sdk__none
+    - sdk__other
+
+- id: 25
+  name: Compatible with
+  friendly_id: compatible_with
+  handle: compatible-with
+  description: Robots or components officially supported together with this product.
+  question: What is it officially compatible with?
+  type: ref
+  ref_target: [robot, component]
+  multi: true
+
+- id: 26
+  name: Sources
+  friendly_id: sources
+  handle: sources
+  description: URL and date for each fact.
+  question: Where did each fact come from?
+  type: text
+  multi: true
+
+# ------------------------------------------------ robot branch-bound
+- id: 27
+  name: Axes
+  friendly_id: axes
+  handle: axes
+  description: "Number of controlled axes. Arm: joints. Force-torque sensor: measured axes."
+  question: How many axes does the spec sheet state?
+  type: number
+  unit: count
+  multi: false
+
+- id: 28
+  name: Reach
+  friendly_id: reach
+  handle: reach
+  description: Maximum reach of the arm.
+  question: What is the maximum reach?
+  type: number
+  unit: mm
+  multi: false
+
+- id: 29
+  name: Repeatability
+  friendly_id: repeatability
+  handle: repeatability
+  description: Position repeatability as specified.
+  question: What repeatability does the spec sheet state?
+  type: number
+  unit: mm
+  multi: false
+
+- id: 30
+  name: Arm count
+  friendly_id: arm_count
+  handle: arm-count
+  description: Number of arms on the product.
+  question: How many arms does it have?
+  type: number
+  unit: count
+  multi: false
+
+- id: 31
+  name: Mounting
+  friendly_id: mounting
+  handle: mounting
+  description: Positions in which an arm can be mounted.
+  question: Where can it be mounted?
+  type: enum
+  multi: true
+  values:
+    - mounting__floor
+    - mounting__table
+    - mounting__wall
+    - mounting__ceiling
+    - mounting__mobile
+    - mounting__other
+
+- id: 32
+  name: Height
+  friendly_id: height
+  handle: height
+  description: Standing height.
+  question: What is the standing height?
+  type: number
+  unit: mm
+  multi: false
+
+- id: 33
+  name: Total DOF
+  friendly_id: dof_total
+  handle: dof-total
+  description: Total degrees of freedom, excluding hands.
+  question: How many degrees of freedom, excluding hands?
+  type: number
+  unit: count
+  multi: false
+
+- id: 34
+  name: Hands included
+  friendly_id: hands_included
+  handle: hands-included
+  description: What end-effectors ship with the robot.
+  question: What hands or grippers are included?
+  type: enum
+  multi: false
+  values:
+    - hands_included__none
+    - hands_included__gripper
+    - hands_included__dexterous-hand
+    - hands_included__optional
+    - hands_included__other
+
+- id: 35
+  name: Max speed
+  friendly_id: max_speed
+  handle: max-speed
+  description: Maximum locomotion speed.
+  question: What is the maximum speed?
+  type: number
+  unit: m/s
+  multi: false
+
+- id: 36
+  name: Wheel feet
+  friendly_id: wheel_feet
+  handle: wheel-feet
+  description: Legged robot with wheels on its feet.
+  question: Does it have wheels on its feet?
+  type: bool
+  multi: false
+
+- id: 37
+  name: Has arm
+  friendly_id: has_arm
+  handle: has-arm
+  description: An arm is available as an add-on.
+  question: Is an arm available as an add-on?
+  type: bool
+  multi: false
+
+- id: 38
+  name: Drive configuration
+  friendly_id: drive_config
+  handle: drive-config
+  description: How a ground base steers and propels itself.
+  question: What drive configuration does the spec sheet state?
+  type: enum
+  multi: false
+  values:
+    - drive_config__differential
+    - drive_config__omnidirectional
+    - drive_config__ackermann
+    - drive_config__tracked
+    - drive_config__other
+
+- id: 39
+  name: Navigation
+  friendly_id: navigation
+  handle: navigation
+  description: How a ground robot navigates.
+  question: How does it navigate?
+  type: enum
+  multi: false
+  values:
+    - navigation__line-following
+    - navigation__marker-based
+    - navigation__slam
+    - navigation__none
+    - navigation__other
+
+- id: 40
+  name: Flight time
+  friendly_id: flight_time
+  handle: flight-time
+  description: Manufacturer-rated flight time.
+  question: What is the rated flight time?
+  type: number
+  unit: min
+  multi: false
+
+- id: 41
+  name: Max take-off weight
+  friendly_id: max_takeoff_weight
+  handle: max-takeoff-weight
+  description: Maximum take-off weight.
+  question: What is the maximum take-off weight?
+  type: number
+  unit: kg
+  multi: false
+
+- id: 42
+  name: Depth rating
+  friendly_id: depth_rating
+  handle: depth-rating
+  description: Maximum rated operating depth.
+  question: What is the maximum rated depth?
+  type: number
+  unit: m
+  multi: false
+
+- id: 43
+  name: Body region
+  friendly_id: body_region
+  handle: body-region
+  description: Body regions a wearable robot acts on.
+  question: Which body regions does it act on?
+  type: enum
+  multi: true
+  values:
+    - body_region__lower-limb
+    - body_region__upper-limb
+    - body_region__back
+    - body_region__full-body
+    - body_region__other
+
+# ------------------------------------------------ component universal
+- id: 44
+  name: Uses components
+  friendly_id: uses_components
+  handle: uses-components
+  description: Separately listed components this product is built from (e.g. a hand's actuators).
+  question: Which listed components is it built from?
+  type: ref
+  ref_target: component
+  multi: true
+
+- id: 45
+  name: Flange standard
+  friendly_id: flange_standard
+  handle: flange-standard
+  description: Mechanical mounting interface standard between a component and a robot.
+  question: Which flange standard does it mount to?
+  type: enum
+  multi: true
+  values:
+    - flange_standard__iso-9409-1-50
+    - flange_standard__iso-9409-1-31
+    - flange_standard__custom
+    - flange_standard__na
+    - flange_standard__other
+
+- id: 46
+  name: Interface
+  friendly_id: interface
+  handle: interface
+  description: Electrical and communication interfaces.
+  question: Which interfaces does it offer?
+  type: enum
+  multi: true
+  values:
+    - interface__ethercat
+    - interface__can
+    - interface__modbus-tcp
+    - interface__rs485
+    - interface__usb
+    - interface__ethernet
+    - interface__io-link
+    - interface__digital-io
+    - interface__pneumatic
+    - interface__other
+
+- id: 47
+  name: Voltage
+  friendly_id: voltage
+  handle: voltage
+  description: Nominal supply voltage.
+  question: What is the nominal supply voltage?
+  type: number
+  unit: V
+  multi: false
+
+- id: 48
+  name: Actuation
+  friendly_id: actuation
+  handle: actuation
+  description: Energy source that drives the component.
+  question: How is it actuated?
+  type: enum
+  multi: false
+  values:
+    - actuation__electric
+    - actuation__pneumatic
+    - actuation__hydraulic
+    - actuation__vacuum
+    - actuation__passive
+    - actuation__other
+
+# ------------------------------------------------ component branch-bound
+- id: 49
+  name: Grip force
+  friendly_id: grip_force
+  handle: grip-force
+  description: Maximum gripping force.
+  question: What is the maximum grip force?
+  type: number
+  unit: N
+  multi: false
+
+- id: 50
+  name: Stroke
+  friendly_id: stroke
+  handle: stroke
+  description: "Total travel. Gripper: jaw opening. Linear actuator: output travel."
+  question: What is the total stroke?
+  type: number
+  unit: mm
+  multi: false
+
+- id: 51
+  name: Finger count
+  friendly_id: finger_count
+  handle: finger-count
+  description: Number of fingers or jaws.
+  question: How many fingers or jaws?
+  type: number
+  unit: count
+  multi: false
+
+- id: 52
+  name: DOF
+  friendly_id: dof
+  handle: dof
+  description: Active degrees of freedom.
+  question: How many active degrees of freedom?
+  type: number
+  unit: count
+  multi: false
+
+- id: 53
+  name: Tactile sensing
+  friendly_id: tactile_sensing
+  handle: tactile-sensing
+  description: Built-in tactile sensing.
+  question: Does it have built-in tactile sensing?
+  type: bool
+  multi: false
+
+- id: 54
+  name: Rated torque
+  friendly_id: rated_torque
+  handle: rated-torque
+  description: Continuous rated torque.
+  question: What is the continuous rated torque?
+  type: number
+  unit: Nm
+  multi: false
+
+- id: 55
+  name: Peak torque
+  friendly_id: peak_torque
+  handle: peak-torque
+  description: Peak torque.
+  question: What is the peak torque?
+  type: number
+  unit: Nm
+  multi: false
+
+- id: 56
+  name: Reducer type
+  friendly_id: reducer_type
+  handle: reducer-type
+  description: Gear reduction principle.
+  question: What type of reducer does it use?
+  type: enum
+  multi: false
+  values:
+    - reducer_type__harmonic
+    - reducer_type__cycloidal
+    - reducer_type__rv
+    - reducer_type__planetary
+    - reducer_type__quasi-direct
+    - reducer_type__none
+    - reducer_type__other
+
+- id: 57
+  name: Gear ratio
+  friendly_id: gear_ratio
+  handle: gear-ratio
+  description: Reduction ratio expressed as N in N:1.
+  question: What is the reduction ratio?
+  type: number
+  unit: ratio
+  multi: false
+
+- id: 58
+  name: Rated force
+  friendly_id: rated_force
+  handle: rated-force
+  description: Continuous rated linear force.
+  question: What is the rated force?
+  type: number
+  unit: N
+  multi: false
+
+- id: 59
+  name: Stall torque
+  friendly_id: stall_torque
+  handle: stall-torque
+  description: Servo stall torque.
+  question: What is the stall torque?
+  type: number
+  unit: kg·cm
+  multi: false
+
+- id: 60
+  name: Bus
+  friendly_id: bus
+  handle: bus
+  description: Servo communication bus.
+  question: Which bus does the servo use?
+  type: enum
+  multi: false
+  values:
+    - bus__ttl
+    - bus__rs485
+    - bus__can
+    - bus__pwm
+    - bus__other
+
+- id: 61
+  name: Modality
+  friendly_id: modality
+  handle: modality
+  description: Imaging modalities of a camera.
+  question: Which imaging modalities does it provide?
+  type: enum
+  multi: true
+  values:
+    - modality__rgb
+    - modality__depth
+    - modality__stereo
+    - modality__thermal
+    - modality__event
+    - modality__other
+
+- id: 62
+  name: Scan dimensions
+  friendly_id: scan_dimensions
+  handle: scan-dimensions
+  description: Whether a lidar scans a plane or a volume.
+  question: Is it a 2D or 3D lidar?
+  type: enum
+  multi: false
+  values:
+    - scan_dimensions__2d
+    - scan_dimensions__3d
+    - scan_dimensions__other
+
+- id: 63
+  name: Range
+  friendly_id: range
+  handle: range
+  description: Maximum measurement range.
+  question: What is the maximum range?
+  type: number
+  unit: m
+  multi: false
+
+- id: 64
+  name: AI performance
+  friendly_id: ai_tops
+  handle: ai-tops
+  description: Peak AI compute performance.
+  question: What peak AI performance does the spec sheet state?
+  type: number
+  unit: TOPS
+  multi: false
+
+- id: 65
+  name: Capacity
+  friendly_id: capacity
+  handle: capacity
+  description: Energy capacity.
+  question: What is the energy capacity?
+  type: number
+  unit: Wh
+  multi: false
+
+- id: 66
+  name: Teleoperation type
+  friendly_id: teleop_type
+  handle: teleop-type
+  description: Kind of teleoperation device.
+  question: What kind of teleoperation device is it?
+  type: enum
+  multi: false
+  values:
+    - teleop_type__leader-arm
+    - teleop_type__haptic-device
+    - teleop_type__vr-rig
+    - teleop_type__mocap
+    - teleop_type__gamepad
+    - teleop_type__other

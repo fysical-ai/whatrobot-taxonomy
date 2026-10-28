@@ -1,0 +1,24 @@
+name: Localisation fix
+description: Report a wrong translation (non-English text).
+labels: [localisation]
+body:
+  - type: input
+    id: locale
+    attributes:
+      label: Locale
+      placeholder: zh-Hans
+    validations:
+      required: true
+  - type: input
+    id: key
+    attributes:
+      label: Category id, or attribute / value friendly_id
+      placeholder: rb-3-1
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Current text and proposed text
+    validations:
+      required: true

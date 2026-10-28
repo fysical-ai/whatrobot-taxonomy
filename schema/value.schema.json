@@ -1,0 +1,33 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "exclusiveMinimum": 0,
+      "title": "Id",
+      "type": "integer"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "friendly_id": {
+      "pattern": "^[a-z][a-z0-9_]*__[a-z0-9][a-z0-9.-]*$",
+      "title": "Friendly Id",
+      "type": "string"
+    },
+    "handle": {
+      "minLength": 1,
+      "title": "Handle",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "friendly_id",
+    "handle"
+  ],
+  "title": "Value",
+  "type": "object"
+}

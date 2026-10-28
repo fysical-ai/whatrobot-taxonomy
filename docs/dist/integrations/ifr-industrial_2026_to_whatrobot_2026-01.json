@@ -1,0 +1,107 @@
+{
+  "version": "2026-01",
+  "mappings": [
+    {
+      "input_taxonomy": "ifr-industrial/2026",
+      "output_taxonomy": "whatrobot/2026-01",
+      "rules": [
+        {
+          "input": {
+            "category": {
+              "id": "10",
+              "full_name": "Articulated robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-1",
+                "full_name": "Robot > Arm > Articulated arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "20",
+              "full_name": "Linear / cartesian / gantry robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-4",
+                "full_name": "Robot > Arm > Cartesian arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "30",
+              "full_name": "SCARA robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-2",
+                "full_name": "Robot > Arm > SCARA arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "40",
+              "full_name": "Parallel robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-3",
+                "full_name": "Robot > Arm > Parallel arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "50",
+              "full_name": "Cylindrical robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
+                "full_name": "Robot > Arm > Cylindrical arm"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "90",
+              "full_name": "Others / not classified"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1",
+                "full_name": "Robot > Arm"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

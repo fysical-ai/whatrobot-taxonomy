@@ -1,0 +1,171 @@
+{
+  "version": "2026-01",
+  "mappings": [
+    {
+      "input_taxonomy": "whatrobot/2026-01",
+      "output_taxonomy": "shopify/2026-08",
+      "rules": [
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1",
+              "full_name": "Robot > Arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-1",
+              "full_name": "Robot > Arm > Articulated arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-2",
+              "full_name": "Robot > Arm > SCARA arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-3",
+              "full_name": "Robot > Arm > Parallel arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-4",
+              "full_name": "Robot > Arm > Cartesian arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
+              "full_name": "Robot > Arm > Cylindrical arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "bi-17"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2-3",
+              "full_name": "Component > Actuator > Motor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-3-1-9",
+                "full_name": "bi-3-1-9"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-4",
+              "full_name": "Robot > Ground robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-18",
+                "full_name": "bi-18"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-4-1",
+              "full_name": "Robot > Ground robot > Wheeled robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-18",
+                "full_name": "bi-18"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-4-2",
+              "full_name": "Robot > Ground robot > Tracked robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-18",
+                "full_name": "bi-18"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

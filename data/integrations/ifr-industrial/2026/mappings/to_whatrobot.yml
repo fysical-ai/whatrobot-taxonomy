@@ -1,0 +1,15 @@
+# IFR industrial robot type class → whatrobot category.
+---
+rules:
+  - input: {category_id: "10"}
+    output: {category_id: [rb-1-1]}
+  - input: {category_id: "20"}
+    output: {category_id: [rb-1-4]}
+  - input: {category_id: "30"}
+    output: {category_id: [rb-1-2]}
+  - input: {category_id: "40"}
+    output: {category_id: [rb-1-3]}
+  - input: {category_id: "50"}
+    output: {category_id: [rb-1-5]}
+  - input: {category_id: "90"}
+    output: {category_id: [rb-1]}

@@ -1,0 +1,69 @@
+# whatrobot taxonomy — zh-Hans localisation of attributes
+# Licence: CC BY 4.0. Status: LLM DRAFT 2026-10-27 — requires native-reader review. Keyed by attribute friendly_id.
+---
+manufacturer: {name: 制造商, description: 生产该产品的公司。}
+model: {name: 型号, description: 制造商公布的正式型号名称。}
+variant: {name: 版本, description: 制造商单独列出的子型号或配置。}
+aliases: {name: 别名, description: 人们搜索时使用的其他名称。}
+segment: {name: 用户群, description: 可能以标价购买该产品的用户群体。}
+application_group: {name: 应用领域, description: 两级应用词表的上层；由应用值推导得出。}
+application: {name: 应用, description: 产品所宣传的用途。}
+iso_category: {name: ISO 8373 类别, description: 制造商定位的 ISO 8373:2021 用途类别。}
+environment: {name: 环境, description: 产品额定可运行的环境。}
+autonomy: {name: 自主性, description: 出厂即支持的最高无人监督运行等级。}
+collaborative: {name: 协作, description: 是否通过无防护人机共处的安全认证（ISO 10218 / ISO/TS 15066）。}
+availability: {name: 供货状态, description: 现在是否可以购买。}
+price: {name: 价格, description: 公布的标价。须附带币种、日期和来源。}
+currency: {name: 币种, description: 价格的 ISO 4217 货币代码。}
+price_date: {name: 价格日期, description: 观察到该价格的日期。}
+price_source: {name: 价格来源, description: 观察到该价格的网址。}
+release_year: {name: 发布年份, description: 首次商业化供货的年份。}
+country: {name: 国家, description: 制造商总部所在国家（ISO 3166-1 两位代码）。}
+mass: {name: 质量, description: 规格表标明的产品质量。}
+payload: {name: 负载, description: 额定负载。机械臂：腕部；移动机器人：台面；末端执行器：所持物体。}
+battery_runtime: {name: 电池续航, description: 制造商标称的单次充电运行时间。}
+ip_rating: {name: 防护等级, description: IEC 60529 防护等级，如 IP54。}
+open_source: {name: 开源, description: 产品中以开放许可发布的部分。}
+sdk: {name: SDK, description: 官方支持的编程接口。}
+compatible_with: {name: 兼容, description: 官方支持与本产品配合使用的机器人或部件。}
+sources: {name: 来源, description: 每项事实的网址和日期。}
+axes: {name: 轴数, description: 受控轴的数量。机械臂：关节数；力/力矩传感器：测量轴数。}
+reach: {name: 臂展, description: 机械臂的最大工作半径。}
+repeatability: {name: 重复定位精度, description: 规格表标明的位置重复精度。}
+arm_count: {name: 机械臂数量, description: 产品上的机械臂数量。}
+mounting: {name: 安装方式, description: 机械臂可安装的位置。}
+height: {name: 高度, description: 站立高度。}
+dof_total: {name: 总自由度, description: 不含手部的总自由度数。}
+hands_included: {name: 随附手部, description: 随机器人配备的末端执行器。}
+max_speed: {name: 最高速度, description: 最高移动速度。}
+wheel_feet: {name: 轮足, description: 足端带轮的足式机器人。}
+has_arm: {name: 可选机械臂, description: 可作为附件选配机械臂。}
+drive_config: {name: 驱动形式, description: 地面底盘的转向与推进方式。}
+navigation: {name: 导航方式, description: 地面机器人的导航方式。}
+flight_time: {name: 飞行时间, description: 制造商标称的飞行时间。}
+max_takeoff_weight: {name: 最大起飞重量, description: 最大起飞重量。}
+depth_rating: {name: 额定深度, description: 最大额定工作深度。}
+body_region: {name: 作用部位, description: 可穿戴机器人作用的身体部位。}
+uses_components: {name: 所用部件, description: 本产品由哪些单独列出的部件构成（如灵巧手的执行器）。}
+flange_standard: {name: 法兰标准, description: 部件与机器人之间的机械安装接口标准。}
+interface: {name: 接口, description: 电气与通信接口。}
+voltage: {name: 电压, description: 额定供电电压。}
+actuation: {name: 驱动方式, description: 驱动部件的能量来源。}
+grip_force: {name: 夹持力, description: 最大夹持力。}
+stroke: {name: 行程, description: 总行程。夹爪：开口宽度；直线执行器：输出行程。}
+finger_count: {name: 手指数量, description: 手指或钳口的数量。}
+dof: {name: 自由度, description: 主动自由度数。}
+tactile_sensing: {name: 触觉感知, description: 内置触觉传感。}
+rated_torque: {name: 额定扭矩, description: 连续额定扭矩。}
+peak_torque: {name: 峰值扭矩, description: 峰值扭矩。}
+reducer_type: {name: 减速器类型, description: 减速原理。}
+gear_ratio: {name: 减速比, description: 以 N:1 中的 N 表示的减速比。}
+rated_force: {name: 额定推力, description: 连续额定直线推力。}
+stall_torque: {name: 堵转扭矩, description: 舵机堵转扭矩。}
+bus: {name: 总线, description: 舵机通信总线。}
+modality: {name: 成像模式, description: 相机的成像模式。}
+scan_dimensions: {name: 扫描维度, description: 激光雷达扫描平面还是空间。}
+range: {name: 量程, description: 最大测量距离。}
+ai_tops: {name: AI 算力, description: 峰值 AI 计算性能。}
+capacity: {name: 容量, description: 能量容量。}
+teleop_type: {name: 遥操作类型, description: 遥操作设备的类型。}

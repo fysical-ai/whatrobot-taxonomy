@@ -1,0 +1,87 @@
+{
+  "$defs": {
+    "MappingRule": {
+      "additionalProperties": false,
+      "properties": {
+        "input": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Input",
+          "type": "object"
+        },
+        "output": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Output",
+          "type": "object"
+        }
+      },
+      "required": [
+        "input",
+        "output"
+      ],
+      "title": "MappingRule",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "input_kind": {
+      "default": "category",
+      "enum": [
+        "category",
+        "attribute_value"
+      ],
+      "title": "Input Kind",
+      "type": "string"
+    },
+    "scope": {
+      "default": [
+        "rb",
+        "cp"
+      ],
+      "items": {
+        "enum": [
+          "rb",
+          "cp"
+        ],
+        "type": "string"
+      },
+      "title": "Scope",
+      "type": "array"
+    },
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/MappingRule"
+      },
+      "title": "Rules",
+      "type": "array"
+    },
+    "unmapped_category_ids": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Unmapped Category Ids",
+      "type": "array"
+    },
+    "unmapped_attribute_values": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Unmapped Attribute Values",
+      "type": "array"
+    }
+  },
+  "required": [
+    "rules"
+  ],
+  "title": "MappingFile",
+  "type": "object"
+}

@@ -1,0 +1,13 @@
+# whatrobot iso_category attribute value → ISO 8373:2021 robot class.
+# ISO classifies by intended use (note 3 to entry 3.1), so this maps an attribute, not the tree.
+---
+input_kind: attribute_value
+rules:
+  - input: {attribute_value: iso_category__industrial}
+    output: {category_id: [industrial-robot]}
+  - input: {attribute_value: iso_category__service}
+    output: {category_id: [service-robot]}
+  - input: {attribute_value: iso_category__medical}
+    output: {category_id: [medical-robot]}
+unmapped_attribute_values:
+  - iso_category__other

@@ -1,0 +1,58 @@
+# whatrobot taxonomy 2026-01 — CC BY 4.0
+gid://whatrobot/TaxonomyCategory/cp : Component
+gid://whatrobot/TaxonomyCategory/cp-1 : Component > End-effector
+gid://whatrobot/TaxonomyCategory/cp-1-1 : Component > End-effector > Gripper
+gid://whatrobot/TaxonomyCategory/cp-1-1-1 : Component > End-effector > Gripper > Finger gripper
+gid://whatrobot/TaxonomyCategory/cp-1-1-2 : Component > End-effector > Gripper > Vacuum gripper
+gid://whatrobot/TaxonomyCategory/cp-1-1-3 : Component > End-effector > Gripper > Magnetic gripper
+gid://whatrobot/TaxonomyCategory/cp-1-1-4 : Component > End-effector > Gripper > Soft gripper
+gid://whatrobot/TaxonomyCategory/cp-1-2 : Component > End-effector > Hand
+gid://whatrobot/TaxonomyCategory/cp-1-3 : Component > End-effector > Tool
+gid://whatrobot/TaxonomyCategory/cp-1-4 : Component > End-effector > Tool changer
+gid://whatrobot/TaxonomyCategory/cp-2 : Component > Actuator
+gid://whatrobot/TaxonomyCategory/cp-2-1 : Component > Actuator > Joint module
+gid://whatrobot/TaxonomyCategory/cp-2-2 : Component > Actuator > Servo
+gid://whatrobot/TaxonomyCategory/cp-2-3 : Component > Actuator > Motor
+gid://whatrobot/TaxonomyCategory/cp-2-4 : Component > Actuator > Reducer
+gid://whatrobot/TaxonomyCategory/cp-2-5 : Component > Actuator > Linear actuator
+gid://whatrobot/TaxonomyCategory/cp-3 : Component > Sensor
+gid://whatrobot/TaxonomyCategory/cp-3-1 : Component > Sensor > Camera
+gid://whatrobot/TaxonomyCategory/cp-3-2 : Component > Sensor > Lidar
+gid://whatrobot/TaxonomyCategory/cp-3-3 : Component > Sensor > Force-torque sensor
+gid://whatrobot/TaxonomyCategory/cp-3-4 : Component > Sensor > Tactile sensor
+gid://whatrobot/TaxonomyCategory/cp-3-5 : Component > Sensor > Inertial / encoder
+gid://whatrobot/TaxonomyCategory/cp-4 : Component > Compute
+gid://whatrobot/TaxonomyCategory/cp-5 : Component > Power
+gid://whatrobot/TaxonomyCategory/cp-6 : Component > Structure
+gid://whatrobot/TaxonomyCategory/cp-7 : Component > Teleoperation
+gid://whatrobot/TaxonomyCategory/rb : Robot
+gid://whatrobot/TaxonomyCategory/rb-1 : Robot > Arm
+gid://whatrobot/TaxonomyCategory/rb-1-1 : Robot > Arm > Articulated arm
+gid://whatrobot/TaxonomyCategory/rb-1-2 : Robot > Arm > SCARA arm
+gid://whatrobot/TaxonomyCategory/rb-1-3 : Robot > Arm > Parallel arm
+gid://whatrobot/TaxonomyCategory/rb-1-4 : Robot > Arm > Cartesian arm
+gid://whatrobot/TaxonomyCategory/rb-1-5 : Robot > Arm > Cylindrical arm
+gid://whatrobot/TaxonomyCategory/rb-2 : Robot > Humanoid
+gid://whatrobot/TaxonomyCategory/rb-2-1 : Robot > Humanoid > Bipedal humanoid
+gid://whatrobot/TaxonomyCategory/rb-2-2 : Robot > Humanoid > Wheeled-base humanoid
+gid://whatrobot/TaxonomyCategory/rb-2-3 : Robot > Humanoid > Fixed-base humanoid
+gid://whatrobot/TaxonomyCategory/rb-3 : Robot > Legged robot
+gid://whatrobot/TaxonomyCategory/rb-3-1 : Robot > Legged robot > Quadruped
+gid://whatrobot/TaxonomyCategory/rb-3-2 : Robot > Legged robot > Biped
+gid://whatrobot/TaxonomyCategory/rb-3-3 : Robot > Legged robot > Multi-legged
+gid://whatrobot/TaxonomyCategory/rb-4 : Robot > Ground robot
+gid://whatrobot/TaxonomyCategory/rb-4-1 : Robot > Ground robot > Wheeled robot
+gid://whatrobot/TaxonomyCategory/rb-4-2 : Robot > Ground robot > Tracked robot
+gid://whatrobot/TaxonomyCategory/rb-5 : Robot > Mobile manipulator
+gid://whatrobot/TaxonomyCategory/rb-6 : Robot > Aerial robot
+gid://whatrobot/TaxonomyCategory/rb-6-1 : Robot > Aerial robot > Multirotor
+gid://whatrobot/TaxonomyCategory/rb-6-2 : Robot > Aerial robot > Fixed-wing
+gid://whatrobot/TaxonomyCategory/rb-6-3 : Robot > Aerial robot > Hybrid VTOL
+gid://whatrobot/TaxonomyCategory/rb-7 : Robot > Aquatic robot
+gid://whatrobot/TaxonomyCategory/rb-7-1 : Robot > Aquatic robot > ROV
+gid://whatrobot/TaxonomyCategory/rb-7-2 : Robot > Aquatic robot > AUV
+gid://whatrobot/TaxonomyCategory/rb-7-3 : Robot > Aquatic robot > USV
+gid://whatrobot/TaxonomyCategory/rb-8 : Robot > Wearable robot
+gid://whatrobot/TaxonomyCategory/rb-8-1 : Robot > Wearable robot > Exoskeleton
+gid://whatrobot/TaxonomyCategory/rb-9 : Robot > Stationary robot
+gid://whatrobot/TaxonomyCategory/rb-10 : Robot > Kit

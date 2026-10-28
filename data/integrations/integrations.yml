@@ -1,0 +1,23 @@
+# whatrobot taxonomy — integrations with external taxonomies (docs/design.md §9.5)
+# Licence: CC BY 4.0. Each integration has one or more versions; each version has mappings/.
+---
+- name: ifr-industrial
+  description: IFR World Robotics industrial robot type classes (classification by mechanical structure).
+  source: https://ifr.org/img/office/Industrial_Robots_2016_Chapter_1_2.pdf
+  available_versions: ["2026"]
+- name: ifr-service
+  description: IFR World Robotics service robot application groups (professional / consumer / medical).
+  source: https://ifr.org/wr-service-robots
+  available_versions: ["2026"]
+- name: iso-8373
+  description: ISO 8373:2021 robot classes by intended use (industrial, service, medical).
+  source: https://www.iso.org/standard/75539.html
+  available_versions: ["2021"]
+- name: google
+  description: Google product taxonomy (Merchant Center).
+  source: https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.txt
+  available_versions: ["2021-09-21"]
+- name: shopify
+  description: Shopify Standard Product Taxonomy.
+  source: https://github.com/Shopify/product-taxonomy
+  available_versions: ["2026-08"]

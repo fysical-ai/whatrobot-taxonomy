@@ -1,0 +1,316 @@
+# whatrobot taxonomy — component hierarchy (root cp)
+# Source of truth. Licence: CC BY 4.0 (see data/LICENSE).
+# Lists only things sold separately. Parts integrated into a robot are specs, not entries.
+---
+- id: cp
+  name: Component
+  friendly_id: component
+  handle: component
+  description: A robot part or accessory sold separately from a complete robot.
+  aliases: [components, accessories, parts, peripherals]
+  inclusion_rule: Sold separately and intended to be fitted to, or used with, a robot.
+  children: [cp-1, cp-2, cp-3, cp-4, cp-5, cp-6, cp-7]
+  attributes:
+    - manufacturer
+    - model
+    - variant
+    - aliases
+    - segment
+    - availability
+    - price
+    - release_year
+    - country
+    - mass
+    - ip_rating
+    - open_source
+    - sdk
+    - sources
+    - compatible_with
+    - uses_components
+    - flange_standard
+    - interface
+    - voltage
+    - actuation
+  examples: []
+
+# -------------------------------------------------------- cp-1 end-effector
+- id: cp-1
+  name: End-effector
+  friendly_id: component.end-effector
+  handle: end-effector
+  description: Device mounted at the end of an arm or wrist that acts on the world.
+  aliases: [end of arm tooling, EOAT, end effector]
+  inclusion_rule: Mounts to a robot wrist or tool flange and performs grasping or a process.
+  children: [cp-1-1, cp-1-2, cp-1-3, cp-1-4]
+  attributes: [payload]
+  examples: []
+
+- id: cp-1-1
+  name: Gripper
+  friendly_id: component.end-effector.gripper
+  handle: gripper
+  description: Grasping end-effector that is not an anthropomorphic hand.
+  aliases: [robot gripper, EOAT gripper]
+  inclusion_rule: Grasps objects; fewer than four fingers, no opposable thumb, or fewer than six DOF. Child category is decided by gripping principle, not actuation.
+  children: [cp-1-1-1, cp-1-1-2, cp-1-1-3, cp-1-1-4]
+  attributes: [grip_force, stroke, finger_count]
+  examples: []
+
+- id: cp-1-1-1
+  name: Finger gripper
+  friendly_id: component.end-effector.gripper.finger
+  handle: finger
+  description: Gripper with mechanical fingers or jaws, including parallel, angular and 2–3-finger adaptive designs.
+  aliases: [parallel gripper, jaw gripper, adaptive gripper, 2-finger gripper, 3-finger gripper, mechanical gripper]
+  inclusion_rule: Grasps by closing rigid or semi-rigid fingers or jaws on the object.
+  children: []
+  attributes: []
+  examples: [robotiq-2f-85, onrobot-rg6]
+
+- id: cp-1-1-2
+  name: Vacuum gripper
+  friendly_id: component.end-effector.gripper.vacuum
+  handle: vacuum
+  description: Gripper that holds by suction, including suction cups, foam and area grippers.
+  aliases: [suction gripper, suction cup gripper, area gripper, vacuum EOAT]
+  inclusion_rule: Grasps by vacuum or suction.
+  children: []
+  attributes: []
+  examples: [schmalz-fxcb, onrobot-vg10]
+
+- id: cp-1-1-3
+  name: Magnetic gripper
+  friendly_id: component.end-effector.gripper.magnetic
+  handle: magnetic
+  description: Gripper that holds ferrous objects by magnetic force.
+  aliases: [magnet gripper, electromagnetic gripper]
+  inclusion_rule: Grasps by permanent or electro-magnetic force.
+  children: []
+  attributes: []
+  examples: [onrobot-mg10]
+
+- id: cp-1-1-4
+  name: Soft gripper
+  friendly_id: component.end-effector.gripper.soft
+  handle: soft
+  description: Gripper with compliant or inflatable fingers.
+  aliases: [soft robotic gripper, inflatable gripper, compliant gripper]
+  inclusion_rule: Grasping surfaces are compliant elastomer or inflatable structures.
+  children: []
+  attributes: []
+  examples: [onrobot-soft-gripper, soft-robotics-mgrip]
+
+- id: cp-1-2
+  name: Hand
+  friendly_id: component.end-effector.hand
+  handle: hand
+  description: Anthropomorphic end-effector with four or more fingers including an opposable thumb and multiple degrees of freedom.
+  aliases: [dexterous hand, robotic hand, humanoid hand, five-finger hand]
+  inclusion_rule: At least four fingers including an opposable thumb and at least six degrees of freedom.
+  children: []
+  attributes: [dof, finger_count, tactile_sensing]
+  examples: [shadow-dexterous-hand, inspire-rh56]
+
+- id: cp-1-3
+  name: Tool
+  friendly_id: component.end-effector.tool
+  handle: tool
+  description: Process end-effector such as a welding torch, spindle, screwdriver, dispenser or camera head.
+  aliases: [process tool, robot tool, welding torch, screwdriving tool, spindle]
+  inclusion_rule: Performs a process rather than grasping. A tool with a secondary gripping function is classified by its primary marketed purpose.
+  children: []
+  attributes: []
+  examples: [onrobot-screwdriver]
+
+- id: cp-1-4
+  name: Tool changer
+  friendly_id: component.end-effector.tool-changer
+  handle: tool-changer
+  description: Quick-change coupling between a robot wrist and interchangeable end-effectors.
+  aliases: [quick changer, tool coupler, quick-change coupling]
+  inclusion_rule: Couples and decouples end-effectors; does not itself grasp or process.
+  children: []
+  attributes: []
+  examples: [ati-qc-11, onrobot-quick-changer]
+
+# ------------------------------------------------------------ cp-2 actuator
+- id: cp-2
+  name: Actuator
+  friendly_id: component.actuator
+  handle: actuator
+  description: Device that produces motion for a robot joint or axis.
+  aliases: [actuators, drives, motion components]
+  inclusion_rule: Produces rotary or linear motion; sold as a unit, not integrated into a robot.
+  children: [cp-2-1, cp-2-2, cp-2-3, cp-2-4, cp-2-5]
+  attributes: []
+  examples: []
+
+- id: cp-2-1
+  name: Joint module
+  friendly_id: component.actuator.joint-module
+  handle: joint-module
+  description: Integrated rotary actuator unit combining motor, reducer, encoder and driver.
+  aliases: [integrated actuator, robot joint, actuator module, rotary actuator module]
+  inclusion_rule: Includes a reducer and industrial communications (EtherCAT, CAN) and is sold for robot joints.
+  children: []
+  attributes: [rated_torque, peak_torque, reducer_type, gear_ratio]
+  examples: [robstride-04, mab-md80, cubemars-ak80-9]
+
+- id: cp-2-2
+  name: Servo
+  friendly_id: component.actuator.servo
+  handle: servo
+  description: Hobby or smart servo with built-in control and a daisy-chain bus.
+  aliases: [smart servo, bus servo, hobby servo, serial servo]
+  inclusion_rule: Packaged hobby-grade servo with built-in control; daisy-chain bus (TTL, RS485, CAN) or PWM.
+  children: []
+  attributes: [stall_torque, bus]
+  examples: [dynamixel-xm430, feetech-sts3215]
+
+- id: cp-2-3
+  name: Motor
+  friendly_id: component.actuator.motor
+  handle: motor
+  description: Bare electric motor such as BLDC, stepper or frameless, without reducer or integrated control.
+  aliases: [BLDC motor, stepper motor, frameless motor, torque motor]
+  inclusion_rule: Motor sold without an integrated reducer or servo controller.
+  children: []
+  attributes: [rated_torque, peak_torque]
+  examples: [tmotor-u8, maxon-ec-flat]
+
+- id: cp-2-4
+  name: Reducer
+  friendly_id: component.actuator.reducer
+  handle: reducer
+  description: Gear reduction unit such as harmonic / strain-wave, cycloidal / RV or planetary.
+  aliases: [gearbox, strain wave gear, harmonic drive, cycloidal drive, RV reducer, planetary gearbox]
+  inclusion_rule: Reduces speed and multiplies torque; sold without a motor.
+  children: []
+  attributes: [reducer_type, gear_ratio]
+  examples: [harmonic-drive-csf, nabtesco-rv]
+
+- id: cp-2-5
+  name: Linear actuator
+  friendly_id: component.actuator.linear
+  handle: linear
+  description: Actuator producing straight-line motion, such as roller screw, ball screw, pneumatic or hydraulic cylinder.
+  aliases: [linear actuator, electric cylinder, roller screw actuator, pneumatic cylinder]
+  inclusion_rule: Output motion is linear.
+  children: []
+  attributes: [stroke, rated_force]
+  examples: [ewellix-cahb, festo-dnc]
+
+# -------------------------------------------------------------- cp-3 sensor
+- id: cp-3
+  name: Sensor
+  friendly_id: component.sensor
+  handle: sensor
+  description: Device that measures the robot or its environment.
+  aliases: [sensors, perception hardware]
+  inclusion_rule: Primary function is sensing. A camera with onboard AI is still a sensor.
+  children: [cp-3-1, cp-3-2, cp-3-3, cp-3-4, cp-3-5]
+  attributes: []
+  examples: []
+
+- id: cp-3-1
+  name: Camera
+  friendly_id: component.sensor.camera
+  handle: camera
+  description: Imaging sensor including RGB, depth, stereo, thermal and event cameras.
+  aliases: [depth camera, stereo camera, RGB-D camera, machine vision camera, event camera]
+  inclusion_rule: Produces images or depth maps.
+  children: []
+  attributes: [modality]
+  examples: [intel-realsense-d435i, zed-2i]
+
+- id: cp-3-2
+  name: Lidar
+  friendly_id: component.sensor.lidar
+  handle: lidar
+  description: Laser range sensor, 2D or 3D.
+  aliases: [LiDAR, laser scanner, laser range finder]
+  inclusion_rule: Measures range by laser time-of-flight or phase.
+  children: []
+  attributes: [scan_dimensions, range]
+  examples: [livox-mid-360, slamtec-rplidar-a1]
+
+- id: cp-3-3
+  name: Force-torque sensor
+  friendly_id: component.sensor.force-torque
+  handle: force-torque
+  description: Sensor measuring force and torque at a wrist or joint, typically 3 or 6 axes.
+  aliases: [F/T sensor, force sensor, torque sensor, six-axis force sensor]
+  inclusion_rule: Measures force and/or torque along defined axes.
+  children: []
+  attributes: [axes]
+  examples: [ati-axia80, robotiq-ft-300]
+
+- id: cp-3-4
+  name: Tactile sensor
+  friendly_id: component.sensor.tactile
+  handle: tactile
+  description: Sensor measuring contact, pressure or texture at a surface.
+  aliases: [tactile skin, touch sensor, fingertip sensor]
+  inclusion_rule: Measures distributed contact over a surface.
+  children: []
+  attributes: []
+  examples: [gelsight-mini, xela-uskin]
+
+- id: cp-3-5
+  name: Inertial / encoder
+  friendly_id: component.sensor.inertial
+  handle: inertial
+  description: Motion and position sensors such as IMUs and encoders.
+  aliases: [IMU, inertial measurement unit, encoder, rotary encoder]
+  inclusion_rule: Measures acceleration, angular rate, orientation or shaft position.
+  children: []
+  attributes: []
+  examples: [xsens-mti-630, renishaw-aksim]
+
+# ------------------------------------------------------------- cp-4 compute
+- id: cp-4
+  name: Compute
+  friendly_id: component.compute
+  handle: compute
+  description: Robot controllers, single-board computers and edge-AI modules.
+  aliases: [robot controller, SBC, edge AI module, compute module]
+  inclusion_rule: Processing hardware without sensing.
+  children: []
+  attributes: [ai_tops]
+  examples: [nvidia-jetson-orin-nano, raspberry-pi-5]
+
+# --------------------------------------------------------------- cp-5 power
+- id: cp-5
+  name: Power
+  friendly_id: component.power
+  handle: power
+  description: Battery packs, chargers and docking stations.
+  aliases: [battery, charger, docking station, power supply]
+  inclusion_rule: Stores or supplies electrical energy to a robot.
+  children: []
+  attributes: [capacity]
+  examples: [unitree-go2-battery]
+
+# ----------------------------------------------------------- cp-6 structure
+- id: cp-6
+  name: Structure
+  friendly_id: component.structure
+  handle: structure
+  description: Frames, mounts, enclosures, flanges and cable management.
+  aliases: [mount, bracket, frame, flange, cable management, enclosure]
+  inclusion_rule: Mechanical parts with no actuation, sensing or compute.
+  children: []
+  attributes: []
+  examples: [robotiq-wrist-camera-mount]
+
+# ------------------------------------------------------- cp-7 teleoperation
+- id: cp-7
+  name: Teleoperation
+  friendly_id: component.teleoperation
+  handle: teleoperation
+  description: Devices for controlling a robot remotely or for collecting demonstration data, such as leader arms, haptic devices and VR or motion-capture rigs.
+  aliases: [leader arm, teleop rig, haptic device, data collection rig, motion capture glove]
+  inclusion_rule: Operated by a human to drive or teach a robot.
+  children: []
+  attributes: [teleop_type]
+  examples: [so-101-leader-arm, gello]
