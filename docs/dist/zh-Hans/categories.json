@@ -3235,6 +3235,12 @@
               "name": "导航方式",
               "friendly_id": "navigation",
               "handle": "navigation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "最高速度",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
             }
           ],
           "examples": []
@@ -3423,6 +3429,12 @@
               "name": "导航方式",
               "friendly_id": "navigation",
               "handle": "navigation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "最高速度",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
             }
           ],
           "examples": [
@@ -3612,6 +3624,12 @@
               "name": "导航方式",
               "friendly_id": "navigation",
               "handle": "navigation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "最高速度",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
             }
           ],
           "examples": [
@@ -3784,6 +3802,18 @@
               "name": "驱动形式",
               "friendly_id": "drive_config",
               "handle": "drive-config"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/39",
+              "name": "导航方式",
+              "friendly_id": "navigation",
+              "handle": "navigation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "最高速度",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/27",
@@ -7372,6 +7402,12 @@
               "name": "触觉感知",
               "friendly_id": "tactile_sensing",
               "handle": "tactile-sensing"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/49",
+              "name": "夹持力",
+              "friendly_id": "grip_force",
+              "handle": "grip-force"
             }
           ],
           "examples": [
@@ -8203,6 +8239,12 @@
               "name": "总线",
               "friendly_id": "bus",
               "handle": "bus"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/57",
+              "name": "减速比",
+              "friendly_id": "gear_ratio",
+              "handle": "gear-ratio"
             }
           ],
           "examples": [
@@ -8537,6 +8579,18 @@
               "name": "减速比",
               "friendly_id": "gear_ratio",
               "handle": "gear-ratio"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/54",
+              "name": "额定扭矩",
+              "friendly_id": "rated_torque",
+              "handle": "rated-torque"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/55",
+              "name": "峰值扭矩",
+              "friendly_id": "peak_torque",
+              "handle": "peak-torque"
             }
           ],
           "examples": [
@@ -9030,6 +9084,12 @@
               "name": "成像模式",
               "friendly_id": "modality",
               "handle": "modality"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/63",
+              "name": "量程",
+              "friendly_id": "range",
+              "handle": "range"
             }
           ],
           "examples": [

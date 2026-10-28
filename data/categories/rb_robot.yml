@@ -203,7 +203,7 @@
   aliases: [mobile robot, mobile base, rover, AMR, AGV, UGV]
   inclusion_rule: Wheels or tracks; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm).
   children: [rb-4-1, rb-4-2]
-  attributes: [has_arm, drive_config, navigation]
+  attributes: [has_arm, drive_config, navigation, max_speed]
   examples: []
 
 - id: rb-4-1
@@ -237,7 +237,7 @@
   aliases: [mobile manipulator, MoMa, arm on wheels]
   inclusion_rule: Base and arm(s) sold together as one product. A base and an arm sold separately are two entries linked by compatible_with.
   children: []
-  attributes: [drive_config, axes, reach, arm_count]   # arm specs apply; payload is already universal on rb
+  attributes: [drive_config, navigation, max_speed, axes, reach, arm_count]   # base + arm specs apply; payload is already universal on rb
   examples: [hello-robot-stretch-3, tiago-pro]
 
 # -------------------------------------------------------------- rb-6 aerial

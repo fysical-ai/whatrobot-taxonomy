@@ -3235,6 +3235,12 @@
               "name": "Navigation",
               "friendly_id": "navigation",
               "handle": "navigation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "Max speed",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
             }
           ],
           "examples": []
@@ -3423,6 +3429,12 @@
               "name": "Navigation",
               "friendly_id": "navigation",
               "handle": "navigation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "Max speed",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
             }
           ],
           "examples": [
@@ -3612,6 +3624,12 @@
               "name": "Navigation",
               "friendly_id": "navigation",
               "handle": "navigation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "Max speed",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
             }
           ],
           "examples": [
@@ -3784,6 +3802,18 @@
               "name": "Drive configuration",
               "friendly_id": "drive_config",
               "handle": "drive-config"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/39",
+              "name": "Navigation",
+              "friendly_id": "navigation",
+              "handle": "navigation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "Max speed",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/27",
@@ -7372,6 +7402,12 @@
               "name": "Tactile sensing",
               "friendly_id": "tactile_sensing",
               "handle": "tactile-sensing"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/49",
+              "name": "Grip force",
+              "friendly_id": "grip_force",
+              "handle": "grip-force"
             }
           ],
           "examples": [
@@ -8203,6 +8239,12 @@
               "name": "Bus",
               "friendly_id": "bus",
               "handle": "bus"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/57",
+              "name": "Gear ratio",
+              "friendly_id": "gear_ratio",
+              "handle": "gear-ratio"
             }
           ],
           "examples": [
@@ -8537,6 +8579,18 @@
               "name": "Gear ratio",
               "friendly_id": "gear_ratio",
               "handle": "gear-ratio"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/54",
+              "name": "Rated torque",
+              "friendly_id": "rated_torque",
+              "handle": "rated-torque"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/55",
+              "name": "Peak torque",
+              "friendly_id": "peak_torque",
+              "handle": "peak-torque"
             }
           ],
           "examples": [
@@ -9030,6 +9084,12 @@
               "name": "Modality",
               "friendly_id": "modality",
               "handle": "modality"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/63",
+              "name": "Range",
+              "friendly_id": "range",
+              "handle": "range"
             }
           ],
           "examples": [
