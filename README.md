@@ -79,17 +79,21 @@ Integrators who only need the data should download the release assets or read `d
 
 | Integration | Direction | What it maps |
 |---|---|---|
-| `ifr-industrial` | both | arm leaves ↔ IFR industrial robot type classes (articulated, cartesian, SCARA, parallel, cylindrical) |
+| `ifr-industrial` | both | arm leaves ↔ IFR industrial robot type classes 10–50 (articulated, cartesian/linear/gantry, cylindrical/spherical, parallel/delta, SCARA) |
 | `ifr-service` | from | `application` values → IFR professional / consumer / medical application groups |
 | `iso-8373` | from | `iso_category` attribute → ISO 8373:2021 industrial / service / medical robot |
-| `google` | from | seed — closest Google product categories; most categories explicitly unmapped |
-| `shopify` | from | seed — closest Shopify Standard Product Taxonomy categories; most unmapped |
+| `google` | both | every category → closest Google product category (2021-09-21); robot-bearing Google categories → whatrobot |
+| `shopify` | both | every category → closest Shopify Standard Product Taxonomy category (2026-08); robot-bearing Shopify categories → whatrobot |
 
-CI fails if any category is neither mapped nor explicitly listed as unmapped.
+The `to_whatrobot` direction is what lets a shop bulk-classify an existing Google- or Shopify-categorised catalogue; a branch-level result is then refined with the tie-break rules. CI fails if any category is neither mapped nor explicitly listed as unmapped.
 
 ## Releases
 
 CalVer (`YYYY-MM`), a stable release at most quarterly. `VERSION` on `main` names the release being prepared; the matching `CHANGELOG.md` section is marked *unreleased* until tagged. `whatrobot-taxonomy release 2026-04` sets `VERSION` and `pyproject.toml`, regenerates `dist/` and `docs/`, and dates the changelog section; pushing a `v2026-04` tag publishes the gzipped assets (CI checks the tag equals `VERSION`).
+
+## Citing
+
+Use the **Cite this repository** button on GitHub, or [`CITATION.cff`](CITATION.cff). Each tagged release is archived on Zenodo with a DOI.
 
 ## Licence
 
@@ -98,4 +102,4 @@ CalVer (`YYYY-MM`), a stable release at most quarterly. `VERSION` on `main` name
 
 ## Status
 
-Pre-release. Product examples are illustrative placeholders used to test the classification rules; they are not verified product data. The `zh-Hans` localisation is an LLM draft awaiting native review. IFR type-class codes 40/50/90 and the Google/Shopify seed mappings (incl. Shopify `bi-18`) need a taxonomist's verification before the first stable release.
+Pre-release. Product examples are illustrative placeholders used to test the classification rules; they are not verified product data. The `zh-Hans` localisation is an LLM draft awaiting native review. External mappings are complete and verified against the source taxonomies (2026-10-28) but are closest-fit choices open to review via the mapping-fix issue template.

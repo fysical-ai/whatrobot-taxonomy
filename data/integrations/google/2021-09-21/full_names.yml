@@ -1,0 +1,25 @@
+# Google product taxonomy (2021-09-21) targets used by whatrobot mappings. Source: taxonomy-with-ids.en-US.txt
+# via Shopify/product-taxonomy data/integrations/google/2021-09-21/full_names.yml (retrieved 2026-10-28).
+- {id: "111", full_name: Business & Industrial}
+- {id: "1470", full_name: Business & Industrial > Manufacturing}
+- {id: "6987", full_name: Business & Industrial > Material Handling}
+- {id: "7261", full_name: Business & Industrial > Automation Control Components}
+- {id: "3395", full_name: Vehicles & Parts > Vehicles > Aircraft}
+- {id: "3540", full_name: Vehicles & Parts > Vehicles > Watercraft}
+- {id: "520", full_name: Health & Beauty > Health Care > Mobility & Accessibility > Accessibility Equipment}
+- {id: "3625", full_name: Toys & Games > Toys > Robotic Toys}
+- {id: "6059", full_name: Toys & Games > Toys > Remote Control Toys > Remote Control Robots}
+- {id: "3500", full_name: Toys & Games > Toys > Educational Toys > Science & Exploration Sets}
+- {id: "619", full_name: Home & Garden > Household Appliances > Vacuums}
+- {id: "6788", full_name: Home & Garden > Lawn & Garden > Outdoor Power Equipment > Lawn Mowers > Robotic Mowers}
+- {id: "2997", full_name: Home & Garden > Pool & Spa > Pool & Spa Accessories > Pool Sweeps & Vacuums}
+- {id: "1801", full_name: Electronics > Components}
+- {id: "7395", full_name: Electronics > Components > Accelerometers}
+- {id: "7275", full_name: Hardware > Power & Electrical Supplies > Electrical Motors}
+- {id: "312", full_name: Cameras & Optics > Cameras > Webcams}
+- {id: "1305", full_name: Hardware > Tools > Measuring Tools & Sensors}
+- {id: "3416", full_name: Electronics > Circuit Boards & Components > Printed Circuit Boards > Development Boards}
+- {id: "276", full_name: Electronics > Electronics Accessories > Power > Batteries}
+- {id: "499950", full_name: Electronics > Electronics Accessories > Computer Components > Input Devices > Gesture Control Input Devices}
+- {id: "222", full_name: Electronics}
+- {id: "1239", full_name: Toys & Games}

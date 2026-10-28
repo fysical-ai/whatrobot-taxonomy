@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use the whatrobot taxonomy, please cite it as below. A DOI for each release is minted on Zenodo."
+title: "whatrobot taxonomy: an open MECE taxonomy of robots and robot components"
+type: dataset
+authors:
+  - family-names: Cowling
+    given-names: Simon
+    affiliation: fysical.ai
+  - name: fysical.ai
+version: "2026-01"
+date-released: "2026-10-28"
+license: CC-BY-4.0
+repository-code: "https://github.com/fysical-ai/whatrobot-taxonomy"
+url: "https://whatro.bot"
+abstract: >-
+  A classification of robots by body plan and of robot components by component type, in which every
+  item sits in exactly one leaf decided from hardware facts, with typed attributes for segment,
+  application, autonomy, specifications and compatibility. Includes mappings to ISO 8373:2021, the IFR
+  World Robotics classifications, and the Google and Shopify product taxonomies, and localisations in
+  English and Simplified Chinese.
+keywords:
+  - robotics
+  - taxonomy
+  - classification
+  - humanoid robots
+  - product taxonomy

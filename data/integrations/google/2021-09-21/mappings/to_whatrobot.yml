@@ -1,0 +1,19 @@
+# Google product taxonomy → whatrobot, for the Google categories that contain robots.
+# Lets a shop bulk-classify an existing Google-categorised catalogue; the result is a branch or leaf
+# that a taxonomist then refines using the tie-break rules.
+---
+rules:
+  - input: {category_id: "6788"}            # Robotic Mowers
+    output: {category_id: [rb-4-1]}
+  - input: {category_id: "3625"}            # Robotic Toys
+    output: {category_id: [rb-9, rb-10]}    # desktop companions or kits — decide by tie-break rule 1
+  - input: {category_id: "6059"}            # Remote Control Robots
+    output: {category_id: [rb-10]}
+  - input: {category_id: "3500"}            # Science & Exploration Sets
+    output: {category_id: [rb-10]}
+  - input: {category_id: "3395"}            # Aircraft
+    output: {category_id: [rb-6]}
+  - input: {category_id: "7275"}            # Electrical Motors
+    output: {category_id: [cp-2]}
+  - input: {category_id: "3416"}            # Development Boards
+    output: {category_id: [cp-4]}

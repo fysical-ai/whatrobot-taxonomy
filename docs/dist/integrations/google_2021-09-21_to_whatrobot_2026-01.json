@@ -1,0 +1,127 @@
+{
+  "version": "2026-01",
+  "mappings": [
+    {
+      "input_taxonomy": "google/2021-09-21",
+      "output_taxonomy": "whatrobot/2026-01",
+      "rules": [
+        {
+          "input": {
+            "category": {
+              "id": "6788",
+              "full_name": "Home & Garden > Lawn & Garden > Outdoor Power Equipment > Lawn Mowers > Robotic Mowers"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-4-1",
+                "full_name": "Robot > Ground robot > Wheeled robot"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "3625",
+              "full_name": "Toys & Games > Toys > Robotic Toys"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-9",
+                "full_name": "Robot > Stationary robot"
+              },
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-10",
+                "full_name": "Robot > Kit"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "6059",
+              "full_name": "Toys & Games > Toys > Remote Control Toys > Remote Control Robots"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-10",
+                "full_name": "Robot > Kit"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "3500",
+              "full_name": "Toys & Games > Toys > Educational Toys > Science & Exploration Sets"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-10",
+                "full_name": "Robot > Kit"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "3395",
+              "full_name": "Vehicles & Parts > Vehicles > Aircraft"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/rb-6",
+                "full_name": "Robot > Aerial robot"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "7275",
+              "full_name": "Hardware > Power & Electrical Supplies > Electrical Motors"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/cp-2",
+                "full_name": "Component > Actuator"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "3416",
+              "full_name": "Electronics > Circuit Boards & Components > Printed Circuit Boards > Development Boards"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "gid://whatrobot/TaxonomyCategory/cp-4",
+                "full_name": "Component > Compute"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

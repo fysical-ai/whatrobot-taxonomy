@@ -16,7 +16,7 @@
             "category": [
               {
                 "id": "1470",
-                "full_name": "1470"
+                "full_name": "Business & Industrial > Manufacturing"
               }
             ]
           }
@@ -32,7 +32,7 @@
             "category": [
               {
                 "id": "1470",
-                "full_name": "1470"
+                "full_name": "Business & Industrial > Manufacturing"
               }
             ]
           }
@@ -48,7 +48,7 @@
             "category": [
               {
                 "id": "1470",
-                "full_name": "1470"
+                "full_name": "Business & Industrial > Manufacturing"
               }
             ]
           }
@@ -64,7 +64,7 @@
             "category": [
               {
                 "id": "1470",
-                "full_name": "1470"
+                "full_name": "Business & Industrial > Manufacturing"
               }
             ]
           }
@@ -80,7 +80,7 @@
             "category": [
               {
                 "id": "1470",
-                "full_name": "1470"
+                "full_name": "Business & Industrial > Manufacturing"
               }
             ]
           }
@@ -96,7 +96,7 @@
             "category": [
               {
                 "id": "1470",
-                "full_name": "1470"
+                "full_name": "Business & Industrial > Manufacturing"
               }
             ]
           }
@@ -104,15 +104,15 @@
         {
           "input": {
             "category": {
-              "id": "gid://whatrobot/TaxonomyCategory/cp-4",
-              "full_name": "Component > Compute"
+              "id": "gid://whatrobot/TaxonomyCategory/rb-2",
+              "full_name": "Robot > Humanoid"
             }
           },
           "output": {
             "category": [
               {
-                "id": "222",
-                "full_name": "222"
+                "id": "111",
+                "full_name": "Business & Industrial"
               }
             ]
           }
@@ -120,15 +120,351 @@
         {
           "input": {
             "category": {
-              "id": "gid://whatrobot/TaxonomyCategory/cp-2-3",
-              "full_name": "Component > Actuator > Motor"
+              "id": "gid://whatrobot/TaxonomyCategory/rb-2-1",
+              "full_name": "Robot > Humanoid > Bipedal humanoid"
             }
           },
           "output": {
             "category": [
               {
-                "id": "7261",
-                "full_name": "7261"
+                "id": "111",
+                "full_name": "Business & Industrial"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-2-2",
+              "full_name": "Robot > Humanoid > Wheeled-base humanoid"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "111",
+                "full_name": "Business & Industrial"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-2-3",
+              "full_name": "Robot > Humanoid > Fixed-base humanoid"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "111",
+                "full_name": "Business & Industrial"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-3",
+              "full_name": "Robot > Legged robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "111",
+                "full_name": "Business & Industrial"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-3-1",
+              "full_name": "Robot > Legged robot > Quadruped"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "111",
+                "full_name": "Business & Industrial"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-3-2",
+              "full_name": "Robot > Legged robot > Biped"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "111",
+                "full_name": "Business & Industrial"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-3-3",
+              "full_name": "Robot > Legged robot > Multi-legged"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3625",
+                "full_name": "Toys & Games > Toys > Robotic Toys"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-4",
+              "full_name": "Robot > Ground robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "6987",
+                "full_name": "Business & Industrial > Material Handling"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-4-1",
+              "full_name": "Robot > Ground robot > Wheeled robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "6987",
+                "full_name": "Business & Industrial > Material Handling"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-4-2",
+              "full_name": "Robot > Ground robot > Tracked robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "6987",
+                "full_name": "Business & Industrial > Material Handling"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-5",
+              "full_name": "Robot > Mobile manipulator"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "6987",
+                "full_name": "Business & Industrial > Material Handling"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-6",
+              "full_name": "Robot > Aerial robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3395",
+                "full_name": "Vehicles & Parts > Vehicles > Aircraft"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-6-1",
+              "full_name": "Robot > Aerial robot > Multirotor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3395",
+                "full_name": "Vehicles & Parts > Vehicles > Aircraft"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-6-2",
+              "full_name": "Robot > Aerial robot > Fixed-wing"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3395",
+                "full_name": "Vehicles & Parts > Vehicles > Aircraft"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-6-3",
+              "full_name": "Robot > Aerial robot > Hybrid VTOL"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3395",
+                "full_name": "Vehicles & Parts > Vehicles > Aircraft"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-7",
+              "full_name": "Robot > Aquatic robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3540",
+                "full_name": "Vehicles & Parts > Vehicles > Watercraft"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-7-1",
+              "full_name": "Robot > Aquatic robot > ROV"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3540",
+                "full_name": "Vehicles & Parts > Vehicles > Watercraft"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-7-2",
+              "full_name": "Robot > Aquatic robot > AUV"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3540",
+                "full_name": "Vehicles & Parts > Vehicles > Watercraft"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-7-3",
+              "full_name": "Robot > Aquatic robot > USV"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3540",
+                "full_name": "Vehicles & Parts > Vehicles > Watercraft"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-8",
+              "full_name": "Robot > Wearable robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "520",
+                "full_name": "Health & Beauty > Health Care > Mobility & Accessibility > Accessibility Equipment"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-8-1",
+              "full_name": "Robot > Wearable robot > Exoskeleton"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "520",
+                "full_name": "Health & Beauty > Health Care > Mobility & Accessibility > Accessibility Equipment"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-9",
+              "full_name": "Robot > Stationary robot"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3625",
+                "full_name": "Toys & Games > Toys > Robotic Toys"
               }
             ]
           }
@@ -143,8 +479,424 @@
           "output": {
             "category": [
               {
-                "id": "1239",
-                "full_name": "1239"
+                "id": "3500",
+                "full_name": "Toys & Games > Toys > Educational Toys > Science & Exploration Sets"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp",
+              "full_name": "Component"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1801",
+                "full_name": "Electronics > Components"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-1",
+              "full_name": "Component > End-effector"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-1-1",
+              "full_name": "Component > End-effector > Gripper"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-1-1-1",
+              "full_name": "Component > End-effector > Gripper > Finger gripper"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-1-1-2",
+              "full_name": "Component > End-effector > Gripper > Vacuum gripper"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-1-1-3",
+              "full_name": "Component > End-effector > Gripper > Magnetic gripper"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-1-1-4",
+              "full_name": "Component > End-effector > Gripper > Soft gripper"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-1-2",
+              "full_name": "Component > End-effector > Hand"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-1-3",
+              "full_name": "Component > End-effector > Tool"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-1-4",
+              "full_name": "Component > End-effector > Tool changer"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2",
+              "full_name": "Component > Actuator"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "7275",
+                "full_name": "Hardware > Power & Electrical Supplies > Electrical Motors"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2-1",
+              "full_name": "Component > Actuator > Joint module"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "7275",
+                "full_name": "Hardware > Power & Electrical Supplies > Electrical Motors"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2-2",
+              "full_name": "Component > Actuator > Servo"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "7275",
+                "full_name": "Hardware > Power & Electrical Supplies > Electrical Motors"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2-3",
+              "full_name": "Component > Actuator > Motor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "7275",
+                "full_name": "Hardware > Power & Electrical Supplies > Electrical Motors"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2-4",
+              "full_name": "Component > Actuator > Reducer"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "7275",
+                "full_name": "Hardware > Power & Electrical Supplies > Electrical Motors"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-2-5",
+              "full_name": "Component > Actuator > Linear actuator"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "7275",
+                "full_name": "Hardware > Power & Electrical Supplies > Electrical Motors"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3",
+              "full_name": "Component > Sensor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1801",
+                "full_name": "Electronics > Components"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3-1",
+              "full_name": "Component > Sensor > Camera"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "312",
+                "full_name": "Cameras & Optics > Cameras > Webcams"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3-2",
+              "full_name": "Component > Sensor > Lidar"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1305",
+                "full_name": "Hardware > Tools > Measuring Tools & Sensors"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3-3",
+              "full_name": "Component > Sensor > Force-torque sensor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1801",
+                "full_name": "Electronics > Components"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3-4",
+              "full_name": "Component > Sensor > Tactile sensor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1801",
+                "full_name": "Electronics > Components"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3-5",
+              "full_name": "Component > Sensor > Inertial / encoder"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "7395",
+                "full_name": "Electronics > Components > Accelerometers"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-4",
+              "full_name": "Component > Compute"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "3416",
+                "full_name": "Electronics > Circuit Boards & Components > Printed Circuit Boards > Development Boards"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-5",
+              "full_name": "Component > Power"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "276",
+                "full_name": "Electronics > Electronics Accessories > Power > Batteries"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-6",
+              "full_name": "Component > Structure"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-7",
+              "full_name": "Component > Teleoperation"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "499950",
+                "full_name": "Electronics > Electronics Accessories > Computer Components > Input Devices > Gesture Control Input Devices"
               }
             ]
           }

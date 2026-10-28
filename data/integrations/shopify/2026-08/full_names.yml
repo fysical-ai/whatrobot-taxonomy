@@ -1,0 +1,26 @@
+# Shopify Standard Product Taxonomy targets used by whatrobot mappings.
+# Verified against Shopify/product-taxonomy dist/en/categories.txt (main, 2026-11-unstable; all present in 2026-08). Retrieved 2026-10-28.
+- {id: bi, full_name: "Business & Industrial"}
+- {id: bi-17, full_name: "Business & Industrial > Manufacturing"}
+- {id: bi-18, full_name: "Business & Industrial > Material Handling"}
+- {id: bi-3-1-9, full_name: "Business & Industrial > Automation Control Components > Programmable Logic Controllers > Motor Controllers"}
+- {id: tg-5-21, full_name: "Toys & Games > Toys > Robotic Toys"}
+- {id: tg-5-9-8, full_name: "Toys & Games > Toys > Educational Toys > Coding & Robotics Learning Toys"}
+- {id: tg-5-18-7, full_name: "Toys & Games > Toys > Remote Control Toys > Remote Control Robots"}
+- {id: hg-9-10-5, full_name: "Home & Garden > Household Appliances > Vacuums > Robot Vacuums"}
+- {id: hg-12-3-5-2, full_name: "Home & Garden > Lawn & Garden > Outdoor Power Equipment > Lawn Mowers > Robotic Mowers"}
+- {id: hg-9-3-4-8, full_name: "Home & Garden > Household Appliances > Floor & Steam Cleaners > Floor Scrubbers > Robotic Floor Scrubbers"}
+- {id: hg-18-1-7, full_name: "Home & Garden > Pool & Spa > Pool & Spa Accessories > Pool Cleaners & Chemicals"}
+- {id: vp-2-1-1-2, full_name: "Vehicles & Parts > Vehicles > Aircraft > Heavier-Than-Air Aircraft > Drones"}
+- {id: vp-2-3, full_name: "Vehicles & Parts > Vehicles > Watercraft"}
+- {id: hb-1-17-1, full_name: "Health & Beauty > Health Care > Mobility & Accessibility > Accessibility Equipment"}
+- {id: el-5, full_name: "Electronics > Components"}
+- {id: el-5-7, full_name: "Electronics > Components > Sensors"}
+- {id: el-5-1, full_name: "Electronics > Components > Accelerometers"}
+- {id: ha-11-7, full_name: "Hardware > Power & Electrical Supplies > Electrical Motors"}
+- {id: ha-11-7-2, full_name: "Hardware > Power & Electrical Supplies > Electrical Motors > Servo Motors"}
+- {id: co-2-8, full_name: "Cameras & Optics > Cameras > Webcams"}
+- {id: el-3-6-3, full_name: "Electronics > Circuit Boards & Components > Printed Circuit Boards > Development Boards"}
+- {id: el-7-15-1, full_name: "Electronics > Electronics Accessories > Power > Batteries"}
+- {id: el-7-9-12-5-11, full_name: "Electronics > Electronics Accessories > Computer Components > Input Devices > Game Controllers > Virtual Reality Motion Controllers"}
+- {id: el-7-16-2, full_name: "Electronics > Electronics Accessories > Remote Controls > Drone Remote Controls"}

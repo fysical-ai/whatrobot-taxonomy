@@ -1,12 +1,14 @@
+# IFR industrial robot type classes (classification by mechanical structure).
+# Source: World Robotics 2022 – Service Robots, chapter 1, footnote 13 (ifr.org, retrieved 2026-10-28):
+# "IFR industrial robot type classes are: 10 – articulated, 20 – cartesian/linear/gantry, 30 – cylindrical and spherical,
+#  40 – parallel/delta, 50 – SCARA."  No separate 'others' class is defined in that source.
 - id: "10"
   full_name: Articulated robots
 - id: "20"
-  full_name: Linear / cartesian / gantry robots
+  full_name: Cartesian / linear / gantry robots
 - id: "30"
-  full_name: SCARA robots
+  full_name: Cylindrical and spherical robots
 - id: "40"
-  full_name: Parallel robots
+  full_name: Parallel / delta robots
 - id: "50"
-  full_name: Cylindrical robots
-- id: "90"
-  full_name: Others / not classified
+  full_name: SCARA robots

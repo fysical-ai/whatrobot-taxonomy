@@ -1,0 +1,28 @@
+# Shopify Standard Product Taxonomy → whatrobot, for the Shopify categories that contain robots or robot parts.
+# Lets a Shopify store bulk-classify an existing catalogue; a branch result is refined with the tie-break rules.
+---
+rules:
+  - input: {category_id: hg-9-10-5}          # Robot Vacuums
+    output: {category_id: [rb-4-1]}
+  - input: {category_id: hg-12-3-5-2}        # Robotic Mowers
+    output: {category_id: [rb-4-1]}
+  - input: {category_id: hg-9-3-4-8}         # Robotic Floor Scrubbers
+    output: {category_id: [rb-4-1]}
+  - input: {category_id: vp-2-1-1-2}         # Drones
+    output: {category_id: [rb-6]}
+  - input: {category_id: tg-5-21}            # Robotic Toys
+    output: {category_id: [rb-9, rb-10]}     # companions or kits — tie-break rule 1 decides
+  - input: {category_id: tg-5-9-8}           # Coding & Robotics Learning Toys
+    output: {category_id: [rb-10]}
+  - input: {category_id: tg-5-18-7}          # Remote Control Robots
+    output: {category_id: [rb-10]}
+  - input: {category_id: ha-11-7-2}          # Servo Motors
+    output: {category_id: [cp-2-2]}
+  - input: {category_id: ha-11-7}            # Electrical Motors
+    output: {category_id: [cp-2]}
+  - input: {category_id: el-5-7}             # Sensors
+    output: {category_id: [cp-3]}
+  - input: {category_id: el-3-6-3}           # Development Boards
+    output: {category_id: [cp-4]}
+  - input: {category_id: el-7-16-2}          # Drone Remote Controls
+    output: {category_id: [cp-7]}

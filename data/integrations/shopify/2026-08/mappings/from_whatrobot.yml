@@ -1,9 +1,16 @@
-# whatrobot category → Shopify Standard Product Taxonomy. SEED — Shopify has no robot categories;
-# IDs verified against Shopify/product-taxonomy main (retrieved 2026-10-27; corresponds to release 2026-08). bi-17 and bi-3-1-9 confirmed; bi-18 (Material Handling) not yet verified.
+# whatrobot category → Shopify Standard Product Taxonomy, closest fit.
+# Every target id verified against Shopify/product-taxonomy dist/en/categories.txt on main
+# (labelled 2026-11-unstable, retrieved 2026-10-28); all ids used here are present in the 2026-08 release.
+# Shopify has more robot-specific leaves than Google: Robot Vacuums, Robotic Mowers, Robotic Floor
+# Scrubbers, Drones, Robotic Toys, Coding & Robotics Learning Toys, Remote Control Robots, Servo Motors,
+# Electronics > Components > Sensors. Comments give the Shopify path.
+#
+# Rule of thumb: branch nodes map to the target a shop would most often use for products under them.
 ---
 rules:
+  # ---- arms
   - input: {category_id: rb-1}
-    output: {category_id: [bi-17]}      # Business & Industrial > Manufacturing
+    output: {category_id: [bi-17]}             # Business & Industrial > Manufacturing
   - input: {category_id: rb-1-1}
     output: {category_id: [bi-17]}
   - input: {category_id: rb-1-2}
@@ -14,13 +21,114 @@ rules:
     output: {category_id: [bi-17]}
   - input: {category_id: rb-1-5}
     output: {category_id: [bi-17]}
-  - input: {category_id: cp-2-3}
-    output: {category_id: [bi-3-1-9]}   # Automation Control Components > PLCs > Motor Controllers (closest fit)
+  # ---- humanoids and legged
+  - input: {category_id: rb-2}
+    output: {category_id: [bi]}                # Business & Industrial (no humanoid leaf exists)
+  - input: {category_id: rb-2-1}
+    output: {category_id: [bi]}
+  - input: {category_id: rb-2-2}
+    output: {category_id: [bi]}
+  - input: {category_id: rb-2-3}
+    output: {category_id: [bi]}
+  - input: {category_id: rb-3}
+    output: {category_id: [bi]}
+  - input: {category_id: rb-3-1}
+    output: {category_id: [bi]}
+  - input: {category_id: rb-3-2}
+    output: {category_id: [bi]}
+  - input: {category_id: rb-3-3}
+    output: {category_id: [tg-5-21]}           # Toys & Games > Toys > Robotic Toys
+  # ---- ground: Material Handling for AMR/AGV; consumer applications override by attribute:
+  #      domestic-cleaning → hg-9-10-5 Robot Vacuums, lawn-garden → hg-12-3-5-2 Robotic Mowers,
+  #      professional-cleaning → hg-9-3-4-8 Robotic Floor Scrubbers, pool → hg-18-1-7 Pool Cleaners & Chemicals
   - input: {category_id: rb-4}
-    output: {category_id: [bi-18]}      # Material Handling (AMR/AGV closest fit)
+    output: {category_id: [bi-18]}             # Business & Industrial > Material Handling
   - input: {category_id: rb-4-1}
     output: {category_id: [bi-18]}
   - input: {category_id: rb-4-2}
     output: {category_id: [bi-18]}
-unmapped_category_ids: [rb, rb-2, rb-2-1, rb-2-2, rb-2-3, rb-3, rb-3-1, rb-3-2, rb-3-3, rb-5, rb-6, rb-6-1, rb-6-2, rb-6-3, rb-7, rb-7-1, rb-7-2, rb-7-3, rb-8, rb-8-1, rb-9, rb-10,
-  cp, cp-1, cp-1-1, cp-1-1-1, cp-1-1-2, cp-1-1-3, cp-1-1-4, cp-1-2, cp-1-3, cp-1-4, cp-2, cp-2-1, cp-2-2, cp-2-4, cp-2-5, cp-3, cp-3-1, cp-3-2, cp-3-3, cp-3-4, cp-3-5, cp-4, cp-5, cp-6, cp-7]
+  - input: {category_id: rb-5}
+    output: {category_id: [bi-18]}
+  # ---- aerial
+  - input: {category_id: rb-6}
+    output: {category_id: [vp-2-1-1-2]}        # Vehicles & Parts > Vehicles > Aircraft > Heavier-Than-Air Aircraft > Drones
+  - input: {category_id: rb-6-1}
+    output: {category_id: [vp-2-1-1-2]}
+  - input: {category_id: rb-6-2}
+    output: {category_id: [vp-2-1-1-2]}
+  - input: {category_id: rb-6-3}
+    output: {category_id: [vp-2-1-1-2]}
+  # ---- aquatic
+  - input: {category_id: rb-7}
+    output: {category_id: [vp-2-3]}            # Vehicles & Parts > Vehicles > Watercraft
+  - input: {category_id: rb-7-1}
+    output: {category_id: [vp-2-3]}
+  - input: {category_id: rb-7-2}
+    output: {category_id: [vp-2-3]}
+  - input: {category_id: rb-7-3}
+    output: {category_id: [vp-2-3]}
+  # ---- wearable
+  - input: {category_id: rb-8}
+    output: {category_id: [hb-1-17-1]}         # Health & Beauty > Health Care > Mobility & Accessibility > Accessibility Equipment
+  - input: {category_id: rb-8-1}
+    output: {category_id: [hb-1-17-1]}
+  # ---- stationary companions and kits
+  - input: {category_id: rb-9}
+    output: {category_id: [tg-5-21]}           # Robotic Toys
+  - input: {category_id: rb-10}
+    output: {category_id: [tg-5-9-8]}          # Toys & Games > Toys > Educational Toys > Coding & Robotics Learning Toys
+  # ---- components
+  - input: {category_id: cp}
+    output: {category_id: [el-5]}              # Electronics > Components
+  - input: {category_id: cp-1}
+    output: {category_id: [bi-17]}             # Manufacturing (end-effectors are industrial tooling)
+  - input: {category_id: cp-1-1}
+    output: {category_id: [bi-17]}
+  - input: {category_id: cp-1-1-1}
+    output: {category_id: [bi-17]}
+  - input: {category_id: cp-1-1-2}
+    output: {category_id: [bi-17]}
+  - input: {category_id: cp-1-1-3}
+    output: {category_id: [bi-17]}
+  - input: {category_id: cp-1-1-4}
+    output: {category_id: [bi-17]}
+  - input: {category_id: cp-1-2}
+    output: {category_id: [bi-17]}
+  - input: {category_id: cp-1-3}
+    output: {category_id: [bi-17]}
+  - input: {category_id: cp-1-4}
+    output: {category_id: [bi-17]}
+  - input: {category_id: cp-2}
+    output: {category_id: [ha-11-7]}           # Hardware > Power & Electrical Supplies > Electrical Motors
+  - input: {category_id: cp-2-1}
+    output: {category_id: [ha-11-7-2]}         # Electrical Motors > Servo Motors
+  - input: {category_id: cp-2-2}
+    output: {category_id: [ha-11-7-2]}
+  - input: {category_id: cp-2-3}
+    output: {category_id: [ha-11-7]}
+  - input: {category_id: cp-2-4}
+    output: {category_id: [ha-11-7]}
+  - input: {category_id: cp-2-5}
+    output: {category_id: [ha-11-7]}
+  - input: {category_id: cp-3}
+    output: {category_id: [el-5-7]}            # Electronics > Components > Sensors
+  - input: {category_id: cp-3-1}
+    output: {category_id: [co-2-8]}            # Cameras & Optics > Cameras > Webcams (closest for machine-vision/depth cameras)
+  - input: {category_id: cp-3-2}
+    output: {category_id: [el-5-7]}
+  - input: {category_id: cp-3-3}
+    output: {category_id: [el-5-7]}
+  - input: {category_id: cp-3-4}
+    output: {category_id: [el-5-7]}
+  - input: {category_id: cp-3-5}
+    output: {category_id: [el-5-1]}            # Electronics > Components > Accelerometers
+  - input: {category_id: cp-4}
+    output: {category_id: [el-3-6-3]}          # Electronics > Circuit Boards & Components > Printed Circuit Boards > Development Boards
+  - input: {category_id: cp-5}
+    output: {category_id: [el-7-15-1]}         # Electronics > Electronics Accessories > Power > Batteries
+  - input: {category_id: cp-6}
+    output: {category_id: [bi-17]}
+  - input: {category_id: cp-7}
+    output: {category_id: [el-7-9-12-5-11]}    # ... > Input Devices > Game Controllers > Virtual Reality Motion Controllers
+unmapped_category_ids:
+  - rb                                         # root — a product is never classified only to root

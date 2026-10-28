@@ -25,7 +25,7 @@
           "input": {
             "category": {
               "id": "20",
-              "full_name": "Linear / cartesian / gantry robots"
+              "full_name": "Cartesian / linear / gantry robots"
             }
           },
           "output": {
@@ -41,14 +41,14 @@
           "input": {
             "category": {
               "id": "30",
-              "full_name": "SCARA robots"
+              "full_name": "Cylindrical and spherical robots"
             }
           },
           "output": {
             "category": [
               {
-                "id": "gid://whatrobot/TaxonomyCategory/rb-1-2",
-                "full_name": "Robot > Arm > SCARA arm"
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
+                "full_name": "Robot > Arm > Cylindrical arm"
               }
             ]
           }
@@ -57,7 +57,7 @@
           "input": {
             "category": {
               "id": "40",
-              "full_name": "Parallel robots"
+              "full_name": "Parallel / delta robots"
             }
           },
           "output": {
@@ -73,30 +73,14 @@
           "input": {
             "category": {
               "id": "50",
-              "full_name": "Cylindrical robots"
+              "full_name": "SCARA robots"
             }
           },
           "output": {
             "category": [
               {
-                "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
-                "full_name": "Robot > Arm > Cylindrical arm"
-              }
-            ]
-          }
-        },
-        {
-          "input": {
-            "category": {
-              "id": "90",
-              "full_name": "Others / not classified"
-            }
-          },
-          "output": {
-            "category": [
-              {
-                "id": "gid://whatrobot/TaxonomyCategory/rb-1",
-                "full_name": "Robot > Arm"
+                "id": "gid://whatrobot/TaxonomyCategory/rb-1-2",
+                "full_name": "Robot > Arm > SCARA arm"
               }
             ]
           }
