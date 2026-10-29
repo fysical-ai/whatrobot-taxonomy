@@ -72,6 +72,8 @@ rules:
     output: {category_id: [hb-1-17-1]}         # Health & Beauty > Health Care > Mobility & Accessibility > Accessibility Equipment
   - input: {category_id: rb-8-1}
     output: {category_id: [hb-1-17-1]}
+  - input: {category_id: rb-8-2}
+    output: {category_id: [hb-1-17-1]}
   # ---- stationary companions and kits
   - input: {category_id: rb-9}
     output: {category_id: [tg-5-21]}           # Robotic Toys
@@ -122,6 +124,8 @@ rules:
     output: {category_id: [el-5-7]}
   - input: {category_id: cp-3-5}
     output: {category_id: [el-5-1]}            # Electronics > Components > Accelerometers
+  - input: {category_id: cp-3-6}
+    output: {category_id: [el-5-7]}            # Electronics > Components > Sensors
   - input: {category_id: cp-4}
     output: {category_id: [el-3-6-3]}          # Electronics > Circuit Boards & Components > Printed Circuit Boards > Development Boards
   - input: {category_id: cp-5}

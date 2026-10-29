@@ -8,7 +8,7 @@ rb-1-1: {name: 关节式机械臂, description: 具有三个或以上串联旋�
 rb-1-2: {name: SCARA 机械臂, description: 具有两个平行垂直旋转关节和一个垂直直线轴的机械臂，在水平面内具有柔顺性。}
 rb-1-3: {name: 并联机械臂, description: 并联运动学机械手，如 Delta 机器人或六足/Stewart 平台。}
 rb-1-4: {name: 直角坐标机械臂, description: 三个直线轴沿笛卡尔坐标系布置的机械手，包括龙门和直线机器人。}
-rb-1-5: {name: 圆柱坐标机械臂, description: 具有旋转基座、直线升降和直线伸缩的机械手，包括极坐标/球坐标机械臂。}
+rb-1-5: {name: 圆柱/球坐标机械臂, description: 具有旋转基座和直线伸缩轴的机械手：圆柱坐标（直线升降）或球坐标/极坐标（俯仰肩关节）。IFR 类型 30。}
 rb-2: {name: 人形机器人, description: 具有按人体比例布置的躯干、双臂和头部的机器人，面向人类环境。}
 rb-2-1: {name: 双足人形机器人, description: 用双腿行走的人形机器人。}
 rb-2-2: {name: 轮式底盘人形机器人, description: 安装在轮式或履带式底盘上的人形上半身。}
@@ -31,6 +31,7 @@ rb-7-2: {name: AUV 自主水下航行器, description: 无缆、自主的水下�
 rb-7-3: {name: USV 无人水面艇, description: 无人水面航行器。}
 rb-8: {name: 可穿戴机器人, description: 穿戴在人体上的机器人。}
 rb-8-1: {name: 外骨骼, description: 辅助或增强人体运动的动力外骨骼或外骨骼服。}
+rb-8-2: {name: 假肢, description: 替代缺失肢体或关节的动力假肢。}
 rb-9: {name: 固定式机器人, description: 固定基座、不进行操作的机器人，如无臂的桌面陪伴或社交机器人。}
 rb-10: {name: 套件, description: 没有固定形态、可组装成可编程机器人的模块化构建套件。}
 cp: {name: 部件, description: 与整机分开销售的机器人零部件或配件。}
@@ -55,6 +56,7 @@ cp-3-2: {name: 激光雷达, description: 2D 或 3D 激光测距传感器。}
 cp-3-3: {name: 力/力矩传感器, description: 测量手腕或关节处力和力矩的传感器，通常为三轴或六轴。}
 cp-3-4: {name: 触觉传感器, description: 测量表面接触、压力或纹理的传感器。}
 cp-3-5: {name: 惯性/编码器, description: 运动和位置传感器，如 IMU 和编码器。}
+cp-3-6: {name: 测距/定位传感器, description: 非激光的测距和绝对定位传感器，如 GNSS 接收机、雷达、超声波和飞行时间测距模块。}
 cp-4: {name: 计算单元, description: 机器人控制器、单板计算机和边缘 AI 模块。}
 cp-5: {name: 电源, description: 电池组、充电器和充电桩。}
 cp-6: {name: 结构件, description: 框架、支架、外壳、法兰和线缆管理件。}

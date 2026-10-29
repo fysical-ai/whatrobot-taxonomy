@@ -155,13 +155,13 @@
 - handle: dynamixel-xm430
   name: ROBOTIS Dynamixel XM430
   expected: cp-2-2
-  facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: false}
+  facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, joint_grade: false}
   attributes: {bus: ttl}
 
 - handle: robstride-04
   name: RobStride 04
   expected: cp-2-1
-  facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: true}
+  facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, joint_grade: true}
   attributes: {reducer_type: planetary, interface: [can]}
 
 - handle: tmotor-u8
@@ -218,6 +218,14 @@
 - {handle: sensefly-ebee, name: senseFly eBee, expected: rb-6-2, facts: {medium: air, aerial_lift: fixed-wing}}
 - {handle: wingtra-one, name: WingtraOne, expected: rb-6-3, facts: {medium: air, aerial_lift: hybrid-vtol}}
 - {handle: hydroid-remus, name: HII REMUS, expected: rb-7-2, facts: {medium: water, aquatic_mode: auv}}
+- {handle: ossur-power-knee, name: Össur POWER KNEE, expected: rb-8-2, facts: {worn_on_body: true, prosthesis: true}, attributes: {body_region: lower-limb}}
+- {handle: dolphin-nautilus-cc, name: 'Maytronics Dolphin Nautilus CC (corded pool cleaner)', expected: rb-7-1, facts: {medium: water, aquatic_mode: rov, wheels_or_tracks: tracks}, attributes: {application: [pool]}}
+- {handle: beatbot-aquasense-2, name: 'Beatbot AquaSense 2 (cordless pool cleaner)', expected: rb-7-2, facts: {medium: water, aquatic_mode: auv, wheels_or_tracks: tracks}, attributes: {application: [pool]}}
+- {handle: flybotix-asio, name: 'Single-rotor helicopter drone (illustrative)', expected: rb-6-1, facts: {medium: air, aerial_lift: multirotor}}
+- {handle: galbot-g1, name: Galbot G1, expected: rb-2-2, facts: {humanoid_form: true, wheels_or_tracks: wheels, integrated_arm: true, manipulates: true}}
+- {handle: bimanual-cart-no-head, name: 'Bimanual torso on a cart without a head (illustrative)', expected: rb-5, facts: {wheels_or_tracks: wheels, integrated_arm: true, manipulates: true}}
+- {handle: ublox-zed-f9p, name: u-blox ZED-F9P RTK GNSS module, expected: cp-3-6, facts: {component_kind: sensor, sensor_type: range-positioning}}
+- {handle: maxon-gearmotor, name: 'maxon ECX with GPX gearhead (gearmotor, no driver)', expected: cp-2-3, facts: {component_kind: actuator, motion: rotary, integrated_control: false, has_reducer: true}}
 - {handle: saildrone-explorer, name: Saildrone Explorer, expected: rb-7-3, facts: {medium: water, aquatic_mode: usv}}
 - {handle: onrobot-rg6, name: OnRobot RG6, expected: cp-1-1-1, facts: {component_kind: end-effector, grasps: true, fingers: 2, gripping_principle: finger}}
 - {handle: schmalz-fxcb, name: Schmalz FXCB area gripper, expected: cp-1-1-2, facts: {component_kind: end-effector, grasps: true, gripping_principle: vacuum}}
@@ -226,9 +234,9 @@
 - {handle: soft-robotics-mgrip, name: Soft Robotics mGrip, expected: cp-1-1-4, facts: {component_kind: end-effector, grasps: true, gripping_principle: soft}}
 - {handle: inspire-rh56, name: Inspire RH56 dexterous hand, expected: cp-1-2, facts: {component_kind: end-effector, grasps: true, fingers: 5, opposable_thumb: true, dof: 6}}
 - {handle: onrobot-quick-changer, name: OnRobot Quick Changer, expected: cp-1-4, facts: {component_kind: end-effector, grasps: false, tool_changer: true}}
-- {handle: mab-md80, name: MAB Robotics MD80, expected: cp-2-1, facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: true}}
-- {handle: cubemars-ak80-9, name: CubeMars AK80-9, expected: cp-2-1, facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: true}}
-- {handle: feetech-sts3215, name: Feetech STS3215, expected: cp-2-2, facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, industrial_bus: false}}
+- {handle: mab-md80, name: MAB Robotics MD80, expected: cp-2-1, facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, joint_grade: true}}
+- {handle: cubemars-ak80-9, name: CubeMars AK80-9, expected: cp-2-1, facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, joint_grade: true}}
+- {handle: feetech-sts3215, name: Feetech STS3215, expected: cp-2-2, facts: {component_kind: actuator, motion: rotary, integrated_control: true, has_reducer: true, joint_grade: false}}
 - {handle: maxon-ec-flat, name: maxon EC flat, expected: cp-2-3, facts: {component_kind: actuator, motion: rotary, integrated_control: false, has_reducer: false}}
 - {handle: nabtesco-rv, name: Nabtesco RV reducer, expected: cp-2-4, facts: {component_kind: actuator, motion: rotary, reducer_only: true}}
 - {handle: festo-dnc, name: Festo DNC pneumatic cylinder, expected: cp-2-5, facts: {component_kind: actuator, motion: linear}}

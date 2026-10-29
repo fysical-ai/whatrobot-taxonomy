@@ -21,6 +21,7 @@ gid://whatrobot/TaxonomyCategory/cp-3-2 : Component > Sensor > Lidar
 gid://whatrobot/TaxonomyCategory/cp-3-3 : Component > Sensor > Force-torque sensor
 gid://whatrobot/TaxonomyCategory/cp-3-4 : Component > Sensor > Tactile sensor
 gid://whatrobot/TaxonomyCategory/cp-3-5 : Component > Sensor > Inertial / encoder
+gid://whatrobot/TaxonomyCategory/cp-3-6 : Component > Sensor > Range / positioning sensor
 gid://whatrobot/TaxonomyCategory/cp-4 : Component > Compute
 gid://whatrobot/TaxonomyCategory/cp-5 : Component > Power
 gid://whatrobot/TaxonomyCategory/cp-6 : Component > Structure
@@ -31,7 +32,7 @@ gid://whatrobot/TaxonomyCategory/rb-1-1 : Robot > Arm > Articulated arm
 gid://whatrobot/TaxonomyCategory/rb-1-2 : Robot > Arm > SCARA arm
 gid://whatrobot/TaxonomyCategory/rb-1-3 : Robot > Arm > Parallel arm
 gid://whatrobot/TaxonomyCategory/rb-1-4 : Robot > Arm > Cartesian arm
-gid://whatrobot/TaxonomyCategory/rb-1-5 : Robot > Arm > Cylindrical arm
+gid://whatrobot/TaxonomyCategory/rb-1-5 : Robot > Arm > Cylindrical & spherical arm
 gid://whatrobot/TaxonomyCategory/rb-2 : Robot > Humanoid
 gid://whatrobot/TaxonomyCategory/rb-2-1 : Robot > Humanoid > Bipedal humanoid
 gid://whatrobot/TaxonomyCategory/rb-2-2 : Robot > Humanoid > Wheeled-base humanoid
@@ -54,5 +55,6 @@ gid://whatrobot/TaxonomyCategory/rb-7-2 : Robot > Aquatic robot > AUV
 gid://whatrobot/TaxonomyCategory/rb-7-3 : Robot > Aquatic robot > USV
 gid://whatrobot/TaxonomyCategory/rb-8 : Robot > Wearable robot
 gid://whatrobot/TaxonomyCategory/rb-8-1 : Robot > Wearable robot > Exoskeleton
+gid://whatrobot/TaxonomyCategory/rb-8-2 : Robot > Wearable robot > Prosthesis
 gid://whatrobot/TaxonomyCategory/rb-9 : Robot > Stationary robot
 gid://whatrobot/TaxonomyCategory/rb-10 : Robot > Kit

@@ -239,7 +239,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
-              "name": "圆柱坐标机械臂"
+              "name": "圆柱/球坐标机械臂"
             }
           ],
           "ancestors": [
@@ -1228,17 +1228,18 @@
         {
           "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
           "level": 2,
-          "name": "圆柱坐标机械臂",
-          "full_name": "机器人 > 机械臂 > 圆柱坐标机械臂",
+          "name": "圆柱/球坐标机械臂",
+          "full_name": "机器人 > 机械臂 > 圆柱/球坐标机械臂",
           "friendly_id": "robot.arm.cylindrical",
           "handle": "cylindrical",
-          "description": "具有旋转基座、直线升降和直线伸缩的机械手，包括极坐标/球坐标机械臂。",
+          "description": "具有旋转基座和直线伸缩轴的机械手：圆柱坐标（直线升降）或球坐标/极坐标（俯仰肩关节）。IFR 类型 30。",
           "aliases": [
             "polar robot",
             "spherical robot",
-            "cylindrical robot"
+            "cylindrical robot",
+            "polar arm"
           ],
-          "inclusion_rule": "Rotary base combined with prismatic lift and reach axes.",
+          "inclusion_rule": "Rotary base combined with a prismatic reach axis; the second axis is either a prismatic lift (cylindrical) or a rotary tilt (spherical / polar).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
           "children": [],
           "ancestors": [
@@ -1832,7 +1833,7 @@
             "wheeled humanoid",
             "mobile humanoid"
           ],
-          "inclusion_rule": "Humanoid torso, arms and head mounted on a wheeled or tracked base instead of legs.",
+          "inclusion_rule": "Humanoid torso, two arms AND a head in human proportion, mounted on a wheeled or tracked base instead of legs. A bimanual torso with a sensor mast but no head, or without human proportions, is a mobile manipulator (rb-5).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-2",
           "children": [],
           "ancestors": [
@@ -2848,9 +2849,10 @@
           "handle": "multi-legged",
           "description": "具有六条或以上腿的足式机器人。",
           "aliases": [
-            "hexapod robot",
+            "hexapod walker",
             "six-legged robot",
-            "insect robot"
+            "insect robot",
+            "walking hexapod"
           ],
           "inclusion_rule": "Six or more articulated legs.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-3",
@@ -4043,7 +4045,7 @@
             "octocopter",
             "multicopter"
           ],
-          "inclusion_rule": "Lift from two or more rotors; no fixed wing.",
+          "inclusion_rule": "Lift from one or more rotors; no fixed wing. Single-rotor helicopters are included.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-6",
           "children": [],
           "ancestors": [
@@ -4769,9 +4771,10 @@
           "aliases": [
             "remotely operated vehicle",
             "tethered underwater drone",
-            "underwater drone"
+            "underwater drone",
+            "corded pool robot"
           ],
-          "inclusion_rule": "Submersible; tethered; remotely operated.",
+          "inclusion_rule": "Submersible; tethered. The tether decides, even if it carries only power and the vehicle runs its mission on its own (corded pool cleaners).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-7",
           "children": [],
           "ancestors": [
@@ -4946,7 +4949,7 @@
             "autonomous underwater vehicle",
             "underwater glider"
           ],
-          "inclusion_rule": "Submersible; untethered; autonomous.",
+          "inclusion_rule": "Submersible; untethered. Includes cordless pool cleaners that crawl the floor.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-7",
           "children": [],
           "ancestors": [
@@ -5297,12 +5300,16 @@
             "wearable robot",
             "exosuit"
           ],
-          "inclusion_rule": "Worn on the body and powered (an unpowered exoskeleton is a robotic device, not a robot).",
+          "inclusion_rule": "Worn on the body and powered. Passive (unpowered) exoskeletons are out of scope for this taxonomy.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
           "children": [
             {
               "id": "gid://whatrobot/TaxonomyCategory/rb-8-1",
               "name": "外骨骼"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-8-2",
+              "name": "假肢"
             }
           ],
           "ancestors": [
@@ -5472,7 +5479,7 @@
             "exosuit",
             "exo"
           ],
-          "inclusion_rule": "Powered actuation applied to one or more body regions.",
+          "inclusion_rule": "Powered actuation applied alongside one or more intact body regions.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-8",
           "children": [],
           "ancestors": [
@@ -5636,6 +5643,183 @@
           ]
         },
         {
+          "id": "gid://whatrobot/TaxonomyCategory/rb-8-2",
+          "level": 2,
+          "name": "假肢",
+          "full_name": "机器人 > 可穿戴机器人 > 假肢",
+          "friendly_id": "robot.wearable.prosthesis",
+          "handle": "prosthesis",
+          "description": "替代缺失肢体或关节的动力假肢。",
+          "aliases": [
+            "powered prosthesis",
+            "bionic limb",
+            "bionic hand",
+            "powered knee"
+          ],
+          "inclusion_rule": "Powered actuation that replaces, rather than assists, a limb or joint. Passive prostheses are out of scope.",
+          "parent_id": "gid://whatrobot/TaxonomyCategory/rb-8",
+          "children": [],
+          "ancestors": [
+            {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-8",
+              "name": "可穿戴机器人"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyCategory/rb",
+              "name": "机器人"
+            }
+          ],
+          "attributes": [
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/1",
+              "name": "制造商",
+              "friendly_id": "manufacturer",
+              "handle": "manufacturer"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/2",
+              "name": "型号",
+              "friendly_id": "model",
+              "handle": "model"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/3",
+              "name": "版本",
+              "friendly_id": "variant",
+              "handle": "variant"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/4",
+              "name": "别名",
+              "friendly_id": "aliases",
+              "handle": "aliases"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/5",
+              "name": "用户群",
+              "friendly_id": "segment",
+              "handle": "segment"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/6",
+              "name": "应用领域",
+              "friendly_id": "application_group",
+              "handle": "application-group"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/7",
+              "name": "应用",
+              "friendly_id": "application",
+              "handle": "application"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/8",
+              "name": "ISO 8373 类别",
+              "friendly_id": "iso_category",
+              "handle": "iso-category"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/9",
+              "name": "环境",
+              "friendly_id": "environment",
+              "handle": "environment"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/10",
+              "name": "自主性",
+              "friendly_id": "autonomy",
+              "handle": "autonomy"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/11",
+              "name": "协作",
+              "friendly_id": "collaborative",
+              "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/12",
+              "name": "供货状态",
+              "friendly_id": "availability",
+              "handle": "availability"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/13",
+              "name": "价格",
+              "friendly_id": "price",
+              "handle": "price"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/17",
+              "name": "发布年份",
+              "friendly_id": "release_year",
+              "handle": "release-year"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/18",
+              "name": "国家",
+              "friendly_id": "country",
+              "handle": "country"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/19",
+              "name": "质量",
+              "friendly_id": "mass",
+              "handle": "mass"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/20",
+              "name": "负载",
+              "friendly_id": "payload",
+              "handle": "payload"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/21",
+              "name": "电池续航",
+              "friendly_id": "battery_runtime",
+              "handle": "battery-runtime"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/22",
+              "name": "防护等级",
+              "friendly_id": "ip_rating",
+              "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/23",
+              "name": "开源",
+              "friendly_id": "open_source",
+              "handle": "open-source"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/24",
+              "name": "SDK",
+              "friendly_id": "sdk",
+              "handle": "sdk"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/25",
+              "name": "兼容",
+              "friendly_id": "compatible_with",
+              "handle": "compatible-with"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/26",
+              "name": "来源",
+              "friendly_id": "sources",
+              "handle": "sources"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/43",
+              "name": "作用部位",
+              "friendly_id": "body_region",
+              "handle": "body-region"
+            }
+          ],
+          "examples": [
+            "ossur-power-knee"
+          ]
+        },
+        {
           "id": "gid://whatrobot/TaxonomyCategory/rb-9",
           "level": 1,
           "name": "固定式机器人",
@@ -5649,7 +5833,7 @@
             "social robot",
             "tabletop robot"
           ],
-          "inclusion_rule": "Fixed base; no locomotion; no manipulator. Last rule in the tie-break order.",
+          "inclusion_rule": "Fixed base; no locomotion; no manipulator; not humanoid in form (a humanoid torso on a stand is rb-2-3). Last rule in the tie-break order.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
           "children": [],
           "ancestors": [
@@ -6120,12 +6304,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -6136,12 +6314,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             }
           ],
           "examples": []
@@ -6283,12 +6455,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -6301,16 +6467,22 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
               "name": "负载",
               "friendly_id": "payload",
               "handle": "payload"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             }
           ],
           "examples": []
@@ -6455,12 +6627,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -6473,34 +6639,28 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
               "name": "负载",
               "friendly_id": "payload",
               "handle": "payload"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
               "name": "夹持力",
               "friendly_id": "grip_force",
               "handle": "grip-force"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/50",
-              "name": "行程",
-              "friendly_id": "stroke",
-              "handle": "stroke"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/51",
-              "name": "手指数量",
-              "friendly_id": "finger_count",
-              "handle": "finger-count"
             }
           ],
           "examples": []
@@ -6636,12 +6796,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -6654,16 +6808,22 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
               "name": "负载",
               "friendly_id": "payload",
               "handle": "payload"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
@@ -6703,7 +6863,7 @@
             "area gripper",
             "vacuum EOAT"
           ],
-          "inclusion_rule": "Grasps by vacuum or suction.",
+          "inclusion_rule": "Grasps by vacuum or suction, including Bernoulli and other non-contact suction grippers.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1-1",
           "children": [],
           "ancestors": [
@@ -6818,12 +6978,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -6836,34 +6990,28 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
               "name": "负载",
               "friendly_id": "payload",
               "handle": "payload"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
               "name": "夹持力",
               "friendly_id": "grip_force",
               "handle": "grip-force"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/50",
-              "name": "行程",
-              "friendly_id": "stroke",
-              "handle": "stroke"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/51",
-              "name": "手指数量",
-              "friendly_id": "finger_count",
-              "handle": "finger-count"
             }
           ],
           "examples": [
@@ -6998,12 +7146,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -7016,34 +7158,28 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
               "name": "负载",
               "friendly_id": "payload",
               "handle": "payload"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
               "name": "夹持力",
               "friendly_id": "grip_force",
               "handle": "grip-force"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/50",
-              "name": "行程",
-              "friendly_id": "stroke",
-              "handle": "stroke"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/51",
-              "name": "手指数量",
-              "friendly_id": "finger_count",
-              "handle": "finger-count"
             }
           ],
           "examples": [
@@ -7063,7 +7199,7 @@
             "inflatable gripper",
             "compliant gripper"
           ],
-          "inclusion_rule": "Grasping surfaces are compliant elastomer or inflatable structures.",
+          "inclusion_rule": "Grasping surfaces are compliant elastomer, inflatable or granular-jamming structures.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1-1",
           "children": [],
           "ancestors": [
@@ -7178,12 +7314,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -7196,16 +7326,22 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
               "name": "负载",
               "friendly_id": "payload",
               "handle": "payload"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
@@ -7245,7 +7381,7 @@
             "humanoid hand",
             "five-finger hand"
           ],
-          "inclusion_rule": "At least four fingers including an opposable thumb and at least six degrees of freedom.",
+          "inclusion_rule": "At least four fingers including an opposable thumb and at least six actuated degrees of freedom (joints driven independently, not passive or coupled joints).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1",
           "children": [],
           "ancestors": [
@@ -7356,12 +7492,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -7374,16 +7504,22 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
               "name": "负载",
               "friendly_id": "payload",
               "handle": "payload"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/52",
@@ -7541,12 +7677,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -7559,16 +7689,22 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
               "name": "负载",
               "friendly_id": "payload",
               "handle": "payload"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             }
           ],
           "examples": [
@@ -7699,12 +7835,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -7717,16 +7847,22 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
               "name": "负载",
               "friendly_id": "payload",
               "handle": "payload"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             }
           ],
           "examples": [
@@ -7875,12 +8011,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -7915,7 +8045,7 @@
             "actuator module",
             "rotary actuator module"
           ],
-          "inclusion_rule": "Includes a reducer and industrial communications (EtherCAT, CAN) and is sold for robot joints.",
+          "inclusion_rule": "Integrated reducer and controller, sold as a joint for robots (robot-grade packaging, torque rating and bus — EtherCAT, CAN or high-speed RS-485). The bus alone does not decide; the grade and purpose do.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-2",
           "children": [],
           "ancestors": [
@@ -8024,12 +8154,6 @@
               "name": "所用部件",
               "friendly_id": "uses_components",
               "handle": "uses-components"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
@@ -8094,7 +8218,7 @@
             "hobby servo",
             "serial servo"
           ],
-          "inclusion_rule": "Packaged hobby-grade servo with built-in control; daisy-chain bus (TTL, RS485, CAN) or PWM.",
+          "inclusion_rule": "Packaged hobby-grade servo with built-in control, on a daisy-chain serial bus (TTL, RS-485) or PWM; sold for hobby, education and desktop robots rather than as a robot joint.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-2",
           "children": [],
           "ancestors": [
@@ -8203,12 +8327,6 @@
               "name": "所用部件",
               "friendly_id": "uses_components",
               "handle": "uses-components"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
@@ -8266,7 +8384,7 @@
             "frameless motor",
             "torque motor"
           ],
-          "inclusion_rule": "Motor sold without an integrated reducer or servo controller.",
+          "inclusion_rule": "Motor sold without an integrated servo controller. A motor with a gearhead but no driver (gearmotor) is a motor, not a reducer.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-2",
           "children": [],
           "ancestors": [
@@ -8375,12 +8493,6 @@
               "name": "所用部件",
               "friendly_id": "uses_components",
               "handle": "uses-components"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
@@ -8543,12 +8655,6 @@
               "name": "所用部件",
               "friendly_id": "uses_components",
               "handle": "uses-components"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
@@ -8723,12 +8829,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -8776,7 +8876,7 @@
             "sensors",
             "perception hardware"
           ],
-          "inclusion_rule": "Primary function is sensing. A camera with onboard AI is still a sensor.",
+          "inclusion_rule": "Primary function is sensing. A camera with onboard AI is still a sensor; a device with several sensing modalities is classified by its primary output. A sensing device sold to drive or teach a robot (a glove, a leader arm) is teleoperation (cp-7).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
           "children": [
             {
@@ -8798,6 +8898,10 @@
             {
               "id": "gid://whatrobot/TaxonomyCategory/cp-3-5",
               "name": "惯性/编码器"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3-6",
+              "name": "测距/定位传感器"
             }
           ],
           "ancestors": [
@@ -8904,12 +9008,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -8920,12 +9018,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             }
           ],
           "examples": []
@@ -9056,12 +9148,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -9072,12 +9158,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/61",
@@ -9221,12 +9301,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -9237,12 +9311,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/62",
@@ -9387,12 +9455,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -9403,12 +9465,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/27",
@@ -9435,7 +9491,7 @@
             "touch sensor",
             "fingertip sensor"
           ],
-          "inclusion_rule": "Measures distributed contact over a surface.",
+          "inclusion_rule": "Measures distributed contact over a surface, including capacitive skins that sense approach before contact.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-3",
           "children": [],
           "ancestors": [
@@ -9546,12 +9602,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -9562,12 +9612,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             }
           ],
           "examples": [
@@ -9700,10 +9744,149 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
+              "id": "gid://whatrobot/TaxonomyAttribute/46",
+              "name": "接口",
+              "friendly_id": "interface",
+              "handle": "interface"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/47",
+              "name": "电压",
+              "friendly_id": "voltage",
+              "handle": "voltage"
+            }
+          ],
+          "examples": [
+            "xsens-mti-630",
+            "renishaw-aksim"
+          ]
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyCategory/cp-3-6",
+          "level": 2,
+          "name": "测距/定位传感器",
+          "full_name": "部件 > 传感器 > 测距/定位传感器",
+          "friendly_id": "component.sensor.range-positioning",
+          "handle": "range-positioning",
+          "description": "非激光的测距和绝对定位传感器，如 GNSS 接收机、雷达、超声波和飞行时间测距模块。",
+          "aliases": [
+            "GNSS receiver",
+            "GPS module",
+            "RTK receiver",
+            "radar sensor",
+            "ultrasonic sensor",
+            "ToF rangefinder",
+            "proximity sensor"
+          ],
+          "inclusion_rule": "Measures distance or absolute position without a laser scanner or an imaging array.",
+          "parent_id": "gid://whatrobot/TaxonomyCategory/cp-3",
+          "children": [],
+          "ancestors": [
+            {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3",
+              "name": "传感器"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyCategory/cp",
+              "name": "部件"
+            }
+          ],
+          "attributes": [
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/1",
+              "name": "制造商",
+              "friendly_id": "manufacturer",
+              "handle": "manufacturer"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/2",
+              "name": "型号",
+              "friendly_id": "model",
+              "handle": "model"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/3",
+              "name": "版本",
+              "friendly_id": "variant",
+              "handle": "variant"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/4",
+              "name": "别名",
+              "friendly_id": "aliases",
+              "handle": "aliases"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/5",
+              "name": "用户群",
+              "friendly_id": "segment",
+              "handle": "segment"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/12",
+              "name": "供货状态",
+              "friendly_id": "availability",
+              "handle": "availability"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/13",
+              "name": "价格",
+              "friendly_id": "price",
+              "handle": "price"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/17",
+              "name": "发布年份",
+              "friendly_id": "release_year",
+              "handle": "release-year"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/18",
+              "name": "国家",
+              "friendly_id": "country",
+              "handle": "country"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/19",
+              "name": "质量",
+              "friendly_id": "mass",
+              "handle": "mass"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/22",
+              "name": "防护等级",
+              "friendly_id": "ip_rating",
+              "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/23",
+              "name": "开源",
+              "friendly_id": "open_source",
+              "handle": "open-source"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/24",
+              "name": "SDK",
+              "friendly_id": "sdk",
+              "handle": "sdk"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/26",
+              "name": "来源",
+              "friendly_id": "sources",
+              "handle": "sources"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/25",
+              "name": "兼容",
+              "friendly_id": "compatible_with",
+              "handle": "compatible-with"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/44",
+              "name": "所用部件",
+              "friendly_id": "uses_components",
+              "handle": "uses-components"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
@@ -9718,15 +9901,14 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
+              "id": "gid://whatrobot/TaxonomyAttribute/63",
+              "name": "量程",
+              "friendly_id": "range",
+              "handle": "range"
             }
           ],
           "examples": [
-            "xsens-mti-630",
-            "renishaw-aksim"
+            "ublox-zed-f9p"
           ]
         },
         {
@@ -9850,12 +10032,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -9866,12 +10042,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/64",
@@ -9899,7 +10069,7 @@
             "docking station",
             "power supply"
           ],
-          "inclusion_rule": "Stores or supplies electrical energy to a robot.",
+          "inclusion_rule": "Stores or supplies electrical energy to a robot. A docking station is power, not structure.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
           "children": [],
           "ancestors": [
@@ -10006,12 +10176,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -10022,12 +10186,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/65",
@@ -10163,12 +10321,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -10179,12 +10331,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             }
           ],
           "examples": [
@@ -10206,7 +10352,7 @@
             "data collection rig",
             "motion capture glove"
           ],
-          "inclusion_rule": "Operated by a human to drive or teach a robot.",
+          "inclusion_rule": "Operated by a human to drive or teach a robot. This wins over the sensor branch for gloves and rigs full of sensors.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
           "children": [],
           "ancestors": [
@@ -10313,12 +10459,6 @@
               "handle": "uses-components"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/46",
               "name": "接口",
               "friendly_id": "interface",
@@ -10329,12 +10469,6 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/66",

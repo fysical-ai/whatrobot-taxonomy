@@ -63,7 +63,7 @@ rb-1-1  │  ├─ articulated      ≥3 rotary joints in series (6/7-axis, inc
 rb-1-2  │  ├─ scara            Two parallel vertical rotary joints + vertical linear axis
 rb-1-3  │  ├─ parallel         Parallel kinematics (delta, hexapod/Stewart)
 rb-1-4  │  ├─ cartesian        Three prismatic axes (linear, gantry, XYZ)
-rb-1-5  │  └─ cylindrical      Rotary base + prismatic lift + prismatic reach (incl. polar/spherical)
+rb-1-5  │  └─ cylindrical      Cylindrical & spherical: rotary base + prismatic reach; lift is prismatic (cylindrical) or a tilt (spherical/polar)
 rb-2    ├─ humanoid            Torso + two arms + head in human proportion
 rb-2-1  │  ├─ bipedal          Walks on two legs
 rb-2-2  │  ├─ wheeled-base     Humanoid upper body on a wheeled or tracked base
@@ -85,7 +85,8 @@ rb-7-1  │  ├─ rov              Remotely operated, tethered
 rb-7-2  │  ├─ auv              Autonomous, untethered, submerged
 rb-7-3  │  └─ usv              Surface vessel
 rb-8    ├─ wearable            Worn on the human body
-rb-8-1  │  └─ exoskeleton      Powered exoskeleton / exosuit
+rb-8-1  │  ├─ exoskeleton      Powered exoskeleton / exosuit (assists an intact limb)
+rb-8-2  │  └─ prosthesis       Powered prosthesis (replaces a limb or joint)
 rb-9    ├─ stationary          Fixed, does not manipulate (desktop companions, social robots without arms)
 rb-10   └─ kit                 Modular construction kit with no fixed body plan
 ```
@@ -97,14 +98,16 @@ Scope (D1): aerial, aquatic and wearable are in scope from launch. `kit` include
 Apply in order; the first rule that matches decides the branch.
 
 1. **Kit** — sold as parts to be assembled into user-chosen forms → `kit`.
-2. **Wearable** — worn on the body → `wearable`.
-3. **Humanoid** — torso + two arms + head in human proportion → `humanoid` (locomotion decides level 2).
+2. **Wearable** — worn on the body and powered → `wearable`; a prosthesis (replaces a limb) → `prosthesis`, otherwise `exoskeleton`. Passive exoskeletons are out of scope.
+3. **Humanoid** — torso + two arms **and** a head, in human proportion → `humanoid`; two legs → `bipedal`, wheels/tracks → `wheeled-base`, neither → `fixed-base`. A bimanual torso with a sensor mast but no head is not a humanoid (→ rule 6). A humanoid with a leg count other than two is unclassified until a case exists.
 4. **Legged** — articulated legs → `legged`, even with wheels on the feet (`wheel_feet: true`) or an arm on the back (`has_arm: true`).
-5. **Aquatic / Aerial** — primary operating medium. Amphibious → the medium it is marketed for.
+5. **Aquatic / Aerial** — primary operating medium. Amphibious → the medium it is marketed for. Aquatic: a tether decides (`rov`), even if it carries only power and the vehicle runs autonomously (corded pool cleaners); untethered submersible → `auv`; surface → `usv`. Aerial: one or more rotors and no wing → `multirotor` (helicopters included).
 6. **Mobile manipulator** — ground base + arm(s) as one product → `mobile-manipulator`. Base and arm sold separately = two entries (`ground` + `arm`) linked by `compatible_with`.
 7. **Ground** — wheels or tracks, no arm.
 8. **Arm** — fixed base, manipulates.
-9. **Stationary** — fixed base, does not manipulate.
+9. **Stationary** — fixed base, does not manipulate, not humanoid in form.
+
+Unplaced: snake and crawler robots (no legs, wheels, medium or fixed base) raise *unclassifiable*; a branch will be added when a purchasable case exists.
 
 ### 2.2 Things that are deliberately NOT branches
 
@@ -220,7 +223,7 @@ cp-1-1-2  │  │  ├─ vacuum          Suction cups, foam, area grippers
 cp-1-1-3  │  │  ├─ magnetic
 cp-1-1-4  │  │  └─ soft            Compliant / inflatable fingers
 cp-1-2    │  ├─ hand               Anthropomorphic, ≥4 fingers incl. opposable thumb, multi-DOF
-cp-1-3    │  ├─ tool               Process tools: welding torch, spindle, screwdriver, dispenser, camera head
+cp-1-3    │  ├─ tool               Process tools: welding torch, spindle, screwdriver, dispenser (a wrist camera is a sensor)
 cp-1-4    │  └─ tool-changer       Quick-change couplings
 cp-2      ├─ actuator
 cp-2-1    │  ├─ joint-module       Integrated rotary unit: motor + reducer + encoder + driver
@@ -233,7 +236,8 @@ cp-3-1    │  ├─ camera             RGB, depth, stereo, event
 cp-3-2    │  ├─ lidar
 cp-3-3    │  ├─ force-torque
 cp-3-4    │  ├─ tactile
-cp-3-5    │  └─ inertial           IMU, encoders
+cp-3-5    │  ├─ inertial           IMU, encoders
+cp-3-6    │  └─ range-positioning  GNSS, radar, ultrasonic / ToF rangefinders
 cp-4      ├─ compute               Robot controllers, SBCs, edge-AI modules
 cp-5      ├─ power                 Battery packs, chargers, docking stations
 cp-6      ├─ structure             Frames, mounts, enclosures, flanges, cable management
@@ -242,11 +246,13 @@ cp-7      └─ teleoperation         Leader arms, haptic devices, VR / motion-
 
 ### 4.1 Tie-break rules
 
-1. **Hand vs gripper** — ≥4 fingers with an opposable thumb and ≥6 DOF → `hand`; otherwise `gripper`.
-2. **Gripper leaf** — by gripping principle (fingers / vacuum / magnetic / soft), not by actuation. Actuation is an attribute.
-3. **Joint-module vs servo** — reducer + industrial comms (EtherCAT/CAN), sold for robot joints → `joint-module`; packaged hobby-grade servo with daisy-chain bus → `servo`.
+1. **Hand vs gripper** — ≥4 fingers with an opposable thumb and ≥6 *actuated* DOF → `hand`; otherwise `gripper`.
+2. **Gripper leaf** — by gripping principle (fingers / vacuum / magnetic / soft), not by actuation. Actuation is an attribute. Bernoulli and other non-contact suction → `vacuum`; granular-jamming → `soft`.
+3. **Joint-module vs servo** — the bus does not decide (RS-485 and CAN appear on both sides). Integrated reducer + controller, sold as a robot joint (robot-grade packaging, torque rating, EtherCAT/CAN/high-speed RS-485) → `joint-module` (`joint_grade: true`); packaged hobby-grade servo on a daisy-chain bus → `servo`. A motor with a gearhead but no driver (gearmotor) → `motor`.
 4. **Tool with gripping function** — by primary marketed purpose.
-5. **Compute vs sensor** — a camera with onboard AI is still `sensor.camera`; a module without sensing is `compute`.
+5. **Compute vs sensor** — a camera with onboard AI is still `sensor.camera`; a module without sensing is `compute`. A device with several sensing modalities is classified by its primary output; capacitive pre-touch skins are `tactile`.
+6. **Teleoperation vs sensor** — anything sold to drive or teach a robot (gloves, leader arms, rigs) is `teleoperation`, however many sensors it contains.
+7. **Power vs structure** — a docking station is `power`.
 
 ### 4.2 Why this differs from the brief's "actuators → grippers → hands"
 
@@ -286,7 +292,7 @@ Actuators are *inside* grippers and hands; they are not a parent category. `hand
 | `linear` | `stroke` | number | mm |
 | `linear` | `rated_force` | number | N |
 | `servo` | `stall_torque` | number | Nm |
-| `servo` | `bus` | enum | `ttl`, `rs485`, `can`, `pwm` |
+| `servo` | `bus` | enum | `ttl`, `rs485`, `pwm` (`can` retained in values for legacy records) |
 | `camera` | `modality` | enum, multi | `rgb`, `depth`, `stereo`, `thermal`, `event` |
 | `lidar` | `dimensions` | enum | `2d`, `3d` |
 | `lidar` | `range` | number | m |
@@ -545,3 +551,20 @@ Applied in `data/` during implementation; this document has not been rewritten a
 | `mobile-manipulator` additionally binds `axes`, `reach`, `arm_count` | A mobile manipulator has an arm. |
 | Attribute record gains `companions` (price → currency, price_date, price_source) and `derived_from` (application_group → application) | Rules stated in prose become data. |
 | Mapping files gain `input_kind: attribute_value` and `scope: [rb\|cp]` | IFR service and ISO 8373 map attributes, not the tree; IFR industrial covers robots only. |
+
+### 10.1 Rulings from the catalogue and content work (2026-10-29)
+
+| Change | Why |
+|---|---|
+| `rb-8-2` Prosthesis added; wearable rule excludes passive exoskeletons | Powered prostheses met the wearable rule but were not exoskeletons. |
+| `cp-3-6` Range / positioning sensor added | GNSS, radar and ultrasonic sensors had no leaf. |
+| Wheeled-base humanoid requires a head and human proportions; otherwise mobile manipulator | Galbot G1 / AgiBot G1 boundary. |
+| Humanoid with legs ≠ 2 is unclassifiable (was: filed under bipedal) | Four legs under a torso is not "bipedal". |
+| Joint module vs servo decided by `joint_grade`, not bus; CAN removed from servo rule | Dynamixel (RS-485) vs Unitree GO-M8010 (RS-485). |
+| ROV = tethered, even if autonomous; multirotor = one or more rotors | Corded pool cleaners; helicopters. |
+| Hand threshold = actuated DOF | Inspire RH56 (6 actuated / 12 joints). |
+| `flange_standard`, `actuation` moved from `cp` root to end-effector (+ `actuation` on actuator); `stroke`, `finger_count` moved from gripper to finger and soft grippers | Meaningless on sensors, compute, power; on vacuum and magnetic grippers. |
+| `rb-1-5` renamed Cylindrical & spherical arm (IFR class 30) | Description included polar arms the rule excluded. |
+| Rule text: tool excludes camera heads; motor includes gearmotors; power includes docks; teleoperation wins over sensor; vacuum includes Bernoulli; soft includes granular jamming; tactile includes capacitive pre-touch; stationary is non-humanoid; multi-legged alias "hexapod walker" | Ambiguities found while writing the category pages. |
+| `stall_torque` unit Nm (was kg·cm) | Matches rated_torque and the recorded data. |
+| Components stay without `application` | Revisit when the site shows demand. |

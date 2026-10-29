@@ -27,10 +27,8 @@
     - sources
     - compatible_with
     - uses_components
-    - flange_standard
     - interface
     - voltage
-    - actuation
   examples: []
 
 # -------------------------------------------------------- cp-1 end-effector
@@ -42,7 +40,7 @@
   aliases: [end of arm tooling, EOAT, end effector]
   inclusion_rule: Mounts to a robot wrist or tool flange and performs grasping or a process.
   children: [cp-1-1, cp-1-2, cp-1-3, cp-1-4]
-  attributes: [payload]
+  attributes: [payload, flange_standard, actuation]
   examples: []
 
 - id: cp-1-1
@@ -53,7 +51,7 @@
   aliases: [robot gripper, EOAT gripper]
   inclusion_rule: Grasps objects; fewer than four fingers, no opposable thumb, or fewer than six DOF. Child category is decided by gripping principle, not actuation.
   children: [cp-1-1-1, cp-1-1-2, cp-1-1-3, cp-1-1-4]
-  attributes: [grip_force, stroke, finger_count]
+  attributes: [grip_force]
   examples: []
 
 - id: cp-1-1-1
@@ -64,7 +62,7 @@
   aliases: [parallel gripper, jaw gripper, adaptive gripper, 2-finger gripper, 3-finger gripper, mechanical gripper]
   inclusion_rule: Grasps by closing rigid or semi-rigid fingers or jaws on the object.
   children: []
-  attributes: []
+  attributes: [stroke, finger_count]
   examples: [robotiq-2f-85, onrobot-rg6]
 
 - id: cp-1-1-2
@@ -73,7 +71,7 @@
   handle: vacuum
   description: Gripper that holds by suction, including suction cups, foam and area grippers.
   aliases: [suction gripper, suction cup gripper, area gripper, vacuum EOAT]
-  inclusion_rule: Grasps by vacuum or suction.
+  inclusion_rule: Grasps by vacuum or suction, including Bernoulli and other non-contact suction grippers.
   children: []
   attributes: []
   examples: [schmalz-fxcb, onrobot-vg10]
@@ -95,9 +93,9 @@
   handle: soft
   description: Gripper with compliant or inflatable fingers.
   aliases: [soft robotic gripper, inflatable gripper, compliant gripper]
-  inclusion_rule: Grasping surfaces are compliant elastomer or inflatable structures.
+  inclusion_rule: Grasping surfaces are compliant elastomer, inflatable or granular-jamming structures.
   children: []
-  attributes: []
+  attributes: [stroke, finger_count]
   examples: [onrobot-soft-gripper, soft-robotics-mgrip]
 
 - id: cp-1-2
@@ -106,7 +104,7 @@
   handle: hand
   description: Anthropomorphic end-effector with four or more fingers including an opposable thumb and multiple degrees of freedom.
   aliases: [dexterous hand, robotic hand, humanoid hand, five-finger hand]
-  inclusion_rule: At least four fingers including an opposable thumb and at least six degrees of freedom.
+  inclusion_rule: At least four fingers including an opposable thumb and at least six actuated degrees of freedom (joints driven independently, not passive or coupled joints).
   children: []
   attributes: [dof, finger_count, tactile_sensing, grip_force]
   examples: [shadow-dexterous-hand, inspire-rh56]
@@ -115,7 +113,7 @@
   name: Tool
   friendly_id: component.end-effector.tool
   handle: tool
-  description: Process end-effector such as a welding torch, spindle, screwdriver, dispenser or camera head.
+  description: Process end-effector such as a welding torch, spindle, screwdriver or dispenser. A wrist-mounted camera is a sensor (cp-3-1), not a tool.
   aliases: [process tool, robot tool, welding torch, screwdriving tool, spindle]
   inclusion_rule: Performs a process rather than grasping. A tool with a secondary gripping function is classified by its primary marketed purpose.
   children: []
@@ -142,7 +140,7 @@
   aliases: [actuators, drives, motion components]
   inclusion_rule: Produces rotary or linear motion; sold as a unit, not integrated into a robot.
   children: [cp-2-1, cp-2-2, cp-2-3, cp-2-4, cp-2-5]
-  attributes: []
+  attributes: [actuation]
   examples: []
 
 - id: cp-2-1
@@ -151,7 +149,7 @@
   handle: joint-module
   description: Integrated rotary actuator unit combining motor, reducer, encoder and driver.
   aliases: [integrated actuator, robot joint, actuator module, rotary actuator module]
-  inclusion_rule: Includes a reducer and industrial communications (EtherCAT, CAN) and is sold for robot joints.
+  inclusion_rule: Integrated reducer and controller, sold as a joint for robots (robot-grade packaging, torque rating and bus — EtherCAT, CAN or high-speed RS-485). The bus alone does not decide; the grade and purpose do.
   children: []
   attributes: [rated_torque, peak_torque, reducer_type, gear_ratio]
   examples: [robstride-04, mab-md80, cubemars-ak80-9]
@@ -162,7 +160,7 @@
   handle: servo
   description: Hobby or smart servo with built-in control and a daisy-chain bus.
   aliases: [smart servo, bus servo, hobby servo, serial servo]
-  inclusion_rule: Packaged hobby-grade servo with built-in control; daisy-chain bus (TTL, RS485, CAN) or PWM.
+  inclusion_rule: Packaged hobby-grade servo with built-in control, on a daisy-chain serial bus (TTL, RS-485) or PWM; sold for hobby, education and desktop robots rather than as a robot joint.
   children: []
   attributes: [stall_torque, bus, gear_ratio]
   examples: [dynamixel-xm430, feetech-sts3215]
@@ -173,7 +171,7 @@
   handle: motor
   description: Bare electric motor such as BLDC, stepper or frameless, without reducer or integrated control.
   aliases: [BLDC motor, stepper motor, frameless motor, torque motor]
-  inclusion_rule: Motor sold without an integrated reducer or servo controller.
+  inclusion_rule: Motor sold without an integrated servo controller. A motor with a gearhead but no driver (gearmotor) is a motor, not a reducer.
   children: []
   attributes: [rated_torque, peak_torque]
   examples: [tmotor-u8, maxon-ec-flat]
@@ -207,8 +205,8 @@
   handle: sensor
   description: Device that measures the robot or its environment.
   aliases: [sensors, perception hardware]
-  inclusion_rule: Primary function is sensing. A camera with onboard AI is still a sensor.
-  children: [cp-3-1, cp-3-2, cp-3-3, cp-3-4, cp-3-5]
+  inclusion_rule: Primary function is sensing. A camera with onboard AI is still a sensor; a device with several sensing modalities is classified by its primary output. A sensing device sold to drive or teach a robot (a glove, a leader arm) is teleoperation (cp-7).
+  children: [cp-3-1, cp-3-2, cp-3-3, cp-3-4, cp-3-5, cp-3-6]
   attributes: []
   examples: []
 
@@ -251,7 +249,7 @@
   handle: tactile
   description: Sensor measuring contact, pressure or texture at a surface.
   aliases: [tactile skin, touch sensor, fingertip sensor]
-  inclusion_rule: Measures distributed contact over a surface.
+  inclusion_rule: Measures distributed contact over a surface, including capacitive skins that sense approach before contact.
   children: []
   attributes: []
   examples: [gelsight-mini, xela-uskin]
@@ -266,6 +264,17 @@
   children: []
   attributes: []
   examples: [xsens-mti-630, renishaw-aksim]
+
+- id: cp-3-6
+  name: Range / positioning sensor
+  friendly_id: component.sensor.range-positioning
+  handle: range-positioning
+  description: Non-laser range and absolute-position sensors such as GNSS receivers, radar and ultrasonic or time-of-flight rangefinders.
+  aliases: [GNSS receiver, GPS module, RTK receiver, radar sensor, ultrasonic sensor, ToF rangefinder, proximity sensor]
+  inclusion_rule: Measures distance or absolute position without a laser scanner or an imaging array.
+  children: []
+  attributes: [range]
+  examples: [ublox-zed-f9p]
 
 # ------------------------------------------------------------- cp-4 compute
 - id: cp-4
@@ -286,7 +295,7 @@
   handle: power
   description: Battery packs, chargers and docking stations.
   aliases: [battery, charger, docking station, power supply]
-  inclusion_rule: Stores or supplies electrical energy to a robot.
+  inclusion_rule: Stores or supplies electrical energy to a robot. A docking station is power, not structure.
   children: []
   attributes: [capacity]
   examples: [unitree-go2-battery]
@@ -310,7 +319,7 @@
   handle: teleoperation
   description: Devices for controlling a robot remotely or for collecting demonstration data, such as leader arms, haptic devices and VR or motion-capture rigs.
   aliases: [leader arm, teleop rig, haptic device, data collection rig, motion capture glove]
-  inclusion_rule: Operated by a human to drive or teach a robot.
+  inclusion_rule: Operated by a human to drive or teach a robot. This wins over the sensor branch for gloves and rigs full of sensors.
   children: []
   attributes: [teleop_type]
   examples: [so-101-leader-arm, gello]

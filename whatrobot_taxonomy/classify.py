@@ -4,7 +4,7 @@
 specification: the first rule that matches decides. data/examples.yml is the regression suite.
 
 Robot facts (all optional; missing = false / none):
-  is_kit, worn_on_body, humanoid_form           bool
+  is_kit, worn_on_body, prosthesis, humanoid_form bool
   legs                                           int   (0, 2, 4, 6+)
   wheels_or_tracks                               none | wheels | tracks
   medium                                         ground | air | water
@@ -17,8 +17,9 @@ Component facts:
   component_kind   end-effector | actuator | sensor | compute | power | structure | teleoperation
   end-effector:    grasps bool, fingers int, opposable_thumb bool, dof int,
                    gripping_principle finger|vacuum|magnetic|soft, process_tool bool, tool_changer bool
-  actuator:        motion rotary|linear, reducer_only bool, integrated_control bool, has_reducer bool, industrial_bus bool
-  sensor:          sensor_type camera|lidar|force-torque|tactile|inertial
+  actuator:        motion rotary|linear, reducer_only bool, integrated_control bool, has_reducer bool, joint_grade bool
+                   (joint_grade: sold as a robot joint — robot-grade packaging, torque rating and bus; 'industrial_bus' is accepted as a legacy alias)
+  sensor:          sensor_type camera|lidar|force-torque|tactile|inertial|range-positioning
 """
 from __future__ import annotations
 
@@ -35,7 +36,7 @@ ARM_LEAF = {"articulated": "rb-1-1", "scara": "rb-1-2", "parallel": "rb-1-3", "c
 AERIAL_LEAF = {"multirotor": "rb-6-1", "fixed-wing": "rb-6-2", "hybrid-vtol": "rb-6-3"}
 AQUATIC_LEAF = {"rov": "rb-7-1", "auv": "rb-7-2", "usv": "rb-7-3"}
 GRIPPER_LEAF = {"finger": "cp-1-1-1", "vacuum": "cp-1-1-2", "magnetic": "cp-1-1-3", "soft": "cp-1-1-4"}
-SENSOR_LEAF = {"camera": "cp-3-1", "lidar": "cp-3-2", "force-torque": "cp-3-3", "tactile": "cp-3-4", "inertial": "cp-3-5"}
+SENSOR_LEAF = {"camera": "cp-3-1", "lidar": "cp-3-2", "force-torque": "cp-3-3", "tactile": "cp-3-4", "inertial": "cp-3-5", "range-positioning": "cp-3-6"}
 SIMPLE_COMPONENT = {"compute": "cp-4", "power": "cp-5", "structure": "cp-6", "teleoperation": "cp-7"}
 
 
@@ -60,13 +61,15 @@ def classify_robot(f: Facts) -> str:
     # 1. Kit
     if f.get("is_kit"):
         return "rb-10"
-    # 2. Wearable
+    # 2. Wearable — prosthesis replaces a limb, exoskeleton assists one
     if f.get("worn_on_body"):
-        return "rb-8-1"
+        return "rb-8-2" if f.get("prosthesis") else "rb-8-1"
     # 3. Humanoid — locomotion decides level 2
     if f.get("humanoid_form"):
-        if legs >= 2:
+        if legs == 2:
             return "rb-2-1"
+        if legs:
+            raise Unclassifiable(f"humanoid with {legs} legs has no category yet")
         if wheels in ("wheels", "tracks"):
             return "rb-2-2"
         return "rb-2-3"
@@ -139,7 +142,8 @@ def classify_component(f: Facts) -> str:
             return "cp-2-4"
         if f.get("integrated_control"):
             # 4.1.3 joint-module vs servo
-            return "cp-2-1" if (f.get("has_reducer") and f.get("industrial_bus")) else "cp-2-2"
+            joint_grade = f.get("joint_grade", f.get("industrial_bus"))
+            return "cp-2-1" if (f.get("has_reducer") and joint_grade) else "cp-2-2"
         return "cp-2-3"
 
     if kind == "sensor":

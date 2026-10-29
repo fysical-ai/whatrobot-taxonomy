@@ -94,12 +94,12 @@
   examples: [igus-drylin-gantry]
 
 - id: rb-1-5
-  name: Cylindrical arm
+  name: Cylindrical & spherical arm
   friendly_id: robot.arm.cylindrical
   handle: cylindrical
-  description: Manipulator with a rotary base, a prismatic lift and a prismatic reach, including polar / spherical arms.
-  aliases: [polar robot, spherical robot, cylindrical robot]
-  inclusion_rule: Rotary base combined with prismatic lift and reach axes.
+  description: Manipulator with a rotary base and a prismatic reach axis — cylindrical (prismatic lift) or spherical / polar (tilting shoulder). IFR type class 30.
+  aliases: [polar robot, spherical robot, cylindrical robot, polar arm]
+  inclusion_rule: Rotary base combined with a prismatic reach axis; the second axis is either a prismatic lift (cylindrical) or a rotary tilt (spherical / polar).
   children: []
   attributes: []
   examples: [st-robotics-r19]
@@ -133,7 +133,7 @@
   handle: wheeled-base
   description: Humanoid upper body on a wheeled or tracked base.
   aliases: [wheeled humanoid, mobile humanoid]
-  inclusion_rule: Humanoid torso, arms and head mounted on a wheeled or tracked base instead of legs.
+  inclusion_rule: Humanoid torso, two arms AND a head in human proportion, mounted on a wheeled or tracked base instead of legs. A bimanual torso with a sensor mast but no head, or without human proportions, is a mobile manipulator (rb-5).
   children: []
   attributes: [drive_config]
   examples: [1x-eve, agibot-a2-w]
@@ -188,7 +188,7 @@
   friendly_id: robot.legged.multi-legged
   handle: multi-legged
   description: Legged robot with six or more legs.
-  aliases: [hexapod robot, six-legged robot, insect robot]
+  aliases: [hexapod walker, six-legged robot, insect robot, walking hexapod]
   inclusion_rule: Six or more articulated legs.
   children: []
   attributes: []
@@ -258,7 +258,7 @@
   handle: multirotor
   description: Aerial robot lifted by multiple rotors.
   aliases: [quadcopter, hexacopter, octocopter, multicopter]
-  inclusion_rule: Lift from two or more rotors; no fixed wing.
+  inclusion_rule: Lift from one or more rotors; no fixed wing. Single-rotor helicopters are included.
   children: []
   attributes: []
   examples: [dji-mavic]
@@ -301,9 +301,9 @@
   name: ROV
   friendly_id: robot.aquatic.rov
   handle: rov
-  description: Remotely operated underwater vehicle connected by a tether.
-  aliases: [remotely operated vehicle, tethered underwater drone, underwater drone]
-  inclusion_rule: Submersible; tethered; remotely operated.
+  description: Underwater vehicle connected to the surface by a tether, whether piloted or running autonomously.
+  aliases: [remotely operated vehicle, tethered underwater drone, underwater drone, corded pool robot]
+  inclusion_rule: Submersible; tethered. The tether decides, even if it carries only power and the vehicle runs its mission on its own (corded pool cleaners).
   children: []
   attributes: []
   examples: [bluerobotics-bluerov2]
@@ -314,7 +314,7 @@
   handle: auv
   description: Autonomous, untethered underwater vehicle.
   aliases: [autonomous underwater vehicle, underwater glider]
-  inclusion_rule: Submersible; untethered; autonomous.
+  inclusion_rule: Submersible; untethered. Includes cordless pool cleaners that crawl the floor.
   children: []
   attributes: []
   examples: [hydroid-remus]
@@ -337,8 +337,8 @@
   handle: wearable
   description: Robot worn on the human body.
   aliases: [wearable robot, exosuit]
-  inclusion_rule: Worn on the body and powered (an unpowered exoskeleton is a robotic device, not a robot).
-  children: [rb-8-1]
+  inclusion_rule: Worn on the body and powered. Passive (unpowered) exoskeletons are out of scope for this taxonomy.
+  children: [rb-8-1, rb-8-2]
   attributes: [body_region]
   examples: []
 
@@ -348,19 +348,30 @@
   handle: exoskeleton
   description: Powered exoskeleton or exosuit that assists or augments human movement.
   aliases: [powered exoskeleton, exosuit, exo]
-  inclusion_rule: Powered actuation applied to one or more body regions.
+  inclusion_rule: Powered actuation applied alongside one or more intact body regions.
   children: []
   attributes: []
   examples: [ekso-bionics-evo]
+
+- id: rb-8-2
+  name: Prosthesis
+  friendly_id: robot.wearable.prosthesis
+  handle: prosthesis
+  description: Powered prosthetic limb or joint that replaces a missing body part.
+  aliases: [powered prosthesis, bionic limb, bionic hand, powered knee]
+  inclusion_rule: Powered actuation that replaces, rather than assists, a limb or joint. Passive prostheses are out of scope.
+  children: []
+  attributes: []
+  examples: [ossur-power-knee]
 
 # ---------------------------------------------------------- rb-9 stationary
 - id: rb-9
   name: Stationary robot
   friendly_id: robot.stationary
   handle: stationary
-  description: Fixed-base robot that does not manipulate, such as a desktop companion or social robot without arms.
+  description: Fixed-base, non-humanoid robot that does not manipulate, such as a desktop companion or social robot without arms.
   aliases: [desktop robot, companion robot, social robot, tabletop robot]
-  inclusion_rule: Fixed base; no locomotion; no manipulator. Last rule in the tie-break order.
+  inclusion_rule: Fixed base; no locomotion; no manipulator; not humanoid in form (a humanoid torso on a stand is rb-2-3). Last rule in the tie-break order.
   children: []
   attributes: []
   examples: [jibo]

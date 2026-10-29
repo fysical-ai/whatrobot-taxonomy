@@ -4,6 +4,13 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Rulings (2026-10-29)
+- New leaves: `rb-8-2` Prosthesis, `cp-3-6` Range / positioning sensor (59 categories).
+- Rule changes: wheeled-base humanoid needs a head and human proportions; humanoid with legs ≠ 2 is unclassifiable; joint module vs servo decided by `joint_grade` (fact `industrial_bus` kept as alias); ROV = tethered even if autonomous; multirotor = one or more rotors; hand threshold = actuated DOF; stationary = non-humanoid.
+- Rule text clarified for tool (no camera heads), motor (gearmotors), power (docks), teleoperation (wins over sensor), vacuum (Bernoulli), soft (granular jamming), tactile (capacitive pre-touch); `rb-1-5` renamed Cylindrical & spherical arm.
+- Attribute bindings: `flange_standard` and `actuation` off the component root (end-effector; `actuation` also on actuator); `stroke`/`finger_count` on finger and soft grippers only; `stall_torque` in Nm.
+- 8 new classification examples (77).
+
 - Initial robot hierarchy (`rb`): 10 top-level branches, 31 nodes.
 - Initial component hierarchy (`cp`): 7 top-level branches, 26 nodes.
 - 66 typed attributes, 152 enum values, two-level `application` vocabulary.

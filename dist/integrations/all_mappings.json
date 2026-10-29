@@ -41,7 +41,7 @@
           "input": {
             "category": {
               "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
-              "full_name": "Robot > Arm > Cylindrical arm"
+              "full_name": "Robot > Arm > Cylindrical & spherical arm"
             }
           },
           "output": {
@@ -134,7 +134,7 @@
             "category": [
               {
                 "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
-                "full_name": "Robot > Arm > Cylindrical arm"
+                "full_name": "Robot > Arm > Cylindrical & spherical arm"
               }
             ]
           }
@@ -645,7 +645,7 @@
           "input": {
             "category": {
               "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
-              "full_name": "Robot > Arm > Cylindrical arm"
+              "full_name": "Robot > Arm > Cylindrical & spherical arm"
             }
           },
           "output": {
@@ -998,6 +998,22 @@
             "category": {
               "id": "gid://whatrobot/TaxonomyCategory/rb-8-1",
               "full_name": "Robot > Wearable robot > Exoskeleton"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "520",
+                "full_name": "Health & Beauty > Health Care > Mobility & Accessibility > Accessibility Equipment"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-8-2",
+              "full_name": "Robot > Wearable robot > Prosthesis"
             }
           },
           "output": {
@@ -1396,6 +1412,22 @@
         {
           "input": {
             "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3-6",
+              "full_name": "Component > Sensor > Range / positioning sensor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1801",
+                "full_name": "Electronics > Components"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
               "id": "gid://whatrobot/TaxonomyCategory/cp-4",
               "full_name": "Component > Compute"
             }
@@ -1669,7 +1701,7 @@
           "input": {
             "category": {
               "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
-              "full_name": "Robot > Arm > Cylindrical arm"
+              "full_name": "Robot > Arm > Cylindrical & spherical arm"
             }
           },
           "output": {
@@ -2022,6 +2054,22 @@
             "category": {
               "id": "gid://whatrobot/TaxonomyCategory/rb-8-1",
               "full_name": "Robot > Wearable robot > Exoskeleton"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "hb-1-17-1",
+                "full_name": "Health & Beauty > Health Care > Mobility & Accessibility > Accessibility Equipment"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-8-2",
+              "full_name": "Robot > Wearable robot > Prosthesis"
             }
           },
           "output": {
@@ -2413,6 +2461,22 @@
               {
                 "id": "el-5-1",
                 "full_name": "Electronics > Components > Accelerometers"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/cp-3-6",
+              "full_name": "Component > Sensor > Range / positioning sensor"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "el-5-7",
+                "full_name": "Electronics > Components > Sensors"
               }
             ]
           }

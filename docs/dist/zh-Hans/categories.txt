@@ -21,6 +21,7 @@ gid://whatrobot/TaxonomyCategory/cp-3-2 : 部件 > 传感器 > 激光雷达
 gid://whatrobot/TaxonomyCategory/cp-3-3 : 部件 > 传感器 > 力/力矩传感器
 gid://whatrobot/TaxonomyCategory/cp-3-4 : 部件 > 传感器 > 触觉传感器
 gid://whatrobot/TaxonomyCategory/cp-3-5 : 部件 > 传感器 > 惯性/编码器
+gid://whatrobot/TaxonomyCategory/cp-3-6 : 部件 > 传感器 > 测距/定位传感器
 gid://whatrobot/TaxonomyCategory/cp-4 : 部件 > 计算单元
 gid://whatrobot/TaxonomyCategory/cp-5 : 部件 > 电源
 gid://whatrobot/TaxonomyCategory/cp-6 : 部件 > 结构件
@@ -31,7 +32,7 @@ gid://whatrobot/TaxonomyCategory/rb-1-1 : 机器人 > 机械臂 > 关节式机�
 gid://whatrobot/TaxonomyCategory/rb-1-2 : 机器人 > 机械臂 > SCARA 机械臂
 gid://whatrobot/TaxonomyCategory/rb-1-3 : 机器人 > 机械臂 > 并联机械臂
 gid://whatrobot/TaxonomyCategory/rb-1-4 : 机器人 > 机械臂 > 直角坐标机械臂
-gid://whatrobot/TaxonomyCategory/rb-1-5 : 机器人 > 机械臂 > 圆柱坐标机械臂
+gid://whatrobot/TaxonomyCategory/rb-1-5 : 机器人 > 机械臂 > 圆柱/球坐标机械臂
 gid://whatrobot/TaxonomyCategory/rb-2 : 机器人 > 人形机器人
 gid://whatrobot/TaxonomyCategory/rb-2-1 : 机器人 > 人形机器人 > 双足人形机器人
 gid://whatrobot/TaxonomyCategory/rb-2-2 : 机器人 > 人形机器人 > 轮式底盘人形机器人
@@ -54,5 +55,6 @@ gid://whatrobot/TaxonomyCategory/rb-7-2 : 机器人 > 水上/水下机器人 > A
 gid://whatrobot/TaxonomyCategory/rb-7-3 : 机器人 > 水上/水下机器人 > USV 无人水面艇
 gid://whatrobot/TaxonomyCategory/rb-8 : 机器人 > 可穿戴机器人
 gid://whatrobot/TaxonomyCategory/rb-8-1 : 机器人 > 可穿戴机器人 > 外骨骼
+gid://whatrobot/TaxonomyCategory/rb-8-2 : 机器人 > 可穿戴机器人 > 假肢
 gid://whatrobot/TaxonomyCategory/rb-9 : 机器人 > 固定式机器人
 gid://whatrobot/TaxonomyCategory/rb-10 : 机器人 > 套件
