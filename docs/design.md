@@ -285,7 +285,7 @@ Actuators are *inside* grippers and hands; they are not a parent category. `hand
 | `joint-module`, `reducer` | `gear_ratio` | number | :1 |
 | `linear` | `stroke` | number | mm |
 | `linear` | `rated_force` | number | N |
-| `servo` | `stall_torque` | number | kg·cm |
+| `servo` | `stall_torque` | number | Nm |
 | `servo` | `bus` | enum | `ttl`, `rs485`, `can`, `pwm` |
 | `camera` | `modality` | enum, multi | `rgb`, `depth`, `stereo`, `thermal`, `event` |
 | `lidar` | `dimensions` | enum | `2d`, `3d` |

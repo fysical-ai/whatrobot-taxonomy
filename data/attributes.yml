@@ -718,10 +718,10 @@
   name: Stall torque
   friendly_id: stall_torque
   handle: stall-torque
-  description: Servo stall torque.
+  description: Servo stall torque (manufacturers quote kg·cm; convert, 1 kg·cm = 0.0981 Nm).
   question: What is the stall torque?
   type: number
-  unit: kg·cm
+  unit: Nm
   multi: false
 
 - id: 60

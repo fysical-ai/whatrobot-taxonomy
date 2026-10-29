@@ -1459,7 +1459,7 @@
       "question": "What is the stall torque?",
       "type": "number",
       "multi": false,
-      "unit": "kg·cm"
+      "unit": "Nm"
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/60",
