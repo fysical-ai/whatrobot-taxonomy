@@ -44,11 +44,11 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/5",
-      "name": "用户群",
+      "name": "用户类型",
       "friendly_id": "segment",
       "handle": "segment",
-      "description": "可能以标价购买该产品的用户群体。",
-      "question": "Which of these groups would plausibly buy this at list price?",
+      "description": "可能以标价购买该产品的用户类型——爱好者、教育、科研、专业、消费者。",
+      "question": "Which user types would plausibly buy this at list price?",
       "type": "enum",
       "multi": true,
       "values": [

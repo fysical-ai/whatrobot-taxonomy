@@ -43,11 +43,11 @@
   multi: true
 
 - id: 5
-  name: Segment
+  name: User type
   friendly_id: segment
   handle: segment
-  description: Buyer groups that would plausibly buy this at list price.
-  question: Which of these groups would plausibly buy this at list price?
+  description: User types that would plausibly buy this at list price — hobby, education, research, professional, consumer. (Identifier kept as `segment`; display name changed 2026-10-30.)
+  question: Which user types would plausibly buy this at list price?
   type: enum
   multi: true
   values:

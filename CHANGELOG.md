@@ -4,6 +4,10 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Wording (2026-10-30)
+- Root `rb` description is now the site's definition of a robot: "A machine that senses and acts on its environment — by moving, manipulating objects, or interacting with people. Robots are classified by physical form, not by user group or application." The ISO 8373:2021 reference moves to the inclusion rule.
+- Attribute `segment` display name "Segment" → "User type"; description and question reworded ("buyer groups" → "user types"). The identifier `segment` and its values are unchanged, so no data or integration breaks. zh-Hans updated accordingly (still an LLM draft).
+
 ### Rulings (2026-10-29)
 - New leaves: `rb-8-2` Prosthesis, `cp-3-6` Range / positioning sensor (59 categories).
 - Rule changes: wheeled-base humanoid needs a head and human proportions; humanoid with legs ≠ 2 is unclassifiable; joint module vs servo decided by `joint_grade` (fact `industrial_bus` kept as alias); ROV = tethered even if autonomous; multirotor = one or more rotors; hand threshold = actuated DOF; stationary = non-humanoid.

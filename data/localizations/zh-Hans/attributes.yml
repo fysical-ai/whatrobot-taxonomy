@@ -5,7 +5,7 @@ manufacturer: {name: 制造商, description: 生产该产品的公司。}
 model: {name: 型号, description: 制造商公布的正式型号名称。}
 variant: {name: 版本, description: 制造商单独列出的子型号或配置。}
 aliases: {name: 别名, description: 人们搜索时使用的其他名称。}
-segment: {name: 用户群, description: 可能以标价购买该产品的用户群体。}
+segment: {name: 用户类型, description: 可能以标价购买该产品的用户类型——爱好者、教育、科研、专业、消费者。}
 application_group: {name: 应用领域, description: 两级应用词表的上层；由应用值推导得出。}
 application: {name: 应用, description: 产品所宣传的用途。}
 iso_category: {name: ISO 8373 类别, description: 制造商定位的 ISO 8373:2021 用途类别。}

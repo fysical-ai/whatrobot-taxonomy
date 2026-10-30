@@ -3,7 +3,7 @@ gid://whatrobot/TaxonomyAttribute/1 : Manufacturer
 gid://whatrobot/TaxonomyAttribute/2 : Model
 gid://whatrobot/TaxonomyAttribute/3 : Variant
 gid://whatrobot/TaxonomyAttribute/4 : Aliases
-gid://whatrobot/TaxonomyAttribute/5 : Segment
+gid://whatrobot/TaxonomyAttribute/5 : User type
 gid://whatrobot/TaxonomyAttribute/6 : Application group
 gid://whatrobot/TaxonomyAttribute/7 : Application
 gid://whatrobot/TaxonomyAttribute/8 : ISO 8373 category

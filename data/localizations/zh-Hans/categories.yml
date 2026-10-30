@@ -2,7 +2,7 @@
 # Licence: CC BY 4.0. Status: LLM DRAFT 2026-10-27 — requires native-reader review before release (docs/design.md §9.9).
 # Keyed by category id. Only name and description are localised; inclusion_rule stays English.
 ---
-rb: {name: 机器人, description: 具有一定自主性的可编程驱动机构，用于移动、操作或定位（ISO 8373:2021）。}
+rb: {name: 机器人, description: 能够感知环境并对其作出动作的机器——通过移动、操作物体或与人互动。机器人按物理形态分类，而非按用户群体或用途。}
 rb-1: {name: 机械臂, description: 固定基座的机械手，用于在空间中定位末端执行器。}
 rb-1-1: {name: 关节式机械臂, description: 具有三个或以上串联旋转关节的机械臂，包括六轴/七轴工业机械臂、协作机器人和桌面机械臂。}
 rb-1-2: {name: SCARA 机械臂, description: 具有两个平行垂直旋转关节和一个垂直直线轴的机械臂，在水平面内具有柔顺性。}

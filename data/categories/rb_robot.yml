@@ -7,9 +7,9 @@
   name: Robot
   friendly_id: robot
   handle: robot
-  description: A programmed, actuated mechanism with a degree of autonomy that performs locomotion, manipulation or positioning (ISO 8373:2021).
+  description: A machine that senses and acts on its environment — by moving, manipulating objects, or interacting with people. Robots are classified by physical form, not by user group or application.
   aliases: [robots]
-  inclusion_rule: Sold as a complete, programmable robot. Parts sold separately are components (cp).
+  inclusion_rule: Sold as a complete, programmable robot (consistent with ISO 8373:2021). Parts sold separately are components (cp).
   children: [rb-1, rb-2, rb-3, rb-4, rb-5, rb-6, rb-7, rb-8, rb-9, rb-10]
   attributes:
     - manufacturer

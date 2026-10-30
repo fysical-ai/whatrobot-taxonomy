@@ -3,7 +3,7 @@ gid://whatrobot/TaxonomyAttribute/1 : 制造商
 gid://whatrobot/TaxonomyAttribute/2 : 型号
 gid://whatrobot/TaxonomyAttribute/3 : 版本
 gid://whatrobot/TaxonomyAttribute/4 : 别名
-gid://whatrobot/TaxonomyAttribute/5 : 用户群
+gid://whatrobot/TaxonomyAttribute/5 : 用户类型
 gid://whatrobot/TaxonomyAttribute/6 : 应用领域
 gid://whatrobot/TaxonomyAttribute/7 : 应用
 gid://whatrobot/TaxonomyAttribute/8 : ISO 8373 类别
