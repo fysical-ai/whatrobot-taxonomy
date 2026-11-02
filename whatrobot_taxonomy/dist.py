@@ -65,6 +65,13 @@ def attribute_json(tx: Taxonomy, fid: str, locale: str, with_values: bool = True
     return out
 
 
+def _loc_aliases(tx: Taxonomy, cid: str, locale: str) -> list[str]:
+    """Search terms in the locale when it has its own list, else the English ones."""
+    if locale != SOURCE_LOCALE and (loc := tx.locales.get(locale)) and cid in loc.categories and loc.categories[cid].aliases:
+        return loc.categories[cid].aliases
+    return tx.categories[cid].aliases
+
+
 def category_json(tx: Taxonomy, cid: str, locale: str) -> dict:
     c = tx.categories[cid]
     name, desc = _loc_cat(tx, cid, locale)
@@ -76,7 +83,7 @@ def category_json(tx: Taxonomy, cid: str, locale: str) -> dict:
         "friendly_id": c.friendly_id,
         "handle": c.handle,
         "description": desc,
-        "aliases": c.aliases,
+        "aliases": _loc_aliases(tx, cid, locale),
         "inclusion_rule": c.inclusion_rule,
         "parent_id": GID.format(id=c.parent_id) if c.parent_id else None,
         "children": [{"id": GID.format(id=ch), "name": _loc_cat(tx, ch, locale)[0]} for ch in c.children],

@@ -35,7 +35,7 @@ data/                       source of truth — CC BY 4.0
   application_groups.yml      application → application_group (derived)
   examples.yml                classification regression suite
   integrations/               mappings to ifr-industrial, ifr-service, iso-8373, google, shopify
-  localizations/zh-Hans/      Simplified Chinese (LLM draft, pending native review)
+  localizations/<locale>/     translations with a per-field review record (zh-Hans now; da in review)
 dist/                       generated per locale: json + txt; integrations/all_mappings.json
 docs/                       static explorer for GitHub Pages, design notes, copy of dist/
 schema/                     JSON Schemas generated from the pydantic models
@@ -102,4 +102,4 @@ Use the **Cite this repository** button on GitHub, or [`CITATION.cff`](CITATION.
 
 ## Status
 
-Pre-release. Product examples are illustrative placeholders used to test the classification rules; they are not verified product data. The `zh-Hans` localisation is an LLM draft awaiting native review. External mappings are complete and verified against the source taxonomies (2026-10-28) but are closest-fit choices open to review via the mapping-fix issue template.
+Pre-release. Product examples are illustrative placeholders used to test the classification rules; they are not verified product data. The `zh-Hans` localisation is an LLM draft in native review; `da` is in its first review. `whatrobot-taxonomy l10n status` shows how far each has got. External mappings are complete and verified against the source taxonomies (2026-10-28) but are closest-fit choices open to review via the mapping-fix issue template.

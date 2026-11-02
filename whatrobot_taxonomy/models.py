@@ -134,15 +134,27 @@ class Integration(Strict):
     available_versions: list[str]
 
 
+L10N_FIELDS = Literal["name", "description", "aliases"]
+SOURCE_DESC = (
+    "Review record: field -> fingerprint of the English text a native reader reviewed this field against "
+    "(whatrobot_taxonomy.l10n.fingerprint). A field not listed is an unreviewed draft; a listed field whose "
+    "fingerprint no longer matches the English is stale."
+)
+
+
 class LocalizedCategory(Strict):
     name: str
     description: str | None = None
+    aliases: list[str] | None = Field(default=None, description="Search terms in this language; replaces the English aliases in this locale's dist")
+    source: dict[L10N_FIELDS, str] | None = Field(default=None, description=SOURCE_DESC)
 
 
 class LocalizedAttribute(Strict):
     name: str
     description: str | None = None
+    source: dict[Literal["name", "description"], str] | None = Field(default=None, description=SOURCE_DESC)
 
 
 class LocalizedValue(Strict):
     name: str
+    source: dict[Literal["name"], str] | None = Field(default=None, description=SOURCE_DESC)

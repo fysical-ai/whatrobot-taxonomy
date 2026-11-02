@@ -4,6 +4,12 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Localisation review (2026-11-02)
+- Localised entries carry a per-field review record, `source: {field: fingerprint}`; unreviewed drafts and stale reviews (English changed since) are now distinguishable. Categories gain localised search terms (`aliases`), which replace the English aliases in that locale's dist.
+- New `whatrobot-taxonomy l10n status | export | import` for the native-review round trip; validation warns on stale reviews; `release` refuses unreviewed locales unless `--allow-unreviewed`.
+- `scripts/sheet_values_to_csv.py` turns the shared review sheet into an import CSV.
+- No change to ids, English data or existing translations; `da` and the `zh-Hans` review follow as reviewed batches.
+
 ### Wording (2026-10-30)
 - Root `rb` description is now the site's definition of a robot: "A machine that senses and acts on its environment — by moving, manipulating objects, or interacting with people. Robots are classified by physical form, not by user group or application." The ISO 8373:2021 reference moves to the inclusion rule.
 - Attribute `segment` display name "Segment" → "User type"; description and question reworded ("buyer groups" → "user types"). The identifier `segment` and its values are unchanged, so no data or integration breaks. zh-Hans updated accordingly (still an LLM draft).

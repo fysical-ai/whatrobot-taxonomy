@@ -6,6 +6,9 @@
   whatrobot-taxonomy schema            # write JSON Schemas generated from the pydantic models to schema/
   whatrobot-taxonomy classify FACTS    # classify ad-hoc facts, e.g. legs=4 medium=ground
   whatrobot-taxonomy release VERSION   # set VERSION, regenerate dist/ and docs/, update CHANGELOG
+  whatrobot-taxonomy l10n status       # per locale: reviewed / stale / draft / missing fields
+  whatrobot-taxonomy l10n export ...   # rows for native review (CSV; paste into the review sheet)
+  whatrobot-taxonomy l10n import ...   # write ticked rows from a review CSV into data/localizations/<locale>/
 
 Equivalent: python -m whatrobot_taxonomy.cli <verb>
 """
@@ -100,6 +103,14 @@ def cmd_release(ns: argparse.Namespace) -> int:
     if not rep.ok:
         print("validation errors; aborting release")
         return 1
+    from .l10n import launch_ready, status
+
+    unready = {loc: c for loc, c in status(tx).items() if not launch_ready(c)}
+    if unready and not ns.allow_unreviewed:
+        for loc, c in unready.items():
+            print(f"{loc}: {dict(c)}")
+        print("locales above are not fully reviewed; finish the review or pass --allow-unreviewed")
+        return 1
     (ROOT / "VERSION").write_text(ns.version + "\n", encoding="utf-8")
     build(tx)  # build() calls version() at write time, so it sees the new value
     from .docs import build_docs
@@ -125,6 +136,45 @@ def cmd_release(ns: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_l10n(ns: argparse.Namespace) -> int:
+    from pathlib import Path
+
+    from . import l10n
+
+    tx = load()
+    if ns.action == "status":
+        counts = l10n.status(tx, ns.locale or None)
+        for loc, c in counts.items():
+            total = sum(c.values())
+            ready = "ready" if l10n.launch_ready(c) else "not ready"
+            print(f"{loc:8} {c['reviewed']:4} reviewed  {c['stale']:4} stale  {c['draft']:4} draft  {c['missing']:4} missing  of {total}  ({ready})")
+        return 0
+    if ns.action == "export":
+        if not ns.locale:
+            print("give at least one --locale")
+            return 2
+        rows = l10n.export_rows(tx, ns.locale, only_needed=ns.only_needed)
+        out = Path(ns.output)
+        l10n.write_csv(rows, out)
+        print(f"wrote {len(rows)} rows to {out}")
+        return 0
+    # import
+    if not ns.file or len(ns.locale or []) != 1:
+        print("usage: whatrobot-taxonomy l10n import FILE --locale <code>")
+        return 2
+    rows = l10n.read_review(Path(ns.file))
+    rep = l10n.import_review(tx, ns.locale[0], rows, accept_changed_english=ns.accept_changed_english)
+    print(f"imported {sum(rep.imported.values())} reviewed fields {dict(rep.imported)}; {rep.unticked} rows not ticked (left as they were)")
+    for k in rep.english_changed:
+        print(f"SKIP  {k}: English changed since the sheet was made; re-export this row")
+    for k in rep.needs_name:
+        print(f"SKIP  {k}: no reviewed name yet, so the entry can't be created")
+    for e in rep.errors:
+        print(f"ERROR {e}")
+    print("next: whatrobot-taxonomy validate && whatrobot-taxonomy dist && whatrobot-taxonomy docs")
+    return 1 if rep.errors else 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="whatrobot-taxonomy", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -137,7 +187,16 @@ def main(argv: list[str] | None = None) -> int:
     c.set_defaults(fn=cmd_classify)
     r = sub.add_parser("release")
     r.add_argument("version", help="CalVer, e.g. 2026-04")
+    r.add_argument("--allow-unreviewed", action="store_true", help="release even if a locale has unreviewed or stale fields")
     r.set_defaults(fn=cmd_release)
+    lz = sub.add_parser("l10n", help="localisation review: status, export, import")
+    lz.add_argument("action", choices=["status", "export", "import"])
+    lz.add_argument("file", nargs="?", help="review CSV (import)")
+    lz.add_argument("--locale", action="append", help="locale code, e.g. da or zh-Hans (repeat for export)")
+    lz.add_argument("-o", "--output", default="l10n-review.csv", help="export: CSV to write")
+    lz.add_argument("--only-needed", action="store_true", help="export: only fields not yet reviewed, or stale, in a given locale")
+    lz.add_argument("--accept-changed-english", action="store_true", help="import: accept rows whose English differs from the current English")
+    lz.set_defaults(fn=cmd_l10n)
     ns = p.parse_args(argv)
     return ns.fn(ns)
 

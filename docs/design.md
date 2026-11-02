@@ -516,14 +516,16 @@ unmapped_category_ids:
 - Structural rules: max depth 3; no cycles; every leaf has a `description`, `inclusion_rule` and ≥1 example.
 - Classification tests: `data/examples.yml` entries resolve to the expected category under the tie-break rules.
 - Mapping completeness: every category is either mapped or listed as unmapped for each integration.
-- Localisation completeness: every `en` string has a `zh-Hans` counterpart (missing → CI warning, not failure, so English-first changes can land).
+- Localisation completeness: every `en` string has a counterpart in each locale (missing → CI warning, not failure, so English-first changes can land). A field reviewed against English that has since changed is reported as stale (warning).
 
 ### 9.9 Localisation (D11)
 
 - Source language `en`; `zh-Hans` (Simplified Chinese, BCP 47) shipped from the first release.
-- Scope: category names and descriptions, attribute names and descriptions, value names, alias lists. Not: inclusion rules or tie-break prose (English only, editorial).
-- Workflow: LLM-drafted translation → native-reader review → PR. Translators edit `data/localizations/zh-Hans/` only.
-- Further locales (e.g. `da`) are added by creating a new `localizations/<locale>/` folder; no structural change.
+- Scope: category names and descriptions, attribute names and descriptions, value names, and search terms (category aliases in the locale's own words, which replace the English aliases in that locale's dist). Not: inclusion rules or tie-break prose (English only, editorial).
+- Review record: each localised entry may carry `source: {field: fingerprint}`. A listed field was reviewed by a native reader against the English text with that fingerprint (12 hex characters of SHA-256 over the whitespace-normalised English). A field not listed is an unreviewed draft; a listed field whose fingerprint no longer matches the English is stale.
+- Workflow: `whatrobot-taxonomy l10n export` writes the rows to review (all, or `--only-needed`) → LLM first draft → native reviewers correct the text and tick an OK column in a shared review sheet → `whatrobot-taxonomy l10n import` writes only ticked rows, with fingerprints, into `data/localizations/<locale>/` → PR. Rows whose English changed after the sheet was made are held back and re-exported.
+- `whatrobot-taxonomy l10n status` reports reviewed / stale / draft / missing per locale. A stable `release` requires every locale to be fully reviewed (`--allow-unreviewed` overrides).
+- Further locales (e.g. `da`, `de`) are added by importing a first reviewed batch, which creates `localizations/<locale>/`; no structural change.
 
 ### 9.10 Contribution
 
