@@ -239,6 +239,8 @@ def _mappings(tx: Taxonomy, r: Report) -> None:
 
 # ------------------------------------------------------------ localisation
 def _localisation(tx: Taxonomy, r: Report) -> None:
+    from .l10n import fields, fingerprint, english, state
+
     for code, loc in tx.locales.items():
         for cid in tx.categories:
             if cid not in loc.categories:
@@ -258,3 +260,12 @@ def _localisation(tx: Taxonomy, r: Report) -> None:
         for fid in loc.values:
             if fid not in tx.values:
                 r.error(f"{code}: localised value {fid} does not exist")
+        # review record: a fingerprint needs text, and a stale fingerprint means the English moved on
+        for kind, table in (("category", loc.categories), ("attribute", loc.attributes), ("value", loc.values)):
+            for ident, entry in table.items():
+                for fld in (entry.source or {}):
+                    if not getattr(entry, fld, None):
+                        r.error(f"{code}: {kind} {ident} has a review fingerprint for empty field {fld}")
+        stale = [k for k, _ in fields(tx) if english(tx, k) and state(tx, code, k) == "stale"]
+        for k in stale:
+            r.warn(f"{code}: {k} was reviewed against older English; re-review (l10n export --only-needed)")
