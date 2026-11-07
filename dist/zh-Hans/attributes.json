@@ -651,7 +651,7 @@
       "bases": [
         {
           "handle": "rated",
-          "description": "Rated payload as the spec sheet states it. Arm = at the flange/wrist. Mobile, legged or humanoid robot = carried while moving. Humanoid = with both arms together. End-effector = held object.",
+          "description": "Rated payload as the spec sheet states it. Arm = at the flange/wrist. Mobile manipulator = at the arm's flange. Mobile, legged or humanoid robot = carried while moving. Humanoid = with both arms together. End-effector = held object.",
           "default": true
         },
         {

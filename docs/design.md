@@ -222,7 +222,7 @@ Makers publish the same quantity on different bases: a quadruped's payload walki
 | Attribute | Default basis | Other bases |
 |---|---|---|
 | `mass` | `operating`: ready to operate, with battery, no payload; arm without controller | `without-battery`, `with-controller` |
-| `payload` | `rated`: arm at the flange; mobile, legged or humanoid robot while moving; humanoid with both arms; end-effector held object | `max`, `standing`, `per-arm`, `towing` |
+| `payload` | `rated`: arm and mobile manipulator at the flange; mobile, legged or humanoid robot while moving; humanoid with both arms; end-effector held object | `max`, `standing`, `per-arm`, `towing` |
 | `battery_runtime` | `rated`: the headline figure in normal use without payload; a range → its upper end | `loaded`, `standby` |
 | `max_speed` | `rated`: normal operation | `limit` (burst / peak / record) |
 | `flight_time` | `max`: the maker's maximum (no wind, no payload) | `hover`, `with-payload` |
