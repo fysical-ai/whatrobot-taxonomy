@@ -619,7 +619,24 @@
       "question": "What is the specified mass?",
       "type": "number",
       "multi": false,
-      "unit": "kg"
+      "unit": "kg",
+      "bases": [
+        {
+          "handle": "operating",
+          "description": "Complete product ready to operate, with battery, without payload or accessories. Arm = manipulator only, without controller or cabinet. Never package or shipping weight.",
+          "default": true
+        },
+        {
+          "handle": "without-battery",
+          "description": "Stated without battery.",
+          "default": false
+        },
+        {
+          "handle": "with-controller",
+          "description": "Arm stated including its controller (only when no arm-only figure exists).",
+          "default": false
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/20",
@@ -630,7 +647,34 @@
       "question": "What is the rated payload?",
       "type": "number",
       "multi": false,
-      "unit": "kg"
+      "unit": "kg",
+      "bases": [
+        {
+          "handle": "rated",
+          "description": "Rated payload as the spec sheet states it. Arm = at the flange/wrist. Mobile, legged or humanoid robot = carried while moving. Humanoid = with both arms together. End-effector = held object.",
+          "default": true
+        },
+        {
+          "handle": "max",
+          "description": "A higher \"maximum\" figure at reduced reach, speed or posture, when no rated figure exists.",
+          "default": false
+        },
+        {
+          "handle": "standing",
+          "description": "Static or standing load (legged or mobile robot not moving).",
+          "default": false
+        },
+        {
+          "handle": "per-arm",
+          "description": "One arm of a humanoid or dual-arm robot.",
+          "default": false
+        },
+        {
+          "handle": "towing",
+          "description": "Towed load (AMR / tugger).",
+          "default": false
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/21",
@@ -641,7 +685,24 @@
       "question": "What is the manufacturer-rated battery runtime?",
       "type": "number",
       "multi": false,
-      "unit": "min"
+      "unit": "min",
+      "bases": [
+        {
+          "handle": "rated",
+          "description": "The maker's headline runtime in normal operation, without payload (\"up to\" figures included). A range \"1-2 h\" → record the upper end.",
+          "default": true
+        },
+        {
+          "handle": "loaded",
+          "description": "Runtime with payload or under a stated working load, when no headline figure exists.",
+          "default": false
+        },
+        {
+          "handle": "standby",
+          "description": "Standby / idle time.",
+          "default": false
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/22",
@@ -788,7 +849,14 @@
       "question": "What is the maximum reach?",
       "type": "number",
       "multi": false,
-      "unit": "mm"
+      "unit": "mm",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "Maker's stated maximum reach. SCARA = total arm length (J1 + J2).",
+          "default": true
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/29",
@@ -799,7 +867,14 @@
       "question": "What repeatability does the spec sheet state?",
       "type": "number",
       "multi": false,
-      "unit": "mm"
+      "unit": "mm",
+      "bases": [
+        {
+          "handle": "pose",
+          "description": "Pose repeatability (ISO 9283) as stated; record the ± value as a positive number.",
+          "default": true
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/30",
@@ -869,7 +944,14 @@
       "question": "What is the standing height?",
       "type": "number",
       "multi": false,
-      "unit": "mm"
+      "unit": "mm",
+      "bases": [
+        {
+          "handle": "standing",
+          "description": "Standing height including head.",
+          "default": true
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/33",
@@ -933,7 +1015,19 @@
       "question": "What is the maximum speed?",
       "type": "number",
       "multi": false,
-      "unit": "m/s"
+      "unit": "m/s",
+      "bases": [
+        {
+          "handle": "rated",
+          "description": "Maximum speed the maker states for normal operation.",
+          "default": true
+        },
+        {
+          "handle": "limit",
+          "description": "Burst, peak, \"limit\" or record speed beyond normal operation, when no rated figure exists.",
+          "default": false
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/36",
@@ -1048,7 +1142,24 @@
       "question": "What is the rated flight time?",
       "type": "number",
       "multi": false,
-      "unit": "min"
+      "unit": "min",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "Maker's maximum flight time (no wind, no payload), as normally published.",
+          "default": true
+        },
+        {
+          "handle": "hover",
+          "description": "Hover time only.",
+          "default": false
+        },
+        {
+          "handle": "with-payload",
+          "description": "With a stated payload.",
+          "default": false
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/41",
@@ -1307,7 +1418,19 @@
       "question": "What is the maximum grip force?",
       "type": "number",
       "multi": false,
-      "unit": "N"
+      "unit": "N",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "Maximum gripping force.",
+          "default": true
+        },
+        {
+          "handle": "continuous",
+          "description": "Continuous / nominal grip force only.",
+          "default": false
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/50",
@@ -1459,7 +1582,14 @@
       "question": "What is the stall torque?",
       "type": "number",
       "multi": false,
-      "unit": "Nm"
+      "unit": "Nm",
+      "bases": [
+        {
+          "handle": "nominal-voltage",
+          "description": "At the nominal voltage recorded in `voltage`.",
+          "default": true
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/60",
@@ -1590,7 +1720,19 @@
       "question": "What is the maximum range?",
       "type": "number",
       "multi": false,
-      "unit": "m"
+      "unit": "m",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "Maker's maximum range.",
+          "default": true
+        },
+        {
+          "handle": "at-10pct",
+          "description": "Range at 10 % reflectivity (lidar).",
+          "default": false
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/64",
@@ -1601,7 +1743,19 @@
       "question": "What peak AI performance does the spec sheet state?",
       "type": "number",
       "multi": false,
-      "unit": "TOPS"
+      "unit": "TOPS",
+      "bases": [
+        {
+          "handle": "stated",
+          "description": "The maker's headline TOPS figure.",
+          "default": true
+        },
+        {
+          "handle": "sparse",
+          "description": "The maker states the figure is with sparsity (e.g. NVIDIA Jetson INT8 sparse).",
+          "default": false
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/65",

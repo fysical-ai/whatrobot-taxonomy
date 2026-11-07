@@ -259,6 +259,13 @@
   type: number
   unit: kg
   multi: false
+  bases:
+    - handle: operating
+      description: "Complete product ready to operate, with battery, without payload or accessories. Arm = manipulator only, without controller or cabinet. Never package or shipping weight."
+    - handle: without-battery
+      description: "Stated without battery."
+    - handle: with-controller
+      description: "Arm stated including its controller (only when no arm-only figure exists)."
 
 - id: 20
   name: Payload
@@ -269,6 +276,17 @@
   type: number
   unit: kg
   multi: false
+  bases:
+    - handle: rated
+      description: "Rated payload as the spec sheet states it. Arm = at the flange/wrist. Mobile, legged or humanoid robot = carried while moving. Humanoid = with both arms together. End-effector = held object."
+    - handle: max
+      description: "A higher \"maximum\" figure at reduced reach, speed or posture, when no rated figure exists."
+    - handle: standing
+      description: "Static or standing load (legged or mobile robot not moving)."
+    - handle: per-arm
+      description: "One arm of a humanoid or dual-arm robot."
+    - handle: towing
+      description: "Towed load (AMR / tugger)."
 
 - id: 21
   name: Battery runtime
@@ -279,6 +297,13 @@
   type: number
   unit: min
   multi: false
+  bases:
+    - handle: rated
+      description: "The maker's headline runtime in normal operation, without payload (\"up to\" figures included). A range \"1-2 h\" → record the upper end."
+    - handle: loaded
+      description: "Runtime with payload or under a stated working load, when no headline figure exists."
+    - handle: standby
+      description: "Standby / idle time."
 
 - id: 22
   name: IP rating
@@ -360,6 +385,9 @@
   type: number
   unit: mm
   multi: false
+  bases:
+    - handle: max
+      description: "Maker's stated maximum reach. SCARA = total arm length (J1 + J2)."
 
 - id: 29
   name: Repeatability
@@ -370,6 +398,9 @@
   type: number
   unit: mm
   multi: false
+  bases:
+    - handle: pose
+      description: "Pose repeatability (ISO 9283) as stated; record the ± value as a positive number."
 
 - id: 30
   name: Arm count
@@ -406,6 +437,9 @@
   type: number
   unit: mm
   multi: false
+  bases:
+    - handle: standing
+      description: "Standing height including head."
 
 - id: 33
   name: Total DOF
@@ -441,6 +475,11 @@
   type: number
   unit: m/s
   multi: false
+  bases:
+    - handle: rated
+      description: "Maximum speed the maker states for normal operation."
+    - handle: limit
+      description: "Burst, peak, \"limit\" or record speed beyond normal operation, when no rated figure exists."
 
 - id: 36
   name: Wheel feet
@@ -499,6 +538,13 @@
   type: number
   unit: min
   multi: false
+  bases:
+    - handle: max
+      description: "Maker's maximum flight time (no wind, no payload), as normally published."
+    - handle: hover
+      description: "Hover time only."
+    - handle: with-payload
+      description: "With a stated payload."
 
 - id: 41
   name: Max take-off weight
@@ -617,6 +663,11 @@
   type: number
   unit: N
   multi: false
+  bases:
+    - handle: max
+      description: "Maximum gripping force."
+    - handle: continuous
+      description: "Continuous / nominal grip force only."
 
 - id: 50
   name: Stroke
@@ -723,6 +774,9 @@
   type: number
   unit: Nm
   multi: false
+  bases:
+    - handle: nominal-voltage
+      description: "At the nominal voltage recorded in `voltage`."
 
 - id: 60
   name: Bus
@@ -777,6 +831,11 @@
   type: number
   unit: m
   multi: false
+  bases:
+    - handle: max
+      description: "Maker's maximum range."
+    - handle: at-10pct
+      description: "Range at 10 % reflectivity (lidar)."
 
 - id: 64
   name: AI performance
@@ -787,6 +846,11 @@
   type: number
   unit: TOPS
   multi: false
+  bases:
+    - handle: stated
+      description: "The maker's headline TOPS figure."
+    - handle: sparse
+      description: "The maker states the figure is with sparsity (e.g. NVIDIA Jetson INT8 sparse)."
 
 - id: 65
   name: Capacity
