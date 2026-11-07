@@ -60,6 +60,8 @@ def attribute_json(tx: Taxonomy, fid: str, locale: str, with_values: bool = True
     for k in ("unit", "format", "ref_target", "derived_from", "companions"):
         if getattr(a, k) is not None:
             out[k] = getattr(a, k)
+    if a.bases:
+        out["bases"] = [{"handle": b.handle, "description": b.description, "default": i == 0} for i, b in enumerate(a.bases)]
     if a.type == "enum" and with_values:
         out["values"] = [value_json(tx, v, locale) for v in a.values or []]
     return out

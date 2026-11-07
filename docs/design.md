@@ -141,6 +141,7 @@ Shopify attributes are enum-only. Robots need numbers with units, so the attribu
 | `values` | list of value `friendly_id`s (enum only); every enum ends with `<attr>__other` |
 | `ref_target` | `robot`, `component`, `manufacturer` (ref only) |
 | `question` | The one defining question an editor answers |
+| `bases` | Number attributes only: the ways the figure can be measured (§3.5). The first is the default |
 
 ### 3.2 Universal attributes (bound at root `rb`, inherited by every robot)
 
@@ -209,6 +210,33 @@ Shopify attributes are enum-only. Robots need numbers with units, so the attribu
 "Industrial robots" on the site = saved filter `segment: professional` AND `application_group: manufacturing`. Seeded from IFR groups; we own the list.
 
 ---
+
+### 3.5 Measurement bases (2026-11)
+
+Makers publish the same quantity on different bases: a quadruped's payload walking or standing, a runtime with or without load, a top speed in normal use or a burst "limit". Products are compared side by side only if the basis is known, so every number attribute that is published in more than one way lists its **bases**. The first is the default.
+
+- Record the figure on the **default basis**. If the source gives several, record only the default.
+- If the source gives **only another basis**, record that figure and label it with the basis (e.g. payload 120 kg, basis `standing`). Catalogues store the label next to the value; displays show it ("120 kg · standing").
+- Never derive one basis from another, and never record package or shipping weight as mass.
+
+| Attribute | Default basis | Other bases |
+|---|---|---|
+| `mass` | `operating`: ready to operate, with battery, no payload; arm without controller | `without-battery`, `with-controller` |
+| `payload` | `rated`: arm and mobile manipulator at the flange; mobile, legged or humanoid robot while moving; humanoid with both arms; end-effector held object | `max`, `standing`, `per-arm`, `towing` |
+| `battery_runtime` | `rated`: the headline figure in normal use without payload; a range → its upper end | `loaded`, `standby` |
+| `max_speed` | `rated`: normal operation | `limit` (burst / peak / record) |
+| `flight_time` | `max`: the maker's maximum (no wind, no payload) | `hover`, `with-payload` |
+| `height` | `standing`, including head | — |
+| `reach` | `max`; SCARA = J1 + J2 arm length | — |
+| `repeatability` | `pose` (ISO 9283), ± value as a positive number | — |
+| `grip_force` | `max` | `continuous` |
+| `range` | `max` | `at-10pct` (lidar at 10 % reflectivity) |
+| `ai_tops` | `stated`: the maker's headline figure | `sparse` |
+| `stall_torque` | `nominal-voltage`: at the voltage recorded in `voltage` | — |
+
+**Conversions** (not bases): hours → minutes; km/h → m/s; kg·cm → Nm (× 0.0981); mAh → Wh only when the same source states the nominal voltage.
+
+**Not applicable.** A product can lack a quantity altogether (a corded pool robot has no battery runtime). Catalogues record that separately from "not published", so displays can show *n/a* rather than a gap.
 
 ## 4. Component hierarchy (by component type)
 

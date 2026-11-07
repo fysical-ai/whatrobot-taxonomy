@@ -1,4 +1,28 @@
 {
+  "$defs": {
+    "Basis": {
+      "additionalProperties": false,
+      "description": "One way of measuring a number attribute (e.g. payload while walking vs standing). The first basis listed on an\nattribute is its default: the figure to record when a source gives several. Another basis is recorded, with its\nlabel, only when the source gives no figure on the default basis.",
+      "properties": {
+        "handle": {
+          "pattern": "^[a-z0-9][a-z0-9-]*$",
+          "title": "Handle",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "handle",
+        "description"
+      ],
+      "title": "Basis",
+      "type": "object"
+    }
+  },
   "additionalProperties": false,
   "properties": {
     "id": {
@@ -140,6 +164,22 @@
       ],
       "default": null,
       "title": "Companions"
+    },
+    "bases": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Basis"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Measurement bases; the first is the default",
+      "title": "Bases"
     }
   },
   "required": [

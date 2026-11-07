@@ -4,6 +4,11 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Measurement bases (2026-11-07)
+- Number attributes gain an optional `bases` list: the ways a figure can be measured, default first (design notes §3.5). Twelve attributes carry bases: `mass`, `payload`, `battery_runtime`, `max_speed`, `flight_time`, `height`, `reach`, `repeatability`, `grip_force`, `range`, `ai_tops`, `stall_torque`.
+- `dist/<locale>/attributes.json` lists them as `bases: [{handle, description, default}]`. Basis descriptions are English only for now (not yet in the localisation review).
+- No change to ids, names, descriptions or values; existing data stays valid.
+
 ### Localisation review (2026-11-02)
 - Localised entries carry a per-field review record, `source: {field: fingerprint}`; unreviewed drafts and stale reviews (English changed since) are now distinguishable. Categories gain localised search terms (`aliases`), which replace the English aliases in that locale's dist.
 - New `whatrobot-taxonomy l10n status | export | import` for the native-review round trip; validation warns on stale reviews; `release` refuses unreviewed locales unless `--allow-unreviewed`.

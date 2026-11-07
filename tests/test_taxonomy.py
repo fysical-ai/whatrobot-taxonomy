@@ -149,3 +149,15 @@ def test_version_is_calver_and_matches_pyproject():
     assert re.fullmatch(r"\d{4}-\d{2}", v), v
     py = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
     assert f'version = "{v.replace("-0", ".").replace("-", ".")}"' in py, "pyproject version must equal VERSION in PEP 440 form (2026-01 → 2026.1)"
+
+
+def test_measurement_bases(tx):
+    """Bases (docs/design.md §3.5): number attributes only, unique handles, default first."""
+    with_bases = {fid: a for fid, a in tx.attributes.items() if a.bases}
+    assert {"mass", "payload", "battery_runtime", "max_speed"} <= set(with_bases)
+    for fid, a in with_bases.items():
+        assert a.type == "number", fid
+        hs = [b.handle for b in a.bases]
+        assert len(hs) == len(set(hs)), fid
+    assert tx.attributes["payload"].bases[0].handle == "rated"
+    assert "standing" in [b.handle for b in tx.attributes["payload"].bases]

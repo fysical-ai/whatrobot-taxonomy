@@ -51,6 +51,14 @@ class Category(Strict):
         return self
 
 
+class Basis(Strict):
+    """One way of measuring a number attribute (e.g. payload while walking vs standing). The first basis listed on an
+    attribute is its default: the figure to record when a source gives several. Another basis is recorded, with its
+    label, only when the source gives no figure on the default basis."""
+    handle: str = Field(pattern=KEBAB_RE.pattern)
+    description: str = Field(min_length=1)
+
+
 class Attribute(Strict):
     id: int = Field(gt=0)
     name: str = Field(min_length=1)
@@ -66,6 +74,7 @@ class Attribute(Strict):
     ref_target: RefTarget | list[RefTarget] | None = None
     derived_from: str | None = None
     companions: list[str] | None = None
+    bases: list[Basis] | None = Field(None, description="Measurement bases; the first is the default")
 
     @model_validator(mode="after")
     def _type_rules(self) -> Attribute:
@@ -84,6 +93,12 @@ class Attribute(Strict):
                 raise ValueError(f"{fid}: duplicate values")
         elif self.values is not None:
             raise ValueError(f"{fid}: only enum attributes carry values")
+        if self.bases is not None:
+            if self.type != "number":
+                raise ValueError(f"{fid}: only number attributes carry bases")
+            hs = [b.handle for b in self.bases]
+            if not hs or len(set(hs)) != len(hs):
+                raise ValueError(f"{fid}: bases must be a non-empty list of unique handles")
         if self.type == "number" and not self.unit:
             raise ValueError(f"{fid}: number attribute needs a unit")
         if self.type != "number" and self.unit:
