@@ -6434,6 +6434,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             }
           ],
           "examples": []
@@ -6587,18 +6599,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
               "name": "Minimum voltage",
               "friendly_id": "voltage_min",
@@ -6609,6 +6609,18 @@
               "name": "Maximum voltage",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             }
           ],
           "examples": []
@@ -6765,18 +6777,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
               "name": "Minimum voltage",
               "friendly_id": "voltage_min",
@@ -6787,6 +6787,18 @@
               "name": "Maximum voltage",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
@@ -6946,18 +6958,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
               "name": "Minimum voltage",
               "friendly_id": "voltage_min",
@@ -6968,6 +6968,18 @@
               "name": "Maximum voltage",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
@@ -7140,18 +7152,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
               "name": "Minimum voltage",
               "friendly_id": "voltage_min",
@@ -7162,6 +7162,18 @@
               "name": "Maximum voltage",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
@@ -7320,18 +7332,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
               "name": "Minimum voltage",
               "friendly_id": "voltage_min",
@@ -7342,6 +7342,18 @@
               "name": "Maximum voltage",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
@@ -7500,18 +7512,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
               "name": "Minimum voltage",
               "friendly_id": "voltage_min",
@@ -7522,6 +7522,18 @@
               "name": "Maximum voltage",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
@@ -7696,18 +7708,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
               "name": "Minimum voltage",
               "friendly_id": "voltage_min",
@@ -7718,6 +7718,18 @@
               "name": "Maximum voltage",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/52",
@@ -7893,18 +7905,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
               "name": "Minimum voltage",
               "friendly_id": "voltage_min",
@@ -7915,6 +7915,18 @@
               "name": "Maximum voltage",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             }
           ],
           "examples": [
@@ -8057,18 +8069,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/45",
-              "name": "法兰标准",
-              "friendly_id": "flange_standard",
-              "handle": "flange-standard"
-            },
-            {
-              "id": "gid://whatrobot/TaxonomyAttribute/48",
-              "name": "驱动方式",
-              "friendly_id": "actuation",
-              "handle": "actuation"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
               "name": "Minimum voltage",
               "friendly_id": "voltage_min",
@@ -8079,6 +8079,18 @@
               "name": "Maximum voltage",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/45",
+              "name": "法兰标准",
+              "friendly_id": "flange_standard",
+              "handle": "flange-standard"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/48",
+              "name": "驱动方式",
+              "friendly_id": "actuation",
+              "handle": "actuation"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/20",
@@ -8245,6 +8257,18 @@
               "handle": "voltage"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/48",
               "name": "驱动方式",
               "friendly_id": "actuation",
@@ -8388,6 +8412,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/48",
@@ -8563,6 +8599,18 @@
               "handle": "voltage"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/48",
               "name": "驱动方式",
               "friendly_id": "actuation",
@@ -8727,6 +8775,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/48",
@@ -8895,6 +8955,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/48",
@@ -9067,6 +9139,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/48",
@@ -9258,6 +9342,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             }
           ],
           "examples": []
@@ -9398,6 +9494,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/61",
@@ -9553,6 +9661,18 @@
               "handle": "voltage"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/62",
               "name": "扫描维度",
               "friendly_id": "scan_dimensions",
@@ -9705,6 +9825,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/27",
@@ -9864,6 +9996,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             }
           ],
           "examples": [
@@ -10006,6 +10150,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/79",
@@ -10171,6 +10327,18 @@
               "handle": "voltage"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/63",
               "name": "量程",
               "friendly_id": "range",
@@ -10326,6 +10494,18 @@
               "handle": "voltage"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/64",
               "name": "AI 算力",
               "friendly_id": "ai_tops",
@@ -10468,6 +10648,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/65",
@@ -10613,6 +10805,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             }
           ],
           "examples": [
@@ -10751,6 +10955,18 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/66",
