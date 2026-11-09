@@ -1219,10 +1219,28 @@
               "name": "安装方式",
               "friendly_id": "mounting",
               "handle": "mounting"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/72",
+              "name": "Stroke X",
+              "friendly_id": "stroke_x",
+              "handle": "stroke-x"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/73",
+              "name": "Stroke Y",
+              "friendly_id": "stroke_y",
+              "handle": "stroke-y"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/74",
+              "name": "Stroke Z",
+              "friendly_id": "stroke_z",
+              "handle": "stroke-z"
             }
           ],
           "examples": [
-            "igus-drylin-gantry"
+            "igus-dle-rg-0001"
           ]
         },
         {
@@ -1420,6 +1438,12 @@
               "name": "安装方式",
               "friendly_id": "mounting",
               "handle": "mounting"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/74",
+              "name": "Stroke Z",
+              "friendly_id": "stroke_z",
+              "handle": "stroke-z"
             }
           ],
           "examples": [
@@ -4027,6 +4051,18 @@
               "name": "最大起飞重量",
               "friendly_id": "max_takeoff_weight",
               "handle": "max-takeoff-weight"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "最高速度",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/69",
+              "name": "Flight range",
+              "friendly_id": "flight_range",
+              "handle": "flight-range"
             }
           ],
           "examples": []
@@ -4208,6 +4244,18 @@
               "name": "最大起飞重量",
               "friendly_id": "max_takeoff_weight",
               "handle": "max-takeoff-weight"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "最高速度",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/69",
+              "name": "Flight range",
+              "friendly_id": "flight_range",
+              "handle": "flight-range"
             }
           ],
           "examples": [
@@ -4389,6 +4437,30 @@
               "name": "最大起飞重量",
               "friendly_id": "max_takeoff_weight",
               "handle": "max-takeoff-weight"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "最高速度",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/69",
+              "name": "Flight range",
+              "friendly_id": "flight_range",
+              "handle": "flight-range"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/67",
+              "name": "Wingspan",
+              "friendly_id": "wingspan",
+              "handle": "wingspan"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/68",
+              "name": "Cruise speed",
+              "friendly_id": "cruise_speed",
+              "handle": "cruise-speed"
             }
           ],
           "examples": [
@@ -4571,6 +4643,30 @@
               "name": "最大起飞重量",
               "friendly_id": "max_takeoff_weight",
               "handle": "max-takeoff-weight"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/35",
+              "name": "最高速度",
+              "friendly_id": "max_speed",
+              "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/69",
+              "name": "Flight range",
+              "friendly_id": "flight_range",
+              "handle": "flight-range"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/67",
+              "name": "Wingspan",
+              "friendly_id": "wingspan",
+              "handle": "wingspan"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/68",
+              "name": "Cruise speed",
+              "friendly_id": "cruise_speed",
+              "handle": "cruise-speed"
             }
           ],
           "examples": [
@@ -5462,6 +5558,12 @@
               "name": "作用部位",
               "friendly_id": "body_region",
               "handle": "body-region"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/70",
+              "name": "Maximum user weight",
+              "friendly_id": "max_user_weight",
+              "handle": "max-user-weight"
             }
           ],
           "examples": []
@@ -5636,6 +5738,12 @@
               "name": "作用部位",
               "friendly_id": "body_region",
               "handle": "body-region"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/70",
+              "name": "Maximum user weight",
+              "friendly_id": "max_user_weight",
+              "handle": "max-user-weight"
             }
           ],
           "examples": [
@@ -5813,6 +5921,18 @@
               "name": "作用部位",
               "friendly_id": "body_region",
               "handle": "body-region"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/70",
+              "name": "Maximum user weight",
+              "friendly_id": "max_user_weight",
+              "handle": "max-user-weight"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/71",
+              "name": "Load limit",
+              "friendly_id": "load_limit",
+              "handle": "load-limit"
             }
           ],
           "examples": [
@@ -6467,12 +6587,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/20",
-              "name": "负载",
-              "friendly_id": "payload",
-              "handle": "payload"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/45",
               "name": "法兰标准",
               "friendly_id": "flange_standard",
@@ -6483,6 +6597,18 @@
               "name": "驱动方式",
               "friendly_id": "actuation",
               "handle": "actuation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             }
           ],
           "examples": []
@@ -6639,12 +6765,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/20",
-              "name": "负载",
-              "friendly_id": "payload",
-              "handle": "payload"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/45",
               "name": "法兰标准",
               "friendly_id": "flange_standard",
@@ -6657,10 +6777,28 @@
               "handle": "actuation"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
               "name": "夹持力",
               "friendly_id": "grip_force",
               "handle": "grip-force"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/20",
+              "name": "负载",
+              "friendly_id": "payload",
+              "handle": "payload"
             }
           ],
           "examples": []
@@ -6808,12 +6946,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/20",
-              "name": "负载",
-              "friendly_id": "payload",
-              "handle": "payload"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/45",
               "name": "法兰标准",
               "friendly_id": "flange_standard",
@@ -6826,10 +6958,28 @@
               "handle": "actuation"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
               "name": "夹持力",
               "friendly_id": "grip_force",
               "handle": "grip-force"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/20",
+              "name": "负载",
+              "friendly_id": "payload",
+              "handle": "payload"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/50",
@@ -6990,12 +7140,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/20",
-              "name": "负载",
-              "friendly_id": "payload",
-              "handle": "payload"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/45",
               "name": "法兰标准",
               "friendly_id": "flange_standard",
@@ -7008,10 +7152,28 @@
               "handle": "actuation"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
               "name": "夹持力",
               "friendly_id": "grip_force",
               "handle": "grip-force"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/20",
+              "name": "负载",
+              "friendly_id": "payload",
+              "handle": "payload"
             }
           ],
           "examples": [
@@ -7158,12 +7320,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/20",
-              "name": "负载",
-              "friendly_id": "payload",
-              "handle": "payload"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/45",
               "name": "法兰标准",
               "friendly_id": "flange_standard",
@@ -7176,10 +7332,28 @@
               "handle": "actuation"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
               "name": "夹持力",
               "friendly_id": "grip_force",
               "handle": "grip-force"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/20",
+              "name": "负载",
+              "friendly_id": "payload",
+              "handle": "payload"
             }
           ],
           "examples": [
@@ -7326,12 +7500,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/20",
-              "name": "负载",
-              "friendly_id": "payload",
-              "handle": "payload"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/45",
               "name": "法兰标准",
               "friendly_id": "flange_standard",
@@ -7344,10 +7512,28 @@
               "handle": "actuation"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/49",
               "name": "夹持力",
               "friendly_id": "grip_force",
               "handle": "grip-force"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/20",
+              "name": "负载",
+              "friendly_id": "payload",
+              "handle": "payload"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/50",
@@ -7360,6 +7546,12 @@
               "name": "手指数量",
               "friendly_id": "finger_count",
               "handle": "finger-count"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/84",
+              "name": "Grip range",
+              "friendly_id": "grip_range",
+              "handle": "grip-range"
             }
           ],
           "examples": [
@@ -7504,12 +7696,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/20",
-              "name": "负载",
-              "friendly_id": "payload",
-              "handle": "payload"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/45",
               "name": "法兰标准",
               "friendly_id": "flange_standard",
@@ -7520,6 +7706,18 @@
               "name": "驱动方式",
               "friendly_id": "actuation",
               "handle": "actuation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/52",
@@ -7544,6 +7742,12 @@
               "name": "夹持力",
               "friendly_id": "grip_force",
               "handle": "grip-force"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/20",
+              "name": "负载",
+              "friendly_id": "payload",
+              "handle": "payload"
             }
           ],
           "examples": [
@@ -7689,12 +7893,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/20",
-              "name": "负载",
-              "friendly_id": "payload",
-              "handle": "payload"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/45",
               "name": "法兰标准",
               "friendly_id": "flange_standard",
@@ -7705,6 +7903,18 @@
               "name": "驱动方式",
               "friendly_id": "actuation",
               "handle": "actuation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
             }
           ],
           "examples": [
@@ -7847,12 +8057,6 @@
               "handle": "voltage"
             },
             {
-              "id": "gid://whatrobot/TaxonomyAttribute/20",
-              "name": "负载",
-              "friendly_id": "payload",
-              "handle": "payload"
-            },
-            {
               "id": "gid://whatrobot/TaxonomyAttribute/45",
               "name": "法兰标准",
               "friendly_id": "flange_standard",
@@ -7863,6 +8067,24 @@
               "name": "驱动方式",
               "friendly_id": "actuation",
               "handle": "actuation"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/75",
+              "name": "Minimum voltage",
+              "friendly_id": "voltage_min",
+              "handle": "voltage-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/76",
+              "name": "Maximum voltage",
+              "friendly_id": "voltage_max",
+              "handle": "voltage-max"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/20",
+              "name": "负载",
+              "friendly_id": "payload",
+              "handle": "payload"
             }
           ],
           "examples": [
@@ -8523,6 +8745,12 @@
               "name": "峰值扭矩",
               "friendly_id": "peak_torque",
               "handle": "peak-torque"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/59",
+              "name": "堵转扭矩",
+              "friendly_id": "stall_torque",
+              "handle": "stall-torque"
             }
           ],
           "examples": [
@@ -8857,6 +9085,18 @@
               "name": "额定推力",
               "friendly_id": "rated_force",
               "handle": "rated-force"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/83",
+              "name": "Linear speed",
+              "friendly_id": "linear_speed",
+              "handle": "linear-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/29",
+              "name": "重复定位精度",
+              "friendly_id": "repeatability",
+              "handle": "repeatability"
             }
           ],
           "examples": [
@@ -9471,6 +9711,18 @@
               "name": "轴数",
               "friendly_id": "axes",
               "handle": "axes"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/81",
+              "name": "Force range",
+              "friendly_id": "force_range",
+              "handle": "force-range"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/82",
+              "name": "Torque range",
+              "friendly_id": "torque_range",
+              "handle": "torque-range"
             }
           ],
           "examples": [
@@ -9754,6 +10006,24 @@
               "name": "电压",
               "friendly_id": "voltage",
               "handle": "voltage"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/79",
+              "name": "Heading accuracy",
+              "friendly_id": "heading_accuracy",
+              "handle": "heading-accuracy"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/80",
+              "name": "Attitude accuracy",
+              "friendly_id": "attitude_accuracy",
+              "handle": "attitude-accuracy"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/78",
+              "name": "Update rate",
+              "friendly_id": "update_rate",
+              "handle": "update-rate"
             }
           ],
           "examples": [
@@ -9905,6 +10175,18 @@
               "name": "量程",
               "friendly_id": "range",
               "handle": "range"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/77",
+              "name": "Position accuracy",
+              "friendly_id": "position_accuracy",
+              "handle": "position-accuracy"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/78",
+              "name": "Update rate",
+              "friendly_id": "update_rate",
+              "handle": "update-rate"
             }
           ],
           "examples": [

@@ -54,7 +54,8 @@ def test_decision_d6_component_branches(tx):
 def test_decision_d3_segment_has_no_industrial(tx):
     vals = tx.attributes["segment"].values
     assert "segment__industrial" not in vals
-    assert vals[:-1] == ["segment__hobby", "segment__education", "segment__research", "segment__professional", "segment__consumer"]
+    # D3 user types; `clinical` added 2026-11-09 (batch-1 ruling: clinician-fitted devices such as prostheses)
+    assert vals[:-1] == ["segment__hobby", "segment__education", "segment__research", "segment__professional", "segment__consumer", "segment__clinical"]
 
 
 def test_every_enum_ends_with_other(tx):

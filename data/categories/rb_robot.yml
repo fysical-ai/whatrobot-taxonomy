@@ -90,8 +90,8 @@
   aliases: [gantry robot, linear robot, XYZ robot, cartesian robot]
   inclusion_rule: Three prismatic (linear) main axes.
   children: []
-  attributes: []
-  examples: [igus-drylin-gantry]
+  attributes: [stroke_x, stroke_y, stroke_z]
+  examples: [igus-dle-rg-0001]
 
 - id: rb-1-5
   name: Cylindrical & spherical arm
@@ -101,7 +101,7 @@
   aliases: [polar robot, spherical robot, cylindrical robot, polar arm]
   inclusion_rule: Rotary base combined with a prismatic reach axis; the second axis is either a prismatic lift (cylindrical) or a rotary tilt (spherical / polar).
   children: []
-  attributes: []
+  attributes: [stroke_z]
   examples: [st-robotics-r19]
 
 # ----------------------------------------------------------- rb-2 humanoid
@@ -249,7 +249,7 @@
   aliases: [drone, UAV, UAS, unmanned aerial vehicle]
   inclusion_rule: Primary operating medium is air.
   children: [rb-6-1, rb-6-2, rb-6-3]
-  attributes: [flight_time, max_takeoff_weight]
+  attributes: [flight_time, max_takeoff_weight, max_speed, flight_range]
   examples: []
 
 - id: rb-6-1
@@ -271,7 +271,7 @@
   aliases: [fixed-wing drone, UAV plane]
   inclusion_rule: Lift from a fixed wing; cannot hover.
   children: []
-  attributes: []
+  attributes: [wingspan, cruise_speed]
   examples: [sensefly-ebee]
 
 - id: rb-6-3
@@ -282,7 +282,7 @@
   aliases: [VTOL drone, tiltrotor drone, tail-sitter]
   inclusion_rule: Both rotors for vertical flight and a fixed wing for cruise.
   children: []
-  attributes: []
+  attributes: [wingspan, cruise_speed]
   examples: [wingtra-one]
 
 # ------------------------------------------------------------- rb-7 aquatic
@@ -339,7 +339,7 @@
   aliases: [wearable robot, exosuit]
   inclusion_rule: Worn on the body and powered. Passive (unpowered) exoskeletons are out of scope for this taxonomy.
   children: [rb-8-1, rb-8-2]
-  attributes: [body_region]
+  attributes: [body_region, max_user_weight]
   examples: []
 
 - id: rb-8-1
@@ -361,7 +361,7 @@
   aliases: [powered prosthesis, bionic limb, bionic hand, powered knee]
   inclusion_rule: Powered actuation that replaces, rather than assists, a limb or joint. Passive prostheses are out of scope.
   children: []
-  attributes: []
+  attributes: [load_limit]
   examples: [ossur-power-knee]
 
 # ---------------------------------------------------------- rb-9 stationary

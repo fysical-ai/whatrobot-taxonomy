@@ -4,6 +4,15 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Batch-1 rulings (2026-11-09)
+- 18 new number attributes (ids 67–84): `wingspan`, `cruise_speed`, `flight_range`, `max_user_weight`, `load_limit`, `stroke_x`, `stroke_y`, `stroke_z`, `voltage_min`, `voltage_max`, `position_accuracy`, `update_rate`, `heading_accuracy`, `attitude_accuracy`, `force_range`, `torque_range`, `linear_speed`, `grip_range`.
+- 11 new values (ids 153–163): applications `mapping-surveying`, `lab-automation`; user type `clinical` (amends D3); teleop type `handheld-demonstrator`; interfaces `uart`, `i2c`, `spi`, `rs232`, `rs422`, `modbus-rtu`, `analog`.
+- Bindings: `max_speed` and `flight_range` on aerial; `wingspan`, `cruise_speed` on fixed-wing and hybrid VTOL; `max_user_weight` on wearable, `load_limit` on prosthesis; X/Y/Z strokes on Cartesian arm, `stroke_z` on cylindrical arm; `voltage_min`/`voltage_max` on the component root; sensor accuracies, rates and ranges on range/positioning, inertial and force-torque; `stall_torque` on motor; `linear_speed` and `repeatability` on linear actuator; `grip_range` on soft gripper.
+- **Breaking for data:** `payload` moves from end-effector to gripper, hand and tool changer, so Tool no longer binds it.
+- Bases: `rated_force` gains `continuous` (default) and `max`; `payload` gains `shear`. `stall_torque` description now covers motors.
+- Rules in design notes §10.2 (not-applicable conventions, kits as one product). IFR service mapping: both new applications → other professional service.
+- Example `igus-drylin-gantry` renamed `igus-dle-rg-0001`. zh-Hans entries for the new attributes and values are not written yet (validation warns).
+
 ### Measurement bases (2026-11-07)
 - Number attributes gain an optional `bases` list: the ways a figure can be measured, default first (design notes §3.5). Twelve attributes carry bases: `mass`, `payload`, `battery_runtime`, `max_speed`, `flight_time`, `height`, `reach`, `repeatability`, `grip_force`, `range`, `ai_tops`, `stall_torque`.
 - `dist/<locale>/attributes.json` lists them as `bases: [{handle, description, default}]`. Basis descriptions are English only for now (not yet in the localisation review).

@@ -328,6 +328,38 @@
               }
             ]
           }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__mapping-surveying",
+              "name": "Mapping and surveying"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-other",
+                "full_name": "Professional service > Other professional service robots"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "attribute_value": {
+              "friendly_id": "application__lab-automation",
+              "name": "Lab automation"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "professional-other",
+                "full_name": "Professional service > Other professional service robots"
+              }
+            ]
+          }
         }
       ]
     }

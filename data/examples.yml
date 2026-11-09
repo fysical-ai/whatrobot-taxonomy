@@ -207,7 +207,7 @@
   attributes: {teleop_type: leader-arm}
 
 # ------------------------------- remaining category examples (compact entries)
-- {handle: igus-drylin-gantry, name: igus drylin gantry, expected: rb-1-4, facts: {fixed_base: true, manipulates: true, arm_kinematics: cartesian}}
+- {handle: igus-dle-rg-0001, name: igus drylin room-linear gantry DLE-RG-0001, expected: rb-1-4, facts: {fixed_base: true, manipulates: true, arm_kinematics: cartesian}}
 - {handle: st-robotics-r19, name: ST Robotics R19, expected: rb-1-5, facts: {fixed_base: true, manipulates: true, arm_kinematics: cylindrical}}
 - {handle: agibot-x2, name: AgiBot X2, expected: rb-2-1, facts: {humanoid_form: true, legs: 2, manipulates: true, medium: ground}}
 - {handle: agibot-a2-w, name: AgiBot A2-W, expected: rb-2-2, facts: {humanoid_form: true, legs: 0, wheels_or_tracks: wheels, manipulates: true, medium: ground}}

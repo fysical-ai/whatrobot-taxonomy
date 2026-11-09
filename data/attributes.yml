@@ -46,7 +46,7 @@
   name: User type
   friendly_id: segment
   handle: segment
-  description: User types that would plausibly buy this at list price — hobby, education, research, professional, consumer. (Identifier kept as `segment`; display name changed 2026-10-30.)
+  description: User types that would plausibly buy this at list price — hobby, education, research, professional, consumer, clinical. (Identifier kept as `segment`; display name changed 2026-10-30.)
   question: Which user types would plausibly buy this at list price?
   type: enum
   multi: true
@@ -56,6 +56,7 @@
     - segment__research
     - segment__professional
     - segment__consumer
+    - segment__clinical
     - segment__other
 
 - id: 6
@@ -116,6 +117,8 @@
     - application__education
     - application__research-platform
     - application__general-purpose
+    - application__mapping-surveying
+    - application__lab-automation
     - application__other
 
 - id: 8
@@ -287,6 +290,8 @@
       description: "One arm of a humanoid or dual-arm robot."
     - handle: towing
       description: "Towed load (AMR / tugger)."
+    - handle: shear
+      description: "Magnetic or vacuum grip with the load acting parallel to the gripping face (shear), when only that figure is given. The default for these grippers is a straight pull off a flat part."
 
 - id: 21
   name: Battery runtime
@@ -625,6 +630,13 @@
     - interface__io-link
     - interface__digital-io
     - interface__pneumatic
+    - interface__uart
+    - interface__i2c
+    - interface__spi
+    - interface__rs232
+    - interface__rs422
+    - interface__modbus-rtu
+    - interface__analog
     - interface__other
 
 - id: 47
@@ -764,12 +776,17 @@
   type: number
   unit: N
   multi: false
+  bases:
+    - handle: continuous
+      description: "Continuous (rated) force at 100 % duty."
+    - handle: max
+      description: "The maker's maximum or peak force (e.g. max lifted or feed force), when no continuous figure exists."
 
 - id: 59
   name: Stall torque
   friendly_id: stall_torque
   handle: stall-torque
-  description: Servo stall torque (manufacturers quote kg·cm; convert, 1 kg·cm = 0.0981 Nm).
+  description: Stall torque, the torque at zero speed (servos and motors; servo makers quote kg·cm — convert, 1 kg·cm = 0.0981 Nm).
   question: What is the stall torque?
   type: number
   unit: Nm
@@ -876,4 +893,185 @@
     - teleop_type__vr-rig
     - teleop_type__mocap
     - teleop_type__gamepad
+    - teleop_type__handheld-demonstrator
     - teleop_type__other
+
+- id: 67
+  name: Wingspan
+  friendly_id: wingspan
+  handle: wingspan
+  description: "Wingspan of a fixed-wing or hybrid VTOL aircraft."
+  question: What is the wingspan?
+  type: number
+  unit: mm
+  multi: false
+
+- id: 68
+  name: Cruise speed
+  friendly_id: cruise_speed
+  handle: cruise-speed
+  description: "Typical cruise airspeed."
+  question: What is the cruise speed?
+  type: number
+  unit: m/s
+  multi: false
+
+- id: 69
+  name: Flight range
+  friendly_id: flight_range
+  handle: flight-range
+  description: "Distance the aircraft can fly on one charge or tank, as the maker states it."
+  question: How far can it fly on one charge?
+  type: number
+  unit: km
+  multi: false
+
+- id: 70
+  name: Maximum user weight
+  friendly_id: max_user_weight
+  handle: max-user-weight
+  description: "Heaviest user the wearable device is rated for."
+  question: What is the maximum user weight?
+  type: number
+  unit: kg
+  multi: false
+
+- id: 71
+  name: Load limit
+  friendly_id: load_limit
+  handle: load-limit
+  description: "Maximum static load a prosthetic device is rated to hold or bear (e.g. a hand's static load limit)."
+  question: What load is it rated to hold?
+  type: number
+  unit: kg
+  multi: false
+
+- id: 72
+  name: Stroke X
+  friendly_id: stroke_x
+  handle: stroke-x
+  description: "Travel of the X axis of a Cartesian robot (working area width)."
+  question: How far does the X axis travel?
+  type: number
+  unit: mm
+  multi: false
+
+- id: 73
+  name: Stroke Y
+  friendly_id: stroke_y
+  handle: stroke-y
+  description: "Travel of the Y axis of a Cartesian robot (working area depth)."
+  question: How far does the Y axis travel?
+  type: number
+  unit: mm
+  multi: false
+
+- id: 74
+  name: Stroke Z
+  friendly_id: stroke_z
+  handle: stroke-z
+  description: "Vertical travel of a Cartesian or cylindrical robot."
+  question: How far does the vertical axis travel?
+  type: number
+  unit: mm
+  multi: false
+
+- id: 75
+  name: Minimum voltage
+  friendly_id: voltage_min
+  handle: voltage-min
+  description: "Lowest supply voltage of a stated input range. Use with voltage_max when the maker gives a range instead of a nominal voltage."
+  question: What is the lowest supply voltage it accepts?
+  type: number
+  unit: V
+  multi: false
+
+- id: 76
+  name: Maximum voltage
+  friendly_id: voltage_max
+  handle: voltage-max
+  description: "Highest supply voltage of a stated input range."
+  question: What is the highest supply voltage it accepts?
+  type: number
+  unit: V
+  multi: false
+
+- id: 77
+  name: Position accuracy
+  friendly_id: position_accuracy
+  handle: position-accuracy
+  description: "Horizontal position accuracy of a positioning sensor (RTK fix for GNSS), as the maker states it."
+  question: How accurate is its position?
+  type: number
+  unit: mm
+  multi: false
+
+- id: 78
+  name: Update rate
+  friendly_id: update_rate
+  handle: update-rate
+  description: "Maximum output or measurement rate."
+  question: How often does it output a reading?
+  type: number
+  unit: Hz
+  multi: false
+
+- id: 79
+  name: Heading accuracy
+  friendly_id: heading_accuracy
+  handle: heading-accuracy
+  description: "Heading (yaw) accuracy of an IMU or AHRS, as the maker states it."
+  question: How accurate is its heading?
+  type: number
+  unit: deg
+  multi: false
+
+- id: 80
+  name: Attitude accuracy
+  friendly_id: attitude_accuracy
+  handle: attitude-accuracy
+  description: "Roll and pitch accuracy of an IMU or AHRS (dynamic, as the maker states it)."
+  question: How accurate are its roll and pitch?
+  type: number
+  unit: deg
+  multi: false
+
+- id: 81
+  name: Force range
+  friendly_id: force_range
+  handle: force-range
+  description: "Measuring range of a force-torque sensor in force (largest axis, ±)."
+  question: What force range does it measure?
+  type: number
+  unit: N
+  multi: false
+
+- id: 82
+  name: Torque range
+  friendly_id: torque_range
+  handle: torque-range
+  description: "Measuring range of a force-torque sensor in torque (largest axis, ±)."
+  question: What torque range does it measure?
+  type: number
+  unit: Nm
+  multi: false
+
+- id: 83
+  name: Linear speed
+  friendly_id: linear_speed
+  handle: linear-speed
+  description: "Maximum linear speed of a linear actuator."
+  question: How fast does it move?
+  type: number
+  unit: mm/s
+  multi: false
+
+- id: 84
+  name: Grip range
+  friendly_id: grip_range
+  handle: grip-range
+  description: "Largest object size the gripper can grasp."
+  question: How large an object can it grasp?
+  type: number
+  unit: mm
+  multi: false

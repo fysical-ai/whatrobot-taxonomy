@@ -23,6 +23,8 @@ application_group__professional-service:
   - application__security
   - application__search-rescue
   - application__hospitality-retail
+  - application__mapping-surveying
+  - application__lab-automation
 application_group__consumer:
   - application__domestic-cleaning
   - application__lawn-garden
