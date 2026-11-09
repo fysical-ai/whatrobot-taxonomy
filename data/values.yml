@@ -653,3 +653,63 @@
   name: Analog
   friendly_id: interface__analog
   handle: interface__analog
+- id: 165
+  name: Programmed
+  friendly_id: autonomy__programmed
+  handle: autonomy__programmed
+- id: 166
+  name: Skid-steer
+  friendly_id: drive_config__skid-steer
+  handle: drive-config__skid-steer
+- id: 167
+  name: Self-balancing
+  friendly_id: drive_config__self-balancing
+  handle: drive-config__self-balancing
+- id: 168
+  name: United States (FDA)
+  friendly_id: medical_clearance__us-fda
+  handle: medical-clearance__us-fda
+- id: 169
+  name: European Union (CE)
+  friendly_id: medical_clearance__eu-ce
+  handle: medical-clearance__eu-ce
+- id: 170
+  name: China (NMPA)
+  friendly_id: medical_clearance__cn-nmpa
+  handle: medical-clearance__cn-nmpa
+- id: 171
+  name: Japan (MHLW / PMDA)
+  friendly_id: medical_clearance__jp-pmda
+  handle: medical-clearance__jp-pmda
+- id: 172
+  name: Other
+  friendly_id: medical_clearance__other
+  handle: medical-clearance__other
+- id: 173
+  name: None
+  friendly_id: adhesion__none
+  handle: adhesion__none
+- id: 174
+  name: Magnetic
+  friendly_id: adhesion__magnetic
+  handle: adhesion__magnetic
+- id: 175
+  name: Vacuum
+  friendly_id: adhesion__vacuum
+  handle: adhesion__vacuum
+- id: 176
+  name: Other
+  friendly_id: adhesion__other
+  handle: adhesion__other
+- id: 177
+  name: Rigid
+  friendly_id: construction__rigid
+  handle: construction__rigid
+- id: 178
+  name: Soft
+  friendly_id: construction__soft
+  handle: construction__soft
+- id: 179
+  name: Other
+  friendly_id: construction__other
+  handle: construction__other

@@ -6,6 +6,7 @@ segment__education: {name: 教育}
 segment__research: {name: 科研}
 segment__professional: {name: 专业/商用}
 segment__consumer: {name: 消费者}
+segment__clinical: {name: 临床}
 segment__other: {name: 其他}
 application_group__manufacturing: {name: 制造}
 application_group__logistics: {name: 物流}
@@ -58,6 +59,7 @@ environment__hazardous: {name: 危险环境}
 environment__space: {name: 太空}
 environment__other: {name: 其他}
 autonomy__teleoperated: {name: 遥操作}
+autonomy__programmed: {name: 程序控制}
 autonomy__assisted: {name: 辅助}
 autonomy__semi-autonomous: {name: 半自主}
 autonomy__autonomous: {name: 全自主}
@@ -94,6 +96,8 @@ drive_config__differential: {name: 差速}
 drive_config__omnidirectional: {name: 全向}
 drive_config__ackermann: {name: 阿克曼}
 drive_config__tracked: {name: 履带}
+drive_config__skid-steer: {name: 滑移转向}
+drive_config__self-balancing: {name: 自平衡}
 drive_config__other: {name: 其他}
 navigation__line-following: {name: 循线}
 navigation__marker-based: {name: 标记导航}
@@ -153,3 +157,15 @@ teleop_type__vr-rig: {name: VR 系统}
 teleop_type__mocap: {name: 动作捕捉}
 teleop_type__gamepad: {name: 手柄}
 teleop_type__other: {name: 其他}
+medical_clearance__us-fda: {name: 美国（FDA）}
+medical_clearance__eu-ce: {name: 欧盟（CE）}
+medical_clearance__cn-nmpa: {name: 中国（NMPA）}
+medical_clearance__jp-pmda: {name: 日本（厚生劳动省/PMDA）}
+medical_clearance__other: {name: 其他}
+adhesion__none: {name: 无}
+adhesion__magnetic: {name: 磁吸}
+adhesion__vacuum: {name: 真空吸附}
+adhesion__other: {name: 其他}
+construction__rigid: {name: 刚性}
+construction__soft: {name: 柔性}
+construction__other: {name: 其他}

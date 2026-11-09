@@ -129,6 +129,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -218,7 +224,7 @@
             "industrial arm",
             "cobot"
           ],
-          "inclusion_rule": "Fixed base (floor, table, wall, ceiling or a separately sold mobile base); manipulates; not humanoid in form.",
+          "inclusion_rule": "Fixed base (floor, table, wall, ceiling, a separately sold mobile base, or a cart or stand that people move between jobs); manipulates, meaning it positions a tool, gripper or sensor head in space; not humanoid in form.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
           "children": [
             {
@@ -240,6 +246,10 @@
             {
               "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
               "name": "Cylindrical & spherical arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-6",
+              "name": "Continuum arm"
             }
           ],
           "ancestors": [
@@ -314,6 +324,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -436,7 +452,7 @@
             "desktop arm",
             "anthropomorphic arm"
           ],
-          "inclusion_rule": "At least three rotary joints in series. Collaborative safety rating does not change the category (attribute collaborative).",
+          "inclusion_rule": "At least three rotary joints in series. Collaborative safety features do not change the category (attribute collaborative). An arm with more bending segments than independently driven joints, bending along its length, is a continuum arm (rb-1-6), even if each segment is a rotary joint. An arm whose every joint has its own drive, even through cables from the base, stays here.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
           "children": [],
           "ancestors": [
@@ -515,6 +531,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -717,6 +739,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -830,14 +858,16 @@
           "full_name": "Robot > Arm > Parallel arm",
           "friendly_id": "robot.arm.parallel",
           "handle": "parallel",
-          "description": "Parallel-kinematic manipulator such as a delta robot or hexapod / Stewart platform.",
+          "description": "Parallel-kinematic manipulator such as a delta robot, a hexapod / Stewart platform or a cable-driven parallel robot.",
           "aliases": [
             "delta robot",
             "hexapod platform",
             "Stewart platform",
-            "parallel robot"
+            "parallel robot",
+            "cable-driven parallel robot",
+            "cable robot"
           ],
-          "inclusion_rule": "End-effector carried by two or more kinematic chains acting in parallel.",
+          "inclusion_rule": "End-effector carried by two or more kinematic chains acting in parallel. The chains may be rigid links or cables pulled by winches (cable-driven parallel robots).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
           "children": [],
           "ancestors": [
@@ -916,6 +946,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -1117,6 +1153,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -1338,6 +1380,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -1451,6 +1499,222 @@
           ]
         },
         {
+          "id": "gid://whatrobot/TaxonomyCategory/rb-1-6",
+          "level": 2,
+          "name": "Continuum arm",
+          "full_name": "Robot > Arm > Continuum arm",
+          "friendly_id": "robot.arm.continuum",
+          "handle": "continuum",
+          "description": "Arm that bends along its length — a continuous flexible backbone or many short segments driven from the base — such as snake-arm robots and robotic catheters.",
+          "aliases": [
+            "snake-arm robot",
+            "snake arm",
+            "continuum robot",
+            "elephant-trunk robot",
+            "robotic catheter",
+            "vine robot"
+          ],
+          "inclusion_rule": "Bends along its length rather than at a few independently driven joints — a continuous backbone, or a chain of segments bent together by tendons, cables, pull wires, concentric tubes or fluid pressure, so that it has more bending segments than independently driven joints. Takes precedence over articulated even when the segments are rotary joints; an arm whose every joint has its own drive, even through cables from the base, is articulated. When a positioning arm and a continuum instrument are sold as one system, the continuum instrument decides (robotic catheters); short cable-driven instrument wrists do not (multiport surgical robots stay articulated). Included even if it only carries a camera or sensor head, and when the body grows from its tip (vine robot). Snake robots that move themselves along the ground are not arms (design notes §2.1, unplaced).",
+          "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
+          "children": [],
+          "ancestors": [
+            {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1",
+              "name": "Arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyCategory/rb",
+              "name": "Robot"
+            }
+          ],
+          "attributes": [
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/1",
+              "name": "Manufacturer",
+              "friendly_id": "manufacturer",
+              "handle": "manufacturer"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/2",
+              "name": "Model",
+              "friendly_id": "model",
+              "handle": "model"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/3",
+              "name": "Variant",
+              "friendly_id": "variant",
+              "handle": "variant"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/4",
+              "name": "Aliases",
+              "friendly_id": "aliases",
+              "handle": "aliases"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/5",
+              "name": "User type",
+              "friendly_id": "segment",
+              "handle": "segment"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/6",
+              "name": "Application group",
+              "friendly_id": "application_group",
+              "handle": "application-group"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/7",
+              "name": "Application",
+              "friendly_id": "application",
+              "handle": "application"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/8",
+              "name": "ISO 8373 category",
+              "friendly_id": "iso_category",
+              "handle": "iso-category"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/9",
+              "name": "Environment",
+              "friendly_id": "environment",
+              "handle": "environment"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/10",
+              "name": "Autonomy",
+              "friendly_id": "autonomy",
+              "handle": "autonomy"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/11",
+              "name": "Collaborative",
+              "friendly_id": "collaborative",
+              "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/12",
+              "name": "Availability",
+              "friendly_id": "availability",
+              "handle": "availability"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/13",
+              "name": "Price",
+              "friendly_id": "price",
+              "handle": "price"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/17",
+              "name": "Release year",
+              "friendly_id": "release_year",
+              "handle": "release-year"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/18",
+              "name": "Country",
+              "friendly_id": "country",
+              "handle": "country"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/19",
+              "name": "Mass",
+              "friendly_id": "mass",
+              "handle": "mass"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/20",
+              "name": "Payload",
+              "friendly_id": "payload",
+              "handle": "payload"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/21",
+              "name": "Battery runtime",
+              "friendly_id": "battery_runtime",
+              "handle": "battery-runtime"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/22",
+              "name": "IP rating",
+              "friendly_id": "ip_rating",
+              "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/23",
+              "name": "Open source",
+              "friendly_id": "open_source",
+              "handle": "open-source"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/24",
+              "name": "SDK",
+              "friendly_id": "sdk",
+              "handle": "sdk"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/25",
+              "name": "Compatible with",
+              "friendly_id": "compatible_with",
+              "handle": "compatible-with"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/26",
+              "name": "Sources",
+              "friendly_id": "sources",
+              "handle": "sources"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/27",
+              "name": "Axes",
+              "friendly_id": "axes",
+              "handle": "axes"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/28",
+              "name": "Reach",
+              "friendly_id": "reach",
+              "handle": "reach"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/29",
+              "name": "Repeatability",
+              "friendly_id": "repeatability",
+              "handle": "repeatability"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/30",
+              "name": "Arm count",
+              "friendly_id": "arm_count",
+              "handle": "arm-count"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/31",
+              "name": "Mounting",
+              "friendly_id": "mounting",
+              "handle": "mounting"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/88",
+              "name": "Outer diameter",
+              "friendly_id": "outer_diameter",
+              "handle": "outer-diameter"
+            }
+          ],
+          "examples": [
+            "intuitive-ion",
+            "oc-robotics-snake-arm"
+          ]
+        },
+        {
           "id": "gid://whatrobot/TaxonomyCategory/rb-2",
           "level": 1,
           "name": "Humanoid",
@@ -1551,6 +1815,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -1744,6 +2014,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -1857,7 +2133,7 @@
             "wheeled humanoid",
             "mobile humanoid"
           ],
-          "inclusion_rule": "Humanoid torso, two arms AND a head in human proportion, mounted on a wheeled or tracked base instead of legs. A bimanual torso with a sensor mast but no head, or without human proportions, is a mobile manipulator (rb-5).",
+          "inclusion_rule": "Humanoid torso, two arms AND a head in human proportion, mounted on a wheeled or tracked base that it drives itself on, instead of legs (a torso on casters that people push is fixed-base, rb-2-3). A bimanual torso with a sensor mast but no head, or without human proportions, is a mobile manipulator (rb-5).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-2",
           "children": [],
           "ancestors": [
@@ -1936,6 +2212,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -2137,6 +2419,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -2341,6 +2629,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -2543,6 +2837,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -2752,6 +3052,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -2959,6 +3265,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -3085,9 +3397,12 @@
             "rover",
             "AMR",
             "AGV",
-            "UGV"
+            "UGV",
+            "inspection crawler",
+            "pipe crawler",
+            "wall-climbing robot"
           ],
-          "inclusion_rule": "Wheels or tracks; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm).",
+          "inclusion_rule": "Moves itself on wheels or tracks; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm). Wheels or tracks count only when the robot moves itself on them as part of its task, including between work stations; wheels or casters on which people move it between jobs (a surgical patient cart, a cobot on a trolley), even with power assist, do not count, and nor do passive wheels on a robot that moves by bending its body. Wheeled or tracked crawlers, including snake-shaped ones on driven tracks, are ground robots; inchworm and peristaltic pipe robots are not (unplaced).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
           "children": [
             {
@@ -3171,6 +3486,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -3267,6 +3588,12 @@
               "name": "Max speed",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/86",
+              "name": "Adhesion",
+              "friendly_id": "adhesion",
+              "handle": "adhesion"
             }
           ],
           "examples": []
@@ -3367,6 +3694,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -3461,6 +3794,12 @@
               "name": "Max speed",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/86",
+              "name": "Adhesion",
+              "friendly_id": "adhesion",
+              "handle": "adhesion"
             }
           ],
           "examples": [
@@ -3562,6 +3901,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -3656,6 +4001,12 @@
               "name": "Max speed",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/86",
+              "name": "Adhesion",
+              "friendly_id": "adhesion",
+              "handle": "adhesion"
             }
           ],
           "examples": [
@@ -3675,7 +4026,7 @@
             "MoMa",
             "arm on wheels"
           ],
-          "inclusion_rule": "Base and arm(s) sold together as one product. A base and an arm sold separately are two entries linked by compatible_with.",
+          "inclusion_rule": "Base that moves itself on wheels or tracks (including between work stations, then parks while the arm works) and arm(s), sold together as one product. A base and an arm sold separately are two entries linked by compatible_with. An arm on casters or a cart that people move between jobs, even with power assist (a surgical patient cart, a cobot on a trolley), is an arm (rb-1).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
           "children": [],
           "ancestors": [
@@ -3750,6 +4101,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -3969,6 +4326,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -4162,6 +4525,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -4353,6 +4722,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -4559,6 +4934,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -4776,6 +5157,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -4949,6 +5336,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -5126,6 +5519,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -5300,6 +5699,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -5482,6 +5887,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -5579,9 +5990,10 @@
           "aliases": [
             "powered exoskeleton",
             "exosuit",
+            "soft exosuit",
             "exo"
           ],
-          "inclusion_rule": "Powered actuation applied alongside one or more intact body regions.",
+          "inclusion_rule": "Powered actuation applied alongside one or more intact body regions. Rigid exoskeletons and soft, textile exosuits are both included (attribute construction).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-8",
           "children": [],
           "ancestors": [
@@ -5660,6 +6072,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -5744,6 +6162,12 @@
               "name": "Maximum user weight",
               "friendly_id": "max_user_weight",
               "handle": "max-user-weight"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/87",
+              "name": "Construction",
+              "friendly_id": "construction",
+              "handle": "construction"
             }
           ],
           "examples": [
@@ -5843,6 +6267,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
@@ -6030,6 +6460,12 @@
               "handle": "collaborative"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/12",
               "name": "Availability",
               "friendly_id": "availability",
@@ -6195,6 +6631,12 @@
               "name": "Collaborative",
               "friendly_id": "collaborative",
               "handle": "collaborative"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/85",
+              "name": "Medical clearance",
+              "friendly_id": "medical_clearance",
+              "handle": "medical-clearance"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/12",

@@ -927,7 +927,7 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/155",
-      "name": "Clinical",
+      "name": "临床",
       "friendly_id": "segment__clinical",
       "handle": "segment__clinical"
     },
@@ -978,6 +978,96 @@
       "name": "Analog",
       "friendly_id": "interface__analog",
       "handle": "interface__analog"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/165",
+      "name": "程序控制",
+      "friendly_id": "autonomy__programmed",
+      "handle": "autonomy__programmed"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/166",
+      "name": "滑移转向",
+      "friendly_id": "drive_config__skid-steer",
+      "handle": "drive-config__skid-steer"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/167",
+      "name": "自平衡",
+      "friendly_id": "drive_config__self-balancing",
+      "handle": "drive-config__self-balancing"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/168",
+      "name": "美国（FDA）",
+      "friendly_id": "medical_clearance__us-fda",
+      "handle": "medical-clearance__us-fda"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/169",
+      "name": "欧盟（CE）",
+      "friendly_id": "medical_clearance__eu-ce",
+      "handle": "medical-clearance__eu-ce"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/170",
+      "name": "中国（NMPA）",
+      "friendly_id": "medical_clearance__cn-nmpa",
+      "handle": "medical-clearance__cn-nmpa"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/171",
+      "name": "日本（厚生劳动省/PMDA）",
+      "friendly_id": "medical_clearance__jp-pmda",
+      "handle": "medical-clearance__jp-pmda"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/172",
+      "name": "其他",
+      "friendly_id": "medical_clearance__other",
+      "handle": "medical-clearance__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/173",
+      "name": "无",
+      "friendly_id": "adhesion__none",
+      "handle": "adhesion__none"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/174",
+      "name": "磁吸",
+      "friendly_id": "adhesion__magnetic",
+      "handle": "adhesion__magnetic"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/175",
+      "name": "真空吸附",
+      "friendly_id": "adhesion__vacuum",
+      "handle": "adhesion__vacuum"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/176",
+      "name": "其他",
+      "friendly_id": "adhesion__other",
+      "handle": "adhesion__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/177",
+      "name": "刚性",
+      "friendly_id": "construction__rigid",
+      "handle": "construction__rigid"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/178",
+      "name": "柔性",
+      "friendly_id": "construction__soft",
+      "handle": "construction__soft"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/179",
+      "name": "其他",
+      "friendly_id": "construction__other",
+      "handle": "construction__other"
     }
   ]
 }

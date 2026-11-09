@@ -4,6 +4,16 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Review: continuum arm, crawlers, medical scope (2026-11-09)
+- New leaf `rb-1-6` Continuum arm (60 categories): arms that bend along their length — a continuous backbone, or more bending segments than independently driven joints (snake-arm robots, robotic catheters, vine robots). Classifier fact `arm_kinematics: continuum`; a continuum body counts as manipulating even if it only carries a camera. The articulated rule now excludes them. IFR industrial: unmapped; Google `1470` and Shopify `bi-17` as the other arms.
+- 4 new attributes (ids 85–88): `medical_clearance` (robot root; `us-fda`, `eu-ce`, `cn-nmpa`, `jp-pmda`), `adhesion` (ground; `none`, `magnetic`, `vacuum`), `construction` (exoskeleton; `rigid`, `soft`), `outer_diameter` (continuum arm, mm).
+- 15 new values (ids 165–179; 164 is `availability__limited` from the batch-2 rulings), including `autonomy__programmed`, `drive_config__skid-steer` and `drive_config__self-balancing`.
+- `collaborative` reworded to ISO 10218-1:2025 ("collaborative applications"; ISO/TS 15066 still accepted). Identifier, type and evidence bar unchanged.
+- Rule text: wheels or tracks count only when the robot moves itself on them as part of its task, including between work stations (carts and casters people move it on, even power-assisted, and passive wheels → fixed base; applies to rules 3, 6 and 7); unplaced robots narrowed to limbless locomotors; wheeled and tracked crawlers are ground robots; parallel arms include cable-driven robots; medical and surgical robots in scope (design notes §2, §2.1, §10.4).
+- 6 new classification examples (83): `intuitive-ion`, plus illustrative `oc-robotics-snake-arm`, `cobot-on-trolley`, `vine-robot-inspection`, `humanoid-torso-on-casters` and `mobile-manipulator-between-stations`.
+- `drive_config` values defined in the attribute description; `segment` row in design notes lists `clinical`; README notes that continuum arms have no IFR class.
+- zh-Hans drafts written for the new and changed entries (LLM draft, awaiting native review).
+
 ### Batch-1 rulings (2026-11-09)
 - 18 new number attributes (ids 67–84): `wingspan`, `cruise_speed`, `flight_range`, `max_user_weight`, `load_limit`, `stroke_x`, `stroke_y`, `stroke_z`, `voltage_min`, `voltage_max`, `position_accuracy`, `update_rate`, `heading_accuracy`, `attitude_accuracy`, `force_range`, `torque_range`, `linear_speed`, `grip_range`.
 - 11 new values (ids 153–163): applications `mapping-surveying`, `lab-automation`; user type `clinical` (amends D3); teleop type `handheld-demonstrator`; interfaces `uart`, `i2c`, `spi`, `rs232`, `rs422`, `modbus-rtu`, `analog`.

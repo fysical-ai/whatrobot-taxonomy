@@ -156,12 +156,13 @@
   name: Autonomy
   friendly_id: autonomy
   handle: autonomy
-  description: Highest level of unsupervised operation supported out of the box.
+  description: "Highest level of unsupervised operation supported out of the box. Programmed: runs a taught or coded sequence without sensing its surroundings (most industrial arms)."
   question: What is the highest level of unsupervised operation out of the box?
   type: enum
   multi: false
   values:
     - autonomy__teleoperated
+    - autonomy__programmed
     - autonomy__assisted
     - autonomy__semi-autonomous
     - autonomy__autonomous
@@ -171,8 +172,8 @@
   name: Collaborative
   friendly_id: collaborative
   handle: collaborative
-  description: Rated for unguarded operation alongside people (ISO 10218 / ISO/TS 15066).
-  question: Is it rated for unguarded operation alongside people?
+  description: "The maker states it meets the robot requirements for collaborative applications in ISO 10218-1:2025 (or the earlier ISO/TS 15066), usually through built-in power and force limiting. Under ISO 10218:2025 an application, not a robot, is confirmed as collaborative, after its own risk assessment."
+  question: Does the maker state it meets the ISO 10218-1:2025 (or ISO/TS 15066) requirements for collaborative applications?
   type: bool
   multi: false
 
@@ -508,7 +509,7 @@
   name: Drive configuration
   friendly_id: drive_config
   handle: drive-config
-  description: How a ground base steers and propels itself.
+  description: "How a ground base steers and propels itself, as the maker states it. Differential: two independently driven wheels, turning by speed difference. Skid-steer: four or more fixed wheels driven as left and right sides, turning by skidding. Omnidirectional: mecanum, omni or swerve wheels. Ackermann: car-like steered wheels. Tracked: continuous tracks. Self-balancing: two wheels on one axle kept upright by active balance."
   question: What drive configuration does the spec sheet state?
   type: enum
   multi: false
@@ -517,6 +518,8 @@
     - drive_config__omnidirectional
     - drive_config__ackermann
     - drive_config__tracked
+    - drive_config__skid-steer
+    - drive_config__self-balancing
     - drive_config__other
 
 - id: 39
@@ -1072,6 +1075,59 @@
   handle: grip-range
   description: "Largest object size the gripper can grasp."
   question: How large an object can it grasp?
+  type: number
+  unit: mm
+  multi: false
+
+# ------------------------------------------------ review 2026-11-09 (design notes §10.4)
+- id: 85
+  name: Medical clearance
+  friendly_id: medical_clearance
+  handle: medical-clearance
+  description: "Markets where the maker states the robot is legally marketed as a medical device. United States: FDA cleared, approved or De Novo-granted, or listed as a 510(k)-exempt device. European Union: CE-marked as a medical device. China: approved by NMPA. Japan: approved by MHLW after PMDA review. Empty when the maker states no such status."
+  question: In which markets does the maker state it is legally marketed as a medical device?
+  type: enum
+  multi: true
+  values:
+    - medical_clearance__us-fda
+    - medical_clearance__eu-ce
+    - medical_clearance__cn-nmpa
+    - medical_clearance__jp-pmda
+    - medical_clearance__other
+
+- id: 86
+  name: Adhesion
+  friendly_id: adhesion
+  handle: adhesion
+  description: "How a ground robot holds on to walls, tanks, hulls or ceilings so that it can climb them. None for robots that only drive on the ground."
+  question: Does it climb by holding on to the surface, and how?
+  type: enum
+  multi: false
+  values:
+    - adhesion__none
+    - adhesion__magnetic
+    - adhesion__vacuum
+    - adhesion__other
+
+- id: 87
+  name: Construction
+  friendly_id: construction
+  handle: construction
+  description: "Whether an exoskeleton carries its assistive force on a rigid frame beside the limb, or through textiles, straps and cables (a soft exosuit)."
+  question: Is it a rigid exoskeleton or a soft exosuit?
+  type: enum
+  multi: false
+  values:
+    - construction__rigid
+    - construction__soft
+    - construction__other
+
+- id: 88
+  name: Outer diameter
+  friendly_id: outer_diameter
+  handle: outer-diameter
+  description: "Outer diameter of the bending section of a continuum arm or robotic catheter, which limits the openings it can enter."
+  question: What is the outer diameter of the bending section?
   type: number
   unit: mm
   multi: false

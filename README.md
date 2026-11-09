@@ -79,7 +79,7 @@ Integrators who only need the data should download the release assets or read `d
 
 | Integration | Direction | What it maps |
 |---|---|---|
-| `ifr-industrial` | both | arm leaves ↔ IFR industrial robot type classes 10–50 (articulated, cartesian/linear/gantry, cylindrical/spherical, parallel/delta, SCARA) |
+| `ifr-industrial` | both | arm leaves `rb-1-1`…`rb-1-5` ↔ IFR industrial robot type classes 10–50 (articulated, cartesian/linear/gantry, cylindrical/spherical, parallel/delta, SCARA); continuum arms (`rb-1-6`) have no IFR class |
 | `ifr-service` | from | `application` values → IFR professional / consumer / medical application groups |
 | `iso-8373` | from | `iso_category` attribute → ISO 8373:2021 industrial / service / medical robot |
 | `google` | both | every category → closest Google product category (2021-09-21); robot-bearing Google categories → whatrobot |

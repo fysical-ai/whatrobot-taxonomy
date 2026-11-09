@@ -10,8 +10,8 @@ application_group: {name: 应用领域, description: 两级应用词表的上层
 application: {name: 应用, description: 产品所宣传的用途。}
 iso_category: {name: ISO 8373 类别, description: 制造商定位的 ISO 8373:2021 用途类别。}
 environment: {name: 环境, description: 产品额定可运行的环境。}
-autonomy: {name: 自主性, description: 出厂即支持的最高无人监督运行等级。}
-collaborative: {name: 协作, description: 是否通过无防护人机共处的安全认证（ISO 10218 / ISO/TS 15066）。}
+autonomy: {name: 自主性, description: 出厂即支持的最高无人监督运行等级。程序化：执行示教或编程的动作序列，不感知周围环境（大多数工业机械臂）。}
+collaborative: {name: 协作, description: 制造商声明其满足 ISO 10218-1:2025（或此前的 ISO/TS 15066）中协作应用对机器人的要求，通常通过内置的功率和力限制实现。根据 ISO 10218:2025，经风险评估后被确认为协作的是应用，而不是机器人本身。}
 availability: {name: 供货状态, description: 现在是否可以购买。}
 price: {name: 价格, description: 公布的标价。须附带币种、日期和来源。}
 currency: {name: 币种, description: 价格的 ISO 4217 货币代码。}
@@ -67,3 +67,7 @@ range: {name: 量程, description: 最大测量距离。}
 ai_tops: {name: AI 算力, description: 峰值 AI 计算性能。}
 capacity: {name: 容量, description: 能量容量。}
 teleop_type: {name: 遥操作类型, description: 遥操作设备的类型。}
+medical_clearance: {name: 医疗器械准入, description: 制造商声明该机器人作为医疗器械合法上市的市场。美国：FDA 许可、批准或 De Novo 授予，或作为 510(k) 豁免器械登记；欧盟：带有医疗器械 CE 标志；中国：经 NMPA 批准；日本：经 PMDA 审评后由厚生劳动省批准。制造商未声明时留空。}
+adhesion: {name: 附着方式, description: 地面机器人如何吸附在墙面、罐体、船体或天花板上进行攀爬。只在地面行驶的机器人为“无”。}
+construction: {name: 结构类型, description: 外骨骼是通过肢体旁的刚性框架传递助力，还是通过织物、绑带和拉索传递（柔性外骨骼服）。}
+outer_diameter: {name: 外径, description: 连续体机械臂或机器人导管弯曲段的外径，决定其能进入的开口大小。}

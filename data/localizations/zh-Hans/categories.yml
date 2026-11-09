@@ -6,9 +6,10 @@ rb: {name: 机器人, description: 能够感知环境并对其作出动作的机
 rb-1: {name: 机械臂, description: 固定基座的机械手，用于在空间中定位末端执行器。}
 rb-1-1: {name: 关节式机械臂, description: 具有三个或以上串联旋转关节的机械臂，包括六轴/七轴工业机械臂、协作机器人和桌面机械臂。}
 rb-1-2: {name: SCARA 机械臂, description: 具有两个平行垂直旋转关节和一个垂直直线轴的机械臂，在水平面内具有柔顺性。}
-rb-1-3: {name: 并联机械臂, description: 并联运动学机械手，如 Delta 机器人或六足/Stewart 平台。}
+rb-1-3: {name: 并联机械臂, description: 并联运动学机械手，如 Delta 机器人、六足/Stewart 平台或绳驱并联机器人。}
 rb-1-4: {name: 直角坐标机械臂, description: 三个直线轴沿笛卡尔坐标系布置的机械手，包括龙门和直线机器人。}
 rb-1-5: {name: 圆柱/球坐标机械臂, description: 具有旋转基座和直线伸缩轴的机械手：圆柱坐标（直线升降）或球坐标/极坐标（俯仰肩关节）。IFR 类型 30。}
+rb-1-6: {name: 连续体机械臂, description: 沿自身长度弯曲的机械臂——连续柔性主干，或由基座驱动的多个短节段——如蛇形臂机器人和机器人导管。}
 rb-2: {name: 人形机器人, description: 具有按人体比例布置的躯干、双臂和头部的机器人，面向人类环境。}
 rb-2-1: {name: 双足人形机器人, description: 用双腿行走的人形机器人。}
 rb-2-2: {name: 轮式底盘人形机器人, description: 安装在轮式或履带式底盘上的人形上半身。}

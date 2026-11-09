@@ -22,6 +22,8 @@ rules:
     output: {category_id: ["1470"]}
   - input: {category_id: rb-1-5}
     output: {category_id: ["1470"]}
+  - input: {category_id: rb-1-6}
+    output: {category_id: ["1470"]}
   # ---- humanoids and legged: no Google category; general industrial/commercial equipment
   - input: {category_id: rb-2}
     output: {category_id: ["111"]}         # Business & Industrial
