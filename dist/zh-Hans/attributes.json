@@ -462,7 +462,7 @@
       "name": "自主性",
       "friendly_id": "autonomy",
       "handle": "autonomy",
-      "description": "出厂即支持的最高无人监督运行等级。",
+      "description": "出厂即支持的最高无人监督运行等级。程序化：执行示教或编程的动作序列，不感知周围环境（大多数工业机械臂）。",
       "question": "What is the highest level of unsupervised operation out of the box?",
       "type": "enum",
       "multi": false,
@@ -472,6 +472,12 @@
           "name": "遥操作",
           "friendly_id": "autonomy__teleoperated",
           "handle": "autonomy__teleoperated"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/164",
+          "name": "程序化",
+          "friendly_id": "autonomy__programmed",
+          "handle": "autonomy__programmed"
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/58",
@@ -504,8 +510,8 @@
       "name": "协作",
       "friendly_id": "collaborative",
       "handle": "collaborative",
-      "description": "是否通过无防护人机共处的安全认证（ISO 10218 / ISO/TS 15066）。",
-      "question": "Is it rated for unguarded operation alongside people?",
+      "description": "制造商声明其满足 ISO 10218-1:2025（或此前的 ISO/TS 15066）中协作应用对机器人的要求，通常通过内置的功率和力限制实现。根据 ISO 10218:2025，经风险评估后被确认为协作的是应用，而不是机器人本身。",
+      "question": "Does the maker state it meets the ISO 10218-1:2025 (or ISO/TS 15066) requirements for collaborative applications?",
       "type": "bool",
       "multi": false
     },
@@ -1105,6 +1111,18 @@
           "name": "履带",
           "friendly_id": "drive_config__tracked",
           "handle": "drive-config__tracked"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/165",
+          "name": "滑移转向",
+          "friendly_id": "drive_config__skid-steer",
+          "handle": "drive-config__skid-steer"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/166",
+          "name": "自平衡",
+          "friendly_id": "drive_config__self-balancing",
+          "handle": "drive-config__self-balancing"
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/94",
@@ -2093,6 +2111,125 @@
       "handle": "grip-range",
       "description": "Largest object size the gripper can grasp.",
       "question": "How large an object can it grasp?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/85",
+      "name": "医疗器械准入",
+      "friendly_id": "medical_clearance",
+      "handle": "medical-clearance",
+      "description": "制造商声明该机器人作为医疗器械合法销售的市场：美国（FDA 批准、许可或注册）、欧盟（医疗器械 CE 标志）、中国（NMPA 注册）或日本（PMDA）。未声明时留空。",
+      "question": "Where is it cleared or approved as a medical device, according to the maker?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/167",
+          "name": "美国（FDA）",
+          "friendly_id": "medical_clearance__us-fda",
+          "handle": "medical-clearance__us-fda"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/168",
+          "name": "欧盟（CE）",
+          "friendly_id": "medical_clearance__eu-ce",
+          "handle": "medical-clearance__eu-ce"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/169",
+          "name": "中国（NMPA）",
+          "friendly_id": "medical_clearance__cn-nmpa",
+          "handle": "medical-clearance__cn-nmpa"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/170",
+          "name": "日本（PMDA）",
+          "friendly_id": "medical_clearance__jp-pmda",
+          "handle": "medical-clearance__jp-pmda"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/171",
+          "name": "其他",
+          "friendly_id": "medical_clearance__other",
+          "handle": "medical-clearance__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/86",
+      "name": "附着方式",
+      "friendly_id": "adhesion",
+      "handle": "adhesion",
+      "description": "地面机器人如何吸附在墙面、罐体、船体或天花板上进行攀爬。只在地面行驶的机器人为“无”。",
+      "question": "Does it climb by holding on to the surface, and how?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/172",
+          "name": "无",
+          "friendly_id": "adhesion__none",
+          "handle": "adhesion__none"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/173",
+          "name": "磁吸",
+          "friendly_id": "adhesion__magnetic",
+          "handle": "adhesion__magnetic"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/174",
+          "name": "真空吸附",
+          "friendly_id": "adhesion__vacuum",
+          "handle": "adhesion__vacuum"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/175",
+          "name": "其他",
+          "friendly_id": "adhesion__other",
+          "handle": "adhesion__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/87",
+      "name": "结构类型",
+      "friendly_id": "construction",
+      "handle": "construction",
+      "description": "外骨骼是通过肢体旁的刚性框架传递助力，还是通过织物、绑带和拉索传递（柔性外骨骼服）。",
+      "question": "Is it a rigid exoskeleton or a soft exosuit?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/176",
+          "name": "刚性",
+          "friendly_id": "construction__rigid",
+          "handle": "construction__rigid"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/177",
+          "name": "柔性",
+          "friendly_id": "construction__soft",
+          "handle": "construction__soft"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/178",
+          "name": "其他",
+          "friendly_id": "construction__other",
+          "handle": "construction__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/88",
+      "name": "外径",
+      "friendly_id": "outer_diameter",
+      "handle": "outer-diameter",
+      "description": "连续体机械臂或机器人导管弯曲段的外径，决定其能进入的开口大小。",
+      "question": "What is the outer diameter of the bending section?",
       "type": "number",
       "multi": false,
       "unit": "mm"

@@ -21,6 +21,8 @@ rules:
     output: {category_id: [bi-17]}
   - input: {category_id: rb-1-5}
     output: {category_id: [bi-17]}
+  - input: {category_id: rb-1-6}
+    output: {category_id: [bi-17]}
   # ---- humanoids and legged
   - input: {category_id: rb-2}
     output: {category_id: [bi]}                # Business & Industrial (no humanoid leaf exists)

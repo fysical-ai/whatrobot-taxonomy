@@ -9,7 +9,9 @@
 # Robot facts:   is_kit, worn_on_body, humanoid_form, legs, wheels_or_tracks (none|wheels|tracks),
 #                medium (ground|air|water), aerial_lift (multirotor|fixed-wing|hybrid-vtol),
 #                aquatic_mode (rov|auv|usv), integrated_arm, manipulates, fixed_base,
-#                arm_kinematics (articulated|scara|parallel|cartesian|cylindrical)
+#                arm_kinematics (articulated|scara|parallel|cartesian|cylindrical|continuum).
+#                wheels_or_tracks counts only wheels or tracks the robot drives on while working; casters or a cart
+#                used to move it between jobs are `none` (design notes §2.1).
 # Component facts: component_kind (end-effector|actuator|sensor|compute|power|structure|teleoperation)
 #                plus per-kind facts documented in classify.py.
 ---
@@ -252,3 +254,7 @@
 - {handle: unitree-go2-battery, name: Unitree Go2 battery, expected: cp-5, facts: {component_kind: power}}
 - {handle: robotiq-wrist-camera-mount, name: Robotiq wrist camera mount, expected: cp-6, facts: {component_kind: structure}}
 - {handle: gello, name: GELLO leader arm, expected: cp-7, facts: {component_kind: teleoperation}}
+# ------------------------------- review 2026-11-09: continuum arm, carts (design notes §10.3)
+- {handle: intuitive-ion, name: 'Intuitive Ion endoluminal system (robotic catheter on a patient cart)', expected: rb-1-6, facts: {fixed_base: true, manipulates: true, arm_kinematics: continuum, wheels_or_tracks: none}, attributes: {segment: [clinical], application: [surgery], iso_category: medical, medical_clearance: [us-fda], outer_diameter: 3.5}}
+- {handle: oc-robotics-snake-arm, name: 'OC Robotics snake-arm robot (illustrative)', expected: rb-1-6, facts: {fixed_base: true, manipulates: true, arm_kinematics: continuum}, attributes: {segment: [professional], application: [inspection-maintenance]}}
+- {handle: cobot-on-trolley, name: 'Articulated cobot on a push trolley (illustrative)', expected: rb-1-1, facts: {fixed_base: true, manipulates: true, arm_kinematics: articulated, wheels_or_tracks: none}, attributes: {collaborative: true, mounting: [mobile]}}

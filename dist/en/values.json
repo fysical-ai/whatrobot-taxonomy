@@ -978,6 +978,96 @@
       "name": "Analog",
       "friendly_id": "interface__analog",
       "handle": "interface__analog"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/164",
+      "name": "Programmed",
+      "friendly_id": "autonomy__programmed",
+      "handle": "autonomy__programmed"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/165",
+      "name": "Skid-steer",
+      "friendly_id": "drive_config__skid-steer",
+      "handle": "drive-config__skid-steer"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/166",
+      "name": "Self-balancing",
+      "friendly_id": "drive_config__self-balancing",
+      "handle": "drive-config__self-balancing"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/167",
+      "name": "United States (FDA)",
+      "friendly_id": "medical_clearance__us-fda",
+      "handle": "medical-clearance__us-fda"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/168",
+      "name": "European Union (CE)",
+      "friendly_id": "medical_clearance__eu-ce",
+      "handle": "medical-clearance__eu-ce"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/169",
+      "name": "China (NMPA)",
+      "friendly_id": "medical_clearance__cn-nmpa",
+      "handle": "medical-clearance__cn-nmpa"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/170",
+      "name": "Japan (PMDA)",
+      "friendly_id": "medical_clearance__jp-pmda",
+      "handle": "medical-clearance__jp-pmda"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/171",
+      "name": "Other",
+      "friendly_id": "medical_clearance__other",
+      "handle": "medical-clearance__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/172",
+      "name": "None",
+      "friendly_id": "adhesion__none",
+      "handle": "adhesion__none"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/173",
+      "name": "Magnetic",
+      "friendly_id": "adhesion__magnetic",
+      "handle": "adhesion__magnetic"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/174",
+      "name": "Vacuum",
+      "friendly_id": "adhesion__vacuum",
+      "handle": "adhesion__vacuum"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/175",
+      "name": "Other",
+      "friendly_id": "adhesion__other",
+      "handle": "adhesion__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/176",
+      "name": "Rigid",
+      "friendly_id": "construction__rigid",
+      "handle": "construction__rigid"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/177",
+      "name": "Soft",
+      "friendly_id": "construction__soft",
+      "handle": "construction__soft"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/178",
+      "name": "Other",
+      "friendly_id": "construction__other",
+      "handle": "construction__other"
     }
   ]
 }

@@ -692,6 +692,22 @@
         {
           "input": {
             "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-6",
+              "full_name": "Robot > Arm > Continuum arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "1470",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
               "id": "gid://whatrobot/TaxonomyCategory/rb-2",
               "full_name": "Robot > Humanoid"
             }
@@ -1734,6 +1750,22 @@
             "category": {
               "id": "gid://whatrobot/TaxonomyCategory/rb-1-5",
               "full_name": "Robot > Arm > Cylindrical & spherical arm"
+            }
+          },
+          "output": {
+            "category": [
+              {
+                "id": "bi-17",
+                "full_name": "Business & Industrial > Manufacturing"
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "category": {
+              "id": "gid://whatrobot/TaxonomyCategory/rb-1-6",
+              "full_name": "Robot > Arm > Continuum arm"
             }
           },
           "output": {

@@ -6,12 +6,18 @@ specification: the first rule that matches decides. data/examples.yml is the reg
 Robot facts (all optional; missing = false / none):
   is_kit, worn_on_body, prosthesis, humanoid_form bool
   legs                                           int   (0, 2, 4, 6+)
-  wheels_or_tracks                               none | wheels | tracks
+  wheels_or_tracks                               none | wheels | tracks  (wheels or tracks it drives itself on while
+                                                 working; casters or a cart only used to move it between jobs = none)
   medium                                         ground | air | water
   aerial_lift                                    multirotor | fixed-wing | hybrid-vtol
   aquatic_mode                                   rov | auv | usv
   integrated_arm, manipulates, fixed_base        bool
-  arm_kinematics                                 articulated | scara | parallel | cartesian | cylindrical
+  arm_kinematics                                 articulated | scara | parallel | cartesian | cylindrical | continuum
+                                                 (continuum: bends along its length, continuous backbone or many short
+                                                 segments driven from the base; wins over articulated)
+
+Not placed: limbless locomotors (snake, inchworm, peristaltic robots that move by changing body shape) have no legs,
+wheels, medium or fixed base and raise Unclassifiable until a purchasable case exists (design notes §2.1).
 
 Component facts:
   component_kind   end-effector | actuator | sensor | compute | power | structure | teleoperation
@@ -32,7 +38,8 @@ class Unclassifiable(ValueError):
     pass
 
 
-ARM_LEAF = {"articulated": "rb-1-1", "scara": "rb-1-2", "parallel": "rb-1-3", "cartesian": "rb-1-4", "cylindrical": "rb-1-5"}
+ARM_LEAF = {"articulated": "rb-1-1", "scara": "rb-1-2", "parallel": "rb-1-3", "cartesian": "rb-1-4", "cylindrical": "rb-1-5",
+           "continuum": "rb-1-6"}
 AERIAL_LEAF = {"multirotor": "rb-6-1", "fixed-wing": "rb-6-2", "hybrid-vtol": "rb-6-3"}
 AQUATIC_LEAF = {"rov": "rb-7-1", "auv": "rb-7-2", "usv": "rb-7-3"}
 GRIPPER_LEAF = {"finger": "cp-1-1-1", "vacuum": "cp-1-1-2", "magnetic": "cp-1-1-3", "soft": "cp-1-1-4"}

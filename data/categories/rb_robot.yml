@@ -23,6 +23,7 @@
     - environment
     - autonomy
     - collaborative
+    - medical_clearance
     - availability
     - price
     - release_year
@@ -44,8 +45,8 @@
   handle: arm
   description: Fixed-base manipulator that positions an end-effector in space.
   aliases: [robot arm, robotic arm, manipulator, industrial arm, cobot]
-  inclusion_rule: Fixed base (floor, table, wall, ceiling or a separately sold mobile base); manipulates; not humanoid in form.
-  children: [rb-1-1, rb-1-2, rb-1-3, rb-1-4, rb-1-5]
+  inclusion_rule: Fixed base (floor, table, wall, ceiling, a separately sold mobile base, or a cart or stand that is only moved between jobs); manipulates; not humanoid in form.
+  children: [rb-1-1, rb-1-2, rb-1-3, rb-1-4, rb-1-5, rb-1-6]
   attributes: [axes, reach, repeatability, arm_count, mounting]
   examples: []
 
@@ -55,7 +56,7 @@
   handle: articulated
   description: Serial arm with three or more rotary joints, including 6/7-axis industrial arms, cobots and desktop arms.
   aliases: [6-axis arm, 7-axis arm, cobot, collaborative robot, desktop arm, anthropomorphic arm]
-  inclusion_rule: At least three rotary joints in series. Collaborative safety rating does not change the category (attribute collaborative).
+  inclusion_rule: At least three rotary joints in series. Collaborative safety features do not change the category (attribute collaborative). An arm that bends along its length through many short segments driven from the base is a continuum arm (rb-1-6), even if each segment is a rotary joint.
   children: []
   attributes: []
   examples: [universal-robots-ur5e, dobot-magician]
@@ -75,9 +76,9 @@
   name: Parallel arm
   friendly_id: robot.arm.parallel
   handle: parallel
-  description: Parallel-kinematic manipulator such as a delta robot or hexapod / Stewart platform.
-  aliases: [delta robot, hexapod platform, Stewart platform, parallel robot]
-  inclusion_rule: End-effector carried by two or more kinematic chains acting in parallel.
+  description: Parallel-kinematic manipulator such as a delta robot, a hexapod / Stewart platform or a cable-driven parallel robot.
+  aliases: [delta robot, hexapod platform, Stewart platform, parallel robot, cable-driven parallel robot, cable robot]
+  inclusion_rule: End-effector carried by two or more kinematic chains acting in parallel. The chains may be rigid links or cables pulled by winches (cable-driven parallel robots).
   children: []
   attributes: []
   examples: [abb-irb-360]
@@ -103,6 +104,17 @@
   children: []
   attributes: [stroke_z]
   examples: [st-robotics-r19]
+
+- id: rb-1-6
+  name: Continuum arm
+  friendly_id: robot.arm.continuum
+  handle: continuum
+  description: Arm that bends along its length — a continuous flexible backbone or many short segments driven from the base — such as snake-arm robots and robotic catheters.
+  aliases: [snake-arm robot, snake arm, continuum robot, elephant-trunk robot, hyper-redundant arm, robotic catheter, vine robot]
+  inclusion_rule: Bends along its length rather than at a few discrete joints — a continuous backbone, or a chain of many short segments moved by tendons, cables, pull wires or concentric tubes from an actuator pack at the base. Takes precedence over articulated even when the segments are rotary joints. A soft body that grows from its tip (vine robot) is included. Snake robots that move themselves along the ground are not arms (design notes §2.1, unplaced).
+  children: []
+  attributes: [outer_diameter]
+  examples: [intuitive-ion, oc-robotics-snake-arm]
 
 # ----------------------------------------------------------- rb-2 humanoid
 - id: rb-2
@@ -200,10 +212,10 @@
   friendly_id: robot.ground
   handle: ground
   description: Robot that moves on wheels or tracks, with no legs and no integrated arm.
-  aliases: [mobile robot, mobile base, rover, AMR, AGV, UGV]
-  inclusion_rule: Wheels or tracks; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm).
+  aliases: [mobile robot, mobile base, rover, AMR, AGV, UGV, inspection crawler, pipe crawler, wall-climbing robot]
+  inclusion_rule: Drives itself on wheels or tracks while working; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm). Casters or a cart used only to move a robot between jobs do not count. Wheeled or tracked crawlers, including snake-shaped ones on tracks, are ground robots.
   children: [rb-4-1, rb-4-2]
-  attributes: [has_arm, drive_config, navigation, max_speed]
+  attributes: [has_arm, drive_config, navigation, max_speed, adhesion]
   examples: []
 
 - id: rb-4-1
@@ -235,7 +247,7 @@
   handle: mobile-manipulator
   description: Wheeled or tracked base with one or more arms, sold as one product, non-humanoid in form.
   aliases: [mobile manipulator, MoMa, arm on wheels]
-  inclusion_rule: Base and arm(s) sold together as one product. A base and an arm sold separately are two entries linked by compatible_with.
+  inclusion_rule: Base that drives itself on wheels or tracks while working, and arm(s), sold together as one product. A base and an arm sold separately are two entries linked by compatible_with. An arm on casters or a cart that is only moved between jobs (a surgical patient cart, a cobot on a trolley) is an arm (rb-1).
   children: []
   attributes: [drive_config, navigation, max_speed, axes, reach, arm_count]   # base + arm specs apply; payload is already universal on rb
   examples: [hello-robot-stretch-3, tiago-pro]
@@ -347,10 +359,10 @@
   friendly_id: robot.wearable.exoskeleton
   handle: exoskeleton
   description: Powered exoskeleton or exosuit that assists or augments human movement.
-  aliases: [powered exoskeleton, exosuit, exo]
-  inclusion_rule: Powered actuation applied alongside one or more intact body regions.
+  aliases: [powered exoskeleton, exosuit, soft exosuit, exo]
+  inclusion_rule: Powered actuation applied alongside one or more intact body regions. Rigid exoskeletons and soft, textile exosuits are both included (attribute construction).
   children: []
-  attributes: []
+  attributes: [construction]
   examples: [ekso-bionics-evo]
 
 - id: rb-8-2

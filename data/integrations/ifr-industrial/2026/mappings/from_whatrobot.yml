@@ -18,6 +18,7 @@ rules:
 unmapped_category_ids:
   - rb
   - rb-1
+  - rb-1-6                 # continuum arm: no IFR type class
   - rb-2
   - rb-2-1
   - rb-2-2

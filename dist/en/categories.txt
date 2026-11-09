@@ -33,6 +33,7 @@ gid://whatrobot/TaxonomyCategory/rb-1-2 : Robot > Arm > SCARA arm
 gid://whatrobot/TaxonomyCategory/rb-1-3 : Robot > Arm > Parallel arm
 gid://whatrobot/TaxonomyCategory/rb-1-4 : Robot > Arm > Cartesian arm
 gid://whatrobot/TaxonomyCategory/rb-1-5 : Robot > Arm > Cylindrical & spherical arm
+gid://whatrobot/TaxonomyCategory/rb-1-6 : Robot > Arm > Continuum arm
 gid://whatrobot/TaxonomyCategory/rb-2 : Robot > Humanoid
 gid://whatrobot/TaxonomyCategory/rb-2-1 : Robot > Humanoid > Bipedal humanoid
 gid://whatrobot/TaxonomyCategory/rb-2-2 : Robot > Humanoid > Wheeled-base humanoid

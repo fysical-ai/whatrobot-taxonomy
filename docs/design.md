@@ -61,9 +61,10 @@ rb      robot
 rb-1    ├─ arm                 Fixed-base manipulator
 rb-1-1  │  ├─ articulated      ≥3 rotary joints in series (6/7-axis, incl. cobots, desktop arms)
 rb-1-2  │  ├─ scara            Two parallel vertical rotary joints + vertical linear axis
-rb-1-3  │  ├─ parallel         Parallel kinematics (delta, hexapod/Stewart)
+rb-1-3  │  ├─ parallel         Parallel kinematics (delta, hexapod/Stewart, cable-driven)
 rb-1-4  │  ├─ cartesian        Three prismatic axes (linear, gantry, XYZ)
-rb-1-5  │  └─ cylindrical      Cylindrical & spherical: rotary base + prismatic reach; lift is prismatic (cylindrical) or a tilt (spherical/polar)
+rb-1-5  │  ├─ cylindrical      Cylindrical & spherical: rotary base + prismatic reach; lift is prismatic (cylindrical) or a tilt (spherical/polar)
+rb-1-6  │  └─ continuum        Bends along its length: continuous backbone or many short segments driven from the base (snake-arms, robotic catheters)
 rb-2    ├─ humanoid            Torso + two arms + head in human proportion
 rb-2-1  │  ├─ bipedal          Walks on two legs
 rb-2-2  │  ├─ wheeled-base     Humanoid upper body on a wheeled or tracked base
@@ -93,6 +94,8 @@ rb-10   └─ kit                 Modular construction kit with no fixed body p
 
 Scope (D1): aerial, aquatic and wearable are in scope from launch. `kit` includes only kits that produce a programmable robot.
 
+Medical and surgical robots are in scope as reference entries (2026-11-09). They are classified by body plan like any other robot (a surgical arm is `arm`, a robotic catheter is `continuum`, a rehabilitation exoskeleton is `wearable`). Medical use is recorded as `iso_category: medical`, user type `clinical`, application group `health` and `medical_clearance`; the catalogue records no clinical-performance claims.
+
 ### 2.1 Tie-break rules for hybrids
 
 Apply in order; the first rule that matches decides the branch.
@@ -104,16 +107,19 @@ Apply in order; the first rule that matches decides the branch.
 5. **Aquatic / Aerial** — primary operating medium. Amphibious → the medium it is marketed for. Aquatic: a tether decides (`rov`), even if it carries only power and the vehicle runs autonomously (corded pool cleaners); untethered submersible → `auv`; surface → `usv`. Aerial: one or more rotors and no wing → `multirotor` (helicopters included).
 6. **Mobile manipulator** — ground base + arm(s) as one product → `mobile-manipulator`. Base and arm sold separately = two entries (`ground` + `arm`) linked by `compatible_with`.
 7. **Ground** — wheels or tracks, no arm.
+
+   Rules 6 and 7 count only wheels or tracks the robot drives itself on while working. Casters or a cart used to move it between jobs (a surgical patient cart, a cobot on a trolley) do not count, so such a robot is classified as fixed-base (rule 8 or 9).
+
 8. **Arm** — fixed base, manipulates.
 9. **Stationary** — fixed base, does not manipulate, not humanoid in form.
 
-Unplaced: snake and crawler robots (no legs, wheels, medium or fixed base) raise *unclassifiable*; a branch will be added when a purchasable case exists.
+Unplaced: limbless locomotors — snake, inchworm and peristaltic (worm) robots that move by changing their body shape — have no legs, wheels, medium or fixed base and raise *unclassifiable*; a branch will be added when a purchasable case exists. Everything else called a snake or crawler robot already has a place: wheeled or tracked crawlers (pipe and tank inspection crawlers, snake-shaped robots on tracks) are `ground`; swimming snakes are `aquatic` (rule 5); snake-arms and vine robots, which reach in from a fixed base, are `continuum` arms.
 
 ### 2.2 Things that are deliberately NOT branches
 
 | Looks like a category | Why it is an attribute | Attribute |
 |---|---|---|
-| Cobot / collaborative robot | Safety rating of an articulated arm, not a structure | `collaborative` |
+| Cobot / collaborative robot | A safety feature of an arm (power and force limiting); under ISO 10218:2025 the application, not the robot, is collaborative | `collaborative` |
 | Robot dog | Marketing name for quadruped | `aliases` |
 | Robot vacuum, lawn mower, pool cleaner | Wheeled robots with a domestic application | `application` |
 | AMR / AGV | Wheeled; AMR vs AGV is a navigation distinction | `navigation` |
@@ -124,6 +130,9 @@ Unplaced: snake and crawler robots (no legs, wheels, medium or fixed base) raise
 | Industrial / service / medical (ISO 8373) | Intended use, not hardware | `iso_category` |
 | Drone | Aerial robot | `aliases` |
 | Telepresence robot | Wheeled, application telepresence | `application` |
+| Surgical / medical robot | Intended use and regulatory status; the body plan decides the branch | `iso_category: medical`, `segment: clinical`, `medical_clearance` |
+| Soft robot / exosuit | A construction choice; the body plan decides the branch (soft grippers are a gripping principle, `cp-1-1-4`) | `construction` (exoskeletons) |
+| Climbing / magnetic crawler | Wheeled or tracked robot that holds on to the surface | `adhesion` |
 
 ---
 
@@ -156,8 +165,9 @@ Shopify attributes are enum-only. Robots need numbers with units, so the attribu
 | `application` | enum, multi | see 3.4 | What is it marketed to do? |
 | `iso_category` | enum | `industrial`, `service`, `medical` | ISO 8373 intended use, as positioned by the manufacturer |
 | `environment` | enum, multi | `indoor`, `outdoor`, `underwater`, `airborne`, `hazardous`, `space` | Where is it rated to operate? |
-| `autonomy` | enum | `teleoperated`, `assisted`, `semi-autonomous`, `autonomous` | Highest level of unsupervised operation out of the box |
-| `collaborative` | bool | | Rated for unguarded operation alongside people (ISO 10218 / ISO/TS 15066)? |
+| `autonomy` | enum | `teleoperated`, `programmed`, `assisted`, `semi-autonomous`, `autonomous` | Highest level of unsupervised operation out of the box (`programmed`: runs a taught or coded sequence without sensing its surroundings) |
+| `collaborative` | bool | | Does the maker state it meets the ISO 10218-1:2025 (or ISO/TS 15066) requirements for collaborative applications? |
+| `medical_clearance` | enum, multi | `us-fda`, `eu-ce`, `cn-nmpa`, `jp-pmda` | Where is it cleared or approved as a medical device, according to the maker? |
 | `availability` | enum | `shipping`, `preorder`, `announced`, `research-only`, `discontinued` | Can you buy it today? |
 | `price` | number + `currency`, `price_date`, `price_source` | | List price as published (date and source required) |
 | `release_year` | number | year | First commercial availability |
@@ -186,12 +196,15 @@ Shopify attributes are enum-only. Robots need numbers with units, so the attribu
 | `humanoid`, `legged` | `max_speed` | number | m/s |
 | `legged` | `wheel_feet` | bool | |
 | `legged`, `ground` | `has_arm` | bool | arm sold as an add-on |
-| `ground`, `mobile-manipulator` | `drive_config` | enum | `differential`, `omnidirectional`, `ackermann`, `tracked` |
+| `ground`, `mobile-manipulator` | `drive_config` | enum | `differential`, `omnidirectional`, `ackermann`, `tracked`, `skid-steer`, `self-balancing` |
+| `ground` | `adhesion` | enum | `none`, `magnetic`, `vacuum` |
 | `ground` | `navigation` | enum | `line-following`, `marker-based`, `slam`, `none` |
 | `aerial` | `flight_time` | number | min |
 | `aerial` | `max_takeoff_weight` | number | kg |
 | `aquatic` | `depth_rating` | number | m |
 | `wearable` | `body_region` | enum, multi | `lower-limb`, `upper-limb`, `back`, `full-body` |
+| `exoskeleton` | `construction` | enum | `rigid`, `soft` |
+| `continuum` | `outer_diameter` | number | mm |
 
 ### 3.4 `application` vocabulary — two levels (D3)
 
@@ -350,6 +363,7 @@ These become `data/examples.yml` and run in CI: each entry asserts the expected 
 | Shadow Dexterous Hand | `cp-1-2` hand | finger_count: 5 |
 | Dynamixel XM430 | `cp-2-2` servo | bus: ttl / rs485 |
 | LEGO Spike Prime | `rb-10` kit | segment: education |
+| Intuitive Ion | `rb-1-6` arm › continuum (patient cart counts as fixed base) | segment: clinical; application: surgery; medical_clearance: us-fda |
 
 (Product facts are illustrative for the classification test only; verified with dated sources before the first stable release.)
 
@@ -618,3 +632,21 @@ Proposed after the batch that filled every empty leaf (catalogue PR #13); accept
 | `payload` moves from end-effector (`cp-1`) to grippers, hands and tool changers, so Tool loses it; `payload` gains basis `shear`; soft grippers bind `grip_range` (mm) | Payload means nothing for a screwdriver or sander; magnetic and vacuum figures depend on load direction. |
 | A gripper or tool sold with its own controller, feeder or pump is one product; the parts are listed in the record | Robotiq screwdriving kit, SRT soft gripper kit. |
 | `rb-1-4` example `igus-drylin-gantry` → `igus-dle-rg-0001` | The example now exists as a catalogue record. |
+
+### 10.3 Review of the multi-dimensional taxonomy, snake and soft robots, medical scope (2026-11-09)
+
+Proposed while comparing the taxonomy with a six-axis "multi-dimensional" robot taxonomy (morphology, autonomy, human–robot interaction, actuation and scale, multi-agent organisation, application); accepted by Simon 2026-11-09. The structure stands: the other axes are already attributes. Additive except where noted.
+
+| Change | Why |
+|---|---|
+| New leaf `rb-1-6` Continuum arm (binds `outer_diameter`, mm); the articulated rule excludes arms that bend along their length | Snake-arm robots have many rotary segments and would otherwise land in articulated; robotic catheters have no discrete joints and fitted no leaf. IFR industrial: unmapped; Google and Shopify: as the other arms |
+| Rules 6–7: only wheels or tracks the robot drives on while working count; casters or a cart moved between jobs make it fixed-base | Surgical patient carts, cobots on trolleys |
+| Unplaced robots narrowed to limbless locomotors (snake, inchworm, peristaltic); wheeled and tracked crawlers are ground robots, swimming snakes aquatic, snake-arms and vine robots continuum arms | "Crawler" in industry means a wheeled or tracked inspection vehicle |
+| `adhesion` on ground robots: `none`, `magnetic`, `vacuum` | Wall-, tank- and hull-climbing inspection crawlers |
+| `construction` on exoskeletons: `rigid`, `soft` | Soft exosuits and rigid exoskeletons differ in what buyers check (comfort, assistance) |
+| `medical_clearance` on every robot: `us-fda`, `eu-ce`, `cn-nmpa`, `jp-pmda` | Medical and surgical robots are in scope as reference entries; availability differs by market |
+| `collaborative` reworded to ISO 10218-1:2025 ("collaborative applications"; the earlier ISO/TS 15066 still accepted). Same identifier and evidence bar: the maker must state it | ISO 10218:2025 drops the term "collaborative robot": an application, not a robot, is confirmed as collaborative |
+| `autonomy` value `programmed` | Arms and gantries that run taught programs without sensing had no fitting value |
+| `drive_config` values `skid-steer`, `self-balancing` | Four- and six-wheel field robots describe themselves as skid-steer; two-wheel balancing robots had no value |
+| Parallel arm rule, description and aliases cover cable-driven parallel robots | Cables pulled by winches are parallel kinematic chains |
+| Medical and surgical robots in scope as reference entries (§2): classified by body plan; medical use is `iso_category: medical`, user type `clinical`, application group `health` and `medical_clearance` | The guide aims to be comprehensive; powered prostheses were already in |

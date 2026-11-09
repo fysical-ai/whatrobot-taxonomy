@@ -33,6 +33,7 @@ gid://whatrobot/TaxonomyCategory/rb-1-2 : 机器人 > 机械臂 > SCARA 机械�
 gid://whatrobot/TaxonomyCategory/rb-1-3 : 机器人 > 机械臂 > 并联机械臂
 gid://whatrobot/TaxonomyCategory/rb-1-4 : 机器人 > 机械臂 > 直角坐标机械臂
 gid://whatrobot/TaxonomyCategory/rb-1-5 : 机器人 > 机械臂 > 圆柱/球坐标机械臂
+gid://whatrobot/TaxonomyCategory/rb-1-6 : 机器人 > 机械臂 > 连续体机械臂
 gid://whatrobot/TaxonomyCategory/rb-2 : 机器人 > 人形机器人
 gid://whatrobot/TaxonomyCategory/rb-2-1 : 机器人 > 人形机器人 > 双足人形机器人
 gid://whatrobot/TaxonomyCategory/rb-2-2 : 机器人 > 人形机器人 > 轮式底盘人形机器人

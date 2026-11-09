@@ -83,3 +83,7 @@ gid://whatrobot/TaxonomyAttribute/81 : Force range
 gid://whatrobot/TaxonomyAttribute/82 : Torque range
 gid://whatrobot/TaxonomyAttribute/83 : Linear speed
 gid://whatrobot/TaxonomyAttribute/84 : Grip range
+gid://whatrobot/TaxonomyAttribute/85 : Medical clearance
+gid://whatrobot/TaxonomyAttribute/86 : Adhesion
+gid://whatrobot/TaxonomyAttribute/87 : Construction
+gid://whatrobot/TaxonomyAttribute/88 : Outer diameter

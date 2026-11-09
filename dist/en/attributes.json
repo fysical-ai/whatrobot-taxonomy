@@ -462,7 +462,7 @@
       "name": "Autonomy",
       "friendly_id": "autonomy",
       "handle": "autonomy",
-      "description": "Highest level of unsupervised operation supported out of the box.",
+      "description": "Highest level of unsupervised operation supported out of the box. Programmed: runs a taught or coded sequence without sensing its surroundings (most industrial arms).",
       "question": "What is the highest level of unsupervised operation out of the box?",
       "type": "enum",
       "multi": false,
@@ -472,6 +472,12 @@
           "name": "Teleoperated",
           "friendly_id": "autonomy__teleoperated",
           "handle": "autonomy__teleoperated"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/164",
+          "name": "Programmed",
+          "friendly_id": "autonomy__programmed",
+          "handle": "autonomy__programmed"
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/58",
@@ -504,8 +510,8 @@
       "name": "Collaborative",
       "friendly_id": "collaborative",
       "handle": "collaborative",
-      "description": "Rated for unguarded operation alongside people (ISO 10218 / ISO/TS 15066).",
-      "question": "Is it rated for unguarded operation alongside people?",
+      "description": "The maker states it meets the robot requirements for collaborative applications in ISO 10218-1:2025 (or the earlier ISO/TS 15066), usually through built-in power and force limiting. Under ISO 10218:2025 an application, not a robot, is confirmed as collaborative, after its own risk assessment.",
+      "question": "Does the maker state it meets the ISO 10218-1:2025 (or ISO/TS 15066) requirements for collaborative applications?",
       "type": "bool",
       "multi": false
     },
@@ -1105,6 +1111,18 @@
           "name": "Tracked",
           "friendly_id": "drive_config__tracked",
           "handle": "drive-config__tracked"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/165",
+          "name": "Skid-steer",
+          "friendly_id": "drive_config__skid-steer",
+          "handle": "drive-config__skid-steer"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/166",
+          "name": "Self-balancing",
+          "friendly_id": "drive_config__self-balancing",
+          "handle": "drive-config__self-balancing"
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/94",
@@ -2093,6 +2111,125 @@
       "handle": "grip-range",
       "description": "Largest object size the gripper can grasp.",
       "question": "How large an object can it grasp?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/85",
+      "name": "Medical clearance",
+      "friendly_id": "medical_clearance",
+      "handle": "medical-clearance",
+      "description": "Markets where the maker states the robot is legally sold as a medical device: FDA cleared, approved, granted or registered (US); CE-marked as a medical device (EU); registered with NMPA (China) or PMDA (Japan). Empty when no such status is stated.",
+      "question": "Where is it cleared or approved as a medical device, according to the maker?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/167",
+          "name": "United States (FDA)",
+          "friendly_id": "medical_clearance__us-fda",
+          "handle": "medical-clearance__us-fda"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/168",
+          "name": "European Union (CE)",
+          "friendly_id": "medical_clearance__eu-ce",
+          "handle": "medical-clearance__eu-ce"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/169",
+          "name": "China (NMPA)",
+          "friendly_id": "medical_clearance__cn-nmpa",
+          "handle": "medical-clearance__cn-nmpa"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/170",
+          "name": "Japan (PMDA)",
+          "friendly_id": "medical_clearance__jp-pmda",
+          "handle": "medical-clearance__jp-pmda"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/171",
+          "name": "Other",
+          "friendly_id": "medical_clearance__other",
+          "handle": "medical-clearance__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/86",
+      "name": "Adhesion",
+      "friendly_id": "adhesion",
+      "handle": "adhesion",
+      "description": "How a ground robot holds on to walls, tanks, hulls or ceilings so that it can climb them. None for robots that only drive on the ground.",
+      "question": "Does it climb by holding on to the surface, and how?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/172",
+          "name": "None",
+          "friendly_id": "adhesion__none",
+          "handle": "adhesion__none"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/173",
+          "name": "Magnetic",
+          "friendly_id": "adhesion__magnetic",
+          "handle": "adhesion__magnetic"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/174",
+          "name": "Vacuum",
+          "friendly_id": "adhesion__vacuum",
+          "handle": "adhesion__vacuum"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/175",
+          "name": "Other",
+          "friendly_id": "adhesion__other",
+          "handle": "adhesion__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/87",
+      "name": "Construction",
+      "friendly_id": "construction",
+      "handle": "construction",
+      "description": "Whether an exoskeleton carries its assistive force on a rigid frame beside the limb, or through textiles, straps and cables (a soft exosuit).",
+      "question": "Is it a rigid exoskeleton or a soft exosuit?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/176",
+          "name": "Rigid",
+          "friendly_id": "construction__rigid",
+          "handle": "construction__rigid"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/177",
+          "name": "Soft",
+          "friendly_id": "construction__soft",
+          "handle": "construction__soft"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/178",
+          "name": "Other",
+          "friendly_id": "construction__other",
+          "handle": "construction__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/88",
+      "name": "Outer diameter",
+      "friendly_id": "outer_diameter",
+      "handle": "outer-diameter",
+      "description": "Outer diameter of the bending section of a continuum arm or robotic catheter, which limits the openings it can enter.",
+      "question": "What is the outer diameter of the bending section?",
       "type": "number",
       "multi": false,
       "unit": "mm"
