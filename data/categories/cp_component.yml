@@ -40,7 +40,7 @@
   aliases: [end of arm tooling, EOAT, end effector]
   inclusion_rule: Mounts to a robot wrist or tool flange and performs grasping or a process.
   children: [cp-1-1, cp-1-2, cp-1-3, cp-1-4]
-  attributes: [payload, flange_standard, actuation]
+  attributes: [flange_standard, actuation, voltage_min, voltage_max]
   examples: []
 
 - id: cp-1-1
@@ -51,7 +51,7 @@
   aliases: [robot gripper, EOAT gripper]
   inclusion_rule: Grasps objects; fewer than four fingers, no opposable thumb, or fewer than six DOF. Child category is decided by gripping principle, not actuation.
   children: [cp-1-1-1, cp-1-1-2, cp-1-1-3, cp-1-1-4]
-  attributes: [grip_force]
+  attributes: [grip_force, payload]
   examples: []
 
 - id: cp-1-1-1
@@ -95,7 +95,7 @@
   aliases: [soft robotic gripper, inflatable gripper, compliant gripper]
   inclusion_rule: Grasping surfaces are compliant elastomer, inflatable or granular-jamming structures.
   children: []
-  attributes: [stroke, finger_count]
+  attributes: [stroke, finger_count, grip_range]
   examples: [onrobot-soft-gripper, soft-robotics-mgrip]
 
 - id: cp-1-2
@@ -106,7 +106,7 @@
   aliases: [dexterous hand, robotic hand, humanoid hand, five-finger hand]
   inclusion_rule: At least four fingers including an opposable thumb and at least six actuated degrees of freedom (joints driven independently, not passive or coupled joints).
   children: []
-  attributes: [dof, finger_count, tactile_sensing, grip_force]
+  attributes: [dof, finger_count, tactile_sensing, grip_force, payload]
   examples: [shadow-dexterous-hand, inspire-rh56]
 
 - id: cp-1-3
@@ -128,7 +128,7 @@
   aliases: [quick changer, tool coupler, quick-change coupling]
   inclusion_rule: Couples and decouples end-effectors; does not itself grasp or process.
   children: []
-  attributes: []
+  attributes: [payload]
   examples: [ati-qc-11, onrobot-quick-changer]
 
 # ------------------------------------------------------------ cp-2 actuator
@@ -173,7 +173,7 @@
   aliases: [BLDC motor, stepper motor, frameless motor, torque motor]
   inclusion_rule: Motor sold without an integrated servo controller. A motor with a gearhead but no driver (gearmotor) is a motor, not a reducer.
   children: []
-  attributes: [rated_torque, peak_torque]
+  attributes: [rated_torque, peak_torque, stall_torque]
   examples: [tmotor-u8, maxon-ec-flat]
 
 - id: cp-2-4
@@ -195,7 +195,7 @@
   aliases: [linear actuator, electric cylinder, roller screw actuator, pneumatic cylinder]
   inclusion_rule: Output motion is linear.
   children: []
-  attributes: [stroke, rated_force]
+  attributes: [stroke, rated_force, linear_speed, repeatability]
   examples: [ewellix-cahb, festo-dnc]
 
 # -------------------------------------------------------------- cp-3 sensor
@@ -240,7 +240,7 @@
   aliases: [F/T sensor, force sensor, torque sensor, six-axis force sensor]
   inclusion_rule: Measures force and/or torque along defined axes.
   children: []
-  attributes: [axes]
+  attributes: [axes, force_range, torque_range]
   examples: [ati-axia80, robotiq-ft-300]
 
 - id: cp-3-4
@@ -262,7 +262,7 @@
   aliases: [IMU, inertial measurement unit, encoder, rotary encoder]
   inclusion_rule: Measures acceleration, angular rate, orientation or shaft position.
   children: []
-  attributes: []
+  attributes: [heading_accuracy, attitude_accuracy, update_rate]
   examples: [xsens-mti-630, renishaw-aksim]
 
 - id: cp-3-6
@@ -273,7 +273,7 @@
   aliases: [GNSS receiver, GPS module, RTK receiver, radar sensor, ultrasonic sensor, ToF rangefinder, proximity sensor]
   inclusion_rule: Measures distance or absolute position without a laser scanner or an imaging array.
   children: []
-  attributes: [range]
+  attributes: [range, position_accuracy, update_rate]
   examples: [ublox-zed-f9p]
 
 # ------------------------------------------------------------- cp-4 compute

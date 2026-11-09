@@ -65,3 +65,21 @@ gid://whatrobot/TaxonomyAttribute/63 : Range
 gid://whatrobot/TaxonomyAttribute/64 : AI performance
 gid://whatrobot/TaxonomyAttribute/65 : Capacity
 gid://whatrobot/TaxonomyAttribute/66 : Teleoperation type
+gid://whatrobot/TaxonomyAttribute/67 : Wingspan
+gid://whatrobot/TaxonomyAttribute/68 : Cruise speed
+gid://whatrobot/TaxonomyAttribute/69 : Flight range
+gid://whatrobot/TaxonomyAttribute/70 : Maximum user weight
+gid://whatrobot/TaxonomyAttribute/71 : Load limit
+gid://whatrobot/TaxonomyAttribute/72 : Stroke X
+gid://whatrobot/TaxonomyAttribute/73 : Stroke Y
+gid://whatrobot/TaxonomyAttribute/74 : Stroke Z
+gid://whatrobot/TaxonomyAttribute/75 : Minimum voltage
+gid://whatrobot/TaxonomyAttribute/76 : Maximum voltage
+gid://whatrobot/TaxonomyAttribute/77 : Position accuracy
+gid://whatrobot/TaxonomyAttribute/78 : Update rate
+gid://whatrobot/TaxonomyAttribute/79 : Heading accuracy
+gid://whatrobot/TaxonomyAttribute/80 : Attitude accuracy
+gid://whatrobot/TaxonomyAttribute/81 : Force range
+gid://whatrobot/TaxonomyAttribute/82 : Torque range
+gid://whatrobot/TaxonomyAttribute/83 : Linear speed
+gid://whatrobot/TaxonomyAttribute/84 : Grip range

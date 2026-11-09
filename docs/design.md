@@ -598,3 +598,23 @@ Applied in `data/` during implementation; this document has not been rewritten a
 | Rule text: tool excludes camera heads; motor includes gearmotors; power includes docks; teleoperation wins over sensor; vacuum includes Bernoulli; soft includes granular jamming; tactile includes capacitive pre-touch; stationary is non-humanoid; multi-legged alias "hexapod walker" | Ambiguities found while writing the category pages. |
 | `stall_torque` unit Nm (was kg·cm) | Matches rated_torque and the recorded data. |
 | Components stay without `application` | Revisit when the site shows demand. |
+
+### 10.2 Rulings from catalogue batch 1 (2026-11-09)
+
+Proposed after the batch that filled every empty leaf (catalogue PR #13); accepted by Simon 2026-11-09. Additive except where noted.
+
+| Change | Why |
+|---|---|
+| Aerial (`rb-6`): `max_speed`, `flight_range` (km); fixed-wing and hybrid VTOL: `wingspan` (mm), `cruise_speed` (m/s). `battery_runtime` stays universal but is recorded as not applicable on aerial robots | Survey drones publish these; `flight_time` is a drone's runtime. |
+| `application` values `mapping-surveying` and `lab-automation` (group professional service; IFR: other professional service) | Six batch-1 records had to use `other` or `handling`. |
+| `segment` value `clinical` | Prostheses are fitted and sold through clinicians. **Amends D3** (the user-type list). |
+| Wearable (`rb-8`): `max_user_weight` (kg); prosthesis: `load_limit` (kg). `autonomy` is recorded as not applicable on prostheses | A hand's static load limit is not a payload; user-weight limits are what buyers check. |
+| Cartesian arm: `stroke_x`, `stroke_y`, `stroke_z` (mm); cylindrical arm: `stroke_z`. `reach` is recorded as not applicable on Cartesian arms | Gantries publish a work envelope, not a reach. |
+| `teleop_type` value `handheld-demonstrator` | UMI-style data-collection grippers (TRumi, PiKA Sense). |
+| `interface` values `uart`, `i2c`, `spi`, `rs232`, `rs422`, `modbus-rtu`, `analog` | Sensors and small actuators fell back to `other`. |
+| Component root: `voltage_min`, `voltage_max` (V). `voltage` stays the nominal voltage; a stated input range goes in min/max | Sensor and compute supplies are ranges (e.g. 19–54 V). |
+| Range/positioning: `position_accuracy` (mm), `update_rate` (Hz); inertial: `heading_accuracy`, `attitude_accuracy` (deg), `update_rate`; force-torque: `force_range` (N), `torque_range` (Nm) | These leaves had no specific numbers. A maker's "Not rated" IP is recorded as not applicable. |
+| `rated_force` gains bases `continuous` (default) and `max`; motors bind `stall_torque` (description generalised); linear actuators bind `linear_speed` (mm/s) and `repeatability` | Makers publish maximum force, not continuous force. |
+| `payload` moves from end-effector (`cp-1`) to grippers, hands and tool changers, so Tool loses it; `payload` gains basis `shear`; soft grippers bind `grip_range` (mm) | Payload means nothing for a screwdriver or sander; magnetic and vacuum figures depend on load direction. |
+| A gripper or tool sold with its own controller, feeder or pump is one product; the parts are listed in the record | Robotiq screwdriving kit, SRT soft gripper kit. |
+| `rb-1-4` example `igus-drylin-gantry` → `igus-dle-rg-0001` | The example now exists as a catalogue record. |

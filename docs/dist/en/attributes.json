@@ -47,7 +47,7 @@
       "name": "User type",
       "friendly_id": "segment",
       "handle": "segment",
-      "description": "User types that would plausibly buy this at list price — hobby, education, research, professional, consumer. (Identifier kept as `segment`; display name changed 2026-10-30.)",
+      "description": "User types that would plausibly buy this at list price — hobby, education, research, professional, consumer, clinical. (Identifier kept as `segment`; display name changed 2026-10-30.)",
       "question": "Which user types would plausibly buy this at list price?",
       "type": "enum",
       "multi": true,
@@ -81,6 +81,12 @@
           "name": "Consumer",
           "friendly_id": "segment__consumer",
           "handle": "segment__consumer"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/155",
+          "name": "Clinical",
+          "friendly_id": "segment__clinical",
+          "handle": "segment__clinical"
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/6",
@@ -340,6 +346,18 @@
           "name": "General purpose",
           "friendly_id": "application__general-purpose",
           "handle": "application__general-purpose"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/153",
+          "name": "Mapping and surveying",
+          "friendly_id": "application__mapping-surveying",
+          "handle": "application__mapping-surveying"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/154",
+          "name": "Lab automation",
+          "friendly_id": "application__lab-automation",
+          "handle": "application__lab-automation"
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/45",
@@ -672,6 +690,11 @@
         {
           "handle": "towing",
           "description": "Towed load (AMR / tugger).",
+          "default": false
+        },
+        {
+          "handle": "shear",
+          "description": "Magnetic or vacuum grip with the load acting parallel to the gripping face (shear), when only that figure is given. The default for these grippers is a straight pull off a flat part.",
           "default": false
         }
       ]
@@ -1343,6 +1366,48 @@
           "handle": "interface__pneumatic"
         },
         {
+          "id": "gid://whatrobot/TaxonomyValue/157",
+          "name": "UART / serial (TTL)",
+          "friendly_id": "interface__uart",
+          "handle": "interface__uart"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/158",
+          "name": "I²C",
+          "friendly_id": "interface__i2c",
+          "handle": "interface__i2c"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/159",
+          "name": "SPI",
+          "friendly_id": "interface__spi",
+          "handle": "interface__spi"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/160",
+          "name": "RS-232",
+          "friendly_id": "interface__rs232",
+          "handle": "interface__rs232"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/161",
+          "name": "RS-422",
+          "friendly_id": "interface__rs422",
+          "handle": "interface__rs422"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/162",
+          "name": "Modbus RTU",
+          "friendly_id": "interface__modbus-rtu",
+          "handle": "interface__modbus-rtu"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/163",
+          "name": "Analog",
+          "friendly_id": "interface__analog",
+          "handle": "interface__analog"
+        },
+        {
           "id": "gid://whatrobot/TaxonomyValue/119",
           "name": "Other",
           "friendly_id": "interface__other",
@@ -1571,14 +1636,26 @@
       "question": "What is the rated force?",
       "type": "number",
       "multi": false,
-      "unit": "N"
+      "unit": "N",
+      "bases": [
+        {
+          "handle": "continuous",
+          "description": "Continuous (rated) force at 100 % duty.",
+          "default": true
+        },
+        {
+          "handle": "max",
+          "description": "The maker's maximum or peak force (e.g. max lifted or feed force), when no continuous figure exists.",
+          "default": false
+        }
+      ]
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/59",
       "name": "Stall torque",
       "friendly_id": "stall_torque",
       "handle": "stall-torque",
-      "description": "Servo stall torque (manufacturers quote kg·cm; convert, 1 kg·cm = 0.0981 Nm).",
+      "description": "Stall torque, the torque at zero speed (servos and motors; servo makers quote kg·cm — convert, 1 kg·cm = 0.0981 Nm).",
       "question": "What is the stall torque?",
       "type": "number",
       "multi": false,
@@ -1809,12 +1886,216 @@
           "handle": "teleop-type__gamepad"
         },
         {
+          "id": "gid://whatrobot/TaxonomyValue/156",
+          "name": "Handheld demonstrator",
+          "friendly_id": "teleop_type__handheld-demonstrator",
+          "handle": "teleop-type__handheld-demonstrator"
+        },
+        {
           "id": "gid://whatrobot/TaxonomyValue/152",
           "name": "Other",
           "friendly_id": "teleop_type__other",
           "handle": "teleop-type__other"
         }
       ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/67",
+      "name": "Wingspan",
+      "friendly_id": "wingspan",
+      "handle": "wingspan",
+      "description": "Wingspan of a fixed-wing or hybrid VTOL aircraft.",
+      "question": "What is the wingspan?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/68",
+      "name": "Cruise speed",
+      "friendly_id": "cruise_speed",
+      "handle": "cruise-speed",
+      "description": "Typical cruise airspeed.",
+      "question": "What is the cruise speed?",
+      "type": "number",
+      "multi": false,
+      "unit": "m/s"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/69",
+      "name": "Flight range",
+      "friendly_id": "flight_range",
+      "handle": "flight-range",
+      "description": "Distance the aircraft can fly on one charge or tank, as the maker states it.",
+      "question": "How far can it fly on one charge?",
+      "type": "number",
+      "multi": false,
+      "unit": "km"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/70",
+      "name": "Maximum user weight",
+      "friendly_id": "max_user_weight",
+      "handle": "max-user-weight",
+      "description": "Heaviest user the wearable device is rated for.",
+      "question": "What is the maximum user weight?",
+      "type": "number",
+      "multi": false,
+      "unit": "kg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/71",
+      "name": "Load limit",
+      "friendly_id": "load_limit",
+      "handle": "load-limit",
+      "description": "Maximum static load a prosthetic device is rated to hold or bear (e.g. a hand's static load limit).",
+      "question": "What load is it rated to hold?",
+      "type": "number",
+      "multi": false,
+      "unit": "kg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/72",
+      "name": "Stroke X",
+      "friendly_id": "stroke_x",
+      "handle": "stroke-x",
+      "description": "Travel of the X axis of a Cartesian robot (working area width).",
+      "question": "How far does the X axis travel?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/73",
+      "name": "Stroke Y",
+      "friendly_id": "stroke_y",
+      "handle": "stroke-y",
+      "description": "Travel of the Y axis of a Cartesian robot (working area depth).",
+      "question": "How far does the Y axis travel?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/74",
+      "name": "Stroke Z",
+      "friendly_id": "stroke_z",
+      "handle": "stroke-z",
+      "description": "Vertical travel of a Cartesian or cylindrical robot.",
+      "question": "How far does the vertical axis travel?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/75",
+      "name": "Minimum voltage",
+      "friendly_id": "voltage_min",
+      "handle": "voltage-min",
+      "description": "Lowest supply voltage of a stated input range. Use with voltage_max when the maker gives a range instead of a nominal voltage.",
+      "question": "What is the lowest supply voltage it accepts?",
+      "type": "number",
+      "multi": false,
+      "unit": "V"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/76",
+      "name": "Maximum voltage",
+      "friendly_id": "voltage_max",
+      "handle": "voltage-max",
+      "description": "Highest supply voltage of a stated input range.",
+      "question": "What is the highest supply voltage it accepts?",
+      "type": "number",
+      "multi": false,
+      "unit": "V"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/77",
+      "name": "Position accuracy",
+      "friendly_id": "position_accuracy",
+      "handle": "position-accuracy",
+      "description": "Horizontal position accuracy of a positioning sensor (RTK fix for GNSS), as the maker states it.",
+      "question": "How accurate is its position?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/78",
+      "name": "Update rate",
+      "friendly_id": "update_rate",
+      "handle": "update-rate",
+      "description": "Maximum output or measurement rate.",
+      "question": "How often does it output a reading?",
+      "type": "number",
+      "multi": false,
+      "unit": "Hz"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/79",
+      "name": "Heading accuracy",
+      "friendly_id": "heading_accuracy",
+      "handle": "heading-accuracy",
+      "description": "Heading (yaw) accuracy of an IMU or AHRS, as the maker states it.",
+      "question": "How accurate is its heading?",
+      "type": "number",
+      "multi": false,
+      "unit": "deg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/80",
+      "name": "Attitude accuracy",
+      "friendly_id": "attitude_accuracy",
+      "handle": "attitude-accuracy",
+      "description": "Roll and pitch accuracy of an IMU or AHRS (dynamic, as the maker states it).",
+      "question": "How accurate are its roll and pitch?",
+      "type": "number",
+      "multi": false,
+      "unit": "deg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/81",
+      "name": "Force range",
+      "friendly_id": "force_range",
+      "handle": "force-range",
+      "description": "Measuring range of a force-torque sensor in force (largest axis, ±).",
+      "question": "What force range does it measure?",
+      "type": "number",
+      "multi": false,
+      "unit": "N"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/82",
+      "name": "Torque range",
+      "friendly_id": "torque_range",
+      "handle": "torque-range",
+      "description": "Measuring range of a force-torque sensor in torque (largest axis, ±).",
+      "question": "What torque range does it measure?",
+      "type": "number",
+      "multi": false,
+      "unit": "Nm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/83",
+      "name": "Linear speed",
+      "friendly_id": "linear_speed",
+      "handle": "linear-speed",
+      "description": "Maximum linear speed of a linear actuator.",
+      "question": "How fast does it move?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm/s"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/84",
+      "name": "Grip range",
+      "friendly_id": "grip_range",
+      "handle": "grip-range",
+      "description": "Largest object size the gripper can grasp.",
+      "question": "How large an object can it grasp?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
     }
   ]
 }

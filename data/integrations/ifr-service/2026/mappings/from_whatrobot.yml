@@ -44,6 +44,10 @@ rules:
     output: {category_id: [medical]}
   - input: {attribute_value: application__rehabilitation}
     output: {category_id: [medical]}
+  - input: {attribute_value: application__mapping-surveying}
+    output: {category_id: [professional-other]}       # IFR has no mapping group (added 2026-11-09)
+  - input: {attribute_value: application__lab-automation}
+    output: {category_id: [professional-other]}       # lab automation; IFR "medical" covers surgery, not labs
 unmapped_attribute_values:
   - application__handling           # industrial, not service
   - application__machine-tending

@@ -912,6 +912,72 @@
       "name": "Other",
       "friendly_id": "teleop_type__other",
       "handle": "teleop-type__other"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/153",
+      "name": "Mapping and surveying",
+      "friendly_id": "application__mapping-surveying",
+      "handle": "application__mapping-surveying"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/154",
+      "name": "Lab automation",
+      "friendly_id": "application__lab-automation",
+      "handle": "application__lab-automation"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/155",
+      "name": "Clinical",
+      "friendly_id": "segment__clinical",
+      "handle": "segment__clinical"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/156",
+      "name": "Handheld demonstrator",
+      "friendly_id": "teleop_type__handheld-demonstrator",
+      "handle": "teleop-type__handheld-demonstrator"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/157",
+      "name": "UART / serial (TTL)",
+      "friendly_id": "interface__uart",
+      "handle": "interface__uart"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/158",
+      "name": "I²C",
+      "friendly_id": "interface__i2c",
+      "handle": "interface__i2c"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/159",
+      "name": "SPI",
+      "friendly_id": "interface__spi",
+      "handle": "interface__spi"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/160",
+      "name": "RS-232",
+      "friendly_id": "interface__rs232",
+      "handle": "interface__rs232"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/161",
+      "name": "RS-422",
+      "friendly_id": "interface__rs422",
+      "handle": "interface__rs422"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/162",
+      "name": "Modbus RTU",
+      "friendly_id": "interface__modbus-rtu",
+      "handle": "interface__modbus-rtu"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyValue/163",
+      "name": "Analog",
+      "friendly_id": "interface__analog",
+      "handle": "interface__analog"
     }
   ]
 }
