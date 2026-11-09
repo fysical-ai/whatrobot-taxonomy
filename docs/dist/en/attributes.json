@@ -532,6 +532,12 @@
           "handle": "availability__shipping"
         },
         {
+          "id": "gid://whatrobot/TaxonomyValue/164",
+          "name": "Limited",
+          "friendly_id": "availability__limited",
+          "handle": "availability__limited"
+        },
+        {
           "id": "gid://whatrobot/TaxonomyValue/63",
           "name": "Preorder",
           "friendly_id": "availability__preorder",
@@ -691,6 +697,11 @@
         {
           "handle": "per-arm",
           "description": "One arm of a humanoid or dual-arm robot.",
+          "default": false
+        },
+        {
+          "handle": "bimanual",
+          "description": "Both arms together, for a dual-arm arm or a mobile manipulator with two arms (their default is one arm at the flange). For a humanoid, both arms together is already the default.",
           "default": false
         },
         {
@@ -1512,6 +1523,11 @@
           "handle": "continuous",
           "description": "Continuous / nominal grip force only.",
           "default": false
+        },
+        {
+          "handle": "fingertip",
+          "description": "Force at a single fingertip or pinch, when the maker gives no whole-hand or jaw figure.",
+          "default": false
         }
       ]
     },
@@ -1834,7 +1850,7 @@
       "name": "AI performance",
       "friendly_id": "ai_tops",
       "handle": "ai-tops",
-      "description": "Peak AI compute performance.",
+      "description": "Peak AI compute performance. On a robot, its onboard compute; recorded only where the maker publishes it.",
       "question": "What peak AI performance does the spec sheet state?",
       "type": "number",
       "multi": false,

@@ -34,6 +34,7 @@
     - ip_rating
     - open_source
     - sdk
+    - ai_tops
     - compatible_with
     - sources
   examples: []
@@ -121,9 +122,9 @@
   name: Humanoid
   friendly_id: robot.humanoid
   handle: humanoid
-  description: Robot with a torso, two arms and a head in human proportion, intended for human environments.
+  description: Robot designed to look human, with a torso, two arms and a head or face, intended for human environments.
   aliases: [humanoid robot, android, general-purpose humanoid]
-  inclusion_rule: Torso plus two arms plus a head in human proportion. Locomotion decides the child category.
+  inclusion_rule: Designed to look human, with a torso, two arms and a head or face (a screen face counts). Legs that end in wheels are still legs. Locomotion decides the child category.
   children: [rb-2-1, rb-2-2, rb-2-3]
   attributes: [height, dof_total, hands_included, max_speed]
   examples: []
@@ -145,7 +146,7 @@
   handle: wheeled-base
   description: Humanoid upper body on a wheeled or tracked base.
   aliases: [wheeled humanoid, mobile humanoid]
-  inclusion_rule: Humanoid torso, two arms AND a head in human proportion, mounted on a wheeled or tracked base that it drives itself on, instead of legs (a torso on casters that people push is fixed-base, rb-2-3). A bimanual torso with a sensor mast but no head, or without human proportions, is a mobile manipulator (rb-5).
+  inclusion_rule: Humanoid upper body (designed to look human, with a torso, two arms and a head or face) on a wheeled or tracked base that it drives itself on, instead of legs (a torso on casters that people push is fixed-base, rb-2-3). A two-armed robot on a wheeled base that is not designed to look human is a mobile manipulator (rb-5).
   children: []
   attributes: [drive_config]
   examples: [1x-eve, agibot-a2-w]
@@ -190,7 +191,7 @@
   handle: biped
   description: Two-legged robot without a humanoid torso, arms and head.
   aliases: [bipedal robot, two-legged robot]
-  inclusion_rule: Two articulated legs; fails the humanoid test (no torso + two arms + head in human proportion).
+  inclusion_rule: Two articulated legs; fails the humanoid test (not designed to look human with a torso, two arms and a head or face).
   children: []
   attributes: []
   examples: [agility-cassie]
@@ -369,9 +370,9 @@
   name: Prosthesis
   friendly_id: robot.wearable.prosthesis
   handle: prosthesis
-  description: Powered prosthetic limb or joint that replaces a missing body part.
+  description: Powered or microprocessor-controlled prosthetic limb or joint that replaces a missing body part.
   aliases: [powered prosthesis, bionic limb, bionic hand, powered knee]
-  inclusion_rule: Powered actuation that replaces, rather than assists, a limb or joint. Passive prostheses are out of scope.
+  inclusion_rule: Replaces, rather than assists, a limb or joint, and is motor-driven or microprocessor-controlled (e.g. a knee that adjusts its own damping). Purely mechanical prostheses are out of scope.
   children: []
   attributes: [load_limit]
   examples: [ossur-power-knee]

@@ -269,6 +269,10 @@
   name: Other
   friendly_id: availability__other
   handle: availability__other
+- id: 164
+  name: Limited
+  friendly_id: availability__limited
+  handle: availability__limited
 - id: 68
   name: Hardware
   friendly_id: open_source__hardware

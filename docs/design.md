@@ -65,7 +65,7 @@ rb-1-3  │  ├─ parallel         Parallel kinematics (delta, hexapod/Stewart
 rb-1-4  │  ├─ cartesian        Three prismatic axes (linear, gantry, XYZ)
 rb-1-5  │  ├─ cylindrical      Cylindrical & spherical: rotary base + prismatic reach; lift is prismatic (cylindrical) or a tilt (spherical/polar)
 rb-1-6  │  └─ continuum        Bends along its length: continuous backbone, or more bending segments than driven joints (snake-arms, robotic catheters)
-rb-2    ├─ humanoid            Torso + two arms + head in human proportion
+rb-2    ├─ humanoid            Designed to look human: torso + two arms + head or face
 rb-2-1  │  ├─ bipedal          Walks on two legs
 rb-2-2  │  ├─ wheeled-base     Humanoid upper body on a wheeled or tracked base
 rb-2-3  │  └─ fixed-base       Humanoid upper body on a fixed mount (torso-only)
@@ -87,7 +87,7 @@ rb-7-2  │  ├─ auv              Autonomous, untethered, submerged
 rb-7-3  │  └─ usv              Surface vessel
 rb-8    ├─ wearable            Worn on the human body
 rb-8-1  │  ├─ exoskeleton      Powered exoskeleton / exosuit (assists an intact limb)
-rb-8-2  │  └─ prosthesis       Powered prosthesis (replaces a limb or joint)
+rb-8-2  │  └─ prosthesis       Powered or microprocessor-controlled prosthesis (replaces a limb or joint)
 rb-9    ├─ stationary          Fixed, does not manipulate (desktop companions, social robots without arms)
 rb-10   └─ kit                 Modular construction kit with no fixed body plan
 ```
@@ -102,7 +102,7 @@ Apply in order; the first rule that matches decides the branch.
 
 1. **Kit** — sold as parts to be assembled into user-chosen forms → `kit`.
 2. **Wearable** — worn on the body and powered → `wearable`; a prosthesis (replaces a limb) → `prosthesis`, otherwise `exoskeleton`. Passive exoskeletons are out of scope.
-3. **Humanoid** — torso + two arms **and** a head, in human proportion → `humanoid`; two legs → `bipedal`, wheels/tracks → `wheeled-base`, neither → `fixed-base`. A bimanual torso with a sensor mast but no head is not a humanoid (→ rule 6). A humanoid with a leg count other than two is unclassified until a case exists.
+3. **Humanoid** — designed to look human: torso + two arms **and** a head or face (a screen face counts) → `humanoid`; two legs (legs that end in wheels are still legs) → `bipedal`, wheels/tracks → `wheeled-base`, neither → `fixed-base`. A two-armed robot that is not designed to look human, such as a bimanual torso with a sensor mast, is not a humanoid (→ rule 6). A humanoid with a leg count other than two is unclassified until a case exists.
 4. **Legged** — articulated legs → `legged`, even with wheels on the feet (`wheel_feet: true`) or an arm on the back (`has_arm: true`).
 5. **Aquatic / Aerial** — primary operating medium. Amphibious → the medium it is marketed for. Aquatic: a tether decides (`rov`), even if it carries only power and the vehicle runs autonomously (corded pool cleaners); untethered submersible → `auv`; surface → `usv`. Aerial: one or more rotors and no wing → `multirotor` (helicopters included).
 6. **Mobile manipulator** — ground base + arm(s) as one product → `mobile-manipulator`. Base and arm sold separately = two entries (`ground` + `arm`) linked by `compatible_with`.
@@ -170,7 +170,7 @@ Shopify attributes are enum-only. Robots need numbers with units, so the attribu
 | `autonomy` | enum | `teleoperated`, `programmed`, `assisted`, `semi-autonomous`, `autonomous` | Highest level of unsupervised operation out of the box (`programmed`: runs a taught or coded sequence without sensing its surroundings) |
 | `collaborative` | bool | | Does the maker state it meets the ISO 10218-1:2025 (or ISO/TS 15066) requirements for collaborative applications? |
 | `medical_clearance` | enum, multi | `us-fda`, `eu-ce`, `cn-nmpa`, `jp-pmda` | In which markets does the maker state it is legally marketed as a medical device? (US: FDA cleared, approved, De Novo or 510(k)-exempt listing; EU: CE-marked; China: NMPA; Japan: MHLW after PMDA review) |
-| `availability` | enum | `shipping`, `preorder`, `announced`, `research-only`, `discontinued` | Can you buy it today? |
+| `availability` | enum | `shipping`, `limited` (deployed only to selected customers: pilots, early access or invitation, no open sale), `preorder`, `announced`, `research-only`, `discontinued`, `other` | Can you buy it today? |
 | `price` | number + `currency`, `price_date`, `price_source` | | List price as published (date and source required) |
 | `release_year` | number | year | First commercial availability |
 | `country` | enum | ISO 3166 | Manufacturer HQ |
@@ -237,19 +237,19 @@ Makers publish the same quantity on different bases: a quadruped's payload walki
 | Attribute | Default basis | Other bases |
 |---|---|---|
 | `mass` | `operating`: ready to operate, with battery, no payload; arm without controller | `without-battery`, `with-controller` |
-| `payload` | `rated`: arm and mobile manipulator at the flange; mobile, legged or humanoid robot while moving; humanoid with both arms; end-effector held object | `max`, `standing`, `per-arm`, `towing` |
+| `payload` | `rated`: arm and mobile manipulator at the flange; mobile, legged or humanoid robot while moving; humanoid with both arms; end-effector held object | `max`, `standing`, `per-arm`, `bimanual` (both arms of a dual-arm arm or mobile manipulator), `towing`, `shear` |
 | `battery_runtime` | `rated`: the headline figure in normal use without payload; a range → its upper end | `loaded`, `standby` |
 | `max_speed` | `rated`: normal operation | `limit` (burst / peak / record) |
 | `flight_time` | `max`: the maker's maximum (no wind, no payload) | `hover`, `with-payload` |
 | `height` | `standing`, including head | — |
 | `reach` | `max`; SCARA = J1 + J2 arm length | — |
 | `repeatability` | `pose` (ISO 9283), ± value as a positive number | — |
-| `grip_force` | `max` | `continuous` |
+| `grip_force` | `max` | `continuous`, `fingertip` (one fingertip or pinch) |
 | `range` | `max` | `at-10pct` (lidar at 10 % reflectivity) |
 | `ai_tops` | `stated`: the maker's headline figure | `sparse` |
 | `stall_torque` | `nominal-voltage`: at the voltage recorded in `voltage` | — |
 
-**Conversions** (not bases): hours → minutes; km/h → m/s; kg·cm → Nm (× 0.0981); mAh → Wh only when the same source states the nominal voltage.
+**Conversions** (not bases; decided 2026-11-09: every figure is recorded in the taxonomy's ISO unit, with the published figure kept in the catalogue's notes): hours → minutes; km/h → m/s; mph → m/s (× 0.44704); knots → m/s (× 0.514444); lb → kg (× 0.45359237); oz → kg (× 0.028349523); in → mm (× 25.4); ft → m (× 0.3048); mi → km (× 1.609344); lbf → N (× 4.4482216); kgf → N (× 9.80665); kg·cm → Nm (× 0.0981); lbf·ft → Nm (× 1.3558179); a load published in N for an attribute in kg → ÷ 9.80665 (standard gravity); mAh → Wh only when the same source states the nominal voltage.
 
 **Not applicable.** A product can lack a quantity altogether (a corded pool robot has no battery runtime). Catalogues record that separately from "not published", so displays can show *n/a* rather than a gap.
 
@@ -604,7 +604,7 @@ Applied in `data/` during implementation; this document has not been rewritten a
 |---|---|
 | `rb-8-2` Prosthesis added; wearable rule excludes passive exoskeletons | Powered prostheses met the wearable rule but were not exoskeletons. |
 | `cp-3-6` Range / positioning sensor added | GNSS, radar and ultrasonic sensors had no leaf. |
-| Wheeled-base humanoid requires a head and human proportions; otherwise mobile manipulator | Galbot G1 / AgiBot G1 boundary. |
+| Wheeled-base humanoid requires a head and human proportions; otherwise mobile manipulator | Galbot G1 / AgiBot G1 boundary. Superseded 2026-11-09: a robot designed to look human is a humanoid (a screen face counts; Galbot, Astribot S1, Mercury X1 are humanoids). |
 | Humanoid with legs ≠ 2 is unclassifiable (was: filed under bipedal) | Four legs under a torso is not "bipedal". |
 | Joint module vs servo decided by `joint_grade`, not bus; CAN removed from servo rule | Dynamixel (RS-485) vs Unitree GO-M8010 (RS-485). |
 | ROV = tethered, even if autonomous; multirotor = one or more rotors | Corded pool cleaners; helicopters. |
@@ -634,6 +634,19 @@ Proposed after the batch that filled every empty leaf (catalogue PR #13); accept
 | `payload` moves from end-effector (`cp-1`) to grippers, hands and tool changers, so Tool loses it; `payload` gains basis `shear`; soft grippers bind `grip_range` (mm) | Payload means nothing for a screwdriver or sander; magnetic and vacuum figures depend on load direction. |
 | A gripper or tool sold with its own controller, feeder or pump is one product; the parts are listed in the record | Robotiq screwdriving kit, SRT soft gripper kit. |
 | `rb-1-4` example `igus-drylin-gantry` → `igus-dle-rg-0001` | The example now exists as a catalogue record. |
+
+### 10.3 Rulings from catalogue batch 2 (2026-11-09)
+
+Proposed after catalogue batch 2 (catalogue PR #15); decided by Simon 2026-11-09. Additive: no id, category or tie-break order changes.
+
+| Change | Why |
+|---|---|
+| Humanoid (`rb-2`, `rb-2-2`): a robot **designed to look human** (torso, two arms and a head or face; a screen face counts) is a humanoid. Legs that end in wheels are still legs, so wheel-legged humanoids stay in `rb-2-1`. A two-armed wheeled robot that is not designed to look human is a mobile manipulator | Replaces the "head in human proportion" test of the 2026-10-29 ruling. Galbot, Astribot S1 and Elephant Mercury X1 are humanoids; wheel-legged humanoids such as Zeroth M1 stay with the humanoids. Tie-break rule 3 (§2.1) and the biped rule use the same test. |
+| Prosthesis (`rb-8-2`): motor-driven **or microprocessor-controlled**; a knee that adjusts its own damping counts. Purely mechanical prostheses stay out of scope | Ottobock C-Leg / Genium / Kenevo and Össur Navii are sold as microprocessor knees. |
+| `ai_tops` bound to every robot (root `rb`), recorded only where the maker publishes it | Onboard compute is a headline spec for legged robots and humanoids (Unitree As2 EDU tiers, Vbot, Dobot Rover X1). |
+| `payload` gains basis `bimanual` (both arms of a dual-arm arm or mobile manipulator; for a humanoid both arms together is already the default); `grip_force` gains basis `fingertip` | Dual-arm and hand makers publish these figures only. |
+| `availability` value `limited`: deployed only to selected customers (pilots, early access or invitation), with no open sale | Enterprise humanoids in pilots (HMND 01, MATRIX-3, KEENON XMAN-R1) and invite-only products (Amazon Astro). |
+| Every figure is recorded in the taxonomy's ISO unit; the conversions in §3.5 now include imperial units | US pages publish lb, in, mph and lbf. |
 
 ### 10.4 Review of the multi-dimensional taxonomy, snake and soft robots, medical scope (2026-11-09)
 
