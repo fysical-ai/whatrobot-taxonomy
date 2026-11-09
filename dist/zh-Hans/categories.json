@@ -14,7 +14,7 @@
           "handle": "robot",
           "description": "能够感知环境并对其作出动作的机器——通过移动、操作物体或与人互动。机器人按物理形态分类，而非按用户群体或用途。",
           "aliases": [
-            "robots"
+            "机器人"
           ],
           "inclusion_rule": "Sold as a complete, programmable robot (consistent with ISO 8373:2021). Parts sold separately are components (cp).",
           "parent_id": null,
@@ -224,11 +224,10 @@
           "handle": "arm",
           "description": "固定基座的机械手，用于在空间中定位末端执行器。",
           "aliases": [
-            "robot arm",
-            "robotic arm",
-            "manipulator",
-            "industrial arm",
-            "cobot"
+            "机器臂",
+            "工业机器人",
+            "协作机器人",
+            "机械手"
           ],
           "inclusion_rule": "Fixed base (floor, table, wall, ceiling, a separately sold mobile base, or a cart or stand that people move between jobs); manipulates, meaning it positions a tool, gripper or sensor head in space; not humanoid in form.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -457,12 +456,11 @@
           "handle": "articulated",
           "description": "具有三个或以上串联旋转关节的机械臂，包括六轴/七轴工业机械臂、协作机器人和桌面机械臂。",
           "aliases": [
-            "6-axis arm",
-            "7-axis arm",
-            "cobot",
-            "collaborative robot",
-            "desktop arm",
-            "anthropomorphic arm"
+            "六轴机械臂",
+            "七轴机械臂",
+            "协作机械臂",
+            "桌面机械臂",
+            "多关节机器人"
           ],
           "inclusion_rule": "At least three rotary joints in series. Collaborative safety features do not change the category (attribute collaborative). An arm with more bending segments than independently driven joints, bending along its length, is a continuum arm (rb-1-6), even if each segment is a rotary joint. An arm whose every joint has its own drive, even through cables from the base, stays here.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
@@ -674,7 +672,8 @@
           "description": "具有两个平行垂直旋转关节和一个垂直直线轴的机械臂，在水平面内具有柔顺性。",
           "aliases": [
             "SCARA",
-            "selective compliance arm"
+            "水平多关节机器人",
+            "四轴机器人"
           ],
           "inclusion_rule": "Two parallel vertical rotary joints plus a vertical prismatic axis.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
@@ -882,14 +881,14 @@
           "full_name": "机器人 > 机械臂 > 并联机械臂",
           "friendly_id": "robot.arm.parallel",
           "handle": "parallel",
-          "description": "并联运动学机械手，如 Delta 机器人、六足/Stewart 平台或绳驱并联机器人。",
+          "description": "并联机构机械臂，如 Delta 机器人、六足/Stewart 平台或绳驱并联机器人。",
           "aliases": [
-            "delta robot",
-            "hexapod platform",
-            "Stewart platform",
-            "parallel robot",
-            "cable-driven parallel robot",
-            "cable robot"
+            "Delta 机器人",
+            "六自由度平台",
+            "Stewart 平台",
+            "并联机器人",
+            "绳驱并联机器人",
+            "索驱动机器人"
           ],
           "inclusion_rule": "End-effector carried by two or more kinematic chains acting in parallel. The chains may be rigid links or cables pulled by winches (cable-driven parallel robots).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
@@ -1099,10 +1098,9 @@
           "handle": "cartesian",
           "description": "三个直线轴沿笛卡尔坐标系布置的机械手，包括龙门和直线机器人。",
           "aliases": [
-            "gantry robot",
-            "linear robot",
-            "XYZ robot",
-            "cartesian robot"
+            "龙门机器人",
+            "桁架机器人",
+            "直角坐标机器人"
           ],
           "inclusion_rule": "Three prismatic (linear) main axes.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
@@ -1300,19 +1298,19 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/72",
-              "name": "Stroke X",
+              "name": "X 轴行程",
               "friendly_id": "stroke_x",
               "handle": "stroke-x"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/73",
-              "name": "Stroke Y",
+              "name": "Y 轴行程",
               "friendly_id": "stroke_y",
               "handle": "stroke-y"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/74",
-              "name": "Stroke Z",
+              "name": "Z 轴行程",
               "friendly_id": "stroke_z",
               "handle": "stroke-z"
             }
@@ -1330,10 +1328,9 @@
           "handle": "cylindrical",
           "description": "具有旋转基座和直线伸缩轴的机械手：圆柱坐标（直线升降）或球坐标/极坐标（俯仰肩关节）。IFR 类型 30。",
           "aliases": [
-            "polar robot",
-            "spherical robot",
-            "cylindrical robot",
-            "polar arm"
+            "极坐标机器人",
+            "球坐标机器人",
+            "圆柱坐标机器人"
           ],
           "inclusion_rule": "Rotary base combined with a prismatic reach axis; the second axis is either a prismatic lift (cylindrical) or a rotary tilt (spherical / polar).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
@@ -1531,7 +1528,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/74",
-              "name": "Stroke Z",
+              "name": "Z 轴行程",
               "friendly_id": "stroke_z",
               "handle": "stroke-z"
             }
@@ -1549,12 +1546,11 @@
           "handle": "continuum",
           "description": "沿自身长度弯曲的机械臂——连续柔性主干，或由基座驱动的多个短节段——如蛇形臂机器人和机器人导管。",
           "aliases": [
-            "snake-arm robot",
-            "snake arm",
-            "continuum robot",
-            "elephant-trunk robot",
-            "robotic catheter",
-            "vine robot"
+            "蛇形臂机器人",
+            "蛇形臂",
+            "连续体机器人",
+            "象鼻机器人",
+            "机器人导管"
           ],
           "inclusion_rule": "Bends along its length rather than at a few independently driven joints — a continuous backbone, or a chain of segments bent together by tendons, cables, pull wires, concentric tubes or fluid pressure, so that it has more bending segments than independently driven joints. Takes precedence over articulated even when the segments are rotary joints; an arm whose every joint has its own drive, even through cables from the base, is articulated. When a positioning arm and a continuum instrument are sold as one system, the continuum instrument decides (robotic catheters); short cable-driven instrument wrists do not (multiport surgical robots stay articulated). Included even if it only carries a camera or sensor head, and when the body grows from its tip (vine robot). Snake robots that move themselves along the ground are not arms (design notes §2.1, unplaced).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
@@ -1769,11 +1765,11 @@
           "full_name": "机器人 > 人形机器人",
           "friendly_id": "robot.humanoid",
           "handle": "humanoid",
-          "description": "具有按人体比例布置的躯干、双臂和头部的机器人，面向人类环境。",
+          "description": "外形仿人的机器人，具有躯干、双臂以及头部或面部，用于人类环境。",
           "aliases": [
-            "humanoid robot",
-            "android",
-            "general-purpose humanoid"
+            "人形机器人",
+            "仿人机器人",
+            "通用人形机器人"
           ],
           "inclusion_rule": "Designed to look human, with a torso, two arms and a head or face (a screen face counts). Legs that end in wheels are still legs. Locomotion decides the child category.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -1984,8 +1980,8 @@
           "handle": "bipedal",
           "description": "用双腿行走的人形机器人。",
           "aliases": [
-            "walking humanoid",
-            "legged humanoid"
+            "双足人形机器人",
+            "行走人形机器人"
           ],
           "inclusion_rule": "Humanoid form with two articulated legs used for locomotion.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-2",
@@ -2190,8 +2186,8 @@
           "handle": "wheeled-base",
           "description": "安装在轮式或履带式底盘上的人形上半身。",
           "aliases": [
-            "wheeled humanoid",
-            "mobile humanoid"
+            "轮式人形机器人",
+            "移动人形机器人"
           ],
           "inclusion_rule": "Humanoid upper body (designed to look human, with a torso, two arms and a head or face) on a wheeled or tracked base that it drives itself on, instead of legs (a torso on casters that people push is fixed-base, rb-2-3). A two-armed robot on a wheeled base that is not designed to look human is a mobile manipulator (rb-5).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-2",
@@ -2402,9 +2398,8 @@
           "handle": "fixed-base",
           "description": "安装在固定底座上、不具备移动能力的人形上半身。",
           "aliases": [
-            "torso humanoid",
-            "half humanoid",
-            "dual-arm humanoid torso"
+            "半身人形机器人",
+            "双臂人形机器人"
           ],
           "inclusion_rule": "Humanoid torso, arms and head with no locomotion system.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-2",
@@ -2608,8 +2603,8 @@
           "handle": "legged",
           "description": "依靠关节式腿部移动、非人形的机器人。",
           "aliases": [
-            "walking robot",
-            "legged robot"
+            "足式机器人",
+            "步行机器人"
           ],
           "inclusion_rule": "Articulated legs; wheels on the feet or an add-on arm do not change the category.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -2832,9 +2827,9 @@
           "handle": "quadruped",
           "description": "具有四条腿的足式机器人。",
           "aliases": [
-            "robot dog",
-            "quadrupedal robot",
-            "four-legged robot"
+            "机器狗",
+            "四足机器狗",
+            "四足机器人"
           ],
           "inclusion_rule": "Four articulated legs. Wheel-feet (attribute wheel_feet) and add-on arms (attribute has_arm) stay in this category.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-3",
@@ -3052,8 +3047,8 @@
           "handle": "biped",
           "description": "没有人形躯干、手臂和头部的两腿机器人。",
           "aliases": [
-            "bipedal robot",
-            "two-legged robot"
+            "双足机器人",
+            "两足机器人"
           ],
           "inclusion_rule": "Two articulated legs; fails the humanoid test (not designed to look human with a torso, two arms and a head or face).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-3",
@@ -3269,10 +3264,8 @@
           "handle": "multi-legged",
           "description": "具有六条或以上腿的足式机器人。",
           "aliases": [
-            "hexapod walker",
-            "six-legged robot",
-            "insect robot",
-            "walking hexapod"
+            "六足机器人",
+            "仿生昆虫机器人"
           ],
           "inclusion_rule": "Six or more articulated legs.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-3",
@@ -3488,15 +3481,15 @@
           "handle": "ground",
           "description": "依靠轮子或履带移动、无腿且无集成机械臂的机器人。",
           "aliases": [
-            "mobile robot",
-            "mobile base",
-            "rover",
+            "移动机器人",
+            "移动底盘",
+            "巡检车",
             "AMR",
             "AGV",
             "UGV",
-            "inspection crawler",
-            "pipe crawler",
-            "wall-climbing robot"
+            "巡检爬行机器人",
+            "管道机器人",
+            "爬壁机器人"
           ],
           "inclusion_rule": "Moves itself on wheels or tracks; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm). Wheels or tracks count only when the robot moves itself on them as part of its task, including between work stations; wheels or casters on which people move it between jobs (a surgical patient cart, a cobot on a trolley), even with power assist, do not count, and nor do passive wheels on a robot that moves by bending its body. Wheeled or tracked crawlers, including snake-shaped ones on driven tracks, are ground robots; inchworm and peristaltic pipe robots are not (unplaced).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -3709,11 +3702,10 @@
           "handle": "wheeled",
           "description": "由轮子驱动的地面机器人。",
           "aliases": [
-            "wheeled robot",
-            "robot vacuum",
-            "robot mower",
-            "delivery robot",
-            "telepresence robot"
+            "扫地机器人",
+            "割草机器人",
+            "配送机器人",
+            "送餐机器人"
           ],
           "inclusion_rule": "Locomotion by wheels. Vacuum, mowing, delivery, telepresence and similar are applications, not categories.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-4",
@@ -3924,9 +3916,9 @@
           "handle": "tracked",
           "description": "由连续履带驱动的地面机器人。",
           "aliases": [
-            "tracked robot",
-            "crawler robot",
-            "tank robot"
+            "履带机器人",
+            "履带底盘",
+            "坦克机器人"
           ],
           "inclusion_rule": "Locomotion by continuous tracks.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-4",
@@ -4136,9 +4128,9 @@
           "handle": "mobile-manipulator",
           "description": "轮式或履带式底盘配备一个或多个机械臂、作为单一产品销售的非人形机器人。",
           "aliases": [
-            "mobile manipulator",
-            "MoMa",
-            "arm on wheels"
+            "复合机器人",
+            "移动操作机器人",
+            "移动机械臂"
           ],
           "inclusion_rule": "Base that moves itself on wheels or tracks (including between work stations, then parks while the arm works) and arm(s), sold together as one product. A base and an arm sold separately are two entries linked by compatible_with. An arm on casters or a cart that people move between jobs, even with power assist (a surgical patient cart, a cobot on a trolley), is an arm (rb-1).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -4351,10 +4343,9 @@
           "handle": "aerial",
           "description": "能够飞行的机器人。",
           "aliases": [
-            "drone",
+            "无人机",
             "UAV",
-            "UAS",
-            "unmanned aerial vehicle"
+            "飞行机器人"
           ],
           "inclusion_rule": "Primary operating medium is air.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -4549,7 +4540,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/69",
-              "name": "Flight range",
+              "name": "航程",
               "friendly_id": "flight_range",
               "handle": "flight-range"
             }
@@ -4565,10 +4556,9 @@
           "handle": "multirotor",
           "description": "由多个旋翼提供升力的空中机器人。",
           "aliases": [
-            "quadcopter",
-            "hexacopter",
-            "octocopter",
-            "multicopter"
+            "四旋翼",
+            "六旋翼",
+            "多旋翼无人机"
           ],
           "inclusion_rule": "Lift from one or more rotors; no fixed wing. Single-rotor helicopters are included.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-6",
@@ -4754,7 +4744,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/69",
-              "name": "Flight range",
+              "name": "航程",
               "friendly_id": "flight_range",
               "handle": "flight-range"
             }
@@ -4772,8 +4762,7 @@
           "handle": "fixed-wing",
           "description": "由固定机翼提供升力的空中机器人。",
           "aliases": [
-            "fixed-wing drone",
-            "UAV plane"
+            "固定翼无人机"
           ],
           "inclusion_rule": "Lift from a fixed wing; cannot hover.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-6",
@@ -4959,19 +4948,19 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/69",
-              "name": "Flight range",
+              "name": "航程",
               "friendly_id": "flight_range",
               "handle": "flight-range"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/67",
-              "name": "Wingspan",
+              "name": "翼展",
               "friendly_id": "wingspan",
               "handle": "wingspan"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/68",
-              "name": "Cruise speed",
+              "name": "巡航速度",
               "friendly_id": "cruise_speed",
               "handle": "cruise-speed"
             }
@@ -4989,9 +4978,9 @@
           "handle": "hybrid-vtol",
           "description": "结合旋翼垂直起降与固定翼巡航的空中机器人。",
           "aliases": [
-            "VTOL drone",
-            "tiltrotor drone",
-            "tail-sitter"
+            "垂直起降固定翼",
+            "复合翼无人机",
+            "倾转旋翼"
           ],
           "inclusion_rule": "Both rotors for vertical flight and a fixed wing for cruise.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-6",
@@ -5177,19 +5166,19 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/69",
-              "name": "Flight range",
+              "name": "航程",
               "friendly_id": "flight_range",
               "handle": "flight-range"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/67",
-              "name": "Wingspan",
+              "name": "翼展",
               "friendly_id": "wingspan",
               "handle": "wingspan"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/68",
-              "name": "Cruise speed",
+              "name": "巡航速度",
               "friendly_id": "cruise_speed",
               "handle": "cruise-speed"
             }
@@ -5207,9 +5196,9 @@
           "handle": "aquatic",
           "description": "在水面或水中作业的机器人。",
           "aliases": [
-            "underwater robot",
-            "marine robot",
-            "water robot"
+            "水下机器人",
+            "海洋机器人",
+            "水下无人机"
           ],
           "inclusion_rule": "Primary operating medium is water. Amphibious products go to the medium they are marketed for.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -5402,10 +5391,9 @@
           "handle": "rov",
           "description": "通过脐带缆连接的遥控水下航行器。",
           "aliases": [
-            "remotely operated vehicle",
-            "tethered underwater drone",
-            "underwater drone",
-            "corded pool robot"
+            "水下无人机",
+            "遥控水下机器人",
+            "有缆泳池机器人"
           ],
           "inclusion_rule": "Submersible; tethered. The tether decides, even if it carries only power and the vehicle runs its mission on its own (corded pool cleaners).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-7",
@@ -5591,8 +5579,8 @@
           "handle": "auv",
           "description": "无缆、自主的水下航行器。",
           "aliases": [
-            "autonomous underwater vehicle",
-            "underwater glider"
+            "自主水下航行器",
+            "水下滑翔机"
           ],
           "inclusion_rule": "Submersible; untethered. Includes cordless pool cleaners that crawl the floor.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-7",
@@ -5778,9 +5766,9 @@
           "handle": "usv",
           "description": "无人水面航行器。",
           "aliases": [
-            "unmanned surface vehicle",
-            "autonomous boat",
-            "robot boat"
+            "无人船",
+            "无人艇",
+            "水面机器人"
           ],
           "inclusion_rule": "Operates on the water surface.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-7",
@@ -5966,8 +5954,8 @@
           "handle": "wearable",
           "description": "穿戴在人体上的机器人。",
           "aliases": [
-            "wearable robot",
-            "exosuit"
+            "可穿戴机器人",
+            "外骨骼"
           ],
           "inclusion_rule": "Worn on the body and powered. Passive (unpowered) exoskeletons are out of scope for this taxonomy.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -6146,7 +6134,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/70",
-              "name": "Maximum user weight",
+              "name": "最大用户体重",
               "friendly_id": "max_user_weight",
               "handle": "max-user-weight"
             }
@@ -6162,10 +6150,10 @@
           "handle": "exoskeleton",
           "description": "辅助或增强人体运动的动力外骨骼或外骨骼服。",
           "aliases": [
-            "powered exoskeleton",
-            "exosuit",
-            "soft exosuit",
-            "exo"
+            "动力外骨骼",
+            "外骨骼服",
+            "柔性外骨骼",
+            "助力外骨骼"
           ],
           "inclusion_rule": "Powered actuation applied alongside one or more intact body regions. Rigid exoskeletons and soft, textile exosuits are both included (attribute construction).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-8",
@@ -6339,7 +6327,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/70",
-              "name": "Maximum user weight",
+              "name": "最大用户体重",
               "friendly_id": "max_user_weight",
               "handle": "max-user-weight"
             },
@@ -6361,12 +6349,12 @@
           "full_name": "机器人 > 可穿戴机器人 > 假肢",
           "friendly_id": "robot.wearable.prosthesis",
           "handle": "prosthesis",
-          "description": "替代缺失肢体或关节的动力假肢。",
+          "description": "动力或微处理器控制的假肢或假体关节，用于替代缺失的身体部位。",
           "aliases": [
-            "powered prosthesis",
-            "bionic limb",
-            "bionic hand",
-            "powered knee"
+            "智能假肢",
+            "仿生手",
+            "仿生假肢",
+            "智能膝关节"
           ],
           "inclusion_rule": "Replaces, rather than assists, a limb or joint, and is motor-driven or microprocessor-controlled (e.g. a knee that adjusts its own damping). Purely mechanical prostheses are out of scope.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-8",
@@ -6540,13 +6528,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/70",
-              "name": "Maximum user weight",
+              "name": "最大用户体重",
               "friendly_id": "max_user_weight",
               "handle": "max-user-weight"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/71",
-              "name": "Load limit",
+              "name": "承重上限",
               "friendly_id": "load_limit",
               "handle": "load-limit"
             }
@@ -6564,10 +6552,9 @@
           "handle": "stationary",
           "description": "固定基座、不进行操作的机器人，如无臂的桌面陪伴或社交机器人。",
           "aliases": [
-            "desktop robot",
-            "companion robot",
-            "social robot",
-            "tabletop robot"
+            "桌面机器人",
+            "陪伴机器人",
+            "社交机器人"
           ],
           "inclusion_rule": "Fixed base; no locomotion; no manipulator; not humanoid in form (a humanoid torso on a stand is rb-2-3). Last rule in the tie-break order.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -6743,10 +6730,10 @@
           "handle": "kit",
           "description": "没有固定形态、可组装成可编程机器人的模块化构建套件。",
           "aliases": [
-            "robot kit",
-            "construction kit",
-            "STEM kit",
-            "educational robot kit"
+            "机器人套件",
+            "编程机器人套件",
+            "STEM 套件",
+            "教育机器人"
           ],
           "inclusion_rule": "Sold as parts to be assembled into user-chosen forms; the result is programmable. Generic electronics kits are excluded.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
@@ -6928,10 +6915,9 @@
           "handle": "component",
           "description": "与整机分开销售的机器人零部件或配件。",
           "aliases": [
-            "components",
-            "accessories",
-            "parts",
-            "peripherals"
+            "机器人配件",
+            "零部件",
+            "机器人部件"
           ],
           "inclusion_rule": "Sold separately and intended to be fitted to, or used with, a robot.",
           "parent_id": null,
@@ -7077,13 +7063,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             }
@@ -7099,9 +7085,9 @@
           "handle": "end-effector",
           "description": "安装在机械臂或手腕末端、作用于外界的装置。",
           "aliases": [
-            "end of arm tooling",
+            "末端工具",
             "EOAT",
-            "end effector"
+            "末端执行器"
           ],
           "inclusion_rule": "Mounts to a robot wrist or tool flange and performs grasping or a process.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
@@ -7240,13 +7226,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -7274,8 +7260,9 @@
           "handle": "gripper",
           "description": "非拟人手形态的抓取末端执行器。",
           "aliases": [
-            "robot gripper",
-            "EOAT gripper"
+            "机器人夹爪",
+            "机械爪",
+            "夹持器"
           ],
           "inclusion_rule": "Grasps objects; fewer than four fingers, no opposable thumb, or fewer than six DOF. Child category is decided by gripping principle, not actuation.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1",
@@ -7418,13 +7405,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -7464,12 +7451,11 @@
           "handle": "finger",
           "description": "具有机械手指或钳口的夹爪，包括平行、角度和两/三指自适应设计。",
           "aliases": [
-            "parallel gripper",
-            "jaw gripper",
-            "adaptive gripper",
-            "2-finger gripper",
-            "3-finger gripper",
-            "mechanical gripper"
+            "平行夹爪",
+            "自适应夹爪",
+            "二指夹爪",
+            "三指夹爪",
+            "电动夹爪"
           ],
           "inclusion_rule": "Grasps by closing rigid or semi-rigid fingers or jaws on the object.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1-1",
@@ -7599,13 +7585,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -7660,10 +7646,9 @@
           "handle": "vacuum",
           "description": "通过吸力抓取的夹爪，包括吸盘、海绵和面吸式。",
           "aliases": [
-            "suction gripper",
-            "suction cup gripper",
-            "area gripper",
-            "vacuum EOAT"
+            "真空夹爪",
+            "吸盘夹具",
+            "海绵吸盘"
           ],
           "inclusion_rule": "Grasps by vacuum or suction, including Bernoulli and other non-contact suction grippers.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1-1",
@@ -7793,13 +7778,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -7842,8 +7827,8 @@
           "handle": "magnetic",
           "description": "通过磁力抓取铁磁物体的夹爪。",
           "aliases": [
-            "magnet gripper",
-            "electromagnetic gripper"
+            "电磁夹爪",
+            "磁吸夹具"
           ],
           "inclusion_rule": "Grasps by permanent or electro-magnetic force.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1-1",
@@ -7973,13 +7958,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -8021,9 +8006,9 @@
           "handle": "soft",
           "description": "具有柔顺或充气手指的夹爪。",
           "aliases": [
-            "soft robotic gripper",
-            "inflatable gripper",
-            "compliant gripper"
+            "柔性手指",
+            "软体夹爪",
+            "气动柔性夹爪"
           ],
           "inclusion_rule": "Grasping surfaces are compliant elastomer, inflatable or granular-jamming structures.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1-1",
@@ -8153,13 +8138,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -8201,7 +8186,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/84",
-              "name": "Grip range",
+              "name": "夹持范围",
               "friendly_id": "grip_range",
               "handle": "grip-range"
             }
@@ -8220,10 +8205,10 @@
           "handle": "hand",
           "description": "具有四个以上手指（含可对掌拇指）和多个自由度的拟人末端执行器。",
           "aliases": [
-            "dexterous hand",
-            "robotic hand",
-            "humanoid hand",
-            "five-finger hand"
+            "灵巧手",
+            "机械手",
+            "仿人手",
+            "五指灵巧手"
           ],
           "inclusion_rule": "At least four fingers including an opposable thumb and at least six actuated degrees of freedom (joints driven independently, not passive or coupled joints).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1",
@@ -8349,13 +8334,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -8416,11 +8401,10 @@
           "handle": "tool",
           "description": "执行工艺的末端执行器，如焊枪、主轴、螺丝刀、点胶头或相机头。",
           "aliases": [
-            "process tool",
-            "robot tool",
-            "welding torch",
-            "screwdriving tool",
-            "spindle"
+            "焊枪",
+            "电主轴",
+            "拧紧工具",
+            "点胶枪"
           ],
           "inclusion_rule": "Performs a process rather than grasping. A tool with a secondary gripping function is classified by its primary marketed purpose.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1",
@@ -8546,13 +8530,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -8582,9 +8566,9 @@
           "handle": "tool-changer",
           "description": "机器人手腕与可更换末端执行器之间的快速换接接口。",
           "aliases": [
-            "quick changer",
-            "tool coupler",
-            "quick-change coupling"
+            "快换盘",
+            "工具快换",
+            "快换接头"
           ],
           "inclusion_rule": "Couples and decouples end-effectors; does not itself grasp or process.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1",
@@ -8710,13 +8694,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -8753,9 +8737,8 @@
           "handle": "actuator",
           "description": "为机器人关节或轴产生运动的装置。",
           "aliases": [
-            "actuators",
-            "drives",
-            "motion components"
+            "驱动器",
+            "执行机构"
           ],
           "inclusion_rule": "Produces rotary or linear motion; sold as a unit, not integrated into a robot.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
@@ -8898,13 +8881,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -8926,10 +8909,9 @@
           "handle": "joint-module",
           "description": "集成电机、减速器、编码器和驱动器的一体化旋转执行器。",
           "aliases": [
-            "integrated actuator",
-            "robot joint",
-            "actuator module",
-            "rotary actuator module"
+            "一体化关节",
+            "机器人关节模组",
+            "关节电机"
           ],
           "inclusion_rule": "Integrated reducer and controller, sold as a joint for robots (robot-grade packaging, torque rating and bus — EtherCAT, CAN or high-speed RS-485). The bus alone does not decide; the grade and purpose do.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-2",
@@ -9055,13 +9037,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -9111,10 +9093,9 @@
           "handle": "servo",
           "description": "内置控制并采用菊花链总线的业余级或智能舵机。",
           "aliases": [
-            "smart servo",
-            "bus servo",
-            "hobby servo",
-            "serial servo"
+            "总线舵机",
+            "串行舵机",
+            "智能舵机"
           ],
           "inclusion_rule": "Packaged hobby-grade servo with built-in control, on a daisy-chain serial bus (TTL, RS-485) or PWM; sold for hobby, education and desktop robots rather than as a robot joint.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-2",
@@ -9240,13 +9221,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -9289,10 +9270,9 @@
           "handle": "motor",
           "description": "不带减速器或集成控制的裸电机，如无刷直流、步进或无框电机。",
           "aliases": [
-            "BLDC motor",
-            "stepper motor",
-            "frameless motor",
-            "torque motor"
+            "无刷电机",
+            "步进电机",
+            "无框力矩电机"
           ],
           "inclusion_rule": "Motor sold without an integrated servo controller. A motor with a gearhead but no driver (gearmotor) is a motor, not a reducer.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-2",
@@ -9418,13 +9398,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -9467,12 +9447,10 @@
           "handle": "reducer",
           "description": "谐波/柔轮、摆线/RV 或行星等减速单元。",
           "aliases": [
-            "gearbox",
-            "strain wave gear",
-            "harmonic drive",
-            "cycloidal drive",
-            "RV reducer",
-            "planetary gearbox"
+            "谐波减速器",
+            "摆线减速器",
+            "RV减速器",
+            "行星减速器"
           ],
           "inclusion_rule": "Reduces speed and multiplies torque; sold without a motor.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-2",
@@ -9598,13 +9576,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -9653,10 +9631,10 @@
           "handle": "linear",
           "description": "产生直线运动的执行器，如滚柱丝杠、滚珠丝杠、气缸或液压缸。",
           "aliases": [
-            "linear actuator",
-            "electric cylinder",
-            "roller screw actuator",
-            "pneumatic cylinder"
+            "电动缸",
+            "行星滚柱丝杠",
+            "直线模组",
+            "气缸"
           ],
           "inclusion_rule": "Output motion is linear.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-2",
@@ -9782,13 +9760,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -9812,7 +9790,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/83",
-              "name": "Linear speed",
+              "name": "线速度",
               "friendly_id": "linear_speed",
               "handle": "linear-speed"
             },
@@ -9837,8 +9815,8 @@
           "handle": "sensor",
           "description": "测量机器人自身或其环境的装置。",
           "aliases": [
-            "sensors",
-            "perception hardware"
+            "机器人传感器",
+            "感知硬件"
           ],
           "inclusion_rule": "Primary function is sensing. A camera with onboard AI is still a sensor; a device with several sensing modalities is classified by its primary output. A sensing device sold to drive or teach a robot (a glove, a leader arm) is teleoperation (cp-7).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
@@ -9985,13 +9963,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             }
@@ -10007,11 +9985,11 @@
           "handle": "camera",
           "description": "成像传感器，包括 RGB、深度、双目、热成像和事件相机。",
           "aliases": [
-            "depth camera",
-            "stereo camera",
-            "RGB-D camera",
-            "machine vision camera",
-            "event camera"
+            "深度相机",
+            "双目相机",
+            "RGB-D 相机",
+            "工业相机",
+            "3D 相机"
           ],
           "inclusion_rule": "Produces images or depth maps.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-3",
@@ -10137,13 +10115,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -10175,8 +10153,8 @@
           "description": "2D 或 3D 激光测距传感器。",
           "aliases": [
             "LiDAR",
-            "laser scanner",
-            "laser range finder"
+            "激光扫描仪",
+            "3D 激光雷达"
           ],
           "inclusion_rule": "Measures range by laser time-of-flight or phase.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-3",
@@ -10302,13 +10280,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -10339,10 +10317,9 @@
           "handle": "force-torque",
           "description": "测量手腕或关节处力和力矩的传感器，通常为三轴或六轴。",
           "aliases": [
-            "F/T sensor",
-            "force sensor",
-            "torque sensor",
-            "six-axis force sensor"
+            "六维力传感器",
+            "六轴力传感器",
+            "力矩传感器"
           ],
           "inclusion_rule": "Measures force and/or torque along defined axes.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-3",
@@ -10468,13 +10445,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -10486,13 +10463,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/81",
-              "name": "Force range",
+              "name": "力量程",
               "friendly_id": "force_range",
               "handle": "force-range"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/82",
-              "name": "Torque range",
+              "name": "力矩量程",
               "friendly_id": "torque_range",
               "handle": "torque-range"
             }
@@ -10511,9 +10488,9 @@
           "handle": "tactile",
           "description": "测量表面接触、压力或纹理的传感器。",
           "aliases": [
-            "tactile skin",
-            "touch sensor",
-            "fingertip sensor"
+            "电子皮肤",
+            "触觉皮肤",
+            "指尖传感器"
           ],
           "inclusion_rule": "Measures distributed contact over a surface, including capacitive skins that sense approach before contact.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-3",
@@ -10639,13 +10616,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             }
@@ -10665,9 +10642,8 @@
           "description": "运动和位置传感器，如 IMU 和编码器。",
           "aliases": [
             "IMU",
-            "inertial measurement unit",
-            "encoder",
-            "rotary encoder"
+            "惯性测量单元",
+            "编码器"
           ],
           "inclusion_rule": "Measures acceleration, angular rate, orientation or shaft position.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-3",
@@ -10793,31 +10769,31 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/79",
-              "name": "Heading accuracy",
+              "name": "航向精度",
               "friendly_id": "heading_accuracy",
               "handle": "heading-accuracy"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/80",
-              "name": "Attitude accuracy",
+              "name": "姿态精度",
               "friendly_id": "attitude_accuracy",
               "handle": "attitude-accuracy"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/78",
-              "name": "Update rate",
+              "name": "更新频率",
               "friendly_id": "update_rate",
               "handle": "update-rate"
             }
@@ -10836,13 +10812,11 @@
           "handle": "range-positioning",
           "description": "非激光的测距和绝对定位传感器，如 GNSS 接收机、雷达、超声波和飞行时间测距模块。",
           "aliases": [
-            "GNSS receiver",
-            "GPS module",
-            "RTK receiver",
-            "radar sensor",
-            "ultrasonic sensor",
-            "ToF rangefinder",
-            "proximity sensor"
+            "GNSS 接收机",
+            "RTK 模块",
+            "毫米波雷达",
+            "超声波传感器",
+            "ToF 测距"
           ],
           "inclusion_rule": "Measures distance or absolute position without a laser scanner or an imaging array.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-3",
@@ -10968,13 +10942,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -10986,13 +10960,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/77",
-              "name": "Position accuracy",
+              "name": "定位精度",
               "friendly_id": "position_accuracy",
               "handle": "position-accuracy"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/78",
-              "name": "Update rate",
+              "name": "更新频率",
               "friendly_id": "update_rate",
               "handle": "update-rate"
             }
@@ -11010,10 +10984,9 @@
           "handle": "compute",
           "description": "机器人控制器、单板计算机和边缘 AI 模块。",
           "aliases": [
-            "robot controller",
-            "SBC",
-            "edge AI module",
-            "compute module"
+            "机器人控制器",
+            "开发板",
+            "边缘 AI 计算模块"
           ],
           "inclusion_rule": "Processing hardware without sensing.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
@@ -11135,13 +11108,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -11166,10 +11139,10 @@
           "handle": "power",
           "description": "电池组、充电器和充电桩。",
           "aliases": [
-            "battery",
-            "charger",
-            "docking station",
-            "power supply"
+            "电池",
+            "充电器",
+            "充电桩",
+            "自动回充"
           ],
           "inclusion_rule": "Stores or supplies electrical energy to a robot. A docking station is power, not structure.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
@@ -11291,13 +11264,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },
@@ -11321,12 +11294,10 @@
           "handle": "structure",
           "description": "框架、支架、外壳、法兰和线缆管理件。",
           "aliases": [
-            "mount",
-            "bracket",
-            "frame",
-            "flange",
-            "cable management",
-            "enclosure"
+            "安装支架",
+            "法兰",
+            "底座",
+            "线缆管理"
           ],
           "inclusion_rule": "Mechanical parts with no actuation, sensing or compute.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
@@ -11448,13 +11419,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             }
@@ -11472,11 +11443,10 @@
           "handle": "teleoperation",
           "description": "用于远程控制机器人或采集示教数据的装置，如主臂、力反馈设备、VR 或动作捕捉系统。",
           "aliases": [
-            "leader arm",
-            "teleop rig",
-            "haptic device",
-            "data collection rig",
-            "motion capture glove"
+            "遥操作",
+            "主从臂",
+            "数据采集",
+            "动捕手套"
           ],
           "inclusion_rule": "Operated by a human to drive or teach a robot. This wins over the sensor branch for gloves and rigs full of sensors.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp",
@@ -11598,13 +11568,13 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/75",
-              "name": "Minimum voltage",
+              "name": "最低电压",
               "friendly_id": "voltage_min",
               "handle": "voltage-min"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/76",
-              "name": "Maximum voltage",
+              "name": "最高电压",
               "friendly_id": "voltage_max",
               "handle": "voltage-max"
             },

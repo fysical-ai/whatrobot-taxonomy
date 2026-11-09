@@ -1,17 +1,19 @@
 # whatrobot taxonomy — zh-Hans localisation of attributes
-# Licence: CC BY 4.0. Status: LLM DRAFT 2026-10-27 — requires native-reader review. Keyed by attribute friendly_id.
+# Licence: CC BY 4.0. Keyed by attribute friendly_id. Localised: name, description. Inclusion rules stay English.
+# Review state: a field listed under `source` was reviewed by a native reader against the English text with that
+# fingerprint; fields not listed are LLM drafts. Check with: whatrobot-taxonomy l10n status
 ---
 manufacturer: {name: 制造商, description: 生产该产品的公司。}
 model: {name: 型号, description: 制造商公布的正式型号名称。}
 variant: {name: 版本, description: 制造商单独列出的子型号或配置。}
 aliases: {name: 别名, description: 人们搜索时使用的其他名称。}
-segment: {name: 用户类型, description: 可能以标价购买该产品的用户类型——爱好者、教育、科研、专业、消费者。}
+segment: {name: 用户类型, description: 可能以标价购买该产品的用户类型：业余爱好、教育、科研、专业/商用、消费者、临床。}
 application_group: {name: 应用领域, description: 两级应用词表的上层；由应用值推导得出。}
 application: {name: 应用, description: 产品所宣传的用途。}
 iso_category: {name: ISO 8373 类别, description: 制造商定位的 ISO 8373:2021 用途类别。}
 environment: {name: 环境, description: 产品额定可运行的环境。}
-autonomy: {name: 自主性, description: 出厂即支持的最高无人监督运行等级。程序化：执行示教或编程的动作序列，不感知周围环境（大多数工业机械臂）。}
-collaborative: {name: 协作, description: 制造商声明其满足 ISO 10218-1:2025（或此前的 ISO/TS 15066）中协作应用对机器人的要求，通常通过内置的功率和力限制实现。根据 ISO 10218:2025，经风险评估后被确认为协作的是应用，而不是机器人本身。}
+autonomy: {name: 自主性, description: 出厂即支持的最高无人监督运行级别。程序控制：执行示教或编程的动作序列，不感知周围环境（大多数工业机械臂）。}
+collaborative: {name: 协作, description: 制造商声明该机器人满足 ISO 10218-1:2025（或此前的 ISO/TS 15066）中协作应用的机器人要求，通常通过内置的功率和力限制实现。根据 ISO 10218:2025，经过自身风险评估后被确认为协作的是应用，而不是机器人。}
 availability: {name: 供货状态, description: 现在是否可以购买。}
 price: {name: 价格, description: 公布的标价。须附带币种、日期和来源。}
 currency: {name: 币种, description: 价格的 ISO 4217 货币代码。}
@@ -38,7 +40,7 @@ hands_included: {name: 随附手部, description: 随机器人配备的末端执
 max_speed: {name: 最高速度, description: 最高移动速度。}
 wheel_feet: {name: 轮足, description: 足端带轮的足式机器人。}
 has_arm: {name: 可选机械臂, description: 可作为附件选配机械臂。}
-drive_config: {name: 驱动形式, description: 地面底盘的转向与推进方式。}
+drive_config: {name: 驱动形式, description: 制造商所述的地面底盘转向与驱动方式。差速驱动：两个独立驱动的轮子，通过速度差转向。滑移转向：四个或更多固定轮，按左右两侧驱动，通过滑移转向。全向：麦克纳姆轮、全向轮或舵轮。阿克曼：类似汽车的转向轮。履带：连续履带。自平衡：同轴两轮，通过主动平衡保持直立。}
 navigation: {name: 导航方式, description: 地面机器人的导航方式。}
 flight_time: {name: 飞行时间, description: 制造商标称的飞行时间。}
 max_takeoff_weight: {name: 最大起飞重量, description: 最大起飞重量。}
@@ -59,14 +61,32 @@ peak_torque: {name: 峰值扭矩, description: 峰值扭矩。}
 reducer_type: {name: 减速器类型, description: 减速原理。}
 gear_ratio: {name: 减速比, description: 以 N:1 中的 N 表示的减速比。}
 rated_force: {name: 额定推力, description: 连续额定直线推力。}
-stall_torque: {name: 堵转扭矩, description: 舵机堵转扭矩。}
+stall_torque: {name: 堵转扭矩, description: 堵转扭矩，即转速为零时的扭矩（舵机和电机；舵机厂商常用 kg·cm 标注，换算：1 kg·cm = 0.0981 Nm）。}
 bus: {name: 总线, description: 舵机通信总线。}
 modality: {name: 成像模式, description: 相机的成像模式。}
 scan_dimensions: {name: 扫描维度, description: 激光雷达扫描平面还是空间。}
 range: {name: 量程, description: 最大测量距离。}
-ai_tops: {name: AI 算力, description: 峰值 AI 计算性能。}
+ai_tops: {name: AI 算力, description: 峰值 AI 算力。对于机器人，指其板载计算单元；仅在制造商公布时记录。}
 capacity: {name: 容量, description: 能量容量。}
 teleop_type: {name: 遥操作类型, description: 遥操作设备的类型。}
+wingspan: {name: 翼展, description: 固定翼或复合翼垂直起降飞行器的翼展。}
+cruise_speed: {name: 巡航速度, description: 典型巡航空速。}
+flight_range: {name: 航程, description: 制造商所述的一次充电或一箱燃料可飞行的距离。}
+max_user_weight: {name: 最大用户体重, description: 可穿戴设备额定支持的最大用户体重。}
+load_limit: {name: 承重上限, description: 假肢额定可承受或持握的最大静载荷（例如假手的静态承重上限）。}
+stroke_x: {name: X 轴行程, description: 直角坐标机器人 X 轴行程（工作区宽度）。}
+stroke_y: {name: Y 轴行程, description: 直角坐标机器人 Y 轴行程（工作区深度）。}
+stroke_z: {name: Z 轴行程, description: 直角坐标或圆柱坐标机器人的垂直行程。}
+voltage_min: {name: 最低电压, description: 标称输入电压范围的最低供电电压。当制造商给出电压范围而非额定电压时，与最高电压配合使用。}
+voltage_max: {name: 最高电压, description: 标称输入电压范围的最高供电电压。}
+position_accuracy: {name: 定位精度, description: 定位传感器的水平定位精度（GNSS 为 RTK 固定解），以制造商所述为准。}
+update_rate: {name: 更新频率, description: 最大输出或测量频率。}
+heading_accuracy: {name: 航向精度, description: IMU 或 AHRS 的航向（偏航）精度，以制造商所述为准。}
+attitude_accuracy: {name: 姿态精度, description: IMU 或 AHRS 的横滚与俯仰精度（动态，以制造商所述为准）。}
+force_range: {name: 力量程, description: 力/力矩传感器的力测量范围（最大轴，±）。}
+torque_range: {name: 力矩量程, description: 力/力矩传感器的力矩测量范围（最大轴，±）。}
+linear_speed: {name: 线速度, description: 直线执行器的最大线速度。}
+grip_range: {name: 夹持范围, description: 夹爪可抓取的最大物体尺寸。}
 medical_clearance: {name: 医疗器械准入, description: 制造商声明该机器人作为医疗器械合法上市的市场。美国：FDA 许可、批准或 De Novo 授予，或作为 510(k) 豁免器械登记；欧盟：带有医疗器械 CE 标志；中国：经 NMPA 批准；日本：经 PMDA 审评后由厚生劳动省批准。制造商未声明时留空。}
 adhesion: {name: 附着方式, description: 地面机器人如何吸附在墙面、罐体、船体或天花板上进行攀爬。只在地面行驶的机器人为“无”。}
 construction: {name: 结构类型, description: 外骨骼是通过肢体旁的刚性框架传递助力，还是通过织物、绑带和拉索传递（柔性外骨骼服）。}

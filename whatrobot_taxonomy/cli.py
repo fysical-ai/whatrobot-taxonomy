@@ -9,6 +9,7 @@
   whatrobot-taxonomy l10n status       # per locale: reviewed / stale / draft / missing fields
   whatrobot-taxonomy l10n export ...   # rows for native review (CSV; paste into the review sheet)
   whatrobot-taxonomy l10n import ...   # write ticked rows from a review CSV into data/localizations/<locale>/
+  whatrobot-taxonomy l10n import FILE --draft --locale <code>   # write machine first drafts (unreviewed)
 
 Equivalent: python -m whatrobot_taxonomy.cli <verb>
 """
@@ -163,8 +164,12 @@ def cmd_l10n(ns: argparse.Namespace) -> int:
         print("usage: whatrobot-taxonomy l10n import FILE --locale <code>")
         return 2
     rows = l10n.read_review(Path(ns.file))
-    rep = l10n.import_review(tx, ns.locale[0], rows, accept_changed_english=ns.accept_changed_english)
-    print(f"imported {sum(rep.imported.values())} reviewed fields {dict(rep.imported)}; {rep.unticked} rows not ticked (left as they were)")
+    if ns.draft:
+        rep = l10n.import_drafts(tx, ns.locale[0], rows)
+        print(f"wrote {sum(rep.imported.values())} draft fields {dict(rep.imported)}; kept {rep.kept_reviewed} reviewed; {rep.unticked} rows empty")
+    else:
+        rep = l10n.import_review(tx, ns.locale[0], rows, accept_changed_english=ns.accept_changed_english)
+        print(f"imported {sum(rep.imported.values())} reviewed fields {dict(rep.imported)}; {rep.unticked} rows not ticked (left as they were)")
     for k in rep.english_changed:
         print(f"SKIP  {k}: English changed since the sheet was made; re-export this row")
     for k in rep.needs_name:
@@ -195,6 +200,7 @@ def main(argv: list[str] | None = None) -> int:
     lz.add_argument("--locale", action="append", help="locale code, e.g. da or zh-Hans (repeat for export)")
     lz.add_argument("-o", "--output", default="l10n-review.csv", help="export: CSV to write")
     lz.add_argument("--only-needed", action="store_true", help="export: only fields not yet reviewed, or stale, in a given locale")
+    lz.add_argument("--draft", action="store_true", help="import: write every non-empty row as an unreviewed draft (machine first drafts); reviewed fields are kept")
     lz.add_argument("--accept-changed-english", action="store_true", help="import: accept rows whose English differs from the current English")
     lz.set_defaults(fn=cmd_l10n)
     ns = p.parse_args(argv)

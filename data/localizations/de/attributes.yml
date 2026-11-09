@@ -1,0 +1,93 @@
+# whatrobot taxonomy — de localisation of attributes
+# Licence: CC BY 4.0. Keyed by attribute friendly_id. Localised: name, description. Inclusion rules stay English.
+# Review state: a field listed under `source` was reviewed by a native reader against the English text with that
+# fingerprint; fields not listed are LLM drafts. Check with: whatrobot-taxonomy l10n status
+---
+manufacturer: {name: Hersteller, description: 'Das Unternehmen, das das Produkt herstellt.'}
+model: {name: Modell, description: 'Offizielle Modellbezeichnung, wie vom Hersteller veröffentlicht.'}
+variant: {name: Variante, description: 'Untermodell oder Konfiguration, wenn der Hersteller sie separat aufführt.'}
+aliases: {name: Weitere Namen, description: 'Andere Namen, unter denen nach dem Produkt gesucht wird.'}
+segment: {name: Nutzertyp, description: 'Nutzertypen, die das Produkt zum Listenpreis plausibel kaufen würden: Hobby, Bildung, Forschung, Gewerblich, Privatkunden, Klinisch.'}
+application_group: {name: Anwendungsbereich, description: Oberste Ebene des zweistufigen Anwendungsvokabulars; abgeleitet aus den Anwendungen.}
+application: {name: Anwendung, description: Wofür das Produkt vermarktet wird. Jede Anwendung gehört zu genau einem Anwendungsbereich.}
+iso_category: {name: ISO-8373-Kategorie, description: 'Verwendungsklasse nach ISO 8373:2021, wie vom Hersteller eingeordnet.'}
+environment: {name: Umgebung, description: 'Umgebungen, für die das Produkt ausgelegt ist.'}
+autonomy: {name: Autonomie, description: 'Höchste Stufe des unbeaufsichtigten Betriebs, die ab Werk unterstützt wird. Programmiert: führt eine eingelernte oder programmierte Abfolge aus, ohne seine Umgebung zu erfassen (die meisten Industriearme).'}
+collaborative: {name: Kollaborativ, description: 'Der Hersteller gibt an, dass der Roboter die Anforderungen an Roboter für kollaborierende Anwendungen nach ISO 10218-1:2025 (oder der früheren ISO/TS 15066) erfüllt, meist durch eingebaute Leistungs- und Kraftbegrenzung. Nach ISO 10218:2025 wird nicht ein Roboter, sondern eine Anwendung nach eigener Risikobeurteilung als kollaborierend bestätigt.'}
+availability: {name: Verfügbarkeit, description: Ob das Produkt heute gekauft werden kann.}
+price: {name: Preis, description: 'Listenpreis wie veröffentlicht. Immer zusammen mit Währung, Preisdatum und Preisquelle.'}
+currency: {name: Währung, description: ISO-4217-Code der Preiswährung.}
+price_date: {name: Preisdatum, description: 'Datum, an dem der Preis erfasst wurde (ISO 8601).'}
+price_source: {name: Preisquelle, description: 'URL, unter der der Preis erfasst wurde.'}
+release_year: {name: Erscheinungsjahr, description: Jahr der ersten kommerziellen Verfügbarkeit.}
+country: {name: Land, description: 'Hauptsitz des Herstellers, ISO 3166-1 Alpha-2.'}
+mass: {name: Gewicht, description: Gewicht des Produkts laut Datenblatt.}
+payload: {name: Traglast, description: 'Nenntraglast. Arm: am Handgelenk. Mobiler Roboter: auf der Ladefläche. Endeffektor: gehaltenes Objekt.'}
+battery_runtime: {name: Akkulaufzeit, description: Vom Hersteller angegebene Laufzeit mit einer Akkuladung.}
+ip_rating: {name: Schutzart (IP), description: 'Schutzart gegen Eindringen von Fremdkörpern und Wasser (IEC 60529), z. B. IP54.'}
+open_source: {name: Open Source, description: Welche Teile des Produkts unter einer offenen Lizenz veröffentlicht sind.}
+sdk: {name: SDK, description: Offiziell unterstützte Programmierschnittstellen.}
+compatible_with: {name: Kompatibel mit, description: 'Roboter oder Komponenten, die offiziell zusammen mit diesem Produkt unterstützt werden.'}
+sources: {name: Quellen, description: URL und Datum für jede Angabe.}
+axes: {name: Achsen, description: 'Anzahl der gesteuerten Achsen. Arm: Gelenke. Kraft-Momenten-Sensor: gemessene Achsen.'}
+reach: {name: Reichweite, description: Maximale Reichweite des Arms.}
+repeatability: {name: Wiederholgenauigkeit, description: Positionswiederholgenauigkeit laut Datenblatt.}
+arm_count: {name: Anzahl Arme, description: Anzahl der Arme am Produkt.}
+mounting: {name: Montage, description: 'Lagen, in denen ein Arm montiert werden kann.'}
+height: {name: Höhe, description: Höhe im Stand.}
+dof_total: {name: Freiheitsgrade gesamt, description: 'Freiheitsgrade insgesamt, ohne Hände.'}
+hands_included: {name: Hände enthalten, description: Welche Endeffektoren mit dem Roboter geliefert werden.}
+max_speed: {name: Höchstgeschwindigkeit, description: Maximale Fortbewegungsgeschwindigkeit.}
+wheel_feet: {name: Räder an den Füßen, description: Laufroboter mit Rädern an den Füßen.}
+has_arm: {name: Arm optional, description: Ein Arm ist als Zubehör erhältlich.}
+drive_config: {name: Antriebskonfiguration, description: 'Wie eine fahrende Basis lenkt und sich fortbewegt, laut Hersteller. Differentialantrieb: zwei unabhängig angetriebene Räder, gelenkt über den Geschwindigkeitsunterschied. Kompaktlenkung (Skid-Steer): vier oder mehr feste Räder, links und rechts getrennt angetrieben, gelenkt durch Rutschen. Omnidirektional: Mecanum-, Omni- oder Swerve-Räder. Ackermann: gelenkte Räder wie beim Auto. Kettenantrieb: Gleisketten. Selbstbalancierend: zwei Räder auf einer Achse, durch aktive Balance aufrecht gehalten.'}
+navigation: {name: Navigation, description: Wie ein fahrender Roboter navigiert.}
+flight_time: {name: Flugzeit, description: Vom Hersteller angegebene Flugzeit.}
+max_takeoff_weight: {name: Max. Startgewicht, description: Maximales Startgewicht.}
+depth_rating: {name: Max. Einsatztiefe, description: Maximale zugelassene Einsatztiefe.}
+body_region: {name: Körperbereich, description: 'Körperbereiche, auf die ein tragbarer Roboter wirkt.'}
+uses_components: {name: Verwendete Komponenten, description: 'Separat gelistete Komponenten, aus denen das Produkt aufgebaut ist (z. B. die Aktoren einer Hand).'}
+flange_standard: {name: Flanschnorm, description: Norm der mechanischen Montageschnittstelle zwischen einer Komponente und einem Roboter.}
+interface: {name: Schnittstelle, description: Elektrische und Kommunikationsschnittstellen.}
+voltage: {name: Spannung, description: Nennversorgungsspannung.}
+actuation: {name: Antriebsart, description: 'Energieform, mit der die Komponente angetrieben wird.'}
+grip_force: {name: Greifkraft, description: Maximale Greifkraft.}
+stroke: {name: Hub, description: 'Gesamter Verfahrweg. Greifer: Backenöffnung. Linearaktor: Hub des Abtriebs.'}
+finger_count: {name: Anzahl Finger, description: Anzahl der Finger oder Backen.}
+dof: {name: Freiheitsgrade, description: Aktive Freiheitsgrade.}
+tactile_sensing: {name: Taktile Sensorik, description: Eingebaute taktile Sensorik.}
+rated_torque: {name: Nenndrehmoment, description: Dauerhaftes Nenndrehmoment.}
+peak_torque: {name: Spitzendrehmoment, description: Spitzendrehmoment.}
+reducer_type: {name: Getriebeart, description: Funktionsprinzip der Untersetzung.}
+gear_ratio: {name: Übersetzung, description: 'Untersetzungsverhältnis, angegeben als N in N:1.'}
+rated_force: {name: Nennkraft, description: Dauerhafte Nennkraft in linearer Richtung.}
+stall_torque: {name: Blockiermoment, description: 'Blockiermoment, das Drehmoment bei Drehzahl null (Servos und Motoren; Servohersteller geben kg·cm an – Umrechnung: 1 kg·cm = 0,0981 Nm).'}
+bus: {name: Bus, description: Kommunikationsbus des Servos.}
+modality: {name: Bildgebungsart, description: Bildgebungsarten einer Kamera.}
+scan_dimensions: {name: Scan-Dimensionen, description: Ob ein Lidar eine Ebene oder einen Raum abtastet.}
+range: {name: Messbereich, description: Maximaler Messbereich.}
+ai_tops: {name: KI-Leistung, description: 'Maximale KI-Rechenleistung. Bei einem Roboter die des eingebauten Rechners; nur erfasst, wenn der Hersteller sie veröffentlicht.'}
+capacity: {name: Kapazität, description: Energiekapazität.}
+teleop_type: {name: Art der Teleoperation, description: Art des Teleoperationsgeräts.}
+wingspan: {name: Spannweite, description: Spannweite eines Starrflüglers oder Hybrid-VTOL.}
+cruise_speed: {name: Reisegeschwindigkeit, description: Typische Reisegeschwindigkeit (Fluggeschwindigkeit).}
+flight_range: {name: Flugreichweite, description: 'Strecke, die das Fluggerät mit einer Akkuladung oder Tankfüllung fliegen kann, laut Hersteller.'}
+max_user_weight: {name: Max. Nutzergewicht, description: 'Höchstes Körpergewicht des Nutzers, für das das tragbare Gerät zugelassen ist.'}
+load_limit: {name: Belastungsgrenze, description: 'Maximale statische Last, die eine Prothese halten oder tragen darf (z. B. die statische Lastgrenze einer Hand).'}
+stroke_x: {name: Hub X, description: Verfahrweg der X-Achse eines kartesischen Roboters (Breite des Arbeitsbereichs).}
+stroke_y: {name: Hub Y, description: Verfahrweg der Y-Achse eines kartesischen Roboters (Tiefe des Arbeitsbereichs).}
+stroke_z: {name: Hub Z, description: Vertikaler Verfahrweg eines kartesischen oder Zylinderroboters.}
+voltage_min: {name: Mindestspannung, description: 'Niedrigste Versorgungsspannung eines angegebenen Eingangsbereichs. Zusammen mit der Höchstspannung verwendet, wenn der Hersteller einen Bereich statt einer Nennspannung angibt.'}
+voltage_max: {name: Höchstspannung, description: Höchste Versorgungsspannung eines angegebenen Eingangsbereichs.}
+position_accuracy: {name: Positionsgenauigkeit, description: 'Horizontale Positionsgenauigkeit eines Positionssensors (bei GNSS mit RTK-Fix), laut Hersteller.'}
+update_rate: {name: Aktualisierungsrate, description: Maximale Ausgabe- oder Messrate.}
+heading_accuracy: {name: Kursgenauigkeit, description: 'Kursgenauigkeit (Gierwinkel) einer IMU oder eines AHRS, laut Hersteller.'}
+attitude_accuracy: {name: Lagegenauigkeit, description: 'Roll- und Nickgenauigkeit einer IMU oder eines AHRS (dynamisch, laut Hersteller).'}
+force_range: {name: Kraftmessbereich, description: 'Messbereich eines Kraft-Momenten-Sensors für Kraft (größte Achse, ±).'}
+torque_range: {name: Drehmomentmessbereich, description: 'Messbereich eines Kraft-Momenten-Sensors für Drehmoment (größte Achse, ±).'}
+linear_speed: {name: Lineargeschwindigkeit, description: Maximale Lineargeschwindigkeit eines Linearaktors.}
+grip_range: {name: Greifbereich, description: 'Größtes Objekt, das der Greifer greifen kann.'}
+medical_clearance: {name: Medizinische Zulassung, description: 'Märkte, in denen der Roboter laut Hersteller rechtmäßig als Medizinprodukt vermarktet wird. USA: von der FDA freigegeben, zugelassen oder per De-Novo-Verfahren genehmigt oder als 510(k)-befreites Produkt gelistet. Europäische Union: CE-gekennzeichnet als Medizinprodukt. China: von der NMPA zugelassen. Japan: vom MHLW nach Prüfung durch die PMDA zugelassen. Leer, wenn der Hersteller keinen solchen Status angibt.'}
+adhesion: {name: Haftprinzip, description: 'Wie sich ein fahrender Roboter an Wänden, Tanks, Schiffsrümpfen oder Decken festhält, um daran zu klettern. „Keine“ bei Robotern, die nur auf dem Boden fahren.'}
+construction: {name: Bauweise, description: 'Ob ein Exoskelett seine Unterstützungskraft über einen starren Rahmen neben der Gliedmaße überträgt oder über Textilien, Gurte und Seilzüge (ein weicher Exosuit).'}
+outer_diameter: {name: Außendurchmesser, description: 'Außendurchmesser des biegsamen Abschnitts eines Kontinuumsroboters oder robotischen Katheters; begrenzt, in welche Öffnungen er eingeführt werden kann.'}

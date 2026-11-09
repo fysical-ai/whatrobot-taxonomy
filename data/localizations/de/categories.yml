@@ -1,0 +1,65 @@
+# whatrobot taxonomy — de localisation of categories
+# Licence: CC BY 4.0. Keyed by category id. Localised: name, description, aliases. Inclusion rules stay English.
+# Review state: a field listed under `source` was reviewed by a native reader against the English text with that
+# fingerprint; fields not listed are LLM drafts. Check with: whatrobot-taxonomy l10n status
+---
+rb: {name: Roboter, description: 'Eine Maschine, die ihre Umgebung wahrnimmt und auf sie einwirkt – indem sie sich bewegt, Objekte handhabt oder mit Menschen interagiert. Roboter werden nach ihrer physischen Bauform eingeordnet, nicht nach Nutzergruppe oder Anwendung.', aliases: [Roboter, Robotik]}
+rb-1: {name: Roboterarm, description: 'Manipulator mit fester Basis, der einen Endeffektor im Raum positioniert.', aliases: [Roboterarm, Industrieroboter, Manipulator, Industriearm, Cobot]}
+rb-1-1: {name: Knickarmroboter, description: 'Serieller Arm mit drei oder mehr Drehgelenken, darunter 6- und 7-achsige Industriearme, Cobots und Tischarme.', aliases: [6-Achs-Roboter, 7-Achs-Roboter, Cobot, kollaborativer Roboter, Tischroboterarm, Knickarmroboter, Gelenkarmroboter]}
+rb-1-2: {name: SCARA-Roboter, description: 'Arm mit zwei parallelen, vertikalen Drehgelenken und einer vertikalen Linearachse, nachgiebig in der horizontalen Ebene.', aliases: [SCARA, SCARA-Roboter, Horizontal-Knickarmroboter]}
+rb-1-3: {name: Parallelroboter, description: 'Manipulator mit Parallelkinematik, etwa ein Delta-Roboter, eine Hexapod-/Stewart-Plattform oder ein seilgetriebener Parallelroboter.', aliases: [Delta-Roboter, Hexapod, Stewart-Plattform, Parallelroboter, Seilroboter, seilgetriebener Parallelroboter]}
+rb-1-4: {name: Kartesischer Roboter, description: 'Manipulator mit drei Linearachsen entlang eines kartesischen Koordinatensystems, darunter Portal- und Linearroboter.', aliases: [Portalroboter, Linearroboter, XYZ-Roboter, kartesischer Roboter, Flächenportal]}
+rb-1-5: {name: Zylinder- und Polarroboter, description: Manipulator mit drehbarer Basis und einer linearen Ausfahrachse – zylindrisch (lineare Hubachse) oder sphärisch/polar (schwenkbare Schulter). IFR-Typklasse 30., aliases: [Polarroboter, Kugelkoordinatenroboter, Zylinderroboter, Zylinderkoordinatenroboter]}
+rb-1-6: {name: Kontinuumsroboter, description: 'Arm, der sich entlang seiner Länge biegt – mit einem durchgehenden flexiblen Rückgrat oder vielen kurzen, von der Basis aus angetriebenen Segmenten –, etwa Schlangenarmroboter und robotische Katheter.', aliases: [Schlangenarmroboter, Schlangenarm, Kontinuumsroboter, Rüsselroboter, robotischer Katheter]}
+rb-2: {name: Humanoider Roboter, description: 'Roboter, der menschenähnlich gestaltet ist, mit Rumpf, zwei Armen und Kopf oder Gesicht, für den Einsatz in menschlichen Umgebungen.', aliases: [humanoider Roboter, Humanoide, Android, menschenähnlicher Roboter]}
+rb-2-1: {name: Zweibeiniger humanoider Roboter, description: 'Humanoider Roboter, der auf zwei Beinen geht.', aliases: [laufender Humanoide, zweibeiniger Humanoide]}
+rb-2-2: {name: Humanoider Roboter mit Radbasis, description: Humanoider Oberkörper auf einer Basis mit Rädern oder Ketten., aliases: [Humanoide auf Rädern, mobiler Humanoide]}
+rb-2-3: {name: Humanoider Roboter mit fester Basis, description: 'Humanoider Oberkörper auf einer festen Halterung, ohne Fortbewegung.', aliases: [humanoider Torso, zweiarmiger Torso-Roboter, Oberkörper-Humanoide]}
+rb-3: {name: Laufroboter, description: 'Roboter, der sich auf gelenkigen Beinen fortbewegt und keine humanoide Gestalt hat.', aliases: [Laufroboter, Schreitroboter, Roboter mit Beinen]}
+rb-3-1: {name: Vierbeiniger Roboter, description: Laufroboter mit vier Beinen., aliases: [Roboterhund, Vierbeiner, vierbeiniger Roboter, Laufroboter]}
+rb-3-2: {name: Zweibeiniger Roboter, description: 'Zweibeiniger Roboter ohne humanoiden Rumpf, Arme und Kopf.', aliases: [zweibeiniger Roboter, Zweibeiner]}
+rb-3-3: {name: Mehrbeiniger Roboter, description: Laufroboter mit sechs oder mehr Beinen., aliases: [Hexapod-Laufroboter, sechsbeiniger Roboter, Insektenroboter]}
+rb-4: {name: Fahrender Roboter, description: 'Roboter, der auf Rädern oder Ketten fährt, ohne Beine und ohne integrierten Arm.', aliases: [mobiler Roboter, mobile Plattform, Rover, AMR, FTS, fahrerloses Transportsystem, UGV, Inspektionsroboter, Rohrinspektionsroboter, Kletterroboter]}
+rb-4-1: {name: Radroboter, description: Fahrender Roboter mit Radantrieb., aliases: [Radroboter, Saugroboter, Mähroboter, Rasenmähroboter, Lieferroboter, Telepräsenzroboter]}
+rb-4-2: {name: Kettenroboter, description: Fahrender Roboter mit Kettenantrieb., aliases: [Kettenroboter, Raupenroboter, Kettenfahrzeug]}
+rb-5: {name: Mobiler Manipulator, description: 'Basis mit Rädern oder Ketten und einem oder mehreren Armen, als ein Produkt verkauft, ohne humanoide Gestalt.', aliases: [mobiler Manipulator, MoMa, Arm auf Rädern, mobiler Roboterarm]}
+rb-6: {name: Flugroboter, description: 'Roboter, der fliegt.', aliases: [Drohne, UAV, UAS, unbemanntes Luftfahrzeug]}
+rb-6-1: {name: Multikopter, description: 'Flugroboter, der von mehreren Rotoren getragen wird.', aliases: [Quadrocopter, Hexacopter, Oktocopter, Multicopter]}
+rb-6-2: {name: Starrflügler, description: 'Flugroboter, der von einem starren Flügel getragen wird.', aliases: [Starrflügeldrohne, Flächendrohne]}
+rb-6-3: {name: Hybrid-VTOL, description: 'Flugroboter, der senkrechten Start mit Rotoren und Reiseflug mit starrem Flügel kombiniert.', aliases: [VTOL-Drohne, Kipprotor-Drohne, Tail-Sitter, Senkrechtstarter]}
+rb-7: {name: Wasserroboter, description: 'Roboter, der auf dem oder im Wasser arbeitet.', aliases: [Unterwasserroboter, maritimer Roboter, Wasserroboter]}
+rb-7-1: {name: ROV, description: 'Unterwasserfahrzeug, das über ein Kabel mit der Oberfläche verbunden ist, egal ob ferngesteuert oder autonom.', aliases: [ferngesteuertes Unterwasserfahrzeug, Unterwasserdrohne, Tauchdrohne, Poolroboter mit Kabel]}
+rb-7-2: {name: AUV, description: Autonomes Unterwasserfahrzeug ohne Kabelverbindung., aliases: [autonomes Unterwasserfahrzeug, Unterwassergleiter]}
+rb-7-3: {name: USV, description: Unbemanntes Überwasserfahrzeug., aliases: [unbemanntes Überwasserfahrzeug, autonomes Boot, Roboterboot]}
+rb-8: {name: Tragbarer Roboter, description: 'Roboter, der am menschlichen Körper getragen wird.', aliases: [tragbarer Roboter, Wearable-Roboter, Exosuit]}
+rb-8-1: {name: Exoskelett, description: 'Angetriebenes Exoskelett oder Exosuit, das menschliche Bewegungen unterstützt oder verstärkt.', aliases: [aktives Exoskelett, Exosuit, weicher Exosuit, Exo]}
+rb-8-2: {name: Prothese, description: 'Angetriebene oder mikroprozessorgesteuerte Prothese einer Gliedmaße oder eines Gelenks, die einen fehlenden Körperteil ersetzt.', aliases: [bionische Prothese, Handprothese, myoelektrische Prothese, Kniegelenk mit Mikroprozessor]}
+rb-9: {name: Stationärer Roboter, description: 'Nicht humanoider Roboter mit fester Basis, der nichts handhabt, etwa ein Tisch-Begleitroboter oder sozialer Roboter ohne Arme.', aliases: [Tischroboter, Begleitroboter, sozialer Roboter, Companion-Roboter]}
+rb-10: {name: Bausatz, description: 'Modularer Baukasten ohne festen Bauplan, aus dem ein programmierbarer Roboter entsteht.', aliases: [Roboterbausatz, Baukasten, MINT-Bausatz, Lernroboter]}
+cp: {name: Komponente, description: 'Ein Roboterteil oder Zubehör, das getrennt von einem kompletten Roboter verkauft wird.', aliases: [Komponenten, Zubehör, Ersatzteile, Peripherie]}
+cp-1: {name: Endeffektor, description: 'Gerät am Ende eines Arms oder Handgelenks, das auf die Umgebung einwirkt.', aliases: [Endeffektor, Roboterwerkzeug, Greifsystem]}
+cp-1-1: {name: Greifer, description: 'Greifender Endeffektor, der keine menschenähnliche Hand ist.', aliases: [Robotergreifer, Greifer]}
+cp-1-1-1: {name: Fingergreifer, description: 'Greifer mit mechanischen Fingern oder Backen, darunter Parallel-, Winkel- und adaptive 2- bis 3-Finger-Greifer.', aliases: [Parallelgreifer, Backengreifer, adaptiver Greifer, 2-Finger-Greifer, 3-Finger-Greifer, mechanischer Greifer]}
+cp-1-1-2: {name: Vakuumgreifer, description: 'Greifer, der durch Unterdruck hält, darunter Saugnäpfe, Schaumstoff- und Flächengreifer.', aliases: [Sauggreifer, Saugnapfgreifer, Flächengreifer, Vakuumgreifer]}
+cp-1-1-3: {name: Magnetgreifer, description: 'Greifer, der eisenhaltige Objekte mit Magnetkraft hält.', aliases: [Magnetgreifer, Elektromagnetgreifer]}
+cp-1-1-4: {name: Soft-Greifer, description: Greifer mit nachgiebigen oder aufblasbaren Fingern., aliases: [Soft Gripper, weicher Greifer, pneumatischer Fingergreifer]}
+cp-1-2: {name: Roboterhand, description: Menschenähnlicher Endeffektor mit vier oder mehr Fingern einschließlich eines gegenüberstellbaren Daumens und mehreren Freiheitsgraden., aliases: [Roboterhand, geschickte Hand, humanoide Hand, Fünffingerhand]}
+cp-1-3: {name: Werkzeug, description: 'Prozess-Endeffektor wie Schweißbrenner, Spindel, Schrauber oder Dosierer. Eine am Handgelenk montierte Kamera ist ein Sensor (cp-3-1), kein Werkzeug.', aliases: [Prozesswerkzeug, Roboterwerkzeug, Schweißbrenner, Schraubwerkzeug, Spindel]}
+cp-1-4: {name: Werkzeugwechsler, description: Schnellwechselkupplung zwischen Roboterhandgelenk und austauschbaren Endeffektoren., aliases: [Werkzeugwechsler, Schnellwechsler, Schnellwechselsystem]}
+cp-2: {name: Aktor, description: 'Gerät, das die Bewegung eines Robotergelenks oder einer Achse erzeugt.', aliases: [Aktoren, Antriebe, Antriebstechnik]}
+cp-2-1: {name: Gelenkmodul, description: 'Integrierte Dreheinheit aus Motor, Getriebe, Encoder und Treiber.', aliases: [Gelenkmodul, Robotergelenk, Aktormodul, integrierter Antrieb]}
+cp-2-2: {name: Servo, description: Hobby- oder Smart-Servo mit eingebauter Regelung und verkettbarem Bus., aliases: [Smart-Servo, Bus-Servo, Modellbauservo, serieller Servo]}
+cp-2-3: {name: Motor, description: 'Elektromotor ohne Getriebe oder integrierte Regelung, etwa BLDC-, Schritt- oder Einbaumotor (frameless).', aliases: [BLDC-Motor, Schrittmotor, Einbaumotor, Torquemotor]}
+cp-2-4: {name: Getriebe, description: 'Untersetzungsgetriebe, etwa Wellgetriebe (Harmonic Drive), Zykloid-/RV-Getriebe oder Planetengetriebe.', aliases: [Getriebe, Wellgetriebe, Harmonic Drive, Zykloidgetriebe, RV-Getriebe, Planetengetriebe]}
+cp-2-5: {name: Linearaktor, description: 'Aktor für geradlinige Bewegung, etwa mit Rollen- oder Kugelgewindetrieb, Pneumatik- oder Hydraulikzylinder.', aliases: [Linearaktor, Elektrozylinder, Rollengewindetrieb, Pneumatikzylinder, Linearantrieb]}
+cp-3: {name: Sensor, description: 'Gerät, das den Roboter oder seine Umgebung misst.', aliases: [Sensoren, Sensorik]}
+cp-3-1: {name: Kamera, description: 'Bildsensor, darunter RGB-, Tiefen-, Stereo-, Wärmebild- und Event-Kameras.', aliases: [Tiefenkamera, Stereokamera, RGB-D-Kamera, Industriekamera, Event-Kamera]}
+cp-3-2: {name: Lidar, description: 'Laserbasierter Entfernungssensor, 2D oder 3D.', aliases: [LiDAR, Laserscanner, Laserentfernungsmesser]}
+cp-3-3: {name: Kraft-Momenten-Sensor, description: 'Sensor, der Kraft und Drehmoment an einem Handgelenk oder Gelenk misst, meist 3- oder 6-achsig.', aliases: [Kraft-Momenten-Sensor, Kraftsensor, Drehmomentsensor, 6-Achs-Kraftsensor]}
+cp-3-4: {name: Taktiler Sensor, description: 'Sensor, der Berührung, Druck oder Textur an einer Oberfläche misst.', aliases: [taktile Haut, Berührungssensor, Fingerspitzensensor, Tastsensor]}
+cp-3-5: {name: Inertialsensor / Encoder, description: Bewegungs- und Positionssensoren wie IMUs und Encoder., aliases: [IMU, inertiale Messeinheit, Encoder, Drehgeber]}
+cp-3-6: {name: Abstands-/Positionssensor, description: 'Entfernungs- und Absolutpositionssensoren ohne Laser, etwa GNSS-Empfänger, Radar sowie Ultraschall- oder Time-of-Flight-Entfernungsmesser.', aliases: [GNSS-Empfänger, GPS-Modul, RTK-Empfänger, Radarsensor, Ultraschallsensor, ToF-Sensor, Näherungssensor]}
+cp-4: {name: Recheneinheit, description: 'Robotersteuerungen, Einplatinencomputer und Edge-KI-Module.', aliases: [Robotersteuerung, Einplatinencomputer, Edge-KI-Modul, Rechenmodul]}
+cp-5: {name: Stromversorgung, description: 'Akkupacks, Ladegeräte und Ladestationen.', aliases: [Akku, Ladegerät, Ladestation, Netzteil]}
+cp-6: {name: Strukturteile, description: 'Rahmen, Halterungen, Gehäuse, Flansche und Kabelführung.', aliases: [Halterung, Montagewinkel, Rahmen, Flansch, Kabelführung, Gehäuse]}
+cp-7: {name: Teleoperation, description: 'Geräte zur Fernsteuerung eines Roboters oder zum Sammeln von Demonstrationsdaten, etwa Leader-Arme, haptische Eingabegeräte sowie VR- oder Motion-Capture-Systeme.', aliases: [Leader-Arm, Teleoperationssystem, haptisches Eingabegerät, Datenerfassungssystem, Motion-Capture-Handschuh]}

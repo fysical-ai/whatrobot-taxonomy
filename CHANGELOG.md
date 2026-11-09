@@ -4,6 +4,11 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Localisation drafts: da, de, zh-Hans complete (2026-11-09)
+- New locales `da` (Danish) and `de` (German): machine first drafts for all 535 fields (category names, descriptions and search terms; attribute names and descriptions; value names). Unreviewed: they are for the native review sheet, and the release gate still refuses them.
+- `zh-Hans`: the 107 missing fields (new attributes and values, search terms) drafted, and the 12 fields whose English changed since the 2026-11-02 draft redrafted. All 535 fields now have text; none reviewed yet.
+- Tooling: `whatrobot-taxonomy l10n import FILE --draft --locale <code>` writes every non-empty row as an unreviewed draft; fields already reviewed against the current English are never overwritten.
+
 ### Batch-2 rulings (2026-11-09)
 - New value (id 164): availability `limited` (deployed only to selected customers: pilots, early access or invitation; no open sale).
 - New bases: `payload` `bimanual` (both arms of a dual-arm arm or mobile manipulator); `grip_force` `fingertip`.

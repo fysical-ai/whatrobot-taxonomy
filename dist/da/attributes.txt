@@ -1,0 +1,89 @@
+# whatrobot taxonomy 2026-01 — CC BY 4.0
+gid://whatrobot/TaxonomyAttribute/1 : Producent
+gid://whatrobot/TaxonomyAttribute/2 : Model
+gid://whatrobot/TaxonomyAttribute/3 : Variant
+gid://whatrobot/TaxonomyAttribute/4 : Andre navne
+gid://whatrobot/TaxonomyAttribute/5 : Brugertype
+gid://whatrobot/TaxonomyAttribute/6 : Anvendelsesområde
+gid://whatrobot/TaxonomyAttribute/7 : Anvendelse
+gid://whatrobot/TaxonomyAttribute/8 : ISO 8373-kategori
+gid://whatrobot/TaxonomyAttribute/9 : Miljø
+gid://whatrobot/TaxonomyAttribute/10 : Autonomi
+gid://whatrobot/TaxonomyAttribute/11 : Kollaborativ
+gid://whatrobot/TaxonomyAttribute/12 : Tilgængelighed
+gid://whatrobot/TaxonomyAttribute/13 : Pris
+gid://whatrobot/TaxonomyAttribute/14 : Valuta
+gid://whatrobot/TaxonomyAttribute/15 : Prisdato
+gid://whatrobot/TaxonomyAttribute/16 : Priskilde
+gid://whatrobot/TaxonomyAttribute/17 : Lanceringsår
+gid://whatrobot/TaxonomyAttribute/18 : Land
+gid://whatrobot/TaxonomyAttribute/19 : Vægt
+gid://whatrobot/TaxonomyAttribute/20 : Nyttelast
+gid://whatrobot/TaxonomyAttribute/21 : Batteritid
+gid://whatrobot/TaxonomyAttribute/22 : IP-klasse
+gid://whatrobot/TaxonomyAttribute/23 : Open source
+gid://whatrobot/TaxonomyAttribute/24 : SDK
+gid://whatrobot/TaxonomyAttribute/25 : Kompatibel med
+gid://whatrobot/TaxonomyAttribute/26 : Kilder
+gid://whatrobot/TaxonomyAttribute/27 : Akser
+gid://whatrobot/TaxonomyAttribute/28 : Rækkevidde
+gid://whatrobot/TaxonomyAttribute/29 : Gentagelsesnøjagtighed
+gid://whatrobot/TaxonomyAttribute/30 : Antal arme
+gid://whatrobot/TaxonomyAttribute/31 : Montering
+gid://whatrobot/TaxonomyAttribute/32 : Højde
+gid://whatrobot/TaxonomyAttribute/33 : Frihedsgrader i alt
+gid://whatrobot/TaxonomyAttribute/34 : Hænder medfølger
+gid://whatrobot/TaxonomyAttribute/35 : Tophastighed
+gid://whatrobot/TaxonomyAttribute/36 : Hjul på fødderne
+gid://whatrobot/TaxonomyAttribute/37 : Arm som tilkøb
+gid://whatrobot/TaxonomyAttribute/38 : Drivkonfiguration
+gid://whatrobot/TaxonomyAttribute/39 : Navigation
+gid://whatrobot/TaxonomyAttribute/40 : Flyvetid
+gid://whatrobot/TaxonomyAttribute/41 : Maks. startvægt
+gid://whatrobot/TaxonomyAttribute/42 : Dybdeklassificering
+gid://whatrobot/TaxonomyAttribute/43 : Kropsområde
+gid://whatrobot/TaxonomyAttribute/44 : Bruger komponenter
+gid://whatrobot/TaxonomyAttribute/45 : Flangestandard
+gid://whatrobot/TaxonomyAttribute/46 : Interface
+gid://whatrobot/TaxonomyAttribute/47 : Spænding
+gid://whatrobot/TaxonomyAttribute/48 : Drivform
+gid://whatrobot/TaxonomyAttribute/49 : Gribekraft
+gid://whatrobot/TaxonomyAttribute/50 : Slaglængde
+gid://whatrobot/TaxonomyAttribute/51 : Antal fingre
+gid://whatrobot/TaxonomyAttribute/52 : Frihedsgrader
+gid://whatrobot/TaxonomyAttribute/53 : Taktil sansning
+gid://whatrobot/TaxonomyAttribute/54 : Nominelt moment
+gid://whatrobot/TaxonomyAttribute/55 : Spidsmoment
+gid://whatrobot/TaxonomyAttribute/56 : Geartype
+gid://whatrobot/TaxonomyAttribute/57 : Udveksling
+gid://whatrobot/TaxonomyAttribute/58 : Nominel kraft
+gid://whatrobot/TaxonomyAttribute/59 : Stall-moment
+gid://whatrobot/TaxonomyAttribute/60 : Bus
+gid://whatrobot/TaxonomyAttribute/61 : Billedtype
+gid://whatrobot/TaxonomyAttribute/62 : Scanningsdimensioner
+gid://whatrobot/TaxonomyAttribute/63 : Måleområde
+gid://whatrobot/TaxonomyAttribute/64 : AI-ydelse
+gid://whatrobot/TaxonomyAttribute/65 : Kapacitet
+gid://whatrobot/TaxonomyAttribute/66 : Fjernstyringstype
+gid://whatrobot/TaxonomyAttribute/67 : Vingefang
+gid://whatrobot/TaxonomyAttribute/68 : Marchhastighed
+gid://whatrobot/TaxonomyAttribute/69 : Flyverækkevidde
+gid://whatrobot/TaxonomyAttribute/70 : Maks. brugervægt
+gid://whatrobot/TaxonomyAttribute/71 : Belastningsgrænse
+gid://whatrobot/TaxonomyAttribute/72 : Slaglængde X
+gid://whatrobot/TaxonomyAttribute/73 : Slaglængde Y
+gid://whatrobot/TaxonomyAttribute/74 : Slaglængde Z
+gid://whatrobot/TaxonomyAttribute/75 : Minimumsspænding
+gid://whatrobot/TaxonomyAttribute/76 : Maksimumsspænding
+gid://whatrobot/TaxonomyAttribute/77 : Positionsnøjagtighed
+gid://whatrobot/TaxonomyAttribute/78 : Opdateringsfrekvens
+gid://whatrobot/TaxonomyAttribute/79 : Kursnøjagtighed
+gid://whatrobot/TaxonomyAttribute/80 : Orienteringsnøjagtighed
+gid://whatrobot/TaxonomyAttribute/81 : Kraftmåleområde
+gid://whatrobot/TaxonomyAttribute/82 : Momentmåleområde
+gid://whatrobot/TaxonomyAttribute/83 : Lineær hastighed
+gid://whatrobot/TaxonomyAttribute/84 : Gribeområde
+gid://whatrobot/TaxonomyAttribute/85 : Medicinsk godkendelse
+gid://whatrobot/TaxonomyAttribute/86 : Vedhæftningsprincip
+gid://whatrobot/TaxonomyAttribute/87 : Konstruktion
+gid://whatrobot/TaxonomyAttribute/88 : Udvendig diameter
