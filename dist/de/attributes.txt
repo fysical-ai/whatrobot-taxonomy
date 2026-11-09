@@ -1,0 +1,89 @@
+# whatrobot taxonomy 2026-01 — CC BY 4.0
+gid://whatrobot/TaxonomyAttribute/1 : Hersteller
+gid://whatrobot/TaxonomyAttribute/2 : Modell
+gid://whatrobot/TaxonomyAttribute/3 : Variante
+gid://whatrobot/TaxonomyAttribute/4 : Weitere Namen
+gid://whatrobot/TaxonomyAttribute/5 : Nutzertyp
+gid://whatrobot/TaxonomyAttribute/6 : Anwendungsbereich
+gid://whatrobot/TaxonomyAttribute/7 : Anwendung
+gid://whatrobot/TaxonomyAttribute/8 : ISO-8373-Kategorie
+gid://whatrobot/TaxonomyAttribute/9 : Umgebung
+gid://whatrobot/TaxonomyAttribute/10 : Autonomie
+gid://whatrobot/TaxonomyAttribute/11 : Kollaborativ
+gid://whatrobot/TaxonomyAttribute/12 : Verfügbarkeit
+gid://whatrobot/TaxonomyAttribute/13 : Preis
+gid://whatrobot/TaxonomyAttribute/14 : Währung
+gid://whatrobot/TaxonomyAttribute/15 : Preisdatum
+gid://whatrobot/TaxonomyAttribute/16 : Preisquelle
+gid://whatrobot/TaxonomyAttribute/17 : Erscheinungsjahr
+gid://whatrobot/TaxonomyAttribute/18 : Land
+gid://whatrobot/TaxonomyAttribute/19 : Gewicht
+gid://whatrobot/TaxonomyAttribute/20 : Traglast
+gid://whatrobot/TaxonomyAttribute/21 : Akkulaufzeit
+gid://whatrobot/TaxonomyAttribute/22 : Schutzart (IP)
+gid://whatrobot/TaxonomyAttribute/23 : Open Source
+gid://whatrobot/TaxonomyAttribute/24 : SDK
+gid://whatrobot/TaxonomyAttribute/25 : Kompatibel mit
+gid://whatrobot/TaxonomyAttribute/26 : Quellen
+gid://whatrobot/TaxonomyAttribute/27 : Achsen
+gid://whatrobot/TaxonomyAttribute/28 : Reichweite
+gid://whatrobot/TaxonomyAttribute/29 : Wiederholgenauigkeit
+gid://whatrobot/TaxonomyAttribute/30 : Anzahl Arme
+gid://whatrobot/TaxonomyAttribute/31 : Montage
+gid://whatrobot/TaxonomyAttribute/32 : Höhe
+gid://whatrobot/TaxonomyAttribute/33 : Freiheitsgrade gesamt
+gid://whatrobot/TaxonomyAttribute/34 : Hände enthalten
+gid://whatrobot/TaxonomyAttribute/35 : Höchstgeschwindigkeit
+gid://whatrobot/TaxonomyAttribute/36 : Räder an den Füßen
+gid://whatrobot/TaxonomyAttribute/37 : Arm optional
+gid://whatrobot/TaxonomyAttribute/38 : Antriebskonfiguration
+gid://whatrobot/TaxonomyAttribute/39 : Navigation
+gid://whatrobot/TaxonomyAttribute/40 : Flugzeit
+gid://whatrobot/TaxonomyAttribute/41 : Max. Startgewicht
+gid://whatrobot/TaxonomyAttribute/42 : Max. Einsatztiefe
+gid://whatrobot/TaxonomyAttribute/43 : Körperbereich
+gid://whatrobot/TaxonomyAttribute/44 : Verwendete Komponenten
+gid://whatrobot/TaxonomyAttribute/45 : Flanschnorm
+gid://whatrobot/TaxonomyAttribute/46 : Schnittstelle
+gid://whatrobot/TaxonomyAttribute/47 : Spannung
+gid://whatrobot/TaxonomyAttribute/48 : Antriebsart
+gid://whatrobot/TaxonomyAttribute/49 : Greifkraft
+gid://whatrobot/TaxonomyAttribute/50 : Hub
+gid://whatrobot/TaxonomyAttribute/51 : Anzahl Finger
+gid://whatrobot/TaxonomyAttribute/52 : Freiheitsgrade
+gid://whatrobot/TaxonomyAttribute/53 : Taktile Sensorik
+gid://whatrobot/TaxonomyAttribute/54 : Nenndrehmoment
+gid://whatrobot/TaxonomyAttribute/55 : Spitzendrehmoment
+gid://whatrobot/TaxonomyAttribute/56 : Getriebeart
+gid://whatrobot/TaxonomyAttribute/57 : Übersetzung
+gid://whatrobot/TaxonomyAttribute/58 : Nennkraft
+gid://whatrobot/TaxonomyAttribute/59 : Blockiermoment
+gid://whatrobot/TaxonomyAttribute/60 : Bus
+gid://whatrobot/TaxonomyAttribute/61 : Bildgebungsart
+gid://whatrobot/TaxonomyAttribute/62 : Scan-Dimensionen
+gid://whatrobot/TaxonomyAttribute/63 : Messbereich
+gid://whatrobot/TaxonomyAttribute/64 : KI-Leistung
+gid://whatrobot/TaxonomyAttribute/65 : Kapazität
+gid://whatrobot/TaxonomyAttribute/66 : Art der Teleoperation
+gid://whatrobot/TaxonomyAttribute/67 : Spannweite
+gid://whatrobot/TaxonomyAttribute/68 : Reisegeschwindigkeit
+gid://whatrobot/TaxonomyAttribute/69 : Flugreichweite
+gid://whatrobot/TaxonomyAttribute/70 : Max. Nutzergewicht
+gid://whatrobot/TaxonomyAttribute/71 : Belastungsgrenze
+gid://whatrobot/TaxonomyAttribute/72 : Hub X
+gid://whatrobot/TaxonomyAttribute/73 : Hub Y
+gid://whatrobot/TaxonomyAttribute/74 : Hub Z
+gid://whatrobot/TaxonomyAttribute/75 : Mindestspannung
+gid://whatrobot/TaxonomyAttribute/76 : Höchstspannung
+gid://whatrobot/TaxonomyAttribute/77 : Positionsgenauigkeit
+gid://whatrobot/TaxonomyAttribute/78 : Aktualisierungsrate
+gid://whatrobot/TaxonomyAttribute/79 : Kursgenauigkeit
+gid://whatrobot/TaxonomyAttribute/80 : Lagegenauigkeit
+gid://whatrobot/TaxonomyAttribute/81 : Kraftmessbereich
+gid://whatrobot/TaxonomyAttribute/82 : Drehmomentmessbereich
+gid://whatrobot/TaxonomyAttribute/83 : Lineargeschwindigkeit
+gid://whatrobot/TaxonomyAttribute/84 : Greifbereich
+gid://whatrobot/TaxonomyAttribute/85 : Medizinische Zulassung
+gid://whatrobot/TaxonomyAttribute/86 : Haftprinzip
+gid://whatrobot/TaxonomyAttribute/87 : Bauweise
+gid://whatrobot/TaxonomyAttribute/88 : Außendurchmesser

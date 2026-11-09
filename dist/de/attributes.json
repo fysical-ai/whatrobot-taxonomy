@@ -1,0 +1,2254 @@
+{
+  "version": "2026-01",
+  "attributes": [
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/1",
+      "name": "Hersteller",
+      "friendly_id": "manufacturer",
+      "handle": "manufacturer",
+      "description": "Das Unternehmen, das das Produkt herstellt.",
+      "question": "Who makes it?",
+      "type": "ref",
+      "multi": false,
+      "ref_target": "manufacturer"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/2",
+      "name": "Modell",
+      "friendly_id": "model",
+      "handle": "model",
+      "description": "Offizielle Modellbezeichnung, wie vom Hersteller veröffentlicht.",
+      "question": "What is the official model name?",
+      "type": "text",
+      "multi": false
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/3",
+      "name": "Variante",
+      "friendly_id": "variant",
+      "handle": "variant",
+      "description": "Untermodell oder Konfiguration, wenn der Hersteller sie separat aufführt.",
+      "question": "Which sub-model or configuration is this?",
+      "type": "text",
+      "multi": false
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/4",
+      "name": "Weitere Namen",
+      "friendly_id": "aliases",
+      "handle": "aliases",
+      "description": "Andere Namen, unter denen nach dem Produkt gesucht wird.",
+      "question": "What else do people call it?",
+      "type": "text",
+      "multi": true
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/5",
+      "name": "Nutzertyp",
+      "friendly_id": "segment",
+      "handle": "segment",
+      "description": "Nutzertypen, die das Produkt zum Listenpreis plausibel kaufen würden: Hobby, Bildung, Forschung, Gewerblich, Privatkunden, Klinisch.",
+      "question": "Which user types would plausibly buy this at list price?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/1",
+          "name": "Hobby",
+          "friendly_id": "segment__hobby",
+          "handle": "segment__hobby"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/2",
+          "name": "Bildung",
+          "friendly_id": "segment__education",
+          "handle": "segment__education"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/3",
+          "name": "Forschung",
+          "friendly_id": "segment__research",
+          "handle": "segment__research"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/4",
+          "name": "Gewerblich",
+          "friendly_id": "segment__professional",
+          "handle": "segment__professional"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/5",
+          "name": "Privatkunden",
+          "friendly_id": "segment__consumer",
+          "handle": "segment__consumer"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/155",
+          "name": "Klinisch",
+          "friendly_id": "segment__clinical",
+          "handle": "segment__clinical"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/6",
+          "name": "Sonstige",
+          "friendly_id": "segment__other",
+          "handle": "segment__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/6",
+      "name": "Anwendungsbereich",
+      "friendly_id": "application_group",
+      "handle": "application-group",
+      "description": "Oberste Ebene des zweistufigen Anwendungsvokabulars; abgeleitet aus den Anwendungen.",
+      "question": "Derived — do not set by hand.",
+      "type": "enum",
+      "multi": true,
+      "derived_from": "application",
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/7",
+          "name": "Fertigung",
+          "friendly_id": "application_group__manufacturing",
+          "handle": "application-group__manufacturing"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/8",
+          "name": "Logistik",
+          "friendly_id": "application_group__logistics",
+          "handle": "application-group__logistics"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/9",
+          "name": "Professionelle Dienstleistungen",
+          "friendly_id": "application_group__professional-service",
+          "handle": "application-group__professional-service"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/10",
+          "name": "Privatanwender",
+          "friendly_id": "application_group__consumer",
+          "handle": "application-group__consumer"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/11",
+          "name": "Gesundheit",
+          "friendly_id": "application_group__health",
+          "handle": "application-group__health"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/12",
+          "name": "Bildung und Forschung",
+          "friendly_id": "application_group__knowledge",
+          "handle": "application-group__knowledge"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/13",
+          "name": "Allgemein",
+          "friendly_id": "application_group__general",
+          "handle": "application-group__general"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/14",
+          "name": "Sonstige",
+          "friendly_id": "application_group__other",
+          "handle": "application-group__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/7",
+      "name": "Anwendung",
+      "friendly_id": "application",
+      "handle": "application",
+      "description": "Wofür das Produkt vermarktet wird. Jede Anwendung gehört zu genau einem Anwendungsbereich.",
+      "question": "What is it marketed to do?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/15",
+          "name": "Handhabung",
+          "friendly_id": "application__handling",
+          "handle": "application__handling"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/16",
+          "name": "Maschinenbeschickung",
+          "friendly_id": "application__machine-tending",
+          "handle": "application__machine-tending"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/17",
+          "name": "Palettieren",
+          "friendly_id": "application__palletizing",
+          "handle": "application__palletizing"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/18",
+          "name": "Schweißen",
+          "friendly_id": "application__welding",
+          "handle": "application__welding"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/19",
+          "name": "Montage",
+          "friendly_id": "application__assembly",
+          "handle": "application__assembly"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/20",
+          "name": "Lackieren und Dosieren",
+          "friendly_id": "application__painting-dispensing",
+          "handle": "application__painting-dispensing"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/21",
+          "name": "Bearbeitung",
+          "friendly_id": "application__machining",
+          "handle": "application__machining"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/22",
+          "name": "Prüfung und Qualitätskontrolle",
+          "friendly_id": "application__inspection-qc",
+          "handle": "application__inspection-qc"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/23",
+          "name": "Lagerlogistik",
+          "friendly_id": "application__warehouse-logistics",
+          "handle": "application__warehouse-logistics"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/24",
+          "name": "Zustellung",
+          "friendly_id": "application__delivery",
+          "handle": "application__delivery"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/25",
+          "name": "Transport",
+          "friendly_id": "application__transport",
+          "handle": "application__transport"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/26",
+          "name": "Gewerbliche Reinigung",
+          "friendly_id": "application__professional-cleaning",
+          "handle": "application__professional-cleaning"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/27",
+          "name": "Inspektion und Wartung",
+          "friendly_id": "application__inspection-maintenance",
+          "handle": "application__inspection-maintenance"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/28",
+          "name": "Landwirtschaft",
+          "friendly_id": "application__agriculture",
+          "handle": "application__agriculture"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/29",
+          "name": "Bau",
+          "friendly_id": "application__construction",
+          "handle": "application__construction"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/30",
+          "name": "Sicherheit und Überwachung",
+          "friendly_id": "application__security",
+          "handle": "application__security"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/31",
+          "name": "Suche und Rettung",
+          "friendly_id": "application__search-rescue",
+          "handle": "application__search-rescue"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/32",
+          "name": "Gastronomie und Handel",
+          "friendly_id": "application__hospitality-retail",
+          "handle": "application__hospitality-retail"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/33",
+          "name": "Haushaltsreinigung",
+          "friendly_id": "application__domestic-cleaning",
+          "handle": "application__domestic-cleaning"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/34",
+          "name": "Rasen und Garten",
+          "friendly_id": "application__lawn-garden",
+          "handle": "application__lawn-garden"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/35",
+          "name": "Pool",
+          "friendly_id": "application__pool",
+          "handle": "application__pool"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/36",
+          "name": "Gesellschaft",
+          "friendly_id": "application__companionship",
+          "handle": "application__companionship"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/37",
+          "name": "Unterhaltung",
+          "friendly_id": "application__entertainment",
+          "handle": "application__entertainment"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/38",
+          "name": "Telepräsenz",
+          "friendly_id": "application__telepresence",
+          "handle": "application__telepresence"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/39",
+          "name": "Chirurgie",
+          "friendly_id": "application__surgery",
+          "handle": "application__surgery"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/40",
+          "name": "Rehabilitation",
+          "friendly_id": "application__rehabilitation",
+          "handle": "application__rehabilitation"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/41",
+          "name": "Pflegeunterstützung",
+          "friendly_id": "application__care-assistance",
+          "handle": "application__care-assistance"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/42",
+          "name": "Bildung",
+          "friendly_id": "application__education",
+          "handle": "application__education"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/43",
+          "name": "Forschungsplattform",
+          "friendly_id": "application__research-platform",
+          "handle": "application__research-platform"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/44",
+          "name": "Universell",
+          "friendly_id": "application__general-purpose",
+          "handle": "application__general-purpose"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/153",
+          "name": "Kartierung und Vermessung",
+          "friendly_id": "application__mapping-surveying",
+          "handle": "application__mapping-surveying"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/154",
+          "name": "Laborautomatisierung",
+          "friendly_id": "application__lab-automation",
+          "handle": "application__lab-automation"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/45",
+          "name": "Sonstige",
+          "friendly_id": "application__other",
+          "handle": "application__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/8",
+      "name": "ISO-8373-Kategorie",
+      "friendly_id": "iso_category",
+      "handle": "iso-category",
+      "description": "Verwendungsklasse nach ISO 8373:2021, wie vom Hersteller eingeordnet.",
+      "question": "Does the manufacturer position it as an industrial, service or medical robot?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/46",
+          "name": "Industrie",
+          "friendly_id": "iso_category__industrial",
+          "handle": "iso-category__industrial"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/47",
+          "name": "Service",
+          "friendly_id": "iso_category__service",
+          "handle": "iso-category__service"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/48",
+          "name": "Medizin",
+          "friendly_id": "iso_category__medical",
+          "handle": "iso-category__medical"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/49",
+          "name": "Sonstige",
+          "friendly_id": "iso_category__other",
+          "handle": "iso-category__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/9",
+      "name": "Umgebung",
+      "friendly_id": "environment",
+      "handle": "environment",
+      "description": "Umgebungen, für die das Produkt ausgelegt ist.",
+      "question": "Where is it rated to operate?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/50",
+          "name": "Innenbereich",
+          "friendly_id": "environment__indoor",
+          "handle": "environment__indoor"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/51",
+          "name": "Außenbereich",
+          "friendly_id": "environment__outdoor",
+          "handle": "environment__outdoor"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/52",
+          "name": "Unter Wasser",
+          "friendly_id": "environment__underwater",
+          "handle": "environment__underwater"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/53",
+          "name": "In der Luft",
+          "friendly_id": "environment__airborne",
+          "handle": "environment__airborne"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/54",
+          "name": "Gefährliche Umgebung",
+          "friendly_id": "environment__hazardous",
+          "handle": "environment__hazardous"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/55",
+          "name": "Weltraum",
+          "friendly_id": "environment__space",
+          "handle": "environment__space"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/56",
+          "name": "Sonstige",
+          "friendly_id": "environment__other",
+          "handle": "environment__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/10",
+      "name": "Autonomie",
+      "friendly_id": "autonomy",
+      "handle": "autonomy",
+      "description": "Höchste Stufe des unbeaufsichtigten Betriebs, die ab Werk unterstützt wird. Programmiert: führt eine eingelernte oder programmierte Abfolge aus, ohne seine Umgebung zu erfassen (die meisten Industriearme).",
+      "question": "What is the highest level of unsupervised operation out of the box?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/57",
+          "name": "Ferngesteuert",
+          "friendly_id": "autonomy__teleoperated",
+          "handle": "autonomy__teleoperated"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/165",
+          "name": "Programmiert",
+          "friendly_id": "autonomy__programmed",
+          "handle": "autonomy__programmed"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/58",
+          "name": "Assistiert",
+          "friendly_id": "autonomy__assisted",
+          "handle": "autonomy__assisted"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/59",
+          "name": "Teilautonom",
+          "friendly_id": "autonomy__semi-autonomous",
+          "handle": "autonomy__semi-autonomous"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/60",
+          "name": "Autonom",
+          "friendly_id": "autonomy__autonomous",
+          "handle": "autonomy__autonomous"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/61",
+          "name": "Sonstige",
+          "friendly_id": "autonomy__other",
+          "handle": "autonomy__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/11",
+      "name": "Kollaborativ",
+      "friendly_id": "collaborative",
+      "handle": "collaborative",
+      "description": "Der Hersteller gibt an, dass der Roboter die Anforderungen an Roboter für kollaborierende Anwendungen nach ISO 10218-1:2025 (oder der früheren ISO/TS 15066) erfüllt, meist durch eingebaute Leistungs- und Kraftbegrenzung. Nach ISO 10218:2025 wird nicht ein Roboter, sondern eine Anwendung nach eigener Risikobeurteilung als kollaborierend bestätigt.",
+      "question": "Does the maker state it meets the ISO 10218-1:2025 (or ISO/TS 15066) requirements for collaborative applications?",
+      "type": "bool",
+      "multi": false
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/12",
+      "name": "Verfügbarkeit",
+      "friendly_id": "availability",
+      "handle": "availability",
+      "description": "Ob das Produkt heute gekauft werden kann.",
+      "question": "Can you buy it today?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/62",
+          "name": "Lieferbar",
+          "friendly_id": "availability__shipping",
+          "handle": "availability__shipping"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/164",
+          "name": "Begrenzt verfügbar",
+          "friendly_id": "availability__limited",
+          "handle": "availability__limited"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/63",
+          "name": "Vorbestellbar",
+          "friendly_id": "availability__preorder",
+          "handle": "availability__preorder"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/64",
+          "name": "Angekündigt",
+          "friendly_id": "availability__announced",
+          "handle": "availability__announced"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/65",
+          "name": "Nur für Forschung",
+          "friendly_id": "availability__research-only",
+          "handle": "availability__research-only"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/66",
+          "name": "Eingestellt",
+          "friendly_id": "availability__discontinued",
+          "handle": "availability__discontinued"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/67",
+          "name": "Sonstige",
+          "friendly_id": "availability__other",
+          "handle": "availability__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/13",
+      "name": "Preis",
+      "friendly_id": "price",
+      "handle": "price",
+      "description": "Listenpreis wie veröffentlicht. Immer zusammen mit Währung, Preisdatum und Preisquelle.",
+      "question": "What is the published list price?",
+      "type": "number",
+      "multi": false,
+      "unit": "currency",
+      "companions": [
+        "currency",
+        "price_date",
+        "price_source"
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/14",
+      "name": "Währung",
+      "friendly_id": "currency",
+      "handle": "currency",
+      "description": "ISO-4217-Code der Preiswährung.",
+      "question": "In which currency is the price published?",
+      "type": "text",
+      "multi": false,
+      "format": "iso-4217"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/15",
+      "name": "Preisdatum",
+      "friendly_id": "price_date",
+      "handle": "price-date",
+      "description": "Datum, an dem der Preis erfasst wurde (ISO 8601).",
+      "question": "When was the price observed?",
+      "type": "text",
+      "multi": false,
+      "format": "iso-8601-date"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/16",
+      "name": "Preisquelle",
+      "friendly_id": "price_source",
+      "handle": "price-source",
+      "description": "URL, unter der der Preis erfasst wurde.",
+      "question": "Where was the price observed?",
+      "type": "text",
+      "multi": false,
+      "format": "url"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/17",
+      "name": "Erscheinungsjahr",
+      "friendly_id": "release_year",
+      "handle": "release-year",
+      "description": "Jahr der ersten kommerziellen Verfügbarkeit.",
+      "question": "When was it first commercially available?",
+      "type": "number",
+      "multi": false,
+      "unit": "year"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/18",
+      "name": "Land",
+      "friendly_id": "country",
+      "handle": "country",
+      "description": "Hauptsitz des Herstellers, ISO 3166-1 Alpha-2.",
+      "question": "Where is the manufacturer headquartered?",
+      "type": "text",
+      "multi": false,
+      "format": "iso-3166-1-alpha-2"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/19",
+      "name": "Gewicht",
+      "friendly_id": "mass",
+      "handle": "mass",
+      "description": "Gewicht des Produkts laut Datenblatt.",
+      "question": "What is the specified mass?",
+      "type": "number",
+      "multi": false,
+      "unit": "kg",
+      "bases": [
+        {
+          "handle": "operating",
+          "description": "Complete product ready to operate, with battery, without payload or accessories. Arm = manipulator only, without controller or cabinet. Never package or shipping weight.",
+          "default": true
+        },
+        {
+          "handle": "without-battery",
+          "description": "Stated without battery.",
+          "default": false
+        },
+        {
+          "handle": "with-controller",
+          "description": "Arm stated including its controller (only when no arm-only figure exists).",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/20",
+      "name": "Traglast",
+      "friendly_id": "payload",
+      "handle": "payload",
+      "description": "Nenntraglast. Arm: am Handgelenk. Mobiler Roboter: auf der Ladefläche. Endeffektor: gehaltenes Objekt.",
+      "question": "What is the rated payload?",
+      "type": "number",
+      "multi": false,
+      "unit": "kg",
+      "bases": [
+        {
+          "handle": "rated",
+          "description": "Rated payload as the spec sheet states it. Arm = at the flange/wrist. Mobile manipulator = at the arm's flange. Mobile, legged or humanoid robot = carried while moving. Humanoid = with both arms together. End-effector = held object.",
+          "default": true
+        },
+        {
+          "handle": "max",
+          "description": "A higher \"maximum\" figure at reduced reach, speed or posture, when no rated figure exists.",
+          "default": false
+        },
+        {
+          "handle": "standing",
+          "description": "Static or standing load (legged or mobile robot not moving).",
+          "default": false
+        },
+        {
+          "handle": "per-arm",
+          "description": "One arm of a humanoid or dual-arm robot.",
+          "default": false
+        },
+        {
+          "handle": "bimanual",
+          "description": "Both arms together, for a dual-arm arm or a mobile manipulator with two arms (their default is one arm at the flange). For a humanoid, both arms together is already the default.",
+          "default": false
+        },
+        {
+          "handle": "towing",
+          "description": "Towed load (AMR / tugger).",
+          "default": false
+        },
+        {
+          "handle": "shear",
+          "description": "Magnetic or vacuum grip with the load acting parallel to the gripping face (shear), when only that figure is given. The default for these grippers is a straight pull off a flat part.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/21",
+      "name": "Akkulaufzeit",
+      "friendly_id": "battery_runtime",
+      "handle": "battery-runtime",
+      "description": "Vom Hersteller angegebene Laufzeit mit einer Akkuladung.",
+      "question": "What is the manufacturer-rated battery runtime?",
+      "type": "number",
+      "multi": false,
+      "unit": "min",
+      "bases": [
+        {
+          "handle": "rated",
+          "description": "The maker's headline runtime in normal operation, without payload (\"up to\" figures included). A range \"1-2 h\" → record the upper end.",
+          "default": true
+        },
+        {
+          "handle": "loaded",
+          "description": "Runtime with payload or under a stated working load, when no headline figure exists.",
+          "default": false
+        },
+        {
+          "handle": "standby",
+          "description": "Standby / idle time.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/22",
+      "name": "Schutzart (IP)",
+      "friendly_id": "ip_rating",
+      "handle": "ip-rating",
+      "description": "Schutzart gegen Eindringen von Fremdkörpern und Wasser (IEC 60529), z. B. IP54.",
+      "question": "What IP rating does the spec sheet state?",
+      "type": "text",
+      "multi": false,
+      "format": "ip-code"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/23",
+      "name": "Open Source",
+      "friendly_id": "open_source",
+      "handle": "open-source",
+      "description": "Welche Teile des Produkts unter einer offenen Lizenz veröffentlicht sind.",
+      "question": "Is the hardware and/or software open source?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/68",
+          "name": "Hardware",
+          "friendly_id": "open_source__hardware",
+          "handle": "open-source__hardware"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/69",
+          "name": "Software",
+          "friendly_id": "open_source__software",
+          "handle": "open-source__software"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/70",
+          "name": "Keine",
+          "friendly_id": "open_source__none",
+          "handle": "open-source__none"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/71",
+          "name": "Sonstige",
+          "friendly_id": "open_source__other",
+          "handle": "open-source__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/24",
+      "name": "SDK",
+      "friendly_id": "sdk",
+      "handle": "sdk",
+      "description": "Offiziell unterstützte Programmierschnittstellen.",
+      "question": "Which SDKs or frameworks are officially supported?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/72",
+          "name": "ROS 1",
+          "friendly_id": "sdk__ros1",
+          "handle": "sdk__ros1"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/73",
+          "name": "ROS 2",
+          "friendly_id": "sdk__ros2",
+          "handle": "sdk__ros2"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/74",
+          "name": "Python",
+          "friendly_id": "sdk__python",
+          "handle": "sdk__python"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/75",
+          "name": "C++",
+          "friendly_id": "sdk__cpp",
+          "handle": "sdk__cpp"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/76",
+          "name": "Proprietär",
+          "friendly_id": "sdk__proprietary",
+          "handle": "sdk__proprietary"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/77",
+          "name": "Keins",
+          "friendly_id": "sdk__none",
+          "handle": "sdk__none"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/78",
+          "name": "Sonstige",
+          "friendly_id": "sdk__other",
+          "handle": "sdk__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/25",
+      "name": "Kompatibel mit",
+      "friendly_id": "compatible_with",
+      "handle": "compatible-with",
+      "description": "Roboter oder Komponenten, die offiziell zusammen mit diesem Produkt unterstützt werden.",
+      "question": "What is it officially compatible with?",
+      "type": "ref",
+      "multi": true,
+      "ref_target": [
+        "robot",
+        "component"
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/26",
+      "name": "Quellen",
+      "friendly_id": "sources",
+      "handle": "sources",
+      "description": "URL und Datum für jede Angabe.",
+      "question": "Where did each fact come from?",
+      "type": "text",
+      "multi": true
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/27",
+      "name": "Achsen",
+      "friendly_id": "axes",
+      "handle": "axes",
+      "description": "Anzahl der gesteuerten Achsen. Arm: Gelenke. Kraft-Momenten-Sensor: gemessene Achsen.",
+      "question": "How many axes does the spec sheet state?",
+      "type": "number",
+      "multi": false,
+      "unit": "count"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/28",
+      "name": "Reichweite",
+      "friendly_id": "reach",
+      "handle": "reach",
+      "description": "Maximale Reichweite des Arms.",
+      "question": "What is the maximum reach?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "Maker's stated maximum reach. SCARA = total arm length (J1 + J2).",
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/29",
+      "name": "Wiederholgenauigkeit",
+      "friendly_id": "repeatability",
+      "handle": "repeatability",
+      "description": "Positionswiederholgenauigkeit laut Datenblatt.",
+      "question": "What repeatability does the spec sheet state?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm",
+      "bases": [
+        {
+          "handle": "pose",
+          "description": "Pose repeatability (ISO 9283) as stated; record the ± value as a positive number.",
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/30",
+      "name": "Anzahl Arme",
+      "friendly_id": "arm_count",
+      "handle": "arm-count",
+      "description": "Anzahl der Arme am Produkt.",
+      "question": "How many arms does it have?",
+      "type": "number",
+      "multi": false,
+      "unit": "count"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/31",
+      "name": "Montage",
+      "friendly_id": "mounting",
+      "handle": "mounting",
+      "description": "Lagen, in denen ein Arm montiert werden kann.",
+      "question": "Where can it be mounted?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/79",
+          "name": "Boden",
+          "friendly_id": "mounting__floor",
+          "handle": "mounting__floor"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/80",
+          "name": "Tisch",
+          "friendly_id": "mounting__table",
+          "handle": "mounting__table"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/81",
+          "name": "Wand",
+          "friendly_id": "mounting__wall",
+          "handle": "mounting__wall"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/82",
+          "name": "Decke",
+          "friendly_id": "mounting__ceiling",
+          "handle": "mounting__ceiling"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/83",
+          "name": "Mobil",
+          "friendly_id": "mounting__mobile",
+          "handle": "mounting__mobile"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/84",
+          "name": "Sonstige",
+          "friendly_id": "mounting__other",
+          "handle": "mounting__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/32",
+      "name": "Höhe",
+      "friendly_id": "height",
+      "handle": "height",
+      "description": "Höhe im Stand.",
+      "question": "What is the standing height?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm",
+      "bases": [
+        {
+          "handle": "standing",
+          "description": "Standing height including head.",
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/33",
+      "name": "Freiheitsgrade gesamt",
+      "friendly_id": "dof_total",
+      "handle": "dof-total",
+      "description": "Freiheitsgrade insgesamt, ohne Hände.",
+      "question": "How many degrees of freedom, excluding hands?",
+      "type": "number",
+      "multi": false,
+      "unit": "count"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/34",
+      "name": "Hände enthalten",
+      "friendly_id": "hands_included",
+      "handle": "hands-included",
+      "description": "Welche Endeffektoren mit dem Roboter geliefert werden.",
+      "question": "What hands or grippers are included?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/85",
+          "name": "Keine",
+          "friendly_id": "hands_included__none",
+          "handle": "hands-included__none"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/86",
+          "name": "Greifer",
+          "friendly_id": "hands_included__gripper",
+          "handle": "hands-included__gripper"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/87",
+          "name": "Geschickte Hand",
+          "friendly_id": "hands_included__dexterous-hand",
+          "handle": "hands-included__dexterous-hand"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/88",
+          "name": "Optional",
+          "friendly_id": "hands_included__optional",
+          "handle": "hands-included__optional"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/89",
+          "name": "Sonstige",
+          "friendly_id": "hands_included__other",
+          "handle": "hands-included__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/35",
+      "name": "Höchstgeschwindigkeit",
+      "friendly_id": "max_speed",
+      "handle": "max-speed",
+      "description": "Maximale Fortbewegungsgeschwindigkeit.",
+      "question": "What is the maximum speed?",
+      "type": "number",
+      "multi": false,
+      "unit": "m/s",
+      "bases": [
+        {
+          "handle": "rated",
+          "description": "Maximum speed the maker states for normal operation.",
+          "default": true
+        },
+        {
+          "handle": "limit",
+          "description": "Burst, peak, \"limit\" or record speed beyond normal operation, when no rated figure exists.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/36",
+      "name": "Räder an den Füßen",
+      "friendly_id": "wheel_feet",
+      "handle": "wheel-feet",
+      "description": "Laufroboter mit Rädern an den Füßen.",
+      "question": "Does it have wheels on its feet?",
+      "type": "bool",
+      "multi": false
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/37",
+      "name": "Arm optional",
+      "friendly_id": "has_arm",
+      "handle": "has-arm",
+      "description": "Ein Arm ist als Zubehör erhältlich.",
+      "question": "Is an arm available as an add-on?",
+      "type": "bool",
+      "multi": false
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/38",
+      "name": "Antriebskonfiguration",
+      "friendly_id": "drive_config",
+      "handle": "drive-config",
+      "description": "Wie eine fahrende Basis lenkt und sich fortbewegt, laut Hersteller. Differentialantrieb: zwei unabhängig angetriebene Räder, gelenkt über den Geschwindigkeitsunterschied. Kompaktlenkung (Skid-Steer): vier oder mehr feste Räder, links und rechts getrennt angetrieben, gelenkt durch Rutschen. Omnidirektional: Mecanum-, Omni- oder Swerve-Räder. Ackermann: gelenkte Räder wie beim Auto. Kettenantrieb: Gleisketten. Selbstbalancierend: zwei Räder auf einer Achse, durch aktive Balance aufrecht gehalten.",
+      "question": "What drive configuration does the spec sheet state?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/90",
+          "name": "Differentialantrieb",
+          "friendly_id": "drive_config__differential",
+          "handle": "drive-config__differential"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/91",
+          "name": "Omnidirektional",
+          "friendly_id": "drive_config__omnidirectional",
+          "handle": "drive-config__omnidirectional"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/92",
+          "name": "Ackermann-Lenkung",
+          "friendly_id": "drive_config__ackermann",
+          "handle": "drive-config__ackermann"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/93",
+          "name": "Kettenantrieb",
+          "friendly_id": "drive_config__tracked",
+          "handle": "drive-config__tracked"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/166",
+          "name": "Kompaktlenkung (Skid-Steer)",
+          "friendly_id": "drive_config__skid-steer",
+          "handle": "drive-config__skid-steer"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/167",
+          "name": "Selbstbalancierend",
+          "friendly_id": "drive_config__self-balancing",
+          "handle": "drive-config__self-balancing"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/94",
+          "name": "Sonstige",
+          "friendly_id": "drive_config__other",
+          "handle": "drive-config__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/39",
+      "name": "Navigation",
+      "friendly_id": "navigation",
+      "handle": "navigation",
+      "description": "Wie ein fahrender Roboter navigiert.",
+      "question": "How does it navigate?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/95",
+          "name": "Linienfolge",
+          "friendly_id": "navigation__line-following",
+          "handle": "navigation__line-following"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/96",
+          "name": "Markerbasiert",
+          "friendly_id": "navigation__marker-based",
+          "handle": "navigation__marker-based"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/97",
+          "name": "SLAM",
+          "friendly_id": "navigation__slam",
+          "handle": "navigation__slam"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/98",
+          "name": "Keine",
+          "friendly_id": "navigation__none",
+          "handle": "navigation__none"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/99",
+          "name": "Sonstige",
+          "friendly_id": "navigation__other",
+          "handle": "navigation__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/40",
+      "name": "Flugzeit",
+      "friendly_id": "flight_time",
+      "handle": "flight-time",
+      "description": "Vom Hersteller angegebene Flugzeit.",
+      "question": "What is the rated flight time?",
+      "type": "number",
+      "multi": false,
+      "unit": "min",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "Maker's maximum flight time (no wind, no payload), as normally published.",
+          "default": true
+        },
+        {
+          "handle": "hover",
+          "description": "Hover time only.",
+          "default": false
+        },
+        {
+          "handle": "with-payload",
+          "description": "With a stated payload.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/41",
+      "name": "Max. Startgewicht",
+      "friendly_id": "max_takeoff_weight",
+      "handle": "max-takeoff-weight",
+      "description": "Maximales Startgewicht.",
+      "question": "What is the maximum take-off weight?",
+      "type": "number",
+      "multi": false,
+      "unit": "kg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/42",
+      "name": "Max. Einsatztiefe",
+      "friendly_id": "depth_rating",
+      "handle": "depth-rating",
+      "description": "Maximale zugelassene Einsatztiefe.",
+      "question": "What is the maximum rated depth?",
+      "type": "number",
+      "multi": false,
+      "unit": "m"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/43",
+      "name": "Körperbereich",
+      "friendly_id": "body_region",
+      "handle": "body-region",
+      "description": "Körperbereiche, auf die ein tragbarer Roboter wirkt.",
+      "question": "Which body regions does it act on?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/100",
+          "name": "Untere Extremitäten",
+          "friendly_id": "body_region__lower-limb",
+          "handle": "body-region__lower-limb"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/101",
+          "name": "Obere Extremitäten",
+          "friendly_id": "body_region__upper-limb",
+          "handle": "body-region__upper-limb"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/102",
+          "name": "Rücken",
+          "friendly_id": "body_region__back",
+          "handle": "body-region__back"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/103",
+          "name": "Ganzkörper",
+          "friendly_id": "body_region__full-body",
+          "handle": "body-region__full-body"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/104",
+          "name": "Sonstige",
+          "friendly_id": "body_region__other",
+          "handle": "body-region__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/44",
+      "name": "Verwendete Komponenten",
+      "friendly_id": "uses_components",
+      "handle": "uses-components",
+      "description": "Separat gelistete Komponenten, aus denen das Produkt aufgebaut ist (z. B. die Aktoren einer Hand).",
+      "question": "Which listed components is it built from?",
+      "type": "ref",
+      "multi": true,
+      "ref_target": "component"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/45",
+      "name": "Flanschnorm",
+      "friendly_id": "flange_standard",
+      "handle": "flange-standard",
+      "description": "Norm der mechanischen Montageschnittstelle zwischen einer Komponente und einem Roboter.",
+      "question": "Which flange standard does it mount to?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/105",
+          "name": "ISO 9409-1-50",
+          "friendly_id": "flange_standard__iso-9409-1-50",
+          "handle": "flange-standard__iso-9409-1-50"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/106",
+          "name": "ISO 9409-1-31",
+          "friendly_id": "flange_standard__iso-9409-1-31",
+          "handle": "flange-standard__iso-9409-1-31"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/107",
+          "name": "Herstellerspezifisch",
+          "friendly_id": "flange_standard__custom",
+          "handle": "flange-standard__custom"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/108",
+          "name": "Nicht zutreffend",
+          "friendly_id": "flange_standard__na",
+          "handle": "flange-standard__na"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/109",
+          "name": "Sonstige",
+          "friendly_id": "flange_standard__other",
+          "handle": "flange-standard__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/46",
+      "name": "Schnittstelle",
+      "friendly_id": "interface",
+      "handle": "interface",
+      "description": "Elektrische und Kommunikationsschnittstellen.",
+      "question": "Which interfaces does it offer?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/110",
+          "name": "EtherCAT",
+          "friendly_id": "interface__ethercat",
+          "handle": "interface__ethercat"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/111",
+          "name": "CAN",
+          "friendly_id": "interface__can",
+          "handle": "interface__can"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/112",
+          "name": "Modbus TCP",
+          "friendly_id": "interface__modbus-tcp",
+          "handle": "interface__modbus-tcp"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/113",
+          "name": "RS-485",
+          "friendly_id": "interface__rs485",
+          "handle": "interface__rs485"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/114",
+          "name": "USB",
+          "friendly_id": "interface__usb",
+          "handle": "interface__usb"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/115",
+          "name": "Ethernet",
+          "friendly_id": "interface__ethernet",
+          "handle": "interface__ethernet"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/116",
+          "name": "IO-Link",
+          "friendly_id": "interface__io-link",
+          "handle": "interface__io-link"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/117",
+          "name": "Digitale E/A",
+          "friendly_id": "interface__digital-io",
+          "handle": "interface__digital-io"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/118",
+          "name": "Pneumatisch",
+          "friendly_id": "interface__pneumatic",
+          "handle": "interface__pneumatic"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/157",
+          "name": "UART / seriell (TTL)",
+          "friendly_id": "interface__uart",
+          "handle": "interface__uart"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/158",
+          "name": "I²C",
+          "friendly_id": "interface__i2c",
+          "handle": "interface__i2c"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/159",
+          "name": "SPI",
+          "friendly_id": "interface__spi",
+          "handle": "interface__spi"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/160",
+          "name": "RS-232",
+          "friendly_id": "interface__rs232",
+          "handle": "interface__rs232"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/161",
+          "name": "RS-422",
+          "friendly_id": "interface__rs422",
+          "handle": "interface__rs422"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/162",
+          "name": "Modbus RTU",
+          "friendly_id": "interface__modbus-rtu",
+          "handle": "interface__modbus-rtu"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/163",
+          "name": "Analog",
+          "friendly_id": "interface__analog",
+          "handle": "interface__analog"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/119",
+          "name": "Sonstige",
+          "friendly_id": "interface__other",
+          "handle": "interface__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/47",
+      "name": "Spannung",
+      "friendly_id": "voltage",
+      "handle": "voltage",
+      "description": "Nennversorgungsspannung.",
+      "question": "What is the nominal supply voltage?",
+      "type": "number",
+      "multi": false,
+      "unit": "V"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/48",
+      "name": "Antriebsart",
+      "friendly_id": "actuation",
+      "handle": "actuation",
+      "description": "Energieform, mit der die Komponente angetrieben wird.",
+      "question": "How is it actuated?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/120",
+          "name": "Elektrisch",
+          "friendly_id": "actuation__electric",
+          "handle": "actuation__electric"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/121",
+          "name": "Pneumatisch",
+          "friendly_id": "actuation__pneumatic",
+          "handle": "actuation__pneumatic"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/122",
+          "name": "Hydraulisch",
+          "friendly_id": "actuation__hydraulic",
+          "handle": "actuation__hydraulic"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/123",
+          "name": "Vakuum",
+          "friendly_id": "actuation__vacuum",
+          "handle": "actuation__vacuum"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/124",
+          "name": "Passiv",
+          "friendly_id": "actuation__passive",
+          "handle": "actuation__passive"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/125",
+          "name": "Sonstige",
+          "friendly_id": "actuation__other",
+          "handle": "actuation__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/49",
+      "name": "Greifkraft",
+      "friendly_id": "grip_force",
+      "handle": "grip-force",
+      "description": "Maximale Greifkraft.",
+      "question": "What is the maximum grip force?",
+      "type": "number",
+      "multi": false,
+      "unit": "N",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "Maximum gripping force.",
+          "default": true
+        },
+        {
+          "handle": "continuous",
+          "description": "Continuous / nominal grip force only.",
+          "default": false
+        },
+        {
+          "handle": "fingertip",
+          "description": "Force at a single fingertip or pinch, when the maker gives no whole-hand or jaw figure.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/50",
+      "name": "Hub",
+      "friendly_id": "stroke",
+      "handle": "stroke",
+      "description": "Gesamter Verfahrweg. Greifer: Backenöffnung. Linearaktor: Hub des Abtriebs.",
+      "question": "What is the total stroke?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/51",
+      "name": "Anzahl Finger",
+      "friendly_id": "finger_count",
+      "handle": "finger-count",
+      "description": "Anzahl der Finger oder Backen.",
+      "question": "How many fingers or jaws?",
+      "type": "number",
+      "multi": false,
+      "unit": "count"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/52",
+      "name": "Freiheitsgrade",
+      "friendly_id": "dof",
+      "handle": "dof",
+      "description": "Aktive Freiheitsgrade.",
+      "question": "How many active degrees of freedom?",
+      "type": "number",
+      "multi": false,
+      "unit": "count"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/53",
+      "name": "Taktile Sensorik",
+      "friendly_id": "tactile_sensing",
+      "handle": "tactile-sensing",
+      "description": "Eingebaute taktile Sensorik.",
+      "question": "Does it have built-in tactile sensing?",
+      "type": "bool",
+      "multi": false
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/54",
+      "name": "Nenndrehmoment",
+      "friendly_id": "rated_torque",
+      "handle": "rated-torque",
+      "description": "Dauerhaftes Nenndrehmoment.",
+      "question": "What is the continuous rated torque?",
+      "type": "number",
+      "multi": false,
+      "unit": "Nm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/55",
+      "name": "Spitzendrehmoment",
+      "friendly_id": "peak_torque",
+      "handle": "peak-torque",
+      "description": "Spitzendrehmoment.",
+      "question": "What is the peak torque?",
+      "type": "number",
+      "multi": false,
+      "unit": "Nm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/56",
+      "name": "Getriebeart",
+      "friendly_id": "reducer_type",
+      "handle": "reducer-type",
+      "description": "Funktionsprinzip der Untersetzung.",
+      "question": "What type of reducer does it use?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/126",
+          "name": "Harmonic Drive (Wellgetriebe)",
+          "friendly_id": "reducer_type__harmonic",
+          "handle": "reducer-type__harmonic"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/127",
+          "name": "Zykloidgetriebe",
+          "friendly_id": "reducer_type__cycloidal",
+          "handle": "reducer-type__cycloidal"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/128",
+          "name": "RV-Getriebe",
+          "friendly_id": "reducer_type__rv",
+          "handle": "reducer-type__rv"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/129",
+          "name": "Planetengetriebe",
+          "friendly_id": "reducer_type__planetary",
+          "handle": "reducer-type__planetary"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/130",
+          "name": "Quasi-Direktantrieb",
+          "friendly_id": "reducer_type__quasi-direct",
+          "handle": "reducer-type__quasi-direct"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/131",
+          "name": "Keins",
+          "friendly_id": "reducer_type__none",
+          "handle": "reducer-type__none"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/132",
+          "name": "Sonstige",
+          "friendly_id": "reducer_type__other",
+          "handle": "reducer-type__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/57",
+      "name": "Übersetzung",
+      "friendly_id": "gear_ratio",
+      "handle": "gear-ratio",
+      "description": "Untersetzungsverhältnis, angegeben als N in N:1.",
+      "question": "What is the reduction ratio?",
+      "type": "number",
+      "multi": false,
+      "unit": "ratio"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/58",
+      "name": "Nennkraft",
+      "friendly_id": "rated_force",
+      "handle": "rated-force",
+      "description": "Dauerhafte Nennkraft in linearer Richtung.",
+      "question": "What is the rated force?",
+      "type": "number",
+      "multi": false,
+      "unit": "N",
+      "bases": [
+        {
+          "handle": "continuous",
+          "description": "Continuous (rated) force at 100 % duty.",
+          "default": true
+        },
+        {
+          "handle": "max",
+          "description": "The maker's maximum or peak force (e.g. max lifted or feed force), when no continuous figure exists.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/59",
+      "name": "Blockiermoment",
+      "friendly_id": "stall_torque",
+      "handle": "stall-torque",
+      "description": "Blockiermoment, das Drehmoment bei Drehzahl null (Servos und Motoren; Servohersteller geben kg·cm an – Umrechnung: 1 kg·cm = 0,0981 Nm).",
+      "question": "What is the stall torque?",
+      "type": "number",
+      "multi": false,
+      "unit": "Nm",
+      "bases": [
+        {
+          "handle": "nominal-voltage",
+          "description": "At the nominal voltage recorded in `voltage`.",
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/60",
+      "name": "Bus",
+      "friendly_id": "bus",
+      "handle": "bus",
+      "description": "Kommunikationsbus des Servos.",
+      "question": "Which bus does the servo use?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/133",
+          "name": "TTL",
+          "friendly_id": "bus__ttl",
+          "handle": "bus__ttl"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/134",
+          "name": "RS-485",
+          "friendly_id": "bus__rs485",
+          "handle": "bus__rs485"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/135",
+          "name": "CAN",
+          "friendly_id": "bus__can",
+          "handle": "bus__can"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/136",
+          "name": "PWM",
+          "friendly_id": "bus__pwm",
+          "handle": "bus__pwm"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/137",
+          "name": "Sonstige",
+          "friendly_id": "bus__other",
+          "handle": "bus__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/61",
+      "name": "Bildgebungsart",
+      "friendly_id": "modality",
+      "handle": "modality",
+      "description": "Bildgebungsarten einer Kamera.",
+      "question": "Which imaging modalities does it provide?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/138",
+          "name": "RGB",
+          "friendly_id": "modality__rgb",
+          "handle": "modality__rgb"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/139",
+          "name": "Tiefe",
+          "friendly_id": "modality__depth",
+          "handle": "modality__depth"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/140",
+          "name": "Stereo",
+          "friendly_id": "modality__stereo",
+          "handle": "modality__stereo"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/141",
+          "name": "Wärmebild",
+          "friendly_id": "modality__thermal",
+          "handle": "modality__thermal"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/142",
+          "name": "Event-basiert",
+          "friendly_id": "modality__event",
+          "handle": "modality__event"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/143",
+          "name": "Sonstige",
+          "friendly_id": "modality__other",
+          "handle": "modality__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/62",
+      "name": "Scan-Dimensionen",
+      "friendly_id": "scan_dimensions",
+      "handle": "scan-dimensions",
+      "description": "Ob ein Lidar eine Ebene oder einen Raum abtastet.",
+      "question": "Is it a 2D or 3D lidar?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/144",
+          "name": "2D",
+          "friendly_id": "scan_dimensions__2d",
+          "handle": "scan-dimensions__2d"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/145",
+          "name": "3D",
+          "friendly_id": "scan_dimensions__3d",
+          "handle": "scan-dimensions__3d"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/146",
+          "name": "Sonstige",
+          "friendly_id": "scan_dimensions__other",
+          "handle": "scan-dimensions__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/63",
+      "name": "Messbereich",
+      "friendly_id": "range",
+      "handle": "range",
+      "description": "Maximaler Messbereich.",
+      "question": "What is the maximum range?",
+      "type": "number",
+      "multi": false,
+      "unit": "m",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "Maker's maximum range.",
+          "default": true
+        },
+        {
+          "handle": "at-10pct",
+          "description": "Range at 10 % reflectivity (lidar).",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/64",
+      "name": "KI-Leistung",
+      "friendly_id": "ai_tops",
+      "handle": "ai-tops",
+      "description": "Maximale KI-Rechenleistung. Bei einem Roboter die des eingebauten Rechners; nur erfasst, wenn der Hersteller sie veröffentlicht.",
+      "question": "What peak AI performance does the spec sheet state?",
+      "type": "number",
+      "multi": false,
+      "unit": "TOPS",
+      "bases": [
+        {
+          "handle": "stated",
+          "description": "The maker's headline TOPS figure.",
+          "default": true
+        },
+        {
+          "handle": "sparse",
+          "description": "The maker states the figure is with sparsity (e.g. NVIDIA Jetson INT8 sparse).",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/65",
+      "name": "Kapazität",
+      "friendly_id": "capacity",
+      "handle": "capacity",
+      "description": "Energiekapazität.",
+      "question": "What is the energy capacity?",
+      "type": "number",
+      "multi": false,
+      "unit": "Wh"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/66",
+      "name": "Art der Teleoperation",
+      "friendly_id": "teleop_type",
+      "handle": "teleop-type",
+      "description": "Art des Teleoperationsgeräts.",
+      "question": "What kind of teleoperation device is it?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/147",
+          "name": "Leader-Arm",
+          "friendly_id": "teleop_type__leader-arm",
+          "handle": "teleop-type__leader-arm"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/148",
+          "name": "Haptisches Eingabegerät",
+          "friendly_id": "teleop_type__haptic-device",
+          "handle": "teleop-type__haptic-device"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/149",
+          "name": "VR-System",
+          "friendly_id": "teleop_type__vr-rig",
+          "handle": "teleop-type__vr-rig"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/150",
+          "name": "Motion Capture",
+          "friendly_id": "teleop_type__mocap",
+          "handle": "teleop-type__mocap"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/151",
+          "name": "Gamepad",
+          "friendly_id": "teleop_type__gamepad",
+          "handle": "teleop-type__gamepad"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/156",
+          "name": "Handgeführter Demonstrator",
+          "friendly_id": "teleop_type__handheld-demonstrator",
+          "handle": "teleop-type__handheld-demonstrator"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/152",
+          "name": "Sonstige",
+          "friendly_id": "teleop_type__other",
+          "handle": "teleop-type__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/67",
+      "name": "Spannweite",
+      "friendly_id": "wingspan",
+      "handle": "wingspan",
+      "description": "Spannweite eines Starrflüglers oder Hybrid-VTOL.",
+      "question": "What is the wingspan?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/68",
+      "name": "Reisegeschwindigkeit",
+      "friendly_id": "cruise_speed",
+      "handle": "cruise-speed",
+      "description": "Typische Reisegeschwindigkeit (Fluggeschwindigkeit).",
+      "question": "What is the cruise speed?",
+      "type": "number",
+      "multi": false,
+      "unit": "m/s"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/69",
+      "name": "Flugreichweite",
+      "friendly_id": "flight_range",
+      "handle": "flight-range",
+      "description": "Strecke, die das Fluggerät mit einer Akkuladung oder Tankfüllung fliegen kann, laut Hersteller.",
+      "question": "How far can it fly on one charge?",
+      "type": "number",
+      "multi": false,
+      "unit": "km"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/70",
+      "name": "Max. Nutzergewicht",
+      "friendly_id": "max_user_weight",
+      "handle": "max-user-weight",
+      "description": "Höchstes Körpergewicht des Nutzers, für das das tragbare Gerät zugelassen ist.",
+      "question": "What is the maximum user weight?",
+      "type": "number",
+      "multi": false,
+      "unit": "kg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/71",
+      "name": "Belastungsgrenze",
+      "friendly_id": "load_limit",
+      "handle": "load-limit",
+      "description": "Maximale statische Last, die eine Prothese halten oder tragen darf (z. B. die statische Lastgrenze einer Hand).",
+      "question": "What load is it rated to hold?",
+      "type": "number",
+      "multi": false,
+      "unit": "kg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/72",
+      "name": "Hub X",
+      "friendly_id": "stroke_x",
+      "handle": "stroke-x",
+      "description": "Verfahrweg der X-Achse eines kartesischen Roboters (Breite des Arbeitsbereichs).",
+      "question": "How far does the X axis travel?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/73",
+      "name": "Hub Y",
+      "friendly_id": "stroke_y",
+      "handle": "stroke-y",
+      "description": "Verfahrweg der Y-Achse eines kartesischen Roboters (Tiefe des Arbeitsbereichs).",
+      "question": "How far does the Y axis travel?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/74",
+      "name": "Hub Z",
+      "friendly_id": "stroke_z",
+      "handle": "stroke-z",
+      "description": "Vertikaler Verfahrweg eines kartesischen oder Zylinderroboters.",
+      "question": "How far does the vertical axis travel?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/75",
+      "name": "Mindestspannung",
+      "friendly_id": "voltage_min",
+      "handle": "voltage-min",
+      "description": "Niedrigste Versorgungsspannung eines angegebenen Eingangsbereichs. Zusammen mit der Höchstspannung verwendet, wenn der Hersteller einen Bereich statt einer Nennspannung angibt.",
+      "question": "What is the lowest supply voltage it accepts?",
+      "type": "number",
+      "multi": false,
+      "unit": "V"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/76",
+      "name": "Höchstspannung",
+      "friendly_id": "voltage_max",
+      "handle": "voltage-max",
+      "description": "Höchste Versorgungsspannung eines angegebenen Eingangsbereichs.",
+      "question": "What is the highest supply voltage it accepts?",
+      "type": "number",
+      "multi": false,
+      "unit": "V"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/77",
+      "name": "Positionsgenauigkeit",
+      "friendly_id": "position_accuracy",
+      "handle": "position-accuracy",
+      "description": "Horizontale Positionsgenauigkeit eines Positionssensors (bei GNSS mit RTK-Fix), laut Hersteller.",
+      "question": "How accurate is its position?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/78",
+      "name": "Aktualisierungsrate",
+      "friendly_id": "update_rate",
+      "handle": "update-rate",
+      "description": "Maximale Ausgabe- oder Messrate.",
+      "question": "How often does it output a reading?",
+      "type": "number",
+      "multi": false,
+      "unit": "Hz"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/79",
+      "name": "Kursgenauigkeit",
+      "friendly_id": "heading_accuracy",
+      "handle": "heading-accuracy",
+      "description": "Kursgenauigkeit (Gierwinkel) einer IMU oder eines AHRS, laut Hersteller.",
+      "question": "How accurate is its heading?",
+      "type": "number",
+      "multi": false,
+      "unit": "deg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/80",
+      "name": "Lagegenauigkeit",
+      "friendly_id": "attitude_accuracy",
+      "handle": "attitude-accuracy",
+      "description": "Roll- und Nickgenauigkeit einer IMU oder eines AHRS (dynamisch, laut Hersteller).",
+      "question": "How accurate are its roll and pitch?",
+      "type": "number",
+      "multi": false,
+      "unit": "deg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/81",
+      "name": "Kraftmessbereich",
+      "friendly_id": "force_range",
+      "handle": "force-range",
+      "description": "Messbereich eines Kraft-Momenten-Sensors für Kraft (größte Achse, ±).",
+      "question": "What force range does it measure?",
+      "type": "number",
+      "multi": false,
+      "unit": "N"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/82",
+      "name": "Drehmomentmessbereich",
+      "friendly_id": "torque_range",
+      "handle": "torque-range",
+      "description": "Messbereich eines Kraft-Momenten-Sensors für Drehmoment (größte Achse, ±).",
+      "question": "What torque range does it measure?",
+      "type": "number",
+      "multi": false,
+      "unit": "Nm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/83",
+      "name": "Lineargeschwindigkeit",
+      "friendly_id": "linear_speed",
+      "handle": "linear-speed",
+      "description": "Maximale Lineargeschwindigkeit eines Linearaktors.",
+      "question": "How fast does it move?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm/s"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/84",
+      "name": "Greifbereich",
+      "friendly_id": "grip_range",
+      "handle": "grip-range",
+      "description": "Größtes Objekt, das der Greifer greifen kann.",
+      "question": "How large an object can it grasp?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/85",
+      "name": "Medizinische Zulassung",
+      "friendly_id": "medical_clearance",
+      "handle": "medical-clearance",
+      "description": "Märkte, in denen der Roboter laut Hersteller rechtmäßig als Medizinprodukt vermarktet wird. USA: von der FDA freigegeben, zugelassen oder per De-Novo-Verfahren genehmigt oder als 510(k)-befreites Produkt gelistet. Europäische Union: CE-gekennzeichnet als Medizinprodukt. China: von der NMPA zugelassen. Japan: vom MHLW nach Prüfung durch die PMDA zugelassen. Leer, wenn der Hersteller keinen solchen Status angibt.",
+      "question": "In which markets does the maker state it is legally marketed as a medical device?",
+      "type": "enum",
+      "multi": true,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/168",
+          "name": "USA (FDA)",
+          "friendly_id": "medical_clearance__us-fda",
+          "handle": "medical-clearance__us-fda"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/169",
+          "name": "Europäische Union (CE)",
+          "friendly_id": "medical_clearance__eu-ce",
+          "handle": "medical-clearance__eu-ce"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/170",
+          "name": "China (NMPA)",
+          "friendly_id": "medical_clearance__cn-nmpa",
+          "handle": "medical-clearance__cn-nmpa"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/171",
+          "name": "Japan (MHLW / PMDA)",
+          "friendly_id": "medical_clearance__jp-pmda",
+          "handle": "medical-clearance__jp-pmda"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/172",
+          "name": "Sonstige",
+          "friendly_id": "medical_clearance__other",
+          "handle": "medical-clearance__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/86",
+      "name": "Haftprinzip",
+      "friendly_id": "adhesion",
+      "handle": "adhesion",
+      "description": "Wie sich ein fahrender Roboter an Wänden, Tanks, Schiffsrümpfen oder Decken festhält, um daran zu klettern. „Keine“ bei Robotern, die nur auf dem Boden fahren.",
+      "question": "Does it climb by holding on to the surface, and how?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/173",
+          "name": "Keine",
+          "friendly_id": "adhesion__none",
+          "handle": "adhesion__none"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/174",
+          "name": "Magnetisch",
+          "friendly_id": "adhesion__magnetic",
+          "handle": "adhesion__magnetic"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/175",
+          "name": "Vakuum",
+          "friendly_id": "adhesion__vacuum",
+          "handle": "adhesion__vacuum"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/176",
+          "name": "Sonstige",
+          "friendly_id": "adhesion__other",
+          "handle": "adhesion__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/87",
+      "name": "Bauweise",
+      "friendly_id": "construction",
+      "handle": "construction",
+      "description": "Ob ein Exoskelett seine Unterstützungskraft über einen starren Rahmen neben der Gliedmaße überträgt oder über Textilien, Gurte und Seilzüge (ein weicher Exosuit).",
+      "question": "Is it a rigid exoskeleton or a soft exosuit?",
+      "type": "enum",
+      "multi": false,
+      "values": [
+        {
+          "id": "gid://whatrobot/TaxonomyValue/177",
+          "name": "Starr",
+          "friendly_id": "construction__rigid",
+          "handle": "construction__rigid"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/178",
+          "name": "Weich",
+          "friendly_id": "construction__soft",
+          "handle": "construction__soft"
+        },
+        {
+          "id": "gid://whatrobot/TaxonomyValue/179",
+          "name": "Sonstige",
+          "friendly_id": "construction__other",
+          "handle": "construction__other"
+        }
+      ]
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/88",
+      "name": "Außendurchmesser",
+      "friendly_id": "outer_diameter",
+      "handle": "outer-diameter",
+      "description": "Außendurchmesser des biegsamen Abschnitts eines Kontinuumsroboters oder robotischen Katheters; begrenzt, in welche Öffnungen er eingeführt werden kann.",
+      "question": "What is the outer diameter of the bending section?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    }
+  ]
+}

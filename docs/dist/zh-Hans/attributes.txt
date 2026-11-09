@@ -65,24 +65,24 @@ gid://whatrobot/TaxonomyAttribute/63 : 量程
 gid://whatrobot/TaxonomyAttribute/64 : AI 算力
 gid://whatrobot/TaxonomyAttribute/65 : 容量
 gid://whatrobot/TaxonomyAttribute/66 : 遥操作类型
-gid://whatrobot/TaxonomyAttribute/67 : Wingspan
-gid://whatrobot/TaxonomyAttribute/68 : Cruise speed
-gid://whatrobot/TaxonomyAttribute/69 : Flight range
-gid://whatrobot/TaxonomyAttribute/70 : Maximum user weight
-gid://whatrobot/TaxonomyAttribute/71 : Load limit
-gid://whatrobot/TaxonomyAttribute/72 : Stroke X
-gid://whatrobot/TaxonomyAttribute/73 : Stroke Y
-gid://whatrobot/TaxonomyAttribute/74 : Stroke Z
-gid://whatrobot/TaxonomyAttribute/75 : Minimum voltage
-gid://whatrobot/TaxonomyAttribute/76 : Maximum voltage
-gid://whatrobot/TaxonomyAttribute/77 : Position accuracy
-gid://whatrobot/TaxonomyAttribute/78 : Update rate
-gid://whatrobot/TaxonomyAttribute/79 : Heading accuracy
-gid://whatrobot/TaxonomyAttribute/80 : Attitude accuracy
-gid://whatrobot/TaxonomyAttribute/81 : Force range
-gid://whatrobot/TaxonomyAttribute/82 : Torque range
-gid://whatrobot/TaxonomyAttribute/83 : Linear speed
-gid://whatrobot/TaxonomyAttribute/84 : Grip range
+gid://whatrobot/TaxonomyAttribute/67 : 翼展
+gid://whatrobot/TaxonomyAttribute/68 : 巡航速度
+gid://whatrobot/TaxonomyAttribute/69 : 航程
+gid://whatrobot/TaxonomyAttribute/70 : 最大用户体重
+gid://whatrobot/TaxonomyAttribute/71 : 承重上限
+gid://whatrobot/TaxonomyAttribute/72 : X 轴行程
+gid://whatrobot/TaxonomyAttribute/73 : Y 轴行程
+gid://whatrobot/TaxonomyAttribute/74 : Z 轴行程
+gid://whatrobot/TaxonomyAttribute/75 : 最低电压
+gid://whatrobot/TaxonomyAttribute/76 : 最高电压
+gid://whatrobot/TaxonomyAttribute/77 : 定位精度
+gid://whatrobot/TaxonomyAttribute/78 : 更新频率
+gid://whatrobot/TaxonomyAttribute/79 : 航向精度
+gid://whatrobot/TaxonomyAttribute/80 : 姿态精度
+gid://whatrobot/TaxonomyAttribute/81 : 力量程
+gid://whatrobot/TaxonomyAttribute/82 : 力矩量程
+gid://whatrobot/TaxonomyAttribute/83 : 线速度
+gid://whatrobot/TaxonomyAttribute/84 : 夹持范围
 gid://whatrobot/TaxonomyAttribute/85 : 医疗器械准入
 gid://whatrobot/TaxonomyAttribute/86 : 附着方式
 gid://whatrobot/TaxonomyAttribute/87 : 结构类型

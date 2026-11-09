@@ -1,0 +1,61 @@
+# whatrobot taxonomy 2026-01 — CC BY 4.0
+gid://whatrobot/TaxonomyCategory/cp : Komponente
+gid://whatrobot/TaxonomyCategory/cp-1 : Komponente > Endeffektor
+gid://whatrobot/TaxonomyCategory/cp-1-1 : Komponente > Endeffektor > Greifer
+gid://whatrobot/TaxonomyCategory/cp-1-1-1 : Komponente > Endeffektor > Greifer > Fingergreifer
+gid://whatrobot/TaxonomyCategory/cp-1-1-2 : Komponente > Endeffektor > Greifer > Vakuumgreifer
+gid://whatrobot/TaxonomyCategory/cp-1-1-3 : Komponente > Endeffektor > Greifer > Magnetgreifer
+gid://whatrobot/TaxonomyCategory/cp-1-1-4 : Komponente > Endeffektor > Greifer > Soft-Greifer
+gid://whatrobot/TaxonomyCategory/cp-1-2 : Komponente > Endeffektor > Roboterhand
+gid://whatrobot/TaxonomyCategory/cp-1-3 : Komponente > Endeffektor > Werkzeug
+gid://whatrobot/TaxonomyCategory/cp-1-4 : Komponente > Endeffektor > Werkzeugwechsler
+gid://whatrobot/TaxonomyCategory/cp-2 : Komponente > Aktor
+gid://whatrobot/TaxonomyCategory/cp-2-1 : Komponente > Aktor > Gelenkmodul
+gid://whatrobot/TaxonomyCategory/cp-2-2 : Komponente > Aktor > Servo
+gid://whatrobot/TaxonomyCategory/cp-2-3 : Komponente > Aktor > Motor
+gid://whatrobot/TaxonomyCategory/cp-2-4 : Komponente > Aktor > Getriebe
+gid://whatrobot/TaxonomyCategory/cp-2-5 : Komponente > Aktor > Linearaktor
+gid://whatrobot/TaxonomyCategory/cp-3 : Komponente > Sensor
+gid://whatrobot/TaxonomyCategory/cp-3-1 : Komponente > Sensor > Kamera
+gid://whatrobot/TaxonomyCategory/cp-3-2 : Komponente > Sensor > Lidar
+gid://whatrobot/TaxonomyCategory/cp-3-3 : Komponente > Sensor > Kraft-Momenten-Sensor
+gid://whatrobot/TaxonomyCategory/cp-3-4 : Komponente > Sensor > Taktiler Sensor
+gid://whatrobot/TaxonomyCategory/cp-3-5 : Komponente > Sensor > Inertialsensor / Encoder
+gid://whatrobot/TaxonomyCategory/cp-3-6 : Komponente > Sensor > Abstands-/Positionssensor
+gid://whatrobot/TaxonomyCategory/cp-4 : Komponente > Recheneinheit
+gid://whatrobot/TaxonomyCategory/cp-5 : Komponente > Stromversorgung
+gid://whatrobot/TaxonomyCategory/cp-6 : Komponente > Strukturteile
+gid://whatrobot/TaxonomyCategory/cp-7 : Komponente > Teleoperation
+gid://whatrobot/TaxonomyCategory/rb : Roboter
+gid://whatrobot/TaxonomyCategory/rb-1 : Roboter > Roboterarm
+gid://whatrobot/TaxonomyCategory/rb-1-1 : Roboter > Roboterarm > Knickarmroboter
+gid://whatrobot/TaxonomyCategory/rb-1-2 : Roboter > Roboterarm > SCARA-Roboter
+gid://whatrobot/TaxonomyCategory/rb-1-3 : Roboter > Roboterarm > Parallelroboter
+gid://whatrobot/TaxonomyCategory/rb-1-4 : Roboter > Roboterarm > Kartesischer Roboter
+gid://whatrobot/TaxonomyCategory/rb-1-5 : Roboter > Roboterarm > Zylinder- und Polarroboter
+gid://whatrobot/TaxonomyCategory/rb-1-6 : Roboter > Roboterarm > Kontinuumsroboter
+gid://whatrobot/TaxonomyCategory/rb-2 : Roboter > Humanoider Roboter
+gid://whatrobot/TaxonomyCategory/rb-2-1 : Roboter > Humanoider Roboter > Zweibeiniger humanoider Roboter
+gid://whatrobot/TaxonomyCategory/rb-2-2 : Roboter > Humanoider Roboter > Humanoider Roboter mit Radbasis
+gid://whatrobot/TaxonomyCategory/rb-2-3 : Roboter > Humanoider Roboter > Humanoider Roboter mit fester Basis
+gid://whatrobot/TaxonomyCategory/rb-3 : Roboter > Laufroboter
+gid://whatrobot/TaxonomyCategory/rb-3-1 : Roboter > Laufroboter > Vierbeiniger Roboter
+gid://whatrobot/TaxonomyCategory/rb-3-2 : Roboter > Laufroboter > Zweibeiniger Roboter
+gid://whatrobot/TaxonomyCategory/rb-3-3 : Roboter > Laufroboter > Mehrbeiniger Roboter
+gid://whatrobot/TaxonomyCategory/rb-4 : Roboter > Fahrender Roboter
+gid://whatrobot/TaxonomyCategory/rb-4-1 : Roboter > Fahrender Roboter > Radroboter
+gid://whatrobot/TaxonomyCategory/rb-4-2 : Roboter > Fahrender Roboter > Kettenroboter
+gid://whatrobot/TaxonomyCategory/rb-5 : Roboter > Mobiler Manipulator
+gid://whatrobot/TaxonomyCategory/rb-6 : Roboter > Flugroboter
+gid://whatrobot/TaxonomyCategory/rb-6-1 : Roboter > Flugroboter > Multikopter
+gid://whatrobot/TaxonomyCategory/rb-6-2 : Roboter > Flugroboter > Starrflügler
+gid://whatrobot/TaxonomyCategory/rb-6-3 : Roboter > Flugroboter > Hybrid-VTOL
+gid://whatrobot/TaxonomyCategory/rb-7 : Roboter > Wasserroboter
+gid://whatrobot/TaxonomyCategory/rb-7-1 : Roboter > Wasserroboter > ROV
+gid://whatrobot/TaxonomyCategory/rb-7-2 : Roboter > Wasserroboter > AUV
+gid://whatrobot/TaxonomyCategory/rb-7-3 : Roboter > Wasserroboter > USV
+gid://whatrobot/TaxonomyCategory/rb-8 : Roboter > Tragbarer Roboter
+gid://whatrobot/TaxonomyCategory/rb-8-1 : Roboter > Tragbarer Roboter > Exoskelett
+gid://whatrobot/TaxonomyCategory/rb-8-2 : Roboter > Tragbarer Roboter > Prothese
+gid://whatrobot/TaxonomyCategory/rb-9 : Roboter > Stationärer Roboter
+gid://whatrobot/TaxonomyCategory/rb-10 : Roboter > Bausatz

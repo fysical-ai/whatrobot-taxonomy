@@ -1,0 +1,184 @@
+# whatrobot taxonomy — de localisation of attribute values
+# Licence: CC BY 4.0. Keyed by value friendly_id. Localised: name. Inclusion rules stay English.
+# Review state: a field listed under `source` was reviewed by a native reader against the English text with that
+# fingerprint; fields not listed are LLM drafts. Check with: whatrobot-taxonomy l10n status
+---
+segment__hobby: {name: Hobby}
+segment__education: {name: Bildung}
+segment__research: {name: Forschung}
+segment__professional: {name: Gewerblich}
+segment__consumer: {name: Privatkunden}
+segment__other: {name: Sonstige}
+application_group__manufacturing: {name: Fertigung}
+application_group__logistics: {name: Logistik}
+application_group__professional-service: {name: Professionelle Dienstleistungen}
+application_group__consumer: {name: Privatanwender}
+application_group__health: {name: Gesundheit}
+application_group__knowledge: {name: Bildung und Forschung}
+application_group__general: {name: Allgemein}
+application_group__other: {name: Sonstige}
+application__handling: {name: Handhabung}
+application__machine-tending: {name: Maschinenbeschickung}
+application__palletizing: {name: Palettieren}
+application__welding: {name: Schweißen}
+application__assembly: {name: Montage}
+application__painting-dispensing: {name: Lackieren und Dosieren}
+application__machining: {name: Bearbeitung}
+application__inspection-qc: {name: Prüfung und Qualitätskontrolle}
+application__warehouse-logistics: {name: Lagerlogistik}
+application__delivery: {name: Zustellung}
+application__transport: {name: Transport}
+application__professional-cleaning: {name: Gewerbliche Reinigung}
+application__inspection-maintenance: {name: Inspektion und Wartung}
+application__agriculture: {name: Landwirtschaft}
+application__construction: {name: Bau}
+application__security: {name: Sicherheit und Überwachung}
+application__search-rescue: {name: Suche und Rettung}
+application__hospitality-retail: {name: Gastronomie und Handel}
+application__domestic-cleaning: {name: Haushaltsreinigung}
+application__lawn-garden: {name: Rasen und Garten}
+application__pool: {name: Pool}
+application__companionship: {name: Gesellschaft}
+application__entertainment: {name: Unterhaltung}
+application__telepresence: {name: Telepräsenz}
+application__surgery: {name: Chirurgie}
+application__rehabilitation: {name: Rehabilitation}
+application__care-assistance: {name: Pflegeunterstützung}
+application__education: {name: Bildung}
+application__research-platform: {name: Forschungsplattform}
+application__general-purpose: {name: Universell}
+application__other: {name: Sonstige}
+iso_category__industrial: {name: Industrie}
+iso_category__service: {name: Service}
+iso_category__medical: {name: Medizin}
+iso_category__other: {name: Sonstige}
+environment__indoor: {name: Innenbereich}
+environment__outdoor: {name: Außenbereich}
+environment__underwater: {name: Unter Wasser}
+environment__airborne: {name: In der Luft}
+environment__hazardous: {name: Gefährliche Umgebung}
+environment__space: {name: Weltraum}
+environment__other: {name: Sonstige}
+autonomy__teleoperated: {name: Ferngesteuert}
+autonomy__assisted: {name: Assistiert}
+autonomy__semi-autonomous: {name: Teilautonom}
+autonomy__autonomous: {name: Autonom}
+autonomy__other: {name: Sonstige}
+availability__shipping: {name: Lieferbar}
+availability__preorder: {name: Vorbestellbar}
+availability__announced: {name: Angekündigt}
+availability__research-only: {name: Nur für Forschung}
+availability__discontinued: {name: Eingestellt}
+availability__other: {name: Sonstige}
+availability__limited: {name: Begrenzt verfügbar}
+open_source__hardware: {name: Hardware}
+open_source__software: {name: Software}
+open_source__none: {name: Keine}
+open_source__other: {name: Sonstige}
+sdk__ros1: {name: ROS 1}
+sdk__ros2: {name: ROS 2}
+sdk__python: {name: Python}
+sdk__cpp: {name: C++}
+sdk__proprietary: {name: Proprietär}
+sdk__none: {name: Keins}
+sdk__other: {name: Sonstige}
+mounting__floor: {name: Boden}
+mounting__table: {name: Tisch}
+mounting__wall: {name: Wand}
+mounting__ceiling: {name: Decke}
+mounting__mobile: {name: Mobil}
+mounting__other: {name: Sonstige}
+hands_included__none: {name: Keine}
+hands_included__gripper: {name: Greifer}
+hands_included__dexterous-hand: {name: Geschickte Hand}
+hands_included__optional: {name: Optional}
+hands_included__other: {name: Sonstige}
+drive_config__differential: {name: Differentialantrieb}
+drive_config__omnidirectional: {name: Omnidirektional}
+drive_config__ackermann: {name: Ackermann-Lenkung}
+drive_config__tracked: {name: Kettenantrieb}
+drive_config__other: {name: Sonstige}
+navigation__line-following: {name: Linienfolge}
+navigation__marker-based: {name: Markerbasiert}
+navigation__slam: {name: SLAM}
+navigation__none: {name: Keine}
+navigation__other: {name: Sonstige}
+body_region__lower-limb: {name: Untere Extremitäten}
+body_region__upper-limb: {name: Obere Extremitäten}
+body_region__back: {name: Rücken}
+body_region__full-body: {name: Ganzkörper}
+body_region__other: {name: Sonstige}
+flange_standard__iso-9409-1-50: {name: ISO 9409-1-50}
+flange_standard__iso-9409-1-31: {name: ISO 9409-1-31}
+flange_standard__custom: {name: Herstellerspezifisch}
+flange_standard__na: {name: Nicht zutreffend}
+flange_standard__other: {name: Sonstige}
+interface__ethercat: {name: EtherCAT}
+interface__can: {name: CAN}
+interface__modbus-tcp: {name: Modbus TCP}
+interface__rs485: {name: RS-485}
+interface__usb: {name: USB}
+interface__ethernet: {name: Ethernet}
+interface__io-link: {name: IO-Link}
+interface__digital-io: {name: Digitale E/A}
+interface__pneumatic: {name: Pneumatisch}
+interface__other: {name: Sonstige}
+actuation__electric: {name: Elektrisch}
+actuation__pneumatic: {name: Pneumatisch}
+actuation__hydraulic: {name: Hydraulisch}
+actuation__vacuum: {name: Vakuum}
+actuation__passive: {name: Passiv}
+actuation__other: {name: Sonstige}
+reducer_type__harmonic: {name: Harmonic Drive (Wellgetriebe)}
+reducer_type__cycloidal: {name: Zykloidgetriebe}
+reducer_type__rv: {name: RV-Getriebe}
+reducer_type__planetary: {name: Planetengetriebe}
+reducer_type__quasi-direct: {name: Quasi-Direktantrieb}
+reducer_type__none: {name: Keins}
+reducer_type__other: {name: Sonstige}
+bus__ttl: {name: TTL}
+bus__rs485: {name: RS-485}
+bus__can: {name: CAN}
+bus__pwm: {name: PWM}
+bus__other: {name: Sonstige}
+modality__rgb: {name: RGB}
+modality__depth: {name: Tiefe}
+modality__stereo: {name: Stereo}
+modality__thermal: {name: Wärmebild}
+modality__event: {name: Event-basiert}
+modality__other: {name: Sonstige}
+scan_dimensions__2d: {name: 2D}
+scan_dimensions__3d: {name: 3D}
+scan_dimensions__other: {name: Sonstige}
+teleop_type__leader-arm: {name: Leader-Arm}
+teleop_type__haptic-device: {name: Haptisches Eingabegerät}
+teleop_type__vr-rig: {name: VR-System}
+teleop_type__mocap: {name: Motion Capture}
+teleop_type__gamepad: {name: Gamepad}
+teleop_type__other: {name: Sonstige}
+application__mapping-surveying: {name: Kartierung und Vermessung}
+application__lab-automation: {name: Laborautomatisierung}
+segment__clinical: {name: Klinisch}
+teleop_type__handheld-demonstrator: {name: Handgeführter Demonstrator}
+interface__uart: {name: UART / seriell (TTL)}
+interface__i2c: {name: I²C}
+interface__spi: {name: SPI}
+interface__rs232: {name: RS-232}
+interface__rs422: {name: RS-422}
+interface__modbus-rtu: {name: Modbus RTU}
+interface__analog: {name: Analog}
+autonomy__programmed: {name: Programmiert}
+drive_config__skid-steer: {name: Kompaktlenkung (Skid-Steer)}
+drive_config__self-balancing: {name: Selbstbalancierend}
+medical_clearance__us-fda: {name: USA (FDA)}
+medical_clearance__eu-ce: {name: Europäische Union (CE)}
+medical_clearance__cn-nmpa: {name: China (NMPA)}
+medical_clearance__jp-pmda: {name: Japan (MHLW / PMDA)}
+medical_clearance__other: {name: Sonstige}
+adhesion__none: {name: Keine}
+adhesion__magnetic: {name: Magnetisch}
+adhesion__vacuum: {name: Vakuum}
+adhesion__other: {name: Sonstige}
+construction__rigid: {name: Starr}
+construction__soft: {name: Weich}
+construction__other: {name: Sonstige}
