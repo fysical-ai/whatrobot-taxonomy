@@ -29,6 +29,8 @@
     - uses_components
     - interface
     - voltage
+    - voltage_min
+    - voltage_max
   examples: []
 
 # -------------------------------------------------------- cp-1 end-effector
@@ -40,7 +42,7 @@
   aliases: [end of arm tooling, EOAT, end effector]
   inclusion_rule: Mounts to a robot wrist or tool flange and performs grasping or a process.
   children: [cp-1-1, cp-1-2, cp-1-3, cp-1-4]
-  attributes: [flange_standard, actuation, voltage_min, voltage_max]
+  attributes: [flange_standard, actuation]
   examples: []
 
 - id: cp-1-1
