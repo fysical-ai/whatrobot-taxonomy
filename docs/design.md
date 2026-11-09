@@ -635,7 +635,7 @@ Proposed after the batch that filled every empty leaf (catalogue PR #13); accept
 | A gripper or tool sold with its own controller, feeder or pump is one product; the parts are listed in the record | Robotiq screwdriving kit, SRT soft gripper kit. |
 | `rb-1-4` example `igus-drylin-gantry` → `igus-dle-rg-0001` | The example now exists as a catalogue record. |
 
-### 10.3 Review of the multi-dimensional taxonomy, snake and soft robots, medical scope (2026-11-09)
+### 10.4 Review of the multi-dimensional taxonomy, snake and soft robots, medical scope (2026-11-09)
 
 Proposed while comparing the taxonomy with a six-axis "multi-dimensional" robot taxonomy (morphology, autonomy, human–robot interaction, actuation and scale, multi-agent organisation, application); accepted by Simon 2026-11-09. The structure stands: the other axes are already attributes. Additive except where noted.
 

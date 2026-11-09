@@ -254,7 +254,7 @@
 - {handle: unitree-go2-battery, name: Unitree Go2 battery, expected: cp-5, facts: {component_kind: power}}
 - {handle: robotiq-wrist-camera-mount, name: Robotiq wrist camera mount, expected: cp-6, facts: {component_kind: structure}}
 - {handle: gello, name: GELLO leader arm, expected: cp-7, facts: {component_kind: teleoperation}}
-# ------------------------------- review 2026-11-09: continuum arm, carts (design notes §10.3)
+# ------------------------------- review 2026-11-09: continuum arm, carts (design notes §10.4)
 - {handle: intuitive-ion, name: 'Intuitive Ion endoluminal system (robotic catheter on a patient cart)', expected: rb-1-6, facts: {fixed_base: true, manipulates: true, arm_kinematics: continuum, wheels_or_tracks: none}, attributes: {segment: [clinical], application: [surgery], iso_category: medical, medical_clearance: [us-fda, eu-ce, cn-nmpa], outer_diameter: 3.5}}
 - {handle: oc-robotics-snake-arm, name: 'OC Robotics snake-arm robot (illustrative)', expected: rb-1-6, facts: {fixed_base: true, manipulates: true, arm_kinematics: continuum}, attributes: {segment: [professional], application: [inspection-maintenance]}}
 - {handle: cobot-on-trolley, name: 'Articulated cobot on a push trolley (illustrative)', expected: rb-1-1, facts: {fixed_base: true, manipulates: true, arm_kinematics: articulated, wheels_or_tracks: none}, attributes: {collaborative: true}}

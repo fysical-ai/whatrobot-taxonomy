@@ -1079,7 +1079,7 @@
   unit: mm
   multi: false
 
-# ------------------------------------------------ review 2026-11-09 (design notes §10.3)
+# ------------------------------------------------ review 2026-11-09 (design notes §10.4)
 - id: 85
   name: Medical clearance
   friendly_id: medical_clearance
