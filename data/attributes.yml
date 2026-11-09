@@ -187,6 +187,7 @@
   multi: false
   values:
     - availability__shipping
+    - availability__limited
     - availability__preorder
     - availability__announced
     - availability__research-only
@@ -289,6 +290,8 @@
       description: "Static or standing load (legged or mobile robot not moving)."
     - handle: per-arm
       description: "One arm of a humanoid or dual-arm robot."
+    - handle: bimanual
+      description: "Both arms together, for a dual-arm arm or a mobile manipulator with two arms (their default is one arm at the flange). For a humanoid, both arms together is already the default."
     - handle: towing
       description: "Towed load (AMR / tugger)."
     - handle: shear
@@ -683,6 +686,8 @@
       description: "Maximum gripping force."
     - handle: continuous
       description: "Continuous / nominal grip force only."
+    - handle: fingertip
+      description: "Force at a single fingertip or pinch, when the maker gives no whole-hand or jaw figure."
 
 - id: 50
   name: Stroke
@@ -861,7 +866,7 @@
   name: AI performance
   friendly_id: ai_tops
   handle: ai-tops
-  description: Peak AI compute performance.
+  description: Peak AI compute performance. On a robot, its onboard compute; recorded only where the maker publishes it.
   question: What peak AI performance does the spec sheet state?
   type: number
   unit: TOPS

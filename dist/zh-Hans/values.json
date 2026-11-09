@@ -404,6 +404,12 @@
       "handle": "availability__other"
     },
     {
+      "id": "gid://whatrobot/TaxonomyValue/164",
+      "name": "Limited",
+      "friendly_id": "availability__limited",
+      "handle": "availability__limited"
+    },
+    {
       "id": "gid://whatrobot/TaxonomyValue/68",
       "name": "硬件",
       "friendly_id": "open_source__hardware",

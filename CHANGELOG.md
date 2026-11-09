@@ -4,6 +4,13 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Batch-2 rulings (2026-11-09)
+- New value (id 164): availability `limited` (deployed only to selected customers: pilots, early access or invitation; no open sale).
+- New bases: `payload` `bimanual` (both arms of a dual-arm arm or mobile manipulator); `grip_force` `fingertip`.
+- Binding: `ai_tops` on the robot root (`rb`), so every robot leaf binds it.
+- Wording: humanoid (`rb-2`, `rb-2-2`) is decided by being designed to look human (a screen face counts; legs ending in wheels are legs); prosthesis (`rb-8-2`) includes microprocessor-controlled joints. Category ids, the classifier and the tie-break order are unchanged.
+- Design notes: §3.5 conversions extended to imperial units (every figure in the taxonomy's ISO unit); §10.3 records the rulings. zh-Hans entries for the changed texts and new value are not written yet (validation warns).
+
 ### Review: continuum arm, crawlers, medical scope (2026-11-09)
 - New leaf `rb-1-6` Continuum arm (60 categories): arms that bend along their length — a continuous backbone, or more bending segments than independently driven joints (snake-arm robots, robotic catheters, vine robots). Classifier fact `arm_kinematics: continuum`; a continuum body counts as manipulating even if it only carries a camera. The articulated rule now excludes them. IFR industrial: unmapped; Google `1470` and Shopify `bi-17` as the other arms.
 - 4 new attributes (ids 85–88): `medical_clearance` (robot root; `us-fda`, `eu-ce`, `cn-nmpa`, `jp-pmda`), `adhesion` (ground; `none`, `magnetic`, `vacuum`), `construction` (exoskeleton; `rigid`, `soft`), `outer_diameter` (continuum arm, mm).
