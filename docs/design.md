@@ -64,7 +64,7 @@ rb-1-2  │  ├─ scara            Two parallel vertical rotary joints + verti
 rb-1-3  │  ├─ parallel         Parallel kinematics (delta, hexapod/Stewart, cable-driven)
 rb-1-4  │  ├─ cartesian        Three prismatic axes (linear, gantry, XYZ)
 rb-1-5  │  ├─ cylindrical      Cylindrical & spherical: rotary base + prismatic reach; lift is prismatic (cylindrical) or a tilt (spherical/polar)
-rb-1-6  │  └─ continuum        Bends along its length: continuous backbone or many short segments driven from the base (snake-arms, robotic catheters)
+rb-1-6  │  └─ continuum        Bends along its length: continuous backbone, or more bending segments than driven joints (snake-arms, robotic catheters)
 rb-2    ├─ humanoid            Torso + two arms + head in human proportion
 rb-2-1  │  ├─ bipedal          Walks on two legs
 rb-2-2  │  ├─ wheeled-base     Humanoid upper body on a wheeled or tracked base
@@ -108,12 +108,14 @@ Apply in order; the first rule that matches decides the branch.
 6. **Mobile manipulator** — ground base + arm(s) as one product → `mobile-manipulator`. Base and arm sold separately = two entries (`ground` + `arm`) linked by `compatible_with`.
 7. **Ground** — wheels or tracks, no arm.
 
-   Rules 6 and 7 count only wheels or tracks the robot drives itself on while working. Casters or a cart used to move it between jobs (a surgical patient cart, a cobot on a trolley) do not count, so such a robot is classified as fixed-base (rule 8 or 9).
+   Wherever the rules mention wheels or tracks (rules 3, 6 and 7), they count only when the robot moves itself on them as part of its task, including between work stations (a mobile manipulator that drives to a station and parks while its arm works is mobile). Wheels or casters on which people move it between jobs (a surgical patient cart, a cobot on a trolley, a humanoid torso on a caster stand), even with power assist, do not count, and nor do passive wheels on a robot that moves by bending its body. Such robots are fixed-base.
+
+   An arm "manipulates" when it positions a tool, gripper or sensor head in space, so an inspection arm that only carries a camera is still an arm.
 
 8. **Arm** — fixed base, manipulates.
 9. **Stationary** — fixed base, does not manipulate, not humanoid in form.
 
-Unplaced: limbless locomotors — snake, inchworm and peristaltic (worm) robots that move by changing their body shape — have no legs, wheels, medium or fixed base and raise *unclassifiable*; a branch will be added when a purchasable case exists. Everything else called a snake or crawler robot already has a place: wheeled or tracked crawlers (pipe and tank inspection crawlers, snake-shaped robots on tracks) are `ground`; swimming snakes are `aquatic` (rule 5); snake-arms and vine robots, which reach in from a fixed base, are `continuum` arms.
+Unplaced: limbless locomotors — snake, inchworm and peristaltic (worm) robots that move by changing their body shape — have no legs, wheels, medium or fixed base and raise *unclassifiable*; a branch will be added when a purchasable case exists. Passive wheels do not change that, and inchworm or peristaltic pipe robots are in this group too. Everything else called a snake or crawler robot already has a place: crawlers on driven wheels or tracks (pipe and tank inspection crawlers, snake-shaped robots on tracks) are `ground`; swimming snakes are `aquatic` (rule 5); snake-arms and vine robots, which reach in from a fixed base, are `continuum` arms.
 
 ### 2.2 Things that are deliberately NOT branches
 
@@ -160,14 +162,14 @@ Shopify attributes are enum-only. Robots need numbers with units, so the attribu
 | `model` | text | | Official model name |
 | `variant` | text | | Sub-model / configuration, if listed separately |
 | `aliases` | text, multi | | Other names people search for |
-| `segment` | enum, multi | `hobby`, `education`, `research`, `professional`, `consumer` | Which of these groups would plausibly buy this at list price? (D3) |
+| `segment` | enum, multi | `hobby`, `education`, `research`, `professional`, `consumer`, `clinical` | Which of these groups would plausibly buy this at list price? (D3; `clinical` added 2026-11-09) |
 | `application_group` | enum, multi | derived from `application` | — |
 | `application` | enum, multi | see 3.4 | What is it marketed to do? |
 | `iso_category` | enum | `industrial`, `service`, `medical` | ISO 8373 intended use, as positioned by the manufacturer |
 | `environment` | enum, multi | `indoor`, `outdoor`, `underwater`, `airborne`, `hazardous`, `space` | Where is it rated to operate? |
 | `autonomy` | enum | `teleoperated`, `programmed`, `assisted`, `semi-autonomous`, `autonomous` | Highest level of unsupervised operation out of the box (`programmed`: runs a taught or coded sequence without sensing its surroundings) |
 | `collaborative` | bool | | Does the maker state it meets the ISO 10218-1:2025 (or ISO/TS 15066) requirements for collaborative applications? |
-| `medical_clearance` | enum, multi | `us-fda`, `eu-ce`, `cn-nmpa`, `jp-pmda` | Where is it cleared or approved as a medical device, according to the maker? |
+| `medical_clearance` | enum, multi | `us-fda`, `eu-ce`, `cn-nmpa`, `jp-pmda` | In which markets does the maker state it is legally marketed as a medical device? (US: FDA cleared, approved, De Novo or 510(k)-exempt listing; EU: CE-marked; China: NMPA; Japan: MHLW after PMDA review) |
 | `availability` | enum | `shipping`, `preorder`, `announced`, `research-only`, `discontinued` | Can you buy it today? |
 | `price` | number + `currency`, `price_date`, `price_source` | | List price as published (date and source required) |
 | `release_year` | number | year | First commercial availability |
@@ -363,7 +365,7 @@ These become `data/examples.yml` and run in CI: each entry asserts the expected 
 | Shadow Dexterous Hand | `cp-1-2` hand | finger_count: 5 |
 | Dynamixel XM430 | `cp-2-2` servo | bus: ttl / rs485 |
 | LEGO Spike Prime | `rb-10` kit | segment: education |
-| Intuitive Ion | `rb-1-6` arm › continuum (patient cart counts as fixed base) | segment: clinical; application: surgery; medical_clearance: us-fda |
+| Intuitive Ion | `rb-1-6` arm › continuum (patient cart counts as fixed base) | segment: clinical; application: surgery; medical_clearance: us-fda, eu-ce, cn-nmpa |
 
 (Product facts are illustrative for the classification test only; verified with dated sources before the first stable release.)
 
@@ -639,14 +641,14 @@ Proposed while comparing the taxonomy with a six-axis "multi-dimensional" robot 
 
 | Change | Why |
 |---|---|
-| New leaf `rb-1-6` Continuum arm (binds `outer_diameter`, mm); the articulated rule excludes arms that bend along their length | Snake-arm robots have many rotary segments and would otherwise land in articulated; robotic catheters have no discrete joints and fitted no leaf. IFR industrial: unmapped; Google and Shopify: as the other arms |
-| Rules 6–7: only wheels or tracks the robot drives on while working count; casters or a cart moved between jobs make it fixed-base | Surgical patient carts, cobots on trolleys |
+| New leaf `rb-1-6` Continuum arm (binds `outer_diameter`, mm). Test: a continuous backbone, or more bending segments than independently driven joints; it wins over articulated; an arm whose every joint has its own drive stays articulated; with a positioning arm plus continuum instrument, the instrument decides. A continuum body counts as manipulating even if it only carries a camera | Snake-arm robots have many rotary segments and would otherwise land in articulated; robotic catheters have no discrete joints and fitted no leaf. IFR industrial: unmapped; Google and Shopify: as the other arms |
+| Rules 3, 6, 7: wheels or tracks count only when the robot moves itself on them as part of its task, including between work stations; wheels or casters people move it on (even power-assisted) and passive wheels do not | Surgical patient carts, cobots on trolleys, humanoid torsos on caster stands; mobile manipulators that park at a station stay mobile |
 | Unplaced robots narrowed to limbless locomotors (snake, inchworm, peristaltic); wheeled and tracked crawlers are ground robots, swimming snakes aquatic, snake-arms and vine robots continuum arms | "Crawler" in industry means a wheeled or tracked inspection vehicle |
 | `adhesion` on ground robots: `none`, `magnetic`, `vacuum` | Wall-, tank- and hull-climbing inspection crawlers |
 | `construction` on exoskeletons: `rigid`, `soft` | Soft exosuits and rigid exoskeletons differ in what buyers check (comfort, assistance) |
-| `medical_clearance` on every robot: `us-fda`, `eu-ce`, `cn-nmpa`, `jp-pmda` | Medical and surgical robots are in scope as reference entries; availability differs by market |
+| `medical_clearance` on every robot: `us-fda`, `eu-ce`, `cn-nmpa`, `jp-pmda` — markets where the maker states it is legally marketed as a medical device (510(k)-exempt listing counts in the US) | Medical and surgical robots are in scope as reference entries; availability differs by market |
 | `collaborative` reworded to ISO 10218-1:2025 ("collaborative applications"; the earlier ISO/TS 15066 still accepted). Same identifier and evidence bar: the maker must state it | ISO 10218:2025 drops the term "collaborative robot": an application, not a robot, is confirmed as collaborative |
 | `autonomy` value `programmed` | Arms and gantries that run taught programs without sensing had no fitting value |
-| `drive_config` values `skid-steer`, `self-balancing` | Four- and six-wheel field robots describe themselves as skid-steer; two-wheel balancing robots had no value |
+| `drive_config` values `skid-steer`, `self-balancing`; every value now defined in the attribute description; the value is what the maker states | Four- and six-wheel field robots describe themselves as skid-steer; two-wheel balancing robots had no value |
 | Parallel arm rule, description and aliases cover cable-driven parallel robots | Cables pulled by winches are parallel kinematic chains |
 | Medical and surgical robots in scope as reference entries (§2): classified by body plan; medical use is `iso_category: medical`, user type `clinical`, application group `health` and `medical_clearance` | The guide aims to be comprehensive; powered prostheses were already in |

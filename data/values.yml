@@ -678,7 +678,7 @@
   friendly_id: medical_clearance__cn-nmpa
   handle: medical-clearance__cn-nmpa
 - id: 170
-  name: Japan (PMDA)
+  name: Japan (MHLW / PMDA)
   friendly_id: medical_clearance__jp-pmda
   handle: medical-clearance__jp-pmda
 - id: 171

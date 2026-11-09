@@ -67,7 +67,7 @@ range: {name: 量程, description: 最大测量距离。}
 ai_tops: {name: AI 算力, description: 峰值 AI 计算性能。}
 capacity: {name: 容量, description: 能量容量。}
 teleop_type: {name: 遥操作类型, description: 遥操作设备的类型。}
-medical_clearance: {name: 医疗器械准入, description: 制造商声明该机器人作为医疗器械合法销售的市场：美国（FDA 批准、许可或注册）、欧盟（医疗器械 CE 标志）、中国（NMPA 注册）或日本（PMDA）。未声明时留空。}
+medical_clearance: {name: 医疗器械准入, description: 制造商声明该机器人作为医疗器械合法上市的市场。美国：FDA 许可、批准或 De Novo 授予，或作为 510(k) 豁免器械登记；欧盟：带有医疗器械 CE 标志；中国：经 NMPA 批准；日本：经 PMDA 审评后由厚生劳动省批准。制造商未声明时留空。}
 adhesion: {name: 附着方式, description: 地面机器人如何吸附在墙面、罐体、船体或天花板上进行攀爬。只在地面行驶的机器人为“无”。}
 construction: {name: 结构类型, description: 外骨骼是通过肢体旁的刚性框架传递助力，还是通过织物、绑带和拉索传递（柔性外骨骼服）。}
 outer_diameter: {name: 外径, description: 连续体机械臂或机器人导管弯曲段的外径，决定其能进入的开口大小。}

@@ -224,7 +224,7 @@
             "industrial arm",
             "cobot"
           ],
-          "inclusion_rule": "Fixed base (floor, table, wall, ceiling, a separately sold mobile base, or a cart or stand that is only moved between jobs); manipulates; not humanoid in form.",
+          "inclusion_rule": "Fixed base (floor, table, wall, ceiling, a separately sold mobile base, or a cart or stand that people move between jobs); manipulates, meaning it positions a tool, gripper or sensor head in space; not humanoid in form.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
           "children": [
             {
@@ -452,7 +452,7 @@
             "desktop arm",
             "anthropomorphic arm"
           ],
-          "inclusion_rule": "At least three rotary joints in series. Collaborative safety features do not change the category (attribute collaborative). An arm that bends along its length through many short segments driven from the base is a continuum arm (rb-1-6), even if each segment is a rotary joint.",
+          "inclusion_rule": "At least three rotary joints in series. Collaborative safety features do not change the category (attribute collaborative). An arm with more bending segments than independently driven joints, bending along its length, is a continuum arm (rb-1-6), even if each segment is a rotary joint. An arm whose every joint has its own drive, even through cables from the base, stays here.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
           "children": [],
           "ancestors": [
@@ -1511,11 +1511,10 @@
             "snake arm",
             "continuum robot",
             "elephant-trunk robot",
-            "hyper-redundant arm",
             "robotic catheter",
             "vine robot"
           ],
-          "inclusion_rule": "Bends along its length rather than at a few discrete joints — a continuous backbone, or a chain of many short segments moved by tendons, cables, pull wires or concentric tubes from an actuator pack at the base. Takes precedence over articulated even when the segments are rotary joints. A soft body that grows from its tip (vine robot) is included. Snake robots that move themselves along the ground are not arms (design notes §2.1, unplaced).",
+          "inclusion_rule": "Bends along its length rather than at a few independently driven joints — a continuous backbone, or a chain of segments bent together by tendons, cables, pull wires, concentric tubes or fluid pressure, so that it has more bending segments than independently driven joints. Takes precedence over articulated even when the segments are rotary joints; an arm whose every joint has its own drive, even through cables from the base, is articulated. When a positioning arm and a continuum instrument are sold as one system, the continuum instrument decides (robotic catheters); short cable-driven instrument wrists do not (multiport surgical robots stay articulated). Included even if it only carries a camera or sensor head, and when the body grows from its tip (vine robot). Snake robots that move themselves along the ground are not arms (design notes §2.1, unplaced).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-1",
           "children": [],
           "ancestors": [
@@ -2134,7 +2133,7 @@
             "wheeled humanoid",
             "mobile humanoid"
           ],
-          "inclusion_rule": "Humanoid torso, two arms AND a head in human proportion, mounted on a wheeled or tracked base instead of legs. A bimanual torso with a sensor mast but no head, or without human proportions, is a mobile manipulator (rb-5).",
+          "inclusion_rule": "Humanoid torso, two arms AND a head in human proportion, mounted on a wheeled or tracked base that it drives itself on, instead of legs (a torso on casters that people push is fixed-base, rb-2-3). A bimanual torso with a sensor mast but no head, or without human proportions, is a mobile manipulator (rb-5).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb-2",
           "children": [],
           "ancestors": [
@@ -3403,7 +3402,7 @@
             "pipe crawler",
             "wall-climbing robot"
           ],
-          "inclusion_rule": "Drives itself on wheels or tracks while working; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm). Casters or a cart used only to move a robot between jobs do not count. Wheeled or tracked crawlers, including snake-shaped ones on tracks, are ground robots.",
+          "inclusion_rule": "Moves itself on wheels or tracks; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm). Wheels or tracks count only when the robot moves itself on them as part of its task, including between work stations; wheels or casters on which people move it between jobs (a surgical patient cart, a cobot on a trolley), even with power assist, do not count, and nor do passive wheels on a robot that moves by bending its body. Wheeled or tracked crawlers, including snake-shaped ones on driven tracks, are ground robots; inchworm and peristaltic pipe robots are not (unplaced).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
           "children": [
             {
@@ -4027,7 +4026,7 @@
             "MoMa",
             "arm on wheels"
           ],
-          "inclusion_rule": "Base that drives itself on wheels or tracks while working, and arm(s), sold together as one product. A base and an arm sold separately are two entries linked by compatible_with. An arm on casters or a cart that is only moved between jobs (a surgical patient cart, a cobot on a trolley) is an arm (rb-1).",
+          "inclusion_rule": "Base that moves itself on wheels or tracks (including between work stations, then parks while the arm works) and arm(s), sold together as one product. A base and an arm sold separately are two entries linked by compatible_with. An arm on casters or a cart that people move between jobs, even with power assist (a surgical patient cart, a cobot on a trolley), is an arm (rb-1).",
           "parent_id": "gid://whatrobot/TaxonomyCategory/rb",
           "children": [],
           "ancestors": [

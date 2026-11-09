@@ -45,7 +45,7 @@
   handle: arm
   description: Fixed-base manipulator that positions an end-effector in space.
   aliases: [robot arm, robotic arm, manipulator, industrial arm, cobot]
-  inclusion_rule: Fixed base (floor, table, wall, ceiling, a separately sold mobile base, or a cart or stand that is only moved between jobs); manipulates; not humanoid in form.
+  inclusion_rule: Fixed base (floor, table, wall, ceiling, a separately sold mobile base, or a cart or stand that people move between jobs); manipulates, meaning it positions a tool, gripper or sensor head in space; not humanoid in form.
   children: [rb-1-1, rb-1-2, rb-1-3, rb-1-4, rb-1-5, rb-1-6]
   attributes: [axes, reach, repeatability, arm_count, mounting]
   examples: []
@@ -56,7 +56,7 @@
   handle: articulated
   description: Serial arm with three or more rotary joints, including 6/7-axis industrial arms, cobots and desktop arms.
   aliases: [6-axis arm, 7-axis arm, cobot, collaborative robot, desktop arm, anthropomorphic arm]
-  inclusion_rule: At least three rotary joints in series. Collaborative safety features do not change the category (attribute collaborative). An arm that bends along its length through many short segments driven from the base is a continuum arm (rb-1-6), even if each segment is a rotary joint.
+  inclusion_rule: At least three rotary joints in series. Collaborative safety features do not change the category (attribute collaborative). An arm with more bending segments than independently driven joints, bending along its length, is a continuum arm (rb-1-6), even if each segment is a rotary joint. An arm whose every joint has its own drive, even through cables from the base, stays here.
   children: []
   attributes: []
   examples: [universal-robots-ur5e, dobot-magician]
@@ -110,8 +110,8 @@
   friendly_id: robot.arm.continuum
   handle: continuum
   description: Arm that bends along its length — a continuous flexible backbone or many short segments driven from the base — such as snake-arm robots and robotic catheters.
-  aliases: [snake-arm robot, snake arm, continuum robot, elephant-trunk robot, hyper-redundant arm, robotic catheter, vine robot]
-  inclusion_rule: Bends along its length rather than at a few discrete joints — a continuous backbone, or a chain of many short segments moved by tendons, cables, pull wires or concentric tubes from an actuator pack at the base. Takes precedence over articulated even when the segments are rotary joints. A soft body that grows from its tip (vine robot) is included. Snake robots that move themselves along the ground are not arms (design notes §2.1, unplaced).
+  aliases: [snake-arm robot, snake arm, continuum robot, elephant-trunk robot, robotic catheter, vine robot]
+  inclusion_rule: Bends along its length rather than at a few independently driven joints — a continuous backbone, or a chain of segments bent together by tendons, cables, pull wires, concentric tubes or fluid pressure, so that it has more bending segments than independently driven joints. Takes precedence over articulated even when the segments are rotary joints; an arm whose every joint has its own drive, even through cables from the base, is articulated. When a positioning arm and a continuum instrument are sold as one system, the continuum instrument decides (robotic catheters); short cable-driven instrument wrists do not (multiport surgical robots stay articulated). Included even if it only carries a camera or sensor head, and when the body grows from its tip (vine robot). Snake robots that move themselves along the ground are not arms (design notes §2.1, unplaced).
   children: []
   attributes: [outer_diameter]
   examples: [intuitive-ion, oc-robotics-snake-arm]
@@ -145,7 +145,7 @@
   handle: wheeled-base
   description: Humanoid upper body on a wheeled or tracked base.
   aliases: [wheeled humanoid, mobile humanoid]
-  inclusion_rule: Humanoid torso, two arms AND a head in human proportion, mounted on a wheeled or tracked base instead of legs. A bimanual torso with a sensor mast but no head, or without human proportions, is a mobile manipulator (rb-5).
+  inclusion_rule: Humanoid torso, two arms AND a head in human proportion, mounted on a wheeled or tracked base that it drives itself on, instead of legs (a torso on casters that people push is fixed-base, rb-2-3). A bimanual torso with a sensor mast but no head, or without human proportions, is a mobile manipulator (rb-5).
   children: []
   attributes: [drive_config]
   examples: [1x-eve, agibot-a2-w]
@@ -213,7 +213,7 @@
   handle: ground
   description: Robot that moves on wheels or tracks, with no legs and no integrated arm.
   aliases: [mobile robot, mobile base, rover, AMR, AGV, UGV, inspection crawler, pipe crawler, wall-climbing robot]
-  inclusion_rule: Drives itself on wheels or tracks while working; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm). Casters or a cart used only to move a robot between jobs do not count. Wheeled or tracked crawlers, including snake-shaped ones on tracks, are ground robots.
+  inclusion_rule: Moves itself on wheels or tracks; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm). Wheels or tracks count only when the robot moves itself on them as part of its task, including between work stations; wheels or casters on which people move it between jobs (a surgical patient cart, a cobot on a trolley), even with power assist, do not count, and nor do passive wheels on a robot that moves by bending its body. Wheeled or tracked crawlers, including snake-shaped ones on driven tracks, are ground robots; inchworm and peristaltic pipe robots are not (unplaced).
   children: [rb-4-1, rb-4-2]
   attributes: [has_arm, drive_config, navigation, max_speed, adhesion]
   examples: []
@@ -247,7 +247,7 @@
   handle: mobile-manipulator
   description: Wheeled or tracked base with one or more arms, sold as one product, non-humanoid in form.
   aliases: [mobile manipulator, MoMa, arm on wheels]
-  inclusion_rule: Base that drives itself on wheels or tracks while working, and arm(s), sold together as one product. A base and an arm sold separately are two entries linked by compatible_with. An arm on casters or a cart that is only moved between jobs (a surgical patient cart, a cobot on a trolley) is an arm (rb-1).
+  inclusion_rule: Base that moves itself on wheels or tracks (including between work stations, then parks while the arm works) and arm(s), sold together as one product. A base and an arm sold separately are two entries linked by compatible_with. An arm on casters or a cart that people move between jobs, even with power assist (a surgical patient cart, a cobot on a trolley), is an arm (rb-1).
   children: []
   attributes: [drive_config, navigation, max_speed, axes, reach, arm_count]   # base + arm specs apply; payload is already universal on rb
   examples: [hello-robot-stretch-3, tiago-pro]

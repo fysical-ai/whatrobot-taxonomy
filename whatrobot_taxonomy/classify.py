@@ -6,15 +6,17 @@ specification: the first rule that matches decides. data/examples.yml is the reg
 Robot facts (all optional; missing = false / none):
   is_kit, worn_on_body, prosthesis, humanoid_form bool
   legs                                           int   (0, 2, 4, 6+)
-  wheels_or_tracks                               none | wheels | tracks  (wheels or tracks it drives itself on while
-                                                 working; casters or a cart only used to move it between jobs = none)
+  wheels_or_tracks                               none | wheels | tracks  (only wheels or tracks it moves itself on as part
+                                                 of its task, incl. between work stations; casters or a cart people move
+                                                 it on, even power-assisted, and passive wheels = none; all rules)
   medium                                         ground | air | water
   aerial_lift                                    multirotor | fixed-wing | hybrid-vtol
   aquatic_mode                                   rov | auv | usv
-  integrated_arm, manipulates, fixed_base        bool
+  integrated_arm, manipulates, fixed_base        bool  (manipulates: positions a tool, gripper or sensor head)
   arm_kinematics                                 articulated | scara | parallel | cartesian | cylindrical | continuum
-                                                 (continuum: bends along its length, continuous backbone or many short
-                                                 segments driven from the base; wins over articulated)
+                                                 (continuum: bends along its length — continuous backbone, or more bending
+                                                 segments than independently driven joints; wins over articulated; a
+                                                 continuum body positions its tip, so it counts as manipulating)
 
 Not placed: limbless locomotors (snake, inchworm, peristaltic robots that move by changing body shape) have no legs,
 wheels, medium or fixed base and raise Unclassifiable until a purchasable case exists (design notes §2.1).
@@ -109,8 +111,8 @@ def classify_robot(f: Facts) -> str:
         return "rb-4-1"
     if wheels == "tracks":
         return "rb-4-2"
-    # 8. Arm — fixed base, manipulates
-    if f.get("fixed_base") and f.get("manipulates"):
+    # 8. Arm — fixed base, manipulates (a continuum body positions its tip, camera-only or not)
+    if f.get("fixed_base") and (f.get("manipulates") or f.get("arm_kinematics") == "continuum"):
         kin = f.get("arm_kinematics")
         if kin not in ARM_LEAF:
             raise Unclassifiable("arm needs arm_kinematics")

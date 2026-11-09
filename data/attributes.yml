@@ -509,7 +509,7 @@
   name: Drive configuration
   friendly_id: drive_config
   handle: drive-config
-  description: How a ground base steers and propels itself.
+  description: "How a ground base steers and propels itself, as the maker states it. Differential: two independently driven wheels, turning by speed difference. Skid-steer: four or more fixed wheels driven as left and right sides, turning by skidding. Omnidirectional: mecanum, omni or swerve wheels. Ackermann: car-like steered wheels. Tracked: continuous tracks. Self-balancing: two wheels on one axle kept upright by active balance."
   question: What drive configuration does the spec sheet state?
   type: enum
   multi: false
@@ -1084,8 +1084,8 @@
   name: Medical clearance
   friendly_id: medical_clearance
   handle: medical-clearance
-  description: "Markets where the maker states the robot is legally sold as a medical device: FDA cleared, approved, granted or registered (US); CE-marked as a medical device (EU); registered with NMPA (China) or PMDA (Japan). Empty when no such status is stated."
-  question: Where is it cleared or approved as a medical device, according to the maker?
+  description: "Markets where the maker states the robot is legally marketed as a medical device. United States: FDA cleared, approved or De Novo-granted, or listed as a 510(k)-exempt device. European Union: CE-marked as a medical device. China: approved by NMPA. Japan: approved by MHLW after PMDA review. Empty when the maker states no such status."
+  question: In which markets does the maker state it is legally marketed as a medical device?
   type: enum
   multi: true
   values:

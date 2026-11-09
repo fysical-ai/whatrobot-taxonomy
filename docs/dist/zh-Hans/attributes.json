@@ -84,7 +84,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/155",
-          "name": "Clinical",
+          "name": "临床",
           "friendly_id": "segment__clinical",
           "handle": "segment__clinical"
         },
@@ -475,7 +475,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/164",
-          "name": "程序化",
+          "name": "程序控制",
           "friendly_id": "autonomy__programmed",
           "handle": "autonomy__programmed"
         },
@@ -2120,8 +2120,8 @@
       "name": "医疗器械准入",
       "friendly_id": "medical_clearance",
       "handle": "medical-clearance",
-      "description": "制造商声明该机器人作为医疗器械合法销售的市场：美国（FDA 批准、许可或注册）、欧盟（医疗器械 CE 标志）、中国（NMPA 注册）或日本（PMDA）。未声明时留空。",
-      "question": "Where is it cleared or approved as a medical device, according to the maker?",
+      "description": "制造商声明该机器人作为医疗器械合法上市的市场。美国：FDA 许可、批准或 De Novo 授予，或作为 510(k) 豁免器械登记；欧盟：带有医疗器械 CE 标志；中国：经 NMPA 批准；日本：经 PMDA 审评后由厚生劳动省批准。制造商未声明时留空。",
+      "question": "In which markets does the maker state it is legally marketed as a medical device?",
       "type": "enum",
       "multi": true,
       "values": [
@@ -2145,7 +2145,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/170",
-          "name": "日本（PMDA）",
+          "name": "日本（厚生劳动省/PMDA）",
           "friendly_id": "medical_clearance__jp-pmda",
           "handle": "medical-clearance__jp-pmda"
         },

@@ -927,7 +927,7 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/155",
-      "name": "Clinical",
+      "name": "临床",
       "friendly_id": "segment__clinical",
       "handle": "segment__clinical"
     },
@@ -981,7 +981,7 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/164",
-      "name": "程序化",
+      "name": "程序控制",
       "friendly_id": "autonomy__programmed",
       "handle": "autonomy__programmed"
     },
@@ -1017,7 +1017,7 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/170",
-      "name": "日本（PMDA）",
+      "name": "日本（厚生劳动省/PMDA）",
       "friendly_id": "medical_clearance__jp-pmda",
       "handle": "medical-clearance__jp-pmda"
     },
