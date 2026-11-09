@@ -5389,7 +5389,7 @@
           "full_name": "机器人 > 水上/水下机器人 > ROV 遥控潜水器",
           "friendly_id": "robot.aquatic.rov",
           "handle": "rov",
-          "description": "通过脐带缆连接的遥控水下航行器。",
+          "description": "通过脐带缆与水面相连的水下航行器，无论由人遥控还是自主运行。",
           "aliases": [
             "水下无人机",
             "遥控水下机器人",
@@ -6550,7 +6550,7 @@
           "full_name": "机器人 > 固定式机器人",
           "friendly_id": "robot.stationary",
           "handle": "stationary",
-          "description": "固定基座、不进行操作的机器人，如无臂的桌面陪伴或社交机器人。",
+          "description": "固定基座、不进行操作的非人形机器人，如无臂的桌面陪伴或社交机器人。",
           "aliases": [
             "桌面机器人",
             "陪伴机器人",
@@ -8399,7 +8399,7 @@
           "full_name": "部件 > 末端执行器 > 工艺工具",
           "friendly_id": "component.end-effector.tool",
           "handle": "tool",
-          "description": "执行工艺的末端执行器，如焊枪、主轴、螺丝刀、点胶头或相机头。",
+          "description": "执行工艺的末端执行器，如焊枪、主轴、螺丝刀或点胶头。安装在手腕上的相机属于传感器（cp-3-1），不属于工具。",
           "aliases": [
             "焊枪",
             "电主轴",
