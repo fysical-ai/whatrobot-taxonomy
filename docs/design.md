@@ -265,7 +265,7 @@ cp-1-1-1  │  │  ├─ finger          Mechanical fingers/jaws: parallel, an
 cp-1-1-2  │  │  ├─ vacuum          Suction cups, foam, area grippers
 cp-1-1-3  │  │  ├─ magnetic
 cp-1-1-4  │  │  └─ soft            Compliant / inflatable fingers
-cp-1-2    │  ├─ hand               Anthropomorphic, ≥4 fingers incl. opposable thumb, multi-DOF
+cp-1-2    │  ├─ hand               Anthropomorphic, ≥4 fingers incl. opposable thumb (actuated or underactuated)
 cp-1-3    │  ├─ tool               Process tools: welding torch, spindle, screwdriver, dispenser (a wrist camera is a sensor)
 cp-1-4    │  └─ tool-changer       Quick-change couplings
 cp-2      ├─ actuator
@@ -289,7 +289,7 @@ cp-7      └─ teleoperation         Leader arms, haptic devices, VR / motion-
 
 ### 4.1 Tie-break rules
 
-1. **Hand vs gripper** — ≥4 fingers with an opposable thumb and ≥6 *actuated* DOF → `hand`; otherwise `gripper`.
+1. **Hand vs gripper** — ≥4 fingers with an opposable thumb → `hand`, however many actuators drive them (underactuated hands count; ruling 2026-11-10, §10.5); otherwise `gripper`.
 2. **Gripper leaf** — by gripping principle (fingers / vacuum / magnetic / soft), not by actuation. Actuation is an attribute. Bernoulli and other non-contact suction → `vacuum`; granular-jamming → `soft`.
 3. **Joint-module vs servo** — the bus does not decide (RS-485 and CAN appear on both sides). Integrated reducer + controller, sold as a robot joint (robot-grade packaging, torque rating, EtherCAT/CAN/high-speed RS-485) → `joint-module` (`joint_grade: true`); packaged hobby-grade servo on a daisy-chain bus → `servo`. A motor with a gearhead but no driver (gearmotor) → `motor`.
 4. **Tool with gripping function** — by primary marketed purpose.
@@ -665,3 +665,15 @@ Proposed while comparing the taxonomy with a six-axis "multi-dimensional" robot 
 | `drive_config` values `skid-steer`, `self-balancing`; every value now defined in the attribute description; the value is what the maker states | Four- and six-wheel field robots describe themselves as skid-steer; two-wheel balancing robots had no value |
 | Parallel arm rule, description and aliases cover cable-driven parallel robots | Cables pulled by winches are parallel kinematic chains |
 | Medical and surgical robots in scope as reference entries (§2): classified by body plan; medical use is `iso_category: medical`, user type `clinical`, application group `health` and `medical_clearance` | The guide aims to be comprehensive; powered prostheses were already in |
+
+### 10.5 Underactuated hands (2026-11-10)
+
+Raised by catalogue batch 5 (qb SoftHand Industry: 5 fingers, 1 motor; Prensilia IH2 Azzurra: 5 actuated of 11 joints; Mia Hand Industrial: 3 actuated of 4), which the ≥6-actuated-DoF test filed as finger grippers. Decided by Simon 2026-11-10: underactuated hands are hands.
+
+| Change | Why |
+|---|---|
+| Hand (`cp-1-2`): ≥4 fingers including an opposable thumb, however many actuators drive them; the ≥6 actuated-DoF condition is dropped. Gripper (`cp-1-1`) wording follows | Anthropomorphic hands with coupled or tendon-driven fingers are sold and searched for as robot hands; filing them with parallel-jaw grippers misleads |
+| `dof` keeps its meaning: actuated degrees of freedom. Total joint count goes in notes | One number per attribute; buyers compare actuator counts |
+| Classification example `underactuated-five-finger-hand` (5 fingers, opposable thumb, `dof: 1` → `cp-1-2`) | Guards the rule |
+
+The Shadow Dexterous Hand Extra Lite (3 digits) stays a finger gripper: the four-finger condition is unchanged.
