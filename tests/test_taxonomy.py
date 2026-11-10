@@ -97,6 +97,7 @@ def test_examples_classify(tx):
         ({"fixed_base": True, "manipulates": False}, "rb-9"),
         ({"legs": 4, "humanoid_form": False, "medium": "ground"}, "rb-3-1"),
         ({"component_kind": "end-effector", "grasps": True, "fingers": 3, "opposable_thumb": True, "dof": 4, "gripping_principle": "finger"}, "cp-1-1-1"),
+        ({"component_kind": "end-effector", "grasps": True, "fingers": 5, "opposable_thumb": True, "dof": 1, "gripping_principle": "finger"}, "cp-1-2"),  # underactuated hand
         ({"component_kind": "actuator", "motion": "rotary", "integrated_control": True, "has_reducer": True, "industrial_bus": False}, "cp-2-2"),
     ],
 )

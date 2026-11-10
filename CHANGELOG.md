@@ -4,6 +4,11 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Underactuated hands (2026-11-10)
+- Hand (`cp-1-2`) no longer requires six actuated degrees of freedom: at least four fingers including an opposable thumb is a hand, however many actuators drive them (coupled or tendon-driven fingers count). The gripper (`cp-1-1`) rule follows. Classifier changed; category ids and tie-break order unchanged. `dof` still means actuated DoF.
+- New classification example `underactuated-five-finger-hand` (84).
+- Design notes §4.1 and §10.5; zh-Hans draft of the `cp-1-2` description updated (LLM draft).
+
 ### Batch-2 rulings (2026-11-09)
 - New value (id 164): availability `limited` (deployed only to selected customers: pilots, early access or invitation; no open sale).
 - New bases: `payload` `bimanual` (both arms of a dual-arm arm or mobile manipulator); `grip_force` `fingertip`.
