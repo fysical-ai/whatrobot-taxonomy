@@ -90,7 +90,7 @@ mounting__mobile: {name: Mobil}
 mounting__other: {name: Sonstige}
 hands_included__none: {name: Keine}
 hands_included__gripper: {name: Greifer}
-hands_included__dexterous-hand: {name: Geschickte Hand}
+hands_included__dexterous-hand: {name: Roboterhand}
 hands_included__optional: {name: Optional}
 hands_included__other: {name: Sonstige}
 drive_config__differential: {name: Differentialantrieb}
@@ -129,7 +129,7 @@ actuation__hydraulic: {name: Hydraulisch}
 actuation__vacuum: {name: Vakuum}
 actuation__passive: {name: Passiv}
 actuation__other: {name: Sonstige}
-reducer_type__harmonic: {name: Harmonic Drive (Wellgetriebe)}
+reducer_type__harmonic: {name: Wellgetriebe}
 reducer_type__cycloidal: {name: Zykloidgetriebe}
 reducer_type__rv: {name: RV-Getriebe}
 reducer_type__planetary: {name: Planetengetriebe}

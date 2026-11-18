@@ -642,10 +642,10 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyAttribute/19",
-      "name": "质量",
+      "name": "重量",
       "friendly_id": "mass",
       "handle": "mass",
-      "description": "规格表标明的产品质量。",
+      "description": "规格表标明的产品重量。",
       "question": "What is the specified mass?",
       "type": "number",
       "multi": false,

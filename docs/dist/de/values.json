@@ -525,7 +525,7 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/87",
-      "name": "Geschickte Hand",
+      "name": "Roboterhand",
       "friendly_id": "hands_included__dexterous-hand",
       "handle": "hands-included__dexterous-hand"
     },
@@ -759,7 +759,7 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/126",
-      "name": "Harmonic Drive (Wellgetriebe)",
+      "name": "Wellgetriebe",
       "friendly_id": "reducer_type__harmonic",
       "handle": "reducer-type__harmonic"
     },

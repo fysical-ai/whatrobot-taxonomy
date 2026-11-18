@@ -29,7 +29,7 @@ gid://whatrobot/TaxonomyAttribute/27 : Achsen
 gid://whatrobot/TaxonomyAttribute/28 : Reichweite
 gid://whatrobot/TaxonomyAttribute/29 : Wiederholgenauigkeit
 gid://whatrobot/TaxonomyAttribute/30 : Anzahl Arme
-gid://whatrobot/TaxonomyAttribute/31 : Montage
+gid://whatrobot/TaxonomyAttribute/31 : Montageart
 gid://whatrobot/TaxonomyAttribute/32 : Höhe
 gid://whatrobot/TaxonomyAttribute/33 : Freiheitsgrade gesamt
 gid://whatrobot/TaxonomyAttribute/34 : Hände enthalten

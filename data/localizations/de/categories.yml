@@ -43,15 +43,15 @@ cp-1-1-1: {name: Fingergreifer, description: 'Greifer mit mechanischen Fingern o
 cp-1-1-2: {name: Vakuumgreifer, description: 'Greifer, der durch Unterdruck hält, darunter Saugnäpfe, Schaumstoff- und Flächengreifer.', aliases: [Sauggreifer, Saugnapfgreifer, Flächengreifer, Vakuumgreifer]}
 cp-1-1-3: {name: Magnetgreifer, description: 'Greifer, der eisenhaltige Objekte mit Magnetkraft hält.', aliases: [Magnetgreifer, Elektromagnetgreifer]}
 cp-1-1-4: {name: Soft-Greifer, description: Greifer mit nachgiebigen oder aufblasbaren Fingern., aliases: [Soft Gripper, weicher Greifer, pneumatischer Fingergreifer]}
-cp-1-2: {name: Roboterhand, description: Menschenähnlicher Endeffektor mit vier oder mehr Fingern einschließlich eines gegenüberstellbaren Daumens und mehreren Freiheitsgraden., aliases: [Roboterhand, geschickte Hand, humanoide Hand, Fünffingerhand]}
+cp-1-2: {name: Roboterhand, description: 'Menschenähnlicher Endeffektor mit vier oder mehr Fingern einschließlich eines gegenüberstellbaren Daumens, voll- oder unteraktuiert.', aliases: [Roboterhand, geschickte Hand, humanoide Hand, Fünffingerhand, unteraktuierte Hand]}
 cp-1-3: {name: Werkzeug, description: 'Prozess-Endeffektor wie Schweißbrenner, Spindel, Schrauber oder Dosierer. Eine am Handgelenk montierte Kamera ist ein Sensor (cp-3-1), kein Werkzeug.', aliases: [Prozesswerkzeug, Roboterwerkzeug, Schweißbrenner, Schraubwerkzeug, Spindel]}
 cp-1-4: {name: Werkzeugwechsler, description: Schnellwechselkupplung zwischen Roboterhandgelenk und austauschbaren Endeffektoren., aliases: [Werkzeugwechsler, Schnellwechsler, Schnellwechselsystem]}
-cp-2: {name: Aktor, description: 'Gerät, das die Bewegung eines Robotergelenks oder einer Achse erzeugt.', aliases: [Aktoren, Antriebe, Antriebstechnik]}
+cp-2: {name: Aktor, description: 'Gerät, das die Bewegung eines Robotergelenks oder einer Achse erzeugt.', aliases: [Aktoren, Aktuator, Aktuatoren, Antriebe, Antriebstechnik]}
 cp-2-1: {name: Gelenkmodul, description: 'Integrierte Dreheinheit aus Motor, Getriebe, Encoder und Treiber.', aliases: [Gelenkmodul, Robotergelenk, Aktormodul, integrierter Antrieb]}
 cp-2-2: {name: Servo, description: Hobby- oder Smart-Servo mit eingebauter Regelung und verkettbarem Bus., aliases: [Smart-Servo, Bus-Servo, Modellbauservo, serieller Servo]}
 cp-2-3: {name: Motor, description: 'Elektromotor ohne Getriebe oder integrierte Regelung, etwa BLDC-, Schritt- oder Einbaumotor (frameless).', aliases: [BLDC-Motor, Schrittmotor, Einbaumotor, Torquemotor]}
-cp-2-4: {name: Getriebe, description: 'Untersetzungsgetriebe, etwa Wellgetriebe (Harmonic Drive), Zykloid-/RV-Getriebe oder Planetengetriebe.', aliases: [Getriebe, Wellgetriebe, Harmonic Drive, Zykloidgetriebe, RV-Getriebe, Planetengetriebe]}
-cp-2-5: {name: Linearaktor, description: 'Aktor für geradlinige Bewegung, etwa mit Rollen- oder Kugelgewindetrieb, Pneumatik- oder Hydraulikzylinder.', aliases: [Linearaktor, Elektrozylinder, Rollengewindetrieb, Pneumatikzylinder, Linearantrieb]}
+cp-2-4: {name: Getriebe, description: 'Untersetzungsgetriebe, etwa Wellgetriebe, Zykloid-/RV-Getriebe oder Planetengetriebe.', aliases: [Getriebe, Wellgetriebe, Harmonic Drive, Zykloidgetriebe, RV-Getriebe, Planetengetriebe]}
+cp-2-5: {name: Linearaktor, description: 'Aktor für geradlinige Bewegung, etwa mit Rollen- oder Kugelgewindetrieb, Pneumatik- oder Hydraulikzylinder.', aliases: [Linearaktor, Linearaktuator, Elektrozylinder, Rollengewindetrieb, Pneumatikzylinder, Linearantrieb]}
 cp-3: {name: Sensor, description: 'Gerät, das den Roboter oder seine Umgebung misst.', aliases: [Sensoren, Sensorik]}
 cp-3-1: {name: Kamera, description: 'Bildsensor, darunter RGB-, Tiefen-, Stereo-, Wärmebild- und Event-Kameras.', aliases: [Tiefenkamera, Stereokamera, RGB-D-Kamera, Industriekamera, Event-Kamera]}
 cp-3-2: {name: Lidar, description: 'Laserbasierter Entfernungssensor, 2D oder 3D.', aliases: [LiDAR, Laserscanner, Laserentfernungsmesser]}

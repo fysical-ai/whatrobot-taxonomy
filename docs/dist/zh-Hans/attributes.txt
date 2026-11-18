@@ -17,7 +17,7 @@ gid://whatrobot/TaxonomyAttribute/15 : 价格日期
 gid://whatrobot/TaxonomyAttribute/16 : 价格来源
 gid://whatrobot/TaxonomyAttribute/17 : 发布年份
 gid://whatrobot/TaxonomyAttribute/18 : 国家
-gid://whatrobot/TaxonomyAttribute/19 : 质量
+gid://whatrobot/TaxonomyAttribute/19 : 重量
 gid://whatrobot/TaxonomyAttribute/20 : 负载
 gid://whatrobot/TaxonomyAttribute/21 : 电池续航
 gid://whatrobot/TaxonomyAttribute/22 : 防护等级

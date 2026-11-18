@@ -21,7 +21,7 @@ price_date: {name: 价格日期, description: 观察到该价格的日期。}
 price_source: {name: 价格来源, description: 观察到该价格的网址。}
 release_year: {name: 发布年份, description: 首次商业化供货的年份。}
 country: {name: 国家, description: 制造商总部所在国家（ISO 3166-1 两位代码）。}
-mass: {name: 质量, description: 规格表标明的产品质量。}
+mass: {name: 重量, description: 规格表标明的产品重量。}
 payload: {name: 负载, description: 额定负载。机械臂：腕部；移动机器人：台面；末端执行器：所持物体。}
 battery_runtime: {name: 电池续航, description: 制造商标称的单次充电运行时间。}
 ip_rating: {name: 防护等级, description: IEC 60529 防护等级，如 IP54。}

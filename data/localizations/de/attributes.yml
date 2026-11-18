@@ -33,7 +33,7 @@ axes: {name: Achsen, description: 'Anzahl der gesteuerten Achsen. Arm: Gelenke. 
 reach: {name: Reichweite, description: Maximale Reichweite des Arms.}
 repeatability: {name: Wiederholgenauigkeit, description: Positionswiederholgenauigkeit laut Datenblatt.}
 arm_count: {name: Anzahl Arme, description: Anzahl der Arme am Produkt.}
-mounting: {name: Montage, description: 'Lagen, in denen ein Arm montiert werden kann.'}
+mounting: {name: Montageart, description: 'Lagen, in denen ein Arm montiert werden kann.'}
 height: {name: Höhe, description: Höhe im Stand.}
 dof_total: {name: Freiheitsgrade gesamt, description: 'Freiheitsgrade insgesamt, ohne Hände.'}
 hands_included: {name: Hände enthalten, description: Welche Endeffektoren mit dem Roboter geliefert werden.}
