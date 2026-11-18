@@ -4,6 +4,9 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Danish removed (2026-11-18)
+- Locale `da` removed: `data/localizations/da/` and its distribution files. The Danish text was an unreviewed machine draft from 2026-11-09 and was never published on whatro.bot. Danish may return later as a new locale; nothing else changes (ids, English data, `de`, `zh-Hans`).
+
 ### Term evidence pass: de, zh-Hans (2026-11-18)
 - New `data/localizations/<locale>/evidence.yml` for `de` and `zh-Hans`: where each checked term was seen (manufacturer, reseller, standards and trade pages, with URL), with a status of confirmed, changed or open. A record only; the tooling does not load it. 28 German and 32 Chinese terms checked so far.
 - `de` changes on that evidence: reducer type `harmonic` is "Wellgetriebe" (was "Harmonic Drive (Wellgetriebe)"; a maker's name is not used as the generic label); attribute `mounting` is "Montageart" (was "Montage", the same word as the application Assembly); hands-included `dexterous-hand` is "Roboterhand" (was "Geschickte Hand"). "Aktuator", "Aktuatoren" and "Linearaktuator" added as search terms.
