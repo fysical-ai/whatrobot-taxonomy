@@ -161,6 +161,7 @@ category.rb-3-1:
   sources:
     - https://www.dlr.de/de/rm/forschung/robotersysteme/laufroboter/bert
     - https://www.wissenschaft.de/technik-digitales/vierbeiner-auf-kontrollgang/
+    - https://unchainedrobotics.de/produkte
 category.cp-1-2:
   term: Roboterhand
   status: confirmed
@@ -171,6 +172,7 @@ category.cp-1-4:
   status: confirmed
   sources:
     - https://content2.smcetech.com/pdf/RMH-B_DE.pdf
+    - https://unchainedrobotics.de/produkte
 category.cp-2:
   term: Aktor
   status: open
@@ -191,3 +193,32 @@ category.cp-3-3:
   sources:
     - https://patents.google.com/patent/AT395124B/de
   note: Only the variant "Kraft-Moment-Sensor" was found (a patent text). Needs a maker page (Schunk, ATI, Bota) before it counts as confirmed.
+category.rb-2:
+  term: Humanoider Roboter
+  status: confirmed
+  sources:
+    - https://unchainedrobotics.de/produkte
+  note: Seen as the shop category "Humanoide Roboter & Vierbeinige Roboter".
+category.cp-1-1:
+  term: Greifer
+  status: confirmed
+  sources:
+    - https://unchainedrobotics.de/produkte
+    - https://www.festo.com/de/en/e/products/landing-pages-id_326973
+category.cp-1-1-1:
+  term: Fingergreifer
+  status: confirmed
+  also: [Finger-Greifer]
+  sources:
+    - https://unchainedrobotics.de/produkte
+category.cp-1-1-2:
+  term: Vakuumgreifer
+  status: confirmed
+  also: [Vakuum-Greifer]
+  sources:
+    - https://unchainedrobotics.de/produkte
+category.cp-3-1:
+  term: Kamera
+  status: confirmed
+  sources:
+    - https://unchainedrobotics.de/produkte

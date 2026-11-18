@@ -9,6 +9,7 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 - `de` changes on that evidence: reducer type `harmonic` is "Wellgetriebe" (was "Harmonic Drive (Wellgetriebe)"; a maker's name is not used as the generic label); attribute `mounting` is "Montageart" (was "Montage", the same word as the application Assembly); hands-included `dexterous-hand` is "Roboterhand" (was "Geschickte Hand"). "Aktuator", "Aktuatoren" and "Linearaktuator" added as search terms.
 - `zh-Hans` change: attribute `mass` is 重量 (was 质量), as on datasheets.
 - `de` description of Hand (`cp-1-2`) brought up to the current English (underactuated hands). The `da` draft of that field still follows the earlier English.
+- Second batch (same day): category names checked against a German robot marketplace and Chinese maker documents; 33 German and 37 Chinese terms now have evidence. No term changed. New open item: zh-Hans Vacuum gripper (真空吸盘 is also the word for the suction cup itself).
 - All fields remain unreviewed machine drafts.
 
 ### Underactuated hands (2026-11-10)

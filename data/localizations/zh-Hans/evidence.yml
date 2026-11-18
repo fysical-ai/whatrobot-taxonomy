@@ -157,6 +157,7 @@ category.rb-3-1:
   status: confirmed
   sources:
     - https://castjournals.cast.org.cn/joweb/kjdb/CN/PDF/1242134091525599941
+    - https://dataclouds.cninfo.com.cn/sjother2/documents/2026/2026-05-25/3d7fc0538abe281340a95c9c77a90525.pdf
 category.cp-1-1:
   term: 夹爪
   status: confirmed
@@ -170,11 +171,13 @@ category.cp-1-2:
   sources:
     - https://damodev.csdn.net/6afab939e5f4ca4eff91c2e5.html
     - https://www.bilibili.com/read/cv47823651
+    - https://dataclouds.cninfo.com.cn/sjother2/documents/2026/2026-05-25/3d7fc0538abe281340a95c9c77a90525.pdf
 category.cp-2-1:
   term: 关节模组
   status: confirmed
   sources:
     - https://damodev.csdn.net/6a75a725662f9a54cb99720a.html
+    - https://dataclouds.cninfo.com.cn/sjother2/documents/2026/2026-05-25/3d7fc0538abe281340a95c9c77a90525.pdf
 category.cp-2-2:
   term: 舵机
   status: confirmed
@@ -194,12 +197,45 @@ category.rb-5:
   note: No maker page checked yet. 复合机器人 is listed as a search term; which of the two buyers use as the category name is a language doubt.
 category.cp-1-4:
   term: 快换装置
-  status: open
-  sources: []
-  note: Not yet seen on a maker page.
+  status: confirmed
+  also: [快换盘]
+  sources:
+    - https://damodev.csdn.net/6ae01cbf49ed150a32da2170.html
+    - https://damodev.csdn.net/6a865d55662f9a54cb9eb9b8.html
+  note: Trade articles use 快换装置 and, for the wrist-side unit, 快换盘. Not yet seen on a maker's own page.
 category.cp-3-3:
   term: 力/力矩传感器
   status: open
   also: [六维力传感器]
   sources: []
   note: Not yet seen on a maker page.
+category.rb-2:
+  term: 人形机器人
+  status: confirmed
+  sources:
+    - https://dataclouds.cninfo.com.cn/sjother2/documents/2026/2026-05-25/3d7fc0538abe281340a95c9c77a90525.pdf
+  note: Unitree's listing document names its product lines 人形机器人 and 四足机器人, and its components 关节模组 and 灵巧手.
+category.rb-3:
+  term: 足式机器人
+  status: confirmed
+  sources:
+    - https://www.worldrobotconference.com/profile/robot/download/2026/07/23/20260723162124000433_20260723162124A829.pdf
+  note: Unitree's brochure describes its robots as 足式 / 人形机器人.
+category.cp-3-2:
+  term: 激光雷达
+  status: confirmed
+  sources:
+    - https://m.tech.china.com/articles/20260828/202608281952597.html
+category.cp-2:
+  term: 执行器
+  status: confirmed
+  sources:
+    - https://www.smcworld.com/webcatalog/zh-cn/gripper-for-collaborative-robots
+  note: SMC's Chinese catalogue lists 电动执行器/电缸.
+category.cp-1-1-2:
+  term: 真空吸盘
+  status: open
+  also: [真空夹持器, 真空夹爪]
+  sources:
+    - https://onrobot.com/zh/chanpin/vg10diandongzhenkongjiachiqi
+  note: OnRobot's Chinese page calls the gripper 真空夹持器 and uses 真空吸盘 for the suction cups on it. The category name may need to be 真空夹爪 or 真空夹持器; language doubt for the translator session.
