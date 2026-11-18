@@ -9,7 +9,7 @@ variant: {name: 版本, description: 制造商单独列出的子型号或配置�
 aliases: {name: 别名, description: 人们搜索时使用的其他名称。}
 segment: {name: 用户类型, description: 可能以标价购买该产品的用户类型：业余爱好、教育、科研、专业/商用、消费者、临床。}
 application_group: {name: 应用领域, description: 两级应用词表的上层；由应用值推导得出。}
-application: {name: 应用, description: 产品所宣传的用途。}
+application: {name: 应用, description: 产品所宣传的用途。每个应用只属于一个应用领域。}
 iso_category: {name: ISO 8373 类别, description: 制造商定位的 ISO 8373:2021 用途类别。}
 environment: {name: 环境, description: 产品额定可运行的环境。}
 autonomy: {name: 自主性, description: 出厂即支持的最高无人监督运行级别。程序控制：执行示教或编程的动作序列，不感知周围环境（大多数工业机械臂）。}
@@ -17,7 +17,7 @@ collaborative: {name: 协作, description: 制造商声明该机器人满足 ISO
 availability: {name: 供货状态, description: 现在是否可以购买。}
 price: {name: 价格, description: 公布的标价。须附带币种、日期和来源。}
 currency: {name: 币种, description: 价格的 ISO 4217 货币代码。}
-price_date: {name: 价格日期, description: 观察到该价格的日期。}
+price_date: {name: 价格日期, description: 观察到该价格的日期（ISO 8601）。}
 price_source: {name: 价格来源, description: 观察到该价格的网址。}
 release_year: {name: 发布年份, description: 首次商业化供货的年份。}
 country: {name: 国家, description: 制造商总部所在国家（ISO 3166-1 两位代码）。}

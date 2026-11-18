@@ -190,11 +190,15 @@ category.cp-2-4:
   sources:
     - https://www.chinabaogao.com/market/202602/778243.html
 category.rb-5:
-  term: 移动操作机器人
-  status: open
-  also: [复合机器人]
-  sources: []
-  note: No maker page checked yet. 复合机器人 is listed as a search term; which of the two buyers use as the category name is a language doubt.
+  term: 复合机器人
+  status: changed
+  was: 移动操作机器人
+  also: [移动协作机器人, 移动操作机器人]
+  sources:
+    - https://damodev.csdn.net/6a8565e310ee7a33f29ccc4e.html
+    - https://damodev.csdn.net/6a4b6517662f9a54cb8a43f6.html
+    - https://pdfs.cir.cn/JiXieDianZi/22/复合机器人的发展前景_3620822.pdf
+  note: Makers' articles and a market report all name the product class 复合机器人 (a mobile AGV/AMR base combined with an arm). 移动操作机器人 was not seen in any of them and stays as a search term.
 category.cp-1-4:
   term: 快换装置
   status: confirmed
@@ -205,10 +209,13 @@ category.cp-1-4:
   note: Trade articles use 快换装置 and, for the wrist-side unit, 快换盘. Not yet seen on a maker's own page.
 category.cp-3-3:
   term: 力/力矩传感器
-  status: open
-  also: [六维力传感器]
-  sources: []
-  note: Not yet seen on a maker page.
+  status: confirmed
+  also: [六维力传感器, 六轴力传感器, 六维力/力矩传感器]
+  sources:
+    - https://schunk.com/cn/zh/zi-dong-hua-ji-shu/li-jue/torukusensa/ft/c/PGR_1680
+    - https://www.worldrobotconference.com/profile/robot/download/2025/06/26/2025 Force Sensor Product catalog_20250626104353A040.pdf
+    - https://damodev.csdn.net/6a438676662f9a54cb86dc40.html
+  note: Schunk's Chinese site writes 6 轴力/力矩传感器. Chinese makers (宇立, 柯力) call their products 六维力传感器 or 六轴力传感器. DeepL and Google both gave 力矩传感器, which drops the force half.
 category.rb-2:
   term: 人形机器人
   status: confirmed
@@ -233,9 +240,22 @@ category.cp-2:
     - https://www.smcworld.com/webcatalog/zh-cn/gripper-for-collaborative-robots
   note: SMC's Chinese catalogue lists 电动执行器/电缸.
 category.cp-1-1-2:
-  term: 真空吸盘
-  status: open
-  also: [真空夹持器, 真空夹爪]
+  term: 真空夹爪
+  status: changed
+  was: 真空吸盘
+  also: [真空夹持器, 真空吸附单元, 真空吸盘]
   sources:
+    - https://www.smcworld.com/webcatalog/zh-cn/vacuum-equipment/gripper-unit-for-collaborative-robots
     - https://onrobot.com/zh/chanpin/vg10diandongzhenkongjiachiqi
-  note: OnRobot's Chinese page calls the gripper 真空夹持器 and uses 真空吸盘 for the suction cups on it. The category name may need to be 真空夹爪 or 真空夹持器; language doubt for the translator session.
+  note: 真空吸盘 is the suction cup. SMC's Chinese catalogue calls the gripper 真空夹爪 or 真空吸附单元 and lists 吸盘 as a part of it; OnRobot calls the gripper 真空夹持器. 真空夹爪 also matches the sibling names (手指式夹爪, 磁力夹爪).
+attribute.range:
+  term: 量程
+  status: confirmed
+  sources:
+    - https://www.worldrobotconference.com/profile/robot/download/2025/06/26/（已压缩）柯力机器人传感器_20250626143336A177.pdf
+value.availability__preorder:
+  term: 预购
+  status: changed
+  was: 预订
+  sources: []
+  note: No web evidence gathered. DeepL and Google both give 预购 (buying before release); 预订 reads as reserving or booking.

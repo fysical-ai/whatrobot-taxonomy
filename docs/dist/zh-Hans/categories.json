@@ -37,7 +37,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyCategory/rb-5",
-              "name": "移动操作机器人"
+              "name": "复合机器人"
             },
             {
               "id": "gid://whatrobot/TaxonomyCategory/rb-6",
@@ -4122,8 +4122,8 @@
         {
           "id": "gid://whatrobot/TaxonomyCategory/rb-5",
           "level": 1,
-          "name": "移动操作机器人",
-          "full_name": "机器人 > 移动操作机器人",
+          "name": "复合机器人",
+          "full_name": "机器人 > 复合机器人",
           "friendly_id": "robot.mobile-manipulator",
           "handle": "mobile-manipulator",
           "description": "轮式或履带式底盘配备一个或多个机械臂、作为单一产品销售的非人形机器人。",
@@ -7273,7 +7273,7 @@
             },
             {
               "id": "gid://whatrobot/TaxonomyCategory/cp-1-1-2",
-              "name": "真空吸盘"
+              "name": "真空夹爪"
             },
             {
               "id": "gid://whatrobot/TaxonomyCategory/cp-1-1-3",
@@ -7640,13 +7640,14 @@
         {
           "id": "gid://whatrobot/TaxonomyCategory/cp-1-1-2",
           "level": 3,
-          "name": "真空吸盘",
-          "full_name": "部件 > 末端执行器 > 夹爪 > 真空吸盘",
+          "name": "真空夹爪",
+          "full_name": "部件 > 末端执行器 > 夹爪 > 真空夹爪",
           "friendly_id": "component.end-effector.gripper.vacuum",
           "handle": "vacuum",
           "description": "通过吸力抓取的夹爪，包括吸盘、海绵和面吸式。",
           "aliases": [
-            "真空夹爪",
+            "真空吸盘",
+            "真空夹持器",
             "吸盘夹具",
             "海绵吸盘"
           ],

@@ -10,6 +10,7 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 - `zh-Hans` change: attribute `mass` is 重量 (was 质量), as on datasheets.
 - `de` description of Hand (`cp-1-2`) brought up to the current English (underactuated hands). The `da` draft of that field still follows the earlier English.
 - Second batch (same day): category names checked against a German robot marketplace and Chinese maker documents; 33 German and 37 Chinese terms now have evidence. No term changed. New open item: zh-Hans Vacuum gripper (真空吸盘 is also the word for the suction cup itself).
+- Engine comparison (same day): all 535 fields were also translated by DeepL and Google Cloud Translation, without a glossary, and compared with the drafts. Changes on that comparison and on further maker research: `de` Ground robot is "Bodenroboter" (was "Fahrender Roboter"); `zh-Hans` Mobile manipulator is 复合机器人 (was 移动操作机器人), Vacuum gripper is 真空夹爪 (was 真空吸盘, the word for the suction cup), availability `preorder` is 预购 (was 预订). Two `zh-Hans` descriptions completed (`application`, `price_date`). 39 German and 39 Chinese terms now have evidence.
 - All fields remain unreviewed machine drafts.
 
 ### Underactuated hands (2026-11-10)

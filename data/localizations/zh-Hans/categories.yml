@@ -22,7 +22,7 @@ rb-3-3: {name: 多足机器人, description: 具有六条或以上腿的足式�
 rb-4: {name: 地面机器人, description: 依靠轮子或履带移动、无腿且无集成机械臂的机器人。, aliases: [移动机器人, 移动底盘, 巡检车, AMR, AGV, UGV, 巡检爬行机器人, 管道机器人, 爬壁机器人]}
 rb-4-1: {name: 轮式机器人, description: 由轮子驱动的地面机器人。, aliases: [扫地机器人, 割草机器人, 配送机器人, 送餐机器人]}
 rb-4-2: {name: 履带式机器人, description: 由连续履带驱动的地面机器人。, aliases: [履带机器人, 履带底盘, 坦克机器人]}
-rb-5: {name: 移动操作机器人, description: 轮式或履带式底盘配备一个或多个机械臂、作为单一产品销售的非人形机器人。, aliases: [复合机器人, 移动操作机器人, 移动机械臂]}
+rb-5: {name: 复合机器人, description: 轮式或履带式底盘配备一个或多个机械臂、作为单一产品销售的非人形机器人。, aliases: [复合机器人, 移动操作机器人, 移动机械臂]}
 rb-6: {name: 空中机器人, description: 能够飞行的机器人。, aliases: [无人机, UAV, 飞行机器人]}
 rb-6-1: {name: 多旋翼, description: 由多个旋翼提供升力的空中机器人。, aliases: [四旋翼, 六旋翼, 多旋翼无人机]}
 rb-6-2: {name: 固定翼, description: 由固定机翼提供升力的空中机器人。, aliases: [固定翼无人机]}
@@ -40,7 +40,7 @@ cp: {name: 部件, description: 与整机分开销售的机器人零部件或配
 cp-1: {name: 末端执行器, description: 安装在机械臂或手腕末端、作用于外界的装置。, aliases: [末端工具, EOAT, 末端执行器]}
 cp-1-1: {name: 夹爪, description: 非拟人手形态的抓取末端执行器。, aliases: [机器人夹爪, 机械爪, 夹持器]}
 cp-1-1-1: {name: 手指式夹爪, description: 具有机械手指或钳口的夹爪，包括平行、角度和两/三指自适应设计。, aliases: [平行夹爪, 自适应夹爪, 二指夹爪, 三指夹爪, 电动夹爪]}
-cp-1-1-2: {name: 真空吸盘, description: 通过吸力抓取的夹爪，包括吸盘、海绵和面吸式。, aliases: [真空夹爪, 吸盘夹具, 海绵吸盘]}
+cp-1-1-2: {name: 真空夹爪, description: 通过吸力抓取的夹爪，包括吸盘、海绵和面吸式。, aliases: [真空吸盘, 真空夹持器, 吸盘夹具, 海绵吸盘]}
 cp-1-1-3: {name: 磁力夹爪, description: 通过磁力抓取铁磁物体的夹爪。, aliases: [电磁夹爪, 磁吸夹具]}
 cp-1-1-4: {name: 柔性夹爪, description: 具有柔顺或充气手指的夹爪。, aliases: [柔性手指, 软体夹爪, 气动柔性夹爪]}
 cp-1-2: {name: 灵巧手, description: 具有四个以上手指（含可对掌拇指）的拟人末端执行器，包括全驱动和欠驱动手。, aliases: [灵巧手, 机械手, 仿人手, 五指灵巧手, 欠驱动灵巧手]}

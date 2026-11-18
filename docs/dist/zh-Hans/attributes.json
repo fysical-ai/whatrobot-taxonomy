@@ -162,7 +162,7 @@
       "name": "应用",
       "friendly_id": "application",
       "handle": "application",
-      "description": "产品所宣传的用途。",
+      "description": "产品所宣传的用途。每个应用只属于一个应用领域。",
       "question": "What is it marketed to do?",
       "type": "enum",
       "multi": true,
@@ -539,7 +539,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/63",
-          "name": "预订",
+          "name": "预购",
           "friendly_id": "availability__preorder",
           "handle": "availability__preorder"
         },
@@ -601,7 +601,7 @@
       "name": "价格日期",
       "friendly_id": "price_date",
       "handle": "price-date",
-      "description": "观察到该价格的日期。",
+      "description": "观察到该价格的日期（ISO 8601）。",
       "question": "When was the price observed?",
       "type": "text",
       "multi": false,
