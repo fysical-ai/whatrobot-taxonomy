@@ -41,7 +41,7 @@ max_speed: {name: Höchstgeschwindigkeit, description: Maximale Fortbewegungsges
 wheel_feet: {name: Räder an den Füßen, description: Laufroboter mit Rädern an den Füßen.}
 has_arm: {name: Arm optional, description: Ein Arm ist als Zubehör erhältlich.}
 drive_config: {name: Antriebskonfiguration, description: 'Wie eine fahrende Basis lenkt und sich fortbewegt, laut Hersteller. Differentialantrieb: zwei unabhängig angetriebene Räder, gelenkt über den Geschwindigkeitsunterschied. Kompaktlenkung (Skid-Steer): vier oder mehr feste Räder, links und rechts getrennt angetrieben, gelenkt durch Rutschen. Omnidirektional: Mecanum-, Omni- oder Swerve-Räder. Ackermann: gelenkte Räder wie beim Auto. Kettenantrieb: Gleisketten. Selbstbalancierend: zwei Räder auf einer Achse, durch aktive Balance aufrecht gehalten.'}
-navigation: {name: Navigation, description: Wie ein fahrender Roboter navigiert.}
+navigation: {name: Navigation, description: Wie ein Bodenroboter navigiert.}
 flight_time: {name: Flugzeit, description: Vom Hersteller angegebene Flugzeit.}
 max_takeoff_weight: {name: Max. Startgewicht, description: Maximales Startgewicht.}
 depth_rating: {name: Max. Einsatztiefe, description: Maximale zugelassene Einsatztiefe.}
@@ -88,6 +88,6 @@ torque_range: {name: Drehmomentmessbereich, description: 'Messbereich eines Kraf
 linear_speed: {name: Lineargeschwindigkeit, description: Maximale Lineargeschwindigkeit eines Linearaktors.}
 grip_range: {name: Greifbereich, description: 'Größtes Objekt, das der Greifer greifen kann.'}
 medical_clearance: {name: Medizinische Zulassung, description: 'Märkte, in denen der Roboter laut Hersteller rechtmäßig als Medizinprodukt vermarktet wird. USA: von der FDA freigegeben, zugelassen oder per De-Novo-Verfahren genehmigt oder als 510(k)-befreites Produkt gelistet. Europäische Union: CE-gekennzeichnet als Medizinprodukt. China: von der NMPA zugelassen. Japan: vom MHLW nach Prüfung durch die PMDA zugelassen. Leer, wenn der Hersteller keinen solchen Status angibt.'}
-adhesion: {name: Haftprinzip, description: 'Wie sich ein fahrender Roboter an Wänden, Tanks, Schiffsrümpfen oder Decken festhält, um daran zu klettern. „Keine“ bei Robotern, die nur auf dem Boden fahren.'}
+adhesion: {name: Haftprinzip, description: 'Wie sich ein Bodenroboter an Wänden, Tanks, Schiffsrümpfen oder Decken festhält, um daran zu klettern. „Keine“ bei Robotern, die nur auf dem Boden fahren.'}
 construction: {name: Bauweise, description: 'Ob ein Exoskelett seine Unterstützungskraft über einen starren Rahmen neben der Gliedmaße überträgt oder über Textilien, Gurte und Seilzüge (ein weicher Exosuit).'}
 outer_diameter: {name: Außendurchmesser, description: 'Außendurchmesser des biegsamen Abschnitts eines Kontinuumsroboters oder robotischen Katheters; begrenzt, in welche Öffnungen er eingeführt werden kann.'}

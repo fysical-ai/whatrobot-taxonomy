@@ -19,9 +19,9 @@ rb-3: {name: Laufroboter, description: 'Roboter, der sich auf gelenkigen Beinen 
 rb-3-1: {name: Vierbeiniger Roboter, description: Laufroboter mit vier Beinen., aliases: [Roboterhund, Vierbeiner, vierbeiniger Roboter, Laufroboter]}
 rb-3-2: {name: Zweibeiniger Roboter, description: 'Zweibeiniger Roboter ohne humanoiden Rumpf, Arme und Kopf.', aliases: [zweibeiniger Roboter, Zweibeiner]}
 rb-3-3: {name: Mehrbeiniger Roboter, description: Laufroboter mit sechs oder mehr Beinen., aliases: [Hexapod-Laufroboter, sechsbeiniger Roboter, Insektenroboter]}
-rb-4: {name: Fahrender Roboter, description: 'Roboter, der auf Rädern oder Ketten fährt, ohne Beine und ohne integrierten Arm.', aliases: [mobiler Roboter, mobile Plattform, Rover, AMR, FTS, fahrerloses Transportsystem, UGV, Inspektionsroboter, Rohrinspektionsroboter, Kletterroboter]}
-rb-4-1: {name: Radroboter, description: Fahrender Roboter mit Radantrieb., aliases: [Radroboter, Saugroboter, Mähroboter, Rasenmähroboter, Lieferroboter, Telepräsenzroboter]}
-rb-4-2: {name: Kettenroboter, description: Fahrender Roboter mit Kettenantrieb., aliases: [Kettenroboter, Raupenroboter, Kettenfahrzeug]}
+rb-4: {name: Bodenroboter, description: 'Roboter, der auf Rädern oder Ketten fährt, ohne Beine und ohne integrierten Arm.', aliases: [mobiler Roboter, mobile Plattform, Rover, AMR, FTS, fahrerloses Transportsystem, UGV, Inspektionsroboter, Rohrinspektionsroboter, Kletterroboter]}
+rb-4-1: {name: Radroboter, description: Bodenroboter mit Radantrieb., aliases: [Radroboter, Saugroboter, Mähroboter, Rasenmähroboter, Lieferroboter, Telepräsenzroboter]}
+rb-4-2: {name: Kettenroboter, description: Bodenroboter mit Kettenantrieb., aliases: [Kettenroboter, Raupenroboter, Kettenfahrzeug]}
 rb-5: {name: Mobiler Manipulator, description: 'Basis mit Rädern oder Ketten und einem oder mehreren Armen, als ein Produkt verkauft, ohne humanoide Gestalt.', aliases: [mobiler Manipulator, MoMa, Arm auf Rädern, mobiler Roboterarm]}
 rb-6: {name: Flugroboter, description: 'Roboter, der fliegt.', aliases: [Drohne, UAV, UAS, unbemanntes Luftfahrzeug]}
 rb-6-1: {name: Multikopter, description: 'Flugroboter, der von mehreren Rotoren getragen wird.', aliases: [Quadrocopter, Hexacopter, Oktocopter, Multicopter]}

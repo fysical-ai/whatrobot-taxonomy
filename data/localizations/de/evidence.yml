@@ -92,17 +92,18 @@ attribute.reducer_type:
 attribute.stall_torque:
   term: Blockiermoment
   status: open
-  also: [Stellkraft, Stillstandsdrehmoment]
+  also: [Blockierdrehmoment, Stellkraft, Stillstandsmoment]
   sources:
     - https://lindinger.at/de/RC-Elektronik/Servos-Zubehoer/Servos-Digital-Low-Voltage/SAVOEX-SH-0255MG-6V-3-9KG-0-13s-Digital-Micro-Servo/9795255
     - https://roboter-bausatz.de/media/pdf/15/f5/87/RBS10997-MG996R-Datenblatt.pdf
-  note: Hobby servo shops label this value "Stellkraft" (in kg/cm) and use "Blockierstrom" for stall current. "Blockiermoment" itself was not found on a product page. The trial reviewer proposed "Stillstandsdrehmoment" (Beckhoff, industrial servo motors). Language doubt for the translator session.
+    - https://emerson.com/documents/automation/datenblatt-servomotoren-aventics-de-10430086.pdf
+  note: Hobby servo shops label this value "Stellkraft" (in kg/cm) and use "Blockierstrom" for stall current. Industrial servo motor datasheets (Aventics) print "Stillstandsmoment", but that is the continuous torque at standstill, a different quantity from the maximum torque at zero speed. DeepL and Google both give "Blockierdrehmoment". No German product page with "Blockiermoment" found. Language doubt for the translator session.
 attribute.wheel_feet:
   term: Räder an den Füßen
   status: open
   sources:
     - https://www.auto-motor-und-sport.de/verkehr/bis-zu-21-km-h-schnell-dieser-lauf-und-roll-roboter-kennt-keine-hindernisse/
-  note: No established spec label found. The press describes such robots as "Hybrid aus Rad- und Laufroboter". Language doubt for the translator session.
+  note: No established spec label found. The press describes such robots as "Hybrid aus Rad- und Laufroboter". DeepL and Google both give "Radfüße". Language doubt for the translator session.
 value.reducer_type__harmonic:
   term: Wellgetriebe
   status: changed
@@ -161,6 +162,7 @@ category.rb-3-1:
   sources:
     - https://www.dlr.de/de/rm/forschung/robotersysteme/laufroboter/bert
     - https://www.wissenschaft.de/technik-digitales/vierbeiner-auf-kontrollgang/
+    - https://unchainedrobotics.de/produkte
 category.cp-1-2:
   term: Roboterhand
   status: confirmed
@@ -171,6 +173,7 @@ category.cp-1-4:
   status: confirmed
   sources:
     - https://content2.smcetech.com/pdf/RMH-B_DE.pdf
+    - https://unchainedrobotics.de/produkte
 category.cp-2:
   term: Aktor
   status: open
@@ -186,8 +189,79 @@ category.cp-2-4:
     - https://www.kollmorgen.com/sites/default/files/2023-12/Building%20Humanoid%20Robots-%20From%20Design%20to%20Delivery_WP_Final_de-DE.pdf
 category.cp-3-3:
   term: Kraft-Momenten-Sensor
-  status: open
-  also: [Kraft-Moment-Sensor, Kraft-Drehmoment-Sensor]
+  status: confirmed
+  also: [6-Achsen-Kraft-Momenten-Sensor, Kraft-Drehmoment-Sensor]
   sources:
-    - https://patents.google.com/patent/AT395124B/de
-  note: Only the variant "Kraft-Moment-Sensor" was found (a patent text). Needs a maker page (Schunk, ATI, Bota) before it counts as confirmed.
+    - https://d16vz4puxlsxm1.cloudfront.net/asset/076200133045-Prod/document_8u1rqlle054mv5f3bk0hsu577c/FT-AXIA%2090%20Katalogkapitel
+    - https://www.industrial-production.de/sensorik---messtechnik/schunk-6-achsen-kraft-momenten-sensor-fts.htm
+    - https://www.welectron.com/Fairino-Kraft-Drehmoment-Sensor
+  note: Schunk's product datasheets and flyers use Kraft-Momenten-Sensor. A reseller of Fairino writes Kraft-/Drehmomentsensor; DeepL and Google both give Kraft-Drehmoment-Sensor.
+category.rb-2:
+  term: Humanoider Roboter
+  status: confirmed
+  sources:
+    - https://unchainedrobotics.de/produkte
+  note: Seen as the shop category "Humanoide Roboter & Vierbeinige Roboter".
+category.cp-1-1:
+  term: Greifer
+  status: confirmed
+  sources:
+    - https://unchainedrobotics.de/produkte
+    - https://www.festo.com/de/en/e/products/landing-pages-id_326973
+category.cp-1-1-1:
+  term: Fingergreifer
+  status: confirmed
+  also: [Finger-Greifer]
+  sources:
+    - https://unchainedrobotics.de/produkte
+category.cp-1-1-2:
+  term: Vakuumgreifer
+  status: confirmed
+  also: [Vakuum-Greifer]
+  sources:
+    - https://unchainedrobotics.de/produkte
+category.cp-3-1:
+  term: Kamera
+  status: confirmed
+  sources:
+    - https://unchainedrobotics.de/produkte
+category.rb-4:
+  term: Bodenroboter
+  status: changed
+  was: Fahrender Roboter
+  also: [mobiler Roboter, mobile Roboterplattform]
+  sources:
+    - https://www.computer-automation.de/robotik/verteiltes-echtzeit-system-steuert-kettenantriebe.htm
+    - https://openelab.io/de/products/waveshare-ugv-beast-jetson-orin-ros2-kit
+  note: The earlier draft "Fahrender Roboter" was not found on any product or trade page. DeepL and Google both give Bodenroboter. Shops and the trade press mostly write "mobile Roboterplattform" or "mobiler Roboter", which stay as search terms because "mobil" also covers legged robots and mobile manipulators here.
+attribute.rated_torque:
+  term: Nenndrehmoment
+  status: confirmed
+  also: [Nennmoment]
+  sources:
+    - https://emerson.com/documents/automation/datenblatt-servomotoren-aventics-de-10430086.pdf
+attribute.peak_torque:
+  term: Spitzendrehmoment
+  status: confirmed
+  also: [Spitzenmoment]
+  sources:
+    - https://emerson.com/documents/automation/datenblatt-servomotoren-aventics-de-10430086.pdf
+attribute.rated_force:
+  term: Nennkraft
+  status: confirmed
+  sources:
+    - https://www.me-systeme.de/de/f6d100-50
+attribute.range:
+  term: Messbereich
+  status: confirmed
+  sources:
+    - https://d16vz4puxlsxm1.cloudfront.net/asset/076200133045-Prod/document_8u1rqlle054mv5f3bk0hsu577c/FT-AXIA%2090%20Katalogkapitel
+    - https://www.me-systeme.de/de/f6d100-50
+  note: Schunk prints "Messbereich Kraft" and "Messbereich Moment". DeepL and Google both gave "Reichweite", which is the arm's reach, not a sensor's range.
+value.drive_config__tracked:
+  term: Kettenantrieb
+  status: confirmed
+  also: [Kettenfahrwerk]
+  sources:
+    - https://www.computer-automation.de/robotik/verteiltes-echtzeit-system-steuert-kettenantriebe.htm
+    - https://openelab.io/de/products/waveshare-ugv-beast-jetson-orin-ros2-kit

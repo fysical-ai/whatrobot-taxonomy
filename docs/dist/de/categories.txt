@@ -42,9 +42,9 @@ gid://whatrobot/TaxonomyCategory/rb-3 : Roboter > Laufroboter
 gid://whatrobot/TaxonomyCategory/rb-3-1 : Roboter > Laufroboter > Vierbeiniger Roboter
 gid://whatrobot/TaxonomyCategory/rb-3-2 : Roboter > Laufroboter > Zweibeiniger Roboter
 gid://whatrobot/TaxonomyCategory/rb-3-3 : Roboter > Laufroboter > Mehrbeiniger Roboter
-gid://whatrobot/TaxonomyCategory/rb-4 : Roboter > Fahrender Roboter
-gid://whatrobot/TaxonomyCategory/rb-4-1 : Roboter > Fahrender Roboter > Radroboter
-gid://whatrobot/TaxonomyCategory/rb-4-2 : Roboter > Fahrender Roboter > Kettenroboter
+gid://whatrobot/TaxonomyCategory/rb-4 : Roboter > Bodenroboter
+gid://whatrobot/TaxonomyCategory/rb-4-1 : Roboter > Bodenroboter > Radroboter
+gid://whatrobot/TaxonomyCategory/rb-4-2 : Roboter > Bodenroboter > Kettenroboter
 gid://whatrobot/TaxonomyCategory/rb-5 : Roboter > Mobiler Manipulator
 gid://whatrobot/TaxonomyCategory/rb-6 : Roboter > Flugroboter
 gid://whatrobot/TaxonomyCategory/rb-6-1 : Roboter > Flugroboter > Multikopter

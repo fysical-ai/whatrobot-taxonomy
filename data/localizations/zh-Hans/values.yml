@@ -65,7 +65,7 @@ autonomy__semi-autonomous: {name: 半自主}
 autonomy__autonomous: {name: 全自主}
 autonomy__other: {name: 其他}
 availability__shipping: {name: 在售}
-availability__preorder: {name: 预订}
+availability__preorder: {name: 预购}
 availability__announced: {name: 已发布}
 availability__research-only: {name: 仅限科研}
 availability__discontinued: {name: 已停产}

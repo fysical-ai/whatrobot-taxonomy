@@ -90,7 +90,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/6",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "segment__other",
           "handle": "segment__other"
         }
@@ -151,7 +151,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/14",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "application_group__other",
           "handle": "application-group__other"
         }
@@ -361,7 +361,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/45",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "application__other",
           "handle": "application__other"
         }
@@ -397,7 +397,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/49",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "iso_category__other",
           "handle": "iso-category__other"
         }
@@ -451,7 +451,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/56",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "environment__other",
           "handle": "environment__other"
         }
@@ -499,7 +499,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/61",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "autonomy__other",
           "handle": "autonomy__other"
         }
@@ -563,7 +563,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/67",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "availability__other",
           "handle": "availability__other"
         }
@@ -785,7 +785,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/71",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "open_source__other",
           "handle": "open-source__other"
         }
@@ -833,13 +833,13 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/77",
-          "name": "Keins",
+          "name": "Keines",
           "friendly_id": "sdk__none",
           "handle": "sdk__none"
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/78",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "sdk__other",
           "handle": "sdk__other"
         }
@@ -969,7 +969,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/84",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "mounting__other",
           "handle": "mounting__other"
         }
@@ -1040,7 +1040,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/89",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "hands_included__other",
           "handle": "hands-included__other"
         }
@@ -1137,7 +1137,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/94",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "drive_config__other",
           "handle": "drive-config__other"
         }
@@ -1148,7 +1148,7 @@
       "name": "Navigation",
       "friendly_id": "navigation",
       "handle": "navigation",
-      "description": "Wie ein fahrender Roboter navigiert.",
+      "description": "Wie ein Bodenroboter navigiert.",
       "question": "How does it navigate?",
       "type": "enum",
       "multi": false,
@@ -1179,7 +1179,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/99",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "navigation__other",
           "handle": "navigation__other"
         }
@@ -1271,7 +1271,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/104",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "body_region__other",
           "handle": "body-region__other"
         }
@@ -1324,7 +1324,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/109",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "flange_standard__other",
           "handle": "flange-standard__other"
         }
@@ -1438,7 +1438,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/119",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "interface__other",
           "handle": "interface__other"
         }
@@ -1497,7 +1497,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/125",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "actuation__other",
           "handle": "actuation__other"
         }
@@ -1638,13 +1638,13 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/131",
-          "name": "Keins",
+          "name": "Keines",
           "friendly_id": "reducer_type__none",
           "handle": "reducer-type__none"
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/132",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "reducer_type__other",
           "handle": "reducer-type__other"
         }
@@ -1738,7 +1738,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/137",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "bus__other",
           "handle": "bus__other"
         }
@@ -1786,7 +1786,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/143",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "modality__other",
           "handle": "modality__other"
         }
@@ -1816,7 +1816,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/146",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "scan_dimensions__other",
           "handle": "scan-dimensions__other"
         }
@@ -1927,7 +1927,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/152",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "teleop_type__other",
           "handle": "teleop-type__other"
         }
@@ -2167,7 +2167,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/172",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "medical_clearance__other",
           "handle": "medical-clearance__other"
         }
@@ -2178,7 +2178,7 @@
       "name": "Haftprinzip",
       "friendly_id": "adhesion",
       "handle": "adhesion",
-      "description": "Wie sich ein fahrender Roboter an Wänden, Tanks, Schiffsrümpfen oder Decken festhält, um daran zu klettern. „Keine“ bei Robotern, die nur auf dem Boden fahren.",
+      "description": "Wie sich ein Bodenroboter an Wänden, Tanks, Schiffsrümpfen oder Decken festhält, um daran zu klettern. „Keine“ bei Robotern, die nur auf dem Boden fahren.",
       "question": "Does it climb by holding on to the surface, and how?",
       "type": "enum",
       "multi": false,
@@ -2203,7 +2203,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/176",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "adhesion__other",
           "handle": "adhesion__other"
         }
@@ -2233,7 +2233,7 @@
         },
         {
           "id": "gid://whatrobot/TaxonomyValue/179",
-          "name": "Sonstige",
+          "name": "Sonstiges",
           "friendly_id": "construction__other",
           "handle": "construction__other"
         }
