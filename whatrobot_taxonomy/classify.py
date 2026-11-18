@@ -133,7 +133,8 @@ def classify_component(f: Facts) -> str:
             return "cp-1-4"
         if f.get("grasps"):
             # 4.1.1 hand vs gripper
-            if _int(f, "fingers") >= 4 and f.get("opposable_thumb") and _int(f, "dof") >= 6:
+            # (underactuated hands count: actuated DoF does not decide, ruling 2026-11-10)
+            if _int(f, "fingers") >= 4 and f.get("opposable_thumb"):
                 return "cp-1-2"
             # 4.1.2 gripper leaf by gripping principle
             principle = f.get("gripping_principle")

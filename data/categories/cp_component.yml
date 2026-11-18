@@ -51,7 +51,7 @@
   handle: gripper
   description: Grasping end-effector that is not an anthropomorphic hand.
   aliases: [robot gripper, EOAT gripper]
-  inclusion_rule: Grasps objects; fewer than four fingers, no opposable thumb, or fewer than six DOF. Child category is decided by gripping principle, not actuation.
+  inclusion_rule: Grasps objects; fewer than four fingers, or no opposable thumb. Child category is decided by gripping principle, not actuation.
   children: [cp-1-1-1, cp-1-1-2, cp-1-1-3, cp-1-1-4]
   attributes: [grip_force, payload]
   examples: []
@@ -104,9 +104,9 @@
   name: Hand
   friendly_id: component.end-effector.hand
   handle: hand
-  description: Anthropomorphic end-effector with four or more fingers including an opposable thumb and multiple degrees of freedom.
-  aliases: [dexterous hand, robotic hand, humanoid hand, five-finger hand]
-  inclusion_rule: At least four fingers including an opposable thumb and at least six actuated degrees of freedom (joints driven independently, not passive or coupled joints).
+  description: Anthropomorphic end-effector with four or more fingers including an opposable thumb, fully actuated or underactuated.
+  aliases: [dexterous hand, robotic hand, humanoid hand, five-finger hand, underactuated hand]
+  inclusion_rule: At least four fingers including an opposable thumb, however many actuators drive them. Underactuated hands (coupled or tendon-driven fingers, fewer motors than joints) are hands; `dof` records the actuated degrees of freedom.
   children: []
   attributes: [dof, finger_count, tactile_sensing, grip_force, payload]
   examples: [shadow-dexterous-hand, inspire-rh56]

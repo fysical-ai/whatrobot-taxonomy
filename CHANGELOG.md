@@ -4,6 +4,11 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Underactuated hands (2026-11-10)
+- Hand (`cp-1-2`) no longer requires six actuated degrees of freedom: at least four fingers including an opposable thumb is a hand, however many actuators drive them (coupled or tendon-driven fingers count). The gripper (`cp-1-1`) rule follows. Classifier changed; category ids and tie-break order unchanged. `dof` still means actuated DoF.
+- New classification example `underactuated-five-finger-hand` (84).
+- Design notes §4.1 and §10.5; zh-Hans draft of the `cp-1-2` description updated (LLM draft).
+
 ### Localisation drafts: da, de, zh-Hans complete (2026-11-09)
 - New locales `da` (Danish) and `de` (German): machine first drafts for all 535 fields (category names, descriptions and search terms; attribute names and descriptions; value names). Unreviewed: they are for the native review sheet, and the release gate still refuses them.
 - `zh-Hans`: the 107 missing fields (new attributes and values, search terms) drafted, and the 12 fields whose English changed since the 2026-11-02 draft redrafted. All 535 fields now have text; none reviewed yet.

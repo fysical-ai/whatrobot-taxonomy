@@ -7264,7 +7264,7 @@
             "机械爪",
             "夹持器"
           ],
-          "inclusion_rule": "Grasps objects; fewer than four fingers, no opposable thumb, or fewer than six DOF. Child category is decided by gripping principle, not actuation.",
+          "inclusion_rule": "Grasps objects; fewer than four fingers, or no opposable thumb. Child category is decided by gripping principle, not actuation.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1",
           "children": [
             {
@@ -8203,14 +8203,15 @@
           "full_name": "部件 > 末端执行器 > 灵巧手",
           "friendly_id": "component.end-effector.hand",
           "handle": "hand",
-          "description": "具有四个以上手指（含可对掌拇指）和多个自由度的拟人末端执行器。",
+          "description": "具有四个以上手指（含可对掌拇指）的拟人末端执行器，包括全驱动和欠驱动手。",
           "aliases": [
             "灵巧手",
             "机械手",
             "仿人手",
-            "五指灵巧手"
+            "五指灵巧手",
+            "欠驱动灵巧手"
           ],
-          "inclusion_rule": "At least four fingers including an opposable thumb and at least six actuated degrees of freedom (joints driven independently, not passive or coupled joints).",
+          "inclusion_rule": "At least four fingers including an opposable thumb, however many actuators drive them. Underactuated hands (coupled or tendon-driven fingers, fewer motors than joints) are hands; `dof` records the actuated degrees of freedom.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1",
           "children": [],
           "ancestors": [

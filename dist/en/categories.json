@@ -7277,7 +7277,7 @@
             "robot gripper",
             "EOAT gripper"
           ],
-          "inclusion_rule": "Grasps objects; fewer than four fingers, no opposable thumb, or fewer than six DOF. Child category is decided by gripping principle, not actuation.",
+          "inclusion_rule": "Grasps objects; fewer than four fingers, or no opposable thumb. Child category is decided by gripping principle, not actuation.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1",
           "children": [
             {
@@ -8218,14 +8218,15 @@
           "full_name": "Component > End-effector > Hand",
           "friendly_id": "component.end-effector.hand",
           "handle": "hand",
-          "description": "Anthropomorphic end-effector with four or more fingers including an opposable thumb and multiple degrees of freedom.",
+          "description": "Anthropomorphic end-effector with four or more fingers including an opposable thumb, fully actuated or underactuated.",
           "aliases": [
             "dexterous hand",
             "robotic hand",
             "humanoid hand",
-            "five-finger hand"
+            "five-finger hand",
+            "underactuated hand"
           ],
-          "inclusion_rule": "At least four fingers including an opposable thumb and at least six actuated degrees of freedom (joints driven independently, not passive or coupled joints).",
+          "inclusion_rule": "At least four fingers including an opposable thumb, however many actuators drive them. Underactuated hands (coupled or tendon-driven fingers, fewer motors than joints) are hands; `dof` records the actuated degrees of freedom.",
           "parent_id": "gid://whatrobot/TaxonomyCategory/cp-1",
           "children": [],
           "ancestors": [
