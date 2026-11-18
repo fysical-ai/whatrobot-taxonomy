@@ -405,7 +405,7 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/164",
-      "name": "Limited",
+      "name": "限量供应",
       "friendly_id": "availability__limited",
       "handle": "availability__limited"
     },
@@ -921,13 +921,13 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/153",
-      "name": "Mapping and surveying",
+      "name": "测绘与勘测",
       "friendly_id": "application__mapping-surveying",
       "handle": "application__mapping-surveying"
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/154",
-      "name": "Lab automation",
+      "name": "实验室自动化",
       "friendly_id": "application__lab-automation",
       "handle": "application__lab-automation"
     },
@@ -939,13 +939,13 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/156",
-      "name": "Handheld demonstrator",
+      "name": "手持示教器",
       "friendly_id": "teleop_type__handheld-demonstrator",
       "handle": "teleop-type__handheld-demonstrator"
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/157",
-      "name": "UART / serial (TTL)",
+      "name": "UART / 串口 (TTL)",
       "friendly_id": "interface__uart",
       "handle": "interface__uart"
     },
@@ -981,7 +981,7 @@
     },
     {
       "id": "gid://whatrobot/TaxonomyValue/163",
-      "name": "Analog",
+      "name": "模拟量",
       "friendly_id": "interface__analog",
       "handle": "interface__analog"
     },

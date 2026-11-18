@@ -197,6 +197,7 @@ class ImportReport:
     english_changed: list[str] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
     needs_name: list[str] = field(default_factory=list)
+    kept_reviewed: int = 0
 
 
 def import_review(tx: Taxonomy, locale: str, rows: list[dict[str, str]], data_dir: Path = DATA,
@@ -247,6 +248,69 @@ def import_review(tx: Taxonomy, locale: str, rows: list[dict[str, str]], data_di
             src[fld] = fingerprint(english(tx, f"{kind}.{ident}.{fld}"))
             rep.imported[kind] += 1
         entry["source"] = src
+        entries[ident] = entry
+        changed.add(KINDS[kind])
+
+    order = {
+        "categories": [k.split(".")[1] for k, _ in fields(tx) if k.startswith("category.") and k.endswith(".name")],
+        "attributes": list(tx.attributes),
+        "values": list(tx.values),
+    }
+    for kind_file, (header, entries) in files.items():
+        if kind_file in changed:
+            _write_locale_file(data_dir, locale, kind_file, header, entries, order[kind_file])
+    return rep
+
+
+def import_drafts(tx: Taxonomy, locale: str, rows: list[dict[str, str]], data_dir: Path = DATA) -> ImportReport:
+    """Write every non-empty text for `locale` as an unreviewed draft (machine first drafts).
+
+    A field already reviewed against the current English is kept as it is. A draft replacing a stale review
+    drops that field's fingerprint, so the field reads as draft until a reviewer ticks it.
+    """
+    if locale == SOURCE_LOCALE:
+        raise ValueError("the source locale is not imported")
+    rep = ImportReport()
+    if rows and locale not in rows[0]:
+        raise ValueError(f"no column for locale {locale!r}; columns: {', '.join(rows[0])}")
+    pending: dict[tuple[str, str], dict[str, str]] = defaultdict(dict)
+    for row in rows:
+        key = row.get("key", "").strip()
+        try:
+            kind, ident, fld = parse_key(key)
+            english(tx, key)
+        except KeyError:
+            rep.errors.append(f"unknown key {key!r}")
+            continue
+        text = (row.get(locale) or "").strip()
+        if not text:
+            rep.unticked += 1
+            continue
+        if state(tx, locale, key) == "reviewed":
+            rep.kept_reviewed += 1
+            continue
+        pending[(kind, ident)][fld] = text
+
+    files = {k: _read_locale_file(data_dir, locale, k) for k in KINDS.values()}
+    changed: set[str] = set()
+    for (kind, ident), flds in pending.items():
+        entries = files[KINDS[kind]][1]
+        entry = dict(entries.get(ident) or {})
+        if "name" not in entry and "name" not in flds:
+            rep.needs_name.append(f"{kind}.{ident}")
+            continue
+        src = dict(entry.get("source") or {})
+        for fld, text in flds.items():
+            if fld == "aliases":
+                entry[fld] = list(dict.fromkeys(a for a in ALIAS_SPLIT.split(text) if a))
+            else:
+                entry[fld] = text
+            src.pop(fld, None)
+            rep.imported[kind] += 1
+        if src:
+            entry["source"] = src
+        else:
+            entry.pop("source", None)
         entries[ident] = entry
         changed.add(KINDS[kind])
 

@@ -1,0 +1,65 @@
+# whatrobot taxonomy — da localisation of categories
+# Licence: CC BY 4.0. Keyed by category id. Localised: name, description, aliases. Inclusion rules stay English.
+# Review state: a field listed under `source` was reviewed by a native reader against the English text with that
+# fingerprint; fields not listed are LLM drafts. Check with: whatrobot-taxonomy l10n status
+---
+rb: {name: Robot, description: 'En maskine, der sanser og påvirker sine omgivelser ved at bevæge sig, håndtere genstande eller interagere med mennesker. Robotter klassificeres efter fysisk form, ikke efter brugergruppe eller anvendelse.', aliases: [robotter]}
+rb-1: {name: Robotarm, description: 'Manipulator på fast base, der placerer en endeeffektor i rummet.', aliases: [robotarm, industrirobot, manipulator, cobot, industriarm]}
+rb-1-1: {name: Leddelt robotarm, description: 'Seriel arm med tre eller flere roterende led, herunder 6- og 7-aksede industriarme, cobots og bordarme.', aliases: [6-akset robot, 7-akset robot, cobot, kollaborativ robot, bordrobotarm, knækarmsrobot]}
+rb-1-2: {name: SCARA-arm, description: 'Arm med to parallelle, lodrette roterende led og en lodret lineær akse, eftergivende i det vandrette plan.', aliases: [SCARA, SCARA-robot]}
+rb-1-3: {name: Parallelarm, description: 'Manipulator med parallel kinematik, fx en deltarobot, en hexapod-/Stewart-platform eller en kabeldrevet parallelrobot.', aliases: [deltarobot, hexapod-platform, Stewart-platform, parallelrobot, kabeldrevet parallelrobot, kabelrobot]}
+rb-1-4: {name: Kartesisk arm, description: 'Manipulator med tre lineære akser langs et kartesisk koordinatsystem, herunder portal- og lineærrobotter.', aliases: [portalrobot, lineærrobot, XYZ-robot, kartesisk robot]}
+rb-1-5: {name: Cylindrisk og sfærisk arm, description: 'Manipulator med roterende base og en lineær udstrækningsakse: cylindrisk (lineært løft) eller sfærisk/polær (vippende skulder). IFR-typeklasse 30.', aliases: [polær robot, sfærisk robot, cylindrisk robot, polær arm]}
+rb-1-6: {name: Kontinuumsarm, description: 'Arm, der bøjer sig i hele sin længde – med en sammenhængende fleksibel rygrad eller mange korte segmenter, der drives fra basen – fx slangearmsrobotter og robotkatetre.', aliases: [slangearmsrobot, slangearm, kontinuumsrobot, elefantsnablerobot, robotkateter]}
+rb-2: {name: Humanoid, description: 'Robot, der er designet til at ligne et menneske, med torso, to arme og et hoved eller ansigt, beregnet til menneskers omgivelser.', aliases: [humanoid robot, android, menneskelignende robot, generel humanoid]}
+rb-2-1: {name: Tobenet humanoid, description: 'Humanoid, der går på to ben.', aliases: [gående humanoid, humanoid med ben]}
+rb-2-2: {name: Humanoid på hjulbase, description: Humanoid overkrop på en base med hjul eller bælter., aliases: [humanoid på hjul, mobil humanoid]}
+rb-2-3: {name: Humanoid på fast base, description: 'Humanoid overkrop på et fast fundament, uden fremdrift.', aliases: [torso-humanoid, halv humanoid, humanoid torso med to arme]}
+rb-3: {name: Robot med ben, description: 'Robot, der bevæger sig på leddelte ben og ikke er humanoid af form.', aliases: [gående robot, gangrobot, robot med ben]}
+rb-3-1: {name: Firbenet robot, description: Robot med fire ben., aliases: [robothund, firbenet robot, quadruped]}
+rb-3-2: {name: Tobenet robot, description: 'Robot med to ben, uden humanoid torso, arme og hoved.', aliases: [tobenet robot, biped]}
+rb-3-3: {name: Flerbenet robot, description: Robot med seks eller flere ben., aliases: [hexapod-gangrobot, seksbenet robot, insektrobot]}
+rb-4: {name: Kørende robot, description: 'Robot, der kører på hjul eller bælter, uden ben og uden integreret arm.', aliases: [mobil robot, mobil base, rover, AMR, AGV, UGV, inspektionsrobot, rørinspektionsrobot, klatrerobot]}
+rb-4-1: {name: Robot på hjul, description: Kørende robot drevet af hjul., aliases: [hjulrobot, robotstøvsuger, robotplæneklipper, leveringsrobot, telepresence-robot]}
+rb-4-2: {name: Bælterobot, description: Kørende robot drevet af bælter., aliases: [bæltekøretøj, robot med larvefødder, tankrobot]}
+rb-5: {name: Mobil manipulator, description: 'Base med hjul eller bælter og en eller flere arme, solgt som ét produkt, ikke humanoid af form.', aliases: [mobil manipulator, MoMa, arm på hjul]}
+rb-6: {name: Flyvende robot, description: 'Robot, der flyver.', aliases: [drone, UAV, UAS, ubemandet luftfartøj]}
+rb-6-1: {name: Multirotor, description: 'Flyvende robot, der løftes af flere rotorer.', aliases: [quadcopter, hexacopter, octocopter, multikopter]}
+rb-6-2: {name: Fastvinget, description: 'Flyvende robot, der løftes af en fast vinge.', aliases: [fastvinget drone, droneflyvemaskine]}
+rb-6-3: {name: Hybrid VTOL, description: 'Flyvende robot, der kombinerer lodret start med rotorer og flyvning på fast vinge.', aliases: [VTOL-drone, tiltrotor-drone, tail-sitter]}
+rb-7: {name: Vandrobot, description: 'Robot, der arbejder på eller i vand.', aliases: [undervandsrobot, maritim robot, vandrobot]}
+rb-7-1: {name: ROV, description: 'Undervandsfartøj, der er forbundet med overfladen via et kabel, uanset om det fjernstyres eller kører autonomt.', aliases: [fjernstyret undervandsfartøj, undervandsdrone med kabel, undervandsdrone, poolrobot med ledning]}
+rb-7-2: {name: AUV, description: Autonomt undervandsfartøj uden kabel., aliases: [autonomt undervandsfartøj, undervandsglider]}
+rb-7-3: {name: USV, description: Ubemandet overfladefartøj., aliases: [ubemandet overfladefartøj, autonom båd, robotbåd]}
+rb-8: {name: Kropsbåren robot, description: 'Robot, der bæres på kroppen.', aliases: [wearable robot, exosuit]}
+rb-8-1: {name: Exoskelet, description: 'Motordrevet exoskelet eller exosuit, der støtter eller forstærker menneskets bevægelser.', aliases: [aktivt exoskelet, exosuit, blød exosuit, exo]}
+rb-8-2: {name: Protese, description: 'Motoriseret eller mikroprocessorstyret protese til et lem eller led, der erstatter en manglende kropsdel.', aliases: [motoriseret protese, bionisk arm, bionisk hånd, motoriseret knæ]}
+rb-9: {name: Stationær robot, description: 'Robot på fast base, ikke humanoid, som ikke håndterer genstande, fx en skrivebordsrobot eller social robot uden arme.', aliases: [skrivebordsrobot, ledsagerrobot, social robot, bordrobot]}
+rb-10: {name: Byggesæt, description: 'Modulært byggesæt uden fast kropsform, som bliver til en programmerbar robot.', aliases: [robotbyggesæt, byggesæt, STEM-sæt, undervisningsrobot]}
+cp: {name: Komponent, description: 'En robotdel eller et tilbehør, der sælges separat fra en komplet robot.', aliases: [komponenter, tilbehør, reservedele, robotdele]}
+cp-1: {name: Endeeffektor, description: 'Enhed monteret for enden af en robotarm eller et håndled, som påvirker omgivelserne.', aliases: [robotværktøj, EOAT, end effector, endeeffektor]}
+cp-1-1: {name: Griber, description: 'Gribende endeeffektor, som ikke er en menneskelignende hånd.', aliases: [robotgriber, gripper, robotgreb]}
+cp-1-1-1: {name: Fingergriber, description: 'Griber med mekaniske fingre eller kæber, herunder parallel- og vinkelgribere og adaptive gribere med 2–3 fingre.', aliases: [parallelgriber, kæbegriber, adaptiv griber, 2-fingret griber, 3-fingret griber, mekanisk griber]}
+cp-1-1-2: {name: Vakuumgriber, description: 'Griber, der holder med sug, herunder sugekopper, skumgribere og fladegribere.', aliases: [sugegriber, sugekop, vakuumløfter, vakuumværktøj]}
+cp-1-1-3: {name: Magnetgriber, description: 'Griber, der holder jernholdige emner med magnetkraft.', aliases: [magnetisk griber, elektromagnetisk griber]}
+cp-1-1-4: {name: Blød griber, description: Griber med eftergivende eller oppustelige fingre., aliases: [soft gripper, blød robotgriber, oppustelig griber]}
+cp-1-2: {name: Robothånd, description: 'Menneskelignende endeeffektor med fire eller flere fingre, herunder en modstillelig tommelfinger, og flere frihedsgrader.', aliases: [fingerfærdig robothånd, robothånd, humanoid hånd, femfingret hånd]}
+cp-1-3: {name: Værktøj, description: 'Procesværktøj som en svejsebrænder, spindel, skruetrækker eller doseringsenhed. Et kamera monteret på håndleddet er en sensor (cp-3-1), ikke et værktøj.', aliases: [procesværktøj, robotværktøj, svejsebrænder, skrueværktøj, spindel]}
+cp-1-4: {name: Værktøjsskifter, description: Hurtigkobling mellem robottens håndled og udskiftelige endeeffektorer., aliases: [hurtigskifter, værktøjskobling, quick changer]}
+cp-2: {name: Aktuator, description: 'Enhed, der skaber bevægelse i et robotled eller en akse.', aliases: [aktuatorer, drev, bevægelseskomponenter]}
+cp-2-1: {name: Ledmodul, description: 'Integreret roterende aktuator, der samler motor, gear, encoder og driver i én enhed.', aliases: [integreret aktuator, robotled, aktuatormodul, leddrev]}
+cp-2-2: {name: Servo, description: Hobby- eller smart-servo med indbygget styring og en seriel bus (daisy-chain)., aliases: [smart servo, busservo, hobbyservo, seriel servo]}
+cp-2-3: {name: Motor, description: 'Ren elmotor, fx BLDC, stepmotor eller rammeløs motor, uden gear eller integreret styring.', aliases: [BLDC-motor, stepmotor, rammeløs motor, momentmotor]}
+cp-2-4: {name: Reduktionsgear, description: 'Gearenhed som harmonisk/strain-wave, cykloide/RV eller planetgear.', aliases: [gearkasse, strain wave-gear, harmonic drive, cykloidegear, RV-gear, planetgear]}
+cp-2-5: {name: Lineær aktuator, description: 'Aktuator, der skaber retlinet bevægelse, fx planetrulleskrue, kugleskrue, pneumatisk eller hydraulisk cylinder.', aliases: [lineær aktuator, elcylinder, rulleskrueaktuator, pneumatisk cylinder]}
+cp-3: {name: Sensor, description: 'Enhed, der måler robotten selv eller dens omgivelser.', aliases: [sensorer, perceptionshardware]}
+cp-3-1: {name: Kamera, description: 'Billedsensor, herunder RGB-, dybde-, stereo-, termiske og eventkameraer.', aliases: [dybdekamera, stereokamera, RGB-D-kamera, maskinsynskamera, eventkamera]}
+cp-3-2: {name: Lidar, description: 'Laserbaseret afstandssensor, 2D eller 3D.', aliases: [LiDAR, laserscanner, laserafstandsmåler]}
+cp-3-3: {name: Kraft-/momentsensor, description: 'Sensor, der måler kraft og moment ved et håndled eller led, typisk i 3 eller 6 akser.', aliases: [F/T-sensor, kraftsensor, momentsensor, 6-akset kraftsensor]}
+cp-3-4: {name: Taktil sensor, description: 'Sensor, der måler berøring, tryk eller tekstur på en overflade.', aliases: [taktil hud, berøringssensor, fingerspidssensor]}
+cp-3-5: {name: Inertisensor / encoder, description: Bevægelses- og positionssensorer som IMU'er og encodere., aliases: [IMU, inertimåleenhed, encoder, drejegiver]}
+cp-3-6: {name: Afstands-/positionssensor, description: 'Ikke-laserbaserede afstands- og absolutte positionssensorer som GNSS-modtagere, radar og ultralyds- eller ToF-afstandsmålere.', aliases: [GNSS-modtager, GPS-modul, RTK-modtager, radarsensor, ultralydssensor, ToF-afstandsmåler, nærhedssensor]}
+cp-4: {name: Computer, description: 'Robotcontrollere, enkeltkortcomputere og edge-AI-moduler.', aliases: [robotcontroller, robotstyring, SBC, edge-AI-modul, computermodul]}
+cp-5: {name: Strøm, description: 'Batteripakker, opladere og ladestationer.', aliases: [batteri, oplader, ladestation, strømforsyning]}
+cp-6: {name: Struktur, description: 'Rammer, beslag, kabinetter, flanger og kabelføring.', aliases: [beslag, montagebeslag, ramme, flange, kabelføring, kabinet]}
+cp-7: {name: Fjernstyring, description: 'Udstyr til at styre en robot på afstand eller indsamle demonstrationsdata, fx leader-arme, haptiske enheder og VR- eller motion capture-udstyr.', aliases: [leader-arm, teleoperation, haptisk enhed, dataindsamlingsudstyr, motion capture-handske]}

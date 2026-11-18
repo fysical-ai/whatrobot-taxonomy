@@ -65,7 +65,8 @@ def test_import_writes_only_ticked_rows_with_fingerprints(data_copy, tmp_path):
     q = tx2.locales["da"].categories["rb-3-1"]
     assert q.name == "Firbenet robot" and q.aliases == ["robothund", "firbenet robot"]
     assert set(q.source) == {"name", "description", "aliases"}
-    assert "rb-3-2" not in tx2.locales["da"].categories  # edited but not ticked
+    before = tx.locales["da"].categories.get("rb-3-2") if "da" in tx.locales else None
+    assert tx2.locales["da"].categories.get("rb-3-2") == before  # edited but not ticked: left as it was
     assert l10n.state(tx2, "da", keys[0]) == "reviewed"
     assert validate(tx2).ok
     # dist carries the localised search terms
@@ -104,3 +105,26 @@ def test_existing_drafts_count_as_drafts():
     tx = load(DATA)
     counts = l10n.status(tx)["zh-Hans"]
     assert counts["draft"] > 0 and not l10n.launch_ready(counts)
+
+
+def test_draft_import_writes_unreviewed_and_keeps_reviewed(data_copy, tmp_path):
+    tx = load(data_copy)
+    key, other = "category.rb-3-1.name", "category.rb-3-2.name"
+    # a reviewed Danish name first
+    l10n.import_review(tx, "da", l10n.read_review(_review_csv(tx, tmp_path / "r.csv", "da", {key: "Firbenet robot"}, {key})), data_dir=data_copy)
+    tx = load(data_copy)
+    assert l10n.state(tx, "da", key) == "reviewed"
+    rows = l10n.export_rows(tx, ["da"])
+    for r in rows:
+        if r["key"] == key:
+            r["da"] = "Machine text that must not win"
+        if r["key"] == other:
+            r["da"] = "Tobenet robot"
+    l10n.write_csv(rows, tmp_path / "d.csv")
+    rep = l10n.import_drafts(tx, "da", l10n.read_review(tmp_path / "d.csv"), data_dir=data_copy)
+    tx = load(data_copy)
+    assert rep.kept_reviewed >= 1
+    assert l10n.localized(tx, "da", key)[0] == "Firbenet robot"
+    assert l10n.state(tx, "da", key) == "reviewed"
+    assert l10n.state(tx, "da", other) == "draft"
+    assert validate(tx).ok

@@ -1,0 +1,93 @@
+# whatrobot taxonomy — da localisation of attributes
+# Licence: CC BY 4.0. Keyed by attribute friendly_id. Localised: name, description. Inclusion rules stay English.
+# Review state: a field listed under `source` was reviewed by a native reader against the English text with that
+# fingerprint; fields not listed are LLM drafts. Check with: whatrobot-taxonomy l10n status
+---
+manufacturer: {name: Producent, description: 'Virksomheden, der fremstiller produktet.'}
+model: {name: Model, description: 'Officielt modelnavn, som producenten har offentliggjort det.'}
+variant: {name: Variant, description: 'Undermodel eller konfiguration, når producenten oplister den separat.'}
+aliases: {name: Andre navne, description: 'Andre navne, folk søger efter.'}
+segment: {name: Brugertype, description: 'Brugertyper, der plausibelt ville købe produktet til listepris: hobby, uddannelse, forskning, professionel, forbruger, klinisk.'}
+application_group: {name: Anvendelsesområde, description: Øverste niveau i det todelte ordforråd for anvendelser; udledt af anvendelsesværdierne.}
+application: {name: Anvendelse, description: Hvad produktet markedsføres til. Hver værdi hører til ét anvendelsesområde.}
+iso_category: {name: ISO 8373-kategori, description: 'Tilsigtet anvendelsesklasse efter ISO 8373:2021, som producenten positionerer produktet.'}
+environment: {name: Miljø, description: 'Miljøer, produktet er klassificeret til at arbejde i.'}
+autonomy: {name: Autonomi, description: 'Højeste niveau af drift uden opsyn, som understøttes fra fabrikken. Programmeret: kører en indlært eller kodet sekvens uden at sanse omgivelserne (de fleste industriarme).'}
+collaborative: {name: Kollaborativ, description: 'Producenten oplyser, at robotten opfylder kravene til robotter i kollaborative applikationer i ISO 10218-1:2025 (eller den tidligere ISO/TS 15066), som regel gennem indbygget effekt- og kraftbegrænsning. Efter ISO 10218:2025 er det en applikation, ikke en robot, der bekræftes som kollaborativ efter sin egen risikovurdering.'}
+availability: {name: Tilgængelighed, description: Om produktet kan købes i dag.}
+price: {name: Pris, description: 'Listepris som offentliggjort. Skal ledsages af valuta, prisdato og priskilde.'}
+currency: {name: Valuta, description: Prisens ISO 4217-kode.}
+price_date: {name: Prisdato, description: 'Dato, hvor prisen blev observeret (ISO 8601).'}
+price_source: {name: Priskilde, description: 'URL, hvor prisen blev observeret.'}
+release_year: {name: Lanceringsår, description: 'Året, hvor produktet første gang kom i handlen.'}
+country: {name: Land, description: 'Producentens hovedsæde, ISO 3166-1 alpha-2.'}
+mass: {name: Vægt, description: Produktets vægt ifølge specifikationen.}
+payload: {name: Nyttelast, description: 'Nominel nyttelast. Arm: ved håndleddet. Mobil robot: på dækket. Endeeffektor: det emne, der holdes.'}
+battery_runtime: {name: Batteritid, description: Producentens angivne driftstid på én opladning.}
+ip_rating: {name: IP-klasse, description: 'Kapslingsklasse (IEC 60529), fx IP54.'}
+open_source: {name: Open source, description: Hvilke dele af produktet der er udgivet under en åben licens.}
+sdk: {name: SDK, description: Officielt understøttede programmeringsgrænseflader.}
+compatible_with: {name: Kompatibel med, description: 'Robotter eller komponenter, der officielt understøttes sammen med dette produkt.'}
+sources: {name: Kilder, description: URL og dato for hver oplysning.}
+axes: {name: Akser, description: 'Antal styrede akser. Arm: led. Kraft-/momentsensor: målte akser.'}
+reach: {name: Rækkevidde, description: Armens maksimale rækkevidde.}
+repeatability: {name: Gentagelsesnøjagtighed, description: Positionens gentagelsesnøjagtighed ifølge specifikationen.}
+arm_count: {name: Antal arme, description: Antal arme på produktet.}
+mounting: {name: Montering, description: 'Positioner, armen kan monteres i.'}
+height: {name: Højde, description: Højde stående.}
+dof_total: {name: Frihedsgrader i alt, description: 'Samlet antal frihedsgrader, ekskl. hænder.'}
+hands_included: {name: Hænder medfølger, description: Hvilke endeeffektorer der leveres med robotten.}
+max_speed: {name: Tophastighed, description: 'Maksimal hastighed, når robotten bevæger sig.'}
+wheel_feet: {name: Hjul på fødderne, description: Robot med ben og hjul på fødderne.}
+has_arm: {name: Arm som tilkøb, description: En arm fås som tilkøb.}
+drive_config: {name: Drivkonfiguration, description: 'Hvordan en kørende base styrer og driver sig selv, som producenten oplyser det. Differentialstyring: to uafhængigt drevne hjul, der drejer ved hastighedsforskel. Skridstyring (skid-steer): fire eller flere faste hjul, drevet som venstre og højre side, der drejer ved at skride. Omnidirektionel: mecanum-, omni- eller swerve-hjul. Ackermann: styrede hjul som på en bil. Bælter: endeløse bælter. Selvbalancerende: to hjul på én aksel, holdt oprejst af aktiv balance.'}
+navigation: {name: Navigation, description: Hvordan en kørende robot navigerer.}
+flight_time: {name: Flyvetid, description: Producentens angivne flyvetid.}
+max_takeoff_weight: {name: Maks. startvægt, description: Maksimal startvægt.}
+depth_rating: {name: Dybdeklassificering, description: Maksimal godkendt arbejdsdybde.}
+body_region: {name: Kropsområde, description: 'Kropsområder, en kropsbåren robot virker på.'}
+uses_components: {name: Bruger komponenter, description: 'Separat oplistede komponenter, som produktet er bygget af (fx en hånds aktuatorer).'}
+flange_standard: {name: Flangestandard, description: Standard for den mekaniske monteringsflade mellem en komponent og en robot.}
+interface: {name: Interface, description: Elektriske og kommunikationsmæssige grænseflader.}
+voltage: {name: Spænding, description: Nominel forsyningsspænding.}
+actuation: {name: Drivform, description: 'Energikilden, der driver komponenten.'}
+grip_force: {name: Gribekraft, description: Maksimal gribekraft.}
+stroke: {name: Slaglængde, description: 'Samlet vandring. Griber: kæbeåbning. Lineær aktuator: udgangsvandring.'}
+finger_count: {name: Antal fingre, description: Antal fingre eller kæber.}
+dof: {name: Frihedsgrader, description: Aktive frihedsgrader.}
+tactile_sensing: {name: Taktil sansning, description: Indbygget taktil sansning.}
+rated_torque: {name: Nominelt moment, description: Kontinuerligt nominelt moment.}
+peak_torque: {name: Spidsmoment, description: Spidsmoment.}
+reducer_type: {name: Geartype, description: Princip for gearreduktion.}
+gear_ratio: {name: Udveksling, description: Reduktionsforhold angivet som N i N:1.}
+rated_force: {name: Nominel kraft, description: Kontinuerlig nominel lineær kraft.}
+stall_torque: {name: Stall-moment, description: 'Stall-moment, momentet ved hastighed nul (servoer og motorer; servoproducenter angiver kg·cm – omregning: 1 kg·cm = 0,0981 Nm).'}
+bus: {name: Bus, description: Servoens kommunikationsbus.}
+modality: {name: Billedtype, description: Kameraets billedtyper.}
+scan_dimensions: {name: Scanningsdimensioner, description: Om en lidar scanner et plan eller et rum.}
+range: {name: Måleområde, description: Maksimal måleafstand.}
+ai_tops: {name: AI-ydelse, description: 'Maksimal AI-regnekraft. På en robot dens indbyggede computer; registreres kun, hvor producenten oplyser den.'}
+capacity: {name: Kapacitet, description: Energikapacitet.}
+teleop_type: {name: Fjernstyringstype, description: Type fjernstyringsudstyr.}
+wingspan: {name: Vingefang, description: Vingefang på et fastvinget fly eller en hybrid VTOL.}
+cruise_speed: {name: Marchhastighed, description: Typisk marchhastighed (lufthastighed).}
+flight_range: {name: Flyverækkevidde, description: 'Den distance, fartøjet kan flyve på én opladning eller tankfuld, som producenten oplyser det.'}
+max_user_weight: {name: Maks. brugervægt, description: 'Den tungeste bruger, den kropsbårne enhed er godkendt til.'}
+load_limit: {name: Belastningsgrænse, description: 'Maksimal statisk belastning, en protese er godkendt til at holde eller bære (fx en hånds statiske belastningsgrænse).'}
+stroke_x: {name: Slaglængde X, description: Slaglængde på X-aksen af en kartesisk robot (arbejdsområdets bredde).}
+stroke_y: {name: Slaglængde Y, description: Slaglængde på Y-aksen af en kartesisk robot (arbejdsområdets dybde).}
+stroke_z: {name: Slaglængde Z, description: Lodret slaglængde på en kartesisk eller cylindrisk robot.}
+voltage_min: {name: Minimumsspænding, description: 'Laveste forsyningsspænding i et oplyst indgangsområde. Bruges sammen med maksimumsspændingen, når producenten oplyser et område i stedet for en nominel spænding.'}
+voltage_max: {name: Maksimumsspænding, description: Højeste forsyningsspænding i et oplyst indgangsområde.}
+position_accuracy: {name: Positionsnøjagtighed, description: 'Vandret positionsnøjagtighed for en positionssensor (RTK-fix for GNSS), som producenten oplyser den.'}
+update_rate: {name: Opdateringsfrekvens, description: Maksimal udlæsnings- eller målefrekvens.}
+heading_accuracy: {name: Kursnøjagtighed, description: 'Kursnøjagtighed (yaw) for en IMU eller AHRS, som producenten oplyser den.'}
+attitude_accuracy: {name: Orienteringsnøjagtighed, description: 'Rul- og pitch-nøjagtighed for en IMU eller AHRS (dynamisk, som producenten oplyser den).'}
+force_range: {name: Kraftmåleområde, description: 'Måleområde for kraft på en kraft-/momentsensor (største akse, ±).'}
+torque_range: {name: Momentmåleområde, description: 'Måleområde for moment på en kraft-/momentsensor (største akse, ±).'}
+linear_speed: {name: Lineær hastighed, description: Maksimal lineær hastighed for en lineær aktuator.}
+grip_range: {name: Gribeområde, description: 'Den største genstand, griberen kan gribe.'}
+medical_clearance: {name: Medicinsk godkendelse, description: 'Markeder, hvor producenten oplyser, at robotten lovligt markedsføres som medicinsk udstyr. USA: godkendt eller clearet af FDA, De Novo-godkendt eller registreret som 510(k)-fritaget udstyr. EU: CE-mærket som medicinsk udstyr. Kina: godkendt af NMPA. Japan: godkendt af MHLW efter PMDA''s gennemgang. Tom, når producenten ikke oplyser en sådan status.'}
+adhesion: {name: Vedhæftningsprincip, description: 'Hvordan en kørende robot holder fast på vægge, tanke, skibsskrog eller lofter, så den kan klatre på dem. Ingen for robotter, der kun kører på jorden.'}
+construction: {name: Konstruktion, description: 'Om et exoskelet overfører sin hjælpekraft gennem en stiv ramme langs lemmet eller gennem tekstiler, remme og kabler (en blød exosuit).'}
+outer_diameter: {name: Udvendig diameter, description: 'Udvendig diameter af den bøjelige sektion på en kontinuumsarm eller robotkateter; afgør, hvilke åbninger den kan føres ind i.'}

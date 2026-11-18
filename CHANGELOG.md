@@ -4,10 +4,22 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Term evidence pass: de, zh-Hans (2026-11-18)
+- New `data/localizations/<locale>/evidence.yml` for `de` and `zh-Hans`: where each checked term was seen (manufacturer, reseller, standards and trade pages, with URL), with a status of confirmed, changed or open. A record only; the tooling does not load it. 28 German and 32 Chinese terms checked so far.
+- `de` changes on that evidence: reducer type `harmonic` is "Wellgetriebe" (was "Harmonic Drive (Wellgetriebe)"; a maker's name is not used as the generic label); attribute `mounting` is "Montageart" (was "Montage", the same word as the application Assembly); hands-included `dexterous-hand` is "Roboterhand" (was "Geschickte Hand"). "Aktuator", "Aktuatoren" and "Linearaktuator" added as search terms.
+- `zh-Hans` change: attribute `mass` is 重量 (was 质量), as on datasheets.
+- `de` description of Hand (`cp-1-2`) brought up to the current English (underactuated hands). The `da` draft of that field still follows the earlier English.
+- All fields remain unreviewed machine drafts.
+
 ### Underactuated hands (2026-11-10)
 - Hand (`cp-1-2`) no longer requires six actuated degrees of freedom: at least four fingers including an opposable thumb is a hand, however many actuators drive them (coupled or tendon-driven fingers count). The gripper (`cp-1-1`) rule follows. Classifier changed; category ids and tie-break order unchanged. `dof` still means actuated DoF.
 - New classification example `underactuated-five-finger-hand` (84).
 - Design notes §4.1 and §10.5; zh-Hans draft of the `cp-1-2` description updated (LLM draft).
+
+### Localisation drafts: da, de, zh-Hans complete (2026-11-09)
+- New locales `da` (Danish) and `de` (German): machine first drafts for all 535 fields (category names, descriptions and search terms; attribute names and descriptions; value names). Unreviewed: they are for the native review sheet, and the release gate still refuses them.
+- `zh-Hans`: the 107 missing fields (new attributes and values, search terms) drafted, and the 12 fields whose English changed since the 2026-11-02 draft redrafted. All 535 fields now have text; none reviewed yet.
+- Tooling: `whatrobot-taxonomy l10n import FILE --draft --locale <code>` writes every non-empty row as an unreviewed draft; fields already reviewed against the current English are never overwritten.
 
 ### Batch-2 rulings (2026-11-09)
 - New value (id 164): availability `limited` (deployed only to selected customers: pilots, early access or invitation; no open sale).

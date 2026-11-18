@@ -1,0 +1,184 @@
+# whatrobot taxonomy — da localisation of attribute values
+# Licence: CC BY 4.0. Keyed by value friendly_id. Localised: name. Inclusion rules stay English.
+# Review state: a field listed under `source` was reviewed by a native reader against the English text with that
+# fingerprint; fields not listed are LLM drafts. Check with: whatrobot-taxonomy l10n status
+---
+segment__hobby: {name: Hobby}
+segment__education: {name: Uddannelse}
+segment__research: {name: Forskning}
+segment__professional: {name: Professionel}
+segment__consumer: {name: Forbruger}
+segment__other: {name: Andet}
+application_group__manufacturing: {name: Produktion}
+application_group__logistics: {name: Logistik}
+application_group__professional-service: {name: Professionel service}
+application_group__consumer: {name: Forbruger}
+application_group__health: {name: Sundhed}
+application_group__knowledge: {name: Uddannelse og forskning}
+application_group__general: {name: Generel}
+application_group__other: {name: Andet}
+application__handling: {name: Håndtering}
+application__machine-tending: {name: Maskinbetjening}
+application__palletizing: {name: Palletering}
+application__welding: {name: Svejsning}
+application__assembly: {name: Montage}
+application__painting-dispensing: {name: Maling og dosering}
+application__machining: {name: Bearbejdning}
+application__inspection-qc: {name: Inspektion og kvalitetskontrol}
+application__warehouse-logistics: {name: Lagerlogistik}
+application__delivery: {name: Levering}
+application__transport: {name: Transport}
+application__professional-cleaning: {name: Professionel rengøring}
+application__inspection-maintenance: {name: Inspektion og vedligehold}
+application__agriculture: {name: Landbrug}
+application__construction: {name: Byggeri}
+application__security: {name: Sikkerhed og overvågning}
+application__search-rescue: {name: Eftersøgning og redning}
+application__hospitality-retail: {name: 'Hotel, restaurant og detail'}
+application__domestic-cleaning: {name: Rengøring i hjemmet}
+application__lawn-garden: {name: Græsplæne og have}
+application__pool: {name: Pool}
+application__companionship: {name: Selskab}
+application__entertainment: {name: Underholdning}
+application__telepresence: {name: Telepresence}
+application__surgery: {name: Kirurgi}
+application__rehabilitation: {name: Genoptræning}
+application__care-assistance: {name: Pleje og assistance}
+application__education: {name: Undervisning}
+application__research-platform: {name: Forskningsplatform}
+application__general-purpose: {name: Generelt formål}
+application__other: {name: Andet}
+iso_category__industrial: {name: Industri}
+iso_category__service: {name: Service}
+iso_category__medical: {name: Medicinsk}
+iso_category__other: {name: Andet}
+environment__indoor: {name: Indendørs}
+environment__outdoor: {name: Udendørs}
+environment__underwater: {name: Under vand}
+environment__airborne: {name: I luften}
+environment__hazardous: {name: Farligt miljø}
+environment__space: {name: Rummet}
+environment__other: {name: Andet}
+autonomy__teleoperated: {name: Fjernstyret}
+autonomy__assisted: {name: Assisteret}
+autonomy__semi-autonomous: {name: Delvist autonom}
+autonomy__autonomous: {name: Autonom}
+autonomy__other: {name: Andet}
+availability__shipping: {name: I handlen}
+availability__preorder: {name: Forudbestilling}
+availability__announced: {name: Annonceret}
+availability__research-only: {name: Kun til forskning}
+availability__discontinued: {name: Udgået}
+availability__other: {name: Andet}
+availability__limited: {name: Begrænset tilgængelig}
+open_source__hardware: {name: Hardware}
+open_source__software: {name: Software}
+open_source__none: {name: Ingen}
+open_source__other: {name: Andet}
+sdk__ros1: {name: ROS 1}
+sdk__ros2: {name: ROS 2}
+sdk__python: {name: Python}
+sdk__cpp: {name: C++}
+sdk__proprietary: {name: Proprietær}
+sdk__none: {name: Ingen}
+sdk__other: {name: Andet}
+mounting__floor: {name: Gulv}
+mounting__table: {name: Bord}
+mounting__wall: {name: Væg}
+mounting__ceiling: {name: Loft}
+mounting__mobile: {name: Mobil}
+mounting__other: {name: Andet}
+hands_included__none: {name: Ingen}
+hands_included__gripper: {name: Griber}
+hands_included__dexterous-hand: {name: Robothånd}
+hands_included__optional: {name: Tilkøb}
+hands_included__other: {name: Andet}
+drive_config__differential: {name: Differentialstyring}
+drive_config__omnidirectional: {name: Omnidirektionel}
+drive_config__ackermann: {name: Ackermann}
+drive_config__tracked: {name: Bælter}
+drive_config__other: {name: Andet}
+navigation__line-following: {name: Linjefølgning}
+navigation__marker-based: {name: Markørbaseret}
+navigation__slam: {name: SLAM}
+navigation__none: {name: Ingen}
+navigation__other: {name: Andet}
+body_region__lower-limb: {name: Ben}
+body_region__upper-limb: {name: Arme}
+body_region__back: {name: Ryg}
+body_region__full-body: {name: Hele kroppen}
+body_region__other: {name: Andet}
+flange_standard__iso-9409-1-50: {name: ISO 9409-1-50}
+flange_standard__iso-9409-1-31: {name: ISO 9409-1-31}
+flange_standard__custom: {name: Specialtilpasset}
+flange_standard__na: {name: Ikke relevant}
+flange_standard__other: {name: Andet}
+interface__ethercat: {name: EtherCAT}
+interface__can: {name: CAN}
+interface__modbus-tcp: {name: Modbus TCP}
+interface__rs485: {name: RS-485}
+interface__usb: {name: USB}
+interface__ethernet: {name: Ethernet}
+interface__io-link: {name: IO-Link}
+interface__digital-io: {name: Digital I/O}
+interface__pneumatic: {name: Pneumatisk}
+interface__other: {name: Andet}
+actuation__electric: {name: Elektrisk}
+actuation__pneumatic: {name: Pneumatisk}
+actuation__hydraulic: {name: Hydraulisk}
+actuation__vacuum: {name: Vakuum}
+actuation__passive: {name: Passiv}
+actuation__other: {name: Andet}
+reducer_type__harmonic: {name: Harmonisk}
+reducer_type__cycloidal: {name: Cykloide}
+reducer_type__rv: {name: RV}
+reducer_type__planetary: {name: Planetgear}
+reducer_type__quasi-direct: {name: Kvasi-direkte drev}
+reducer_type__none: {name: Ingen}
+reducer_type__other: {name: Andet}
+bus__ttl: {name: TTL}
+bus__rs485: {name: RS-485}
+bus__can: {name: CAN}
+bus__pwm: {name: PWM}
+bus__other: {name: Andet}
+modality__rgb: {name: RGB}
+modality__depth: {name: Dybde}
+modality__stereo: {name: Stereo}
+modality__thermal: {name: Termisk}
+modality__event: {name: Event}
+modality__other: {name: Andet}
+scan_dimensions__2d: {name: 2D}
+scan_dimensions__3d: {name: 3D}
+scan_dimensions__other: {name: Andet}
+teleop_type__leader-arm: {name: Leader-arm}
+teleop_type__haptic-device: {name: Haptisk enhed}
+teleop_type__vr-rig: {name: VR-udstyr}
+teleop_type__mocap: {name: Motion capture}
+teleop_type__gamepad: {name: Gamepad}
+teleop_type__other: {name: Andet}
+application__mapping-surveying: {name: Kortlægning og opmåling}
+application__lab-automation: {name: Laboratorieautomatisering}
+segment__clinical: {name: Klinisk}
+teleop_type__handheld-demonstrator: {name: Håndholdt demonstrator}
+interface__uart: {name: UART / seriel (TTL)}
+interface__i2c: {name: I²C}
+interface__spi: {name: SPI}
+interface__rs232: {name: RS-232}
+interface__rs422: {name: RS-422}
+interface__modbus-rtu: {name: Modbus RTU}
+interface__analog: {name: Analog}
+autonomy__programmed: {name: Programmeret}
+drive_config__skid-steer: {name: Skridstyring (skid-steer)}
+drive_config__self-balancing: {name: Selvbalancerende}
+medical_clearance__us-fda: {name: USA (FDA)}
+medical_clearance__eu-ce: {name: Den Europæiske Union (CE)}
+medical_clearance__cn-nmpa: {name: Kina (NMPA)}
+medical_clearance__jp-pmda: {name: Japan (MHLW / PMDA)}
+medical_clearance__other: {name: Andet}
+adhesion__none: {name: Ingen}
+adhesion__magnetic: {name: Magnetisk}
+adhesion__vacuum: {name: Vakuum}
+adhesion__other: {name: Andet}
+construction__rigid: {name: Stiv}
+construction__soft: {name: Blød}
+construction__other: {name: Andet}

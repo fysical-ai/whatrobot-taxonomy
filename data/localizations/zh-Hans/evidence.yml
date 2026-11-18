@@ -1,0 +1,205 @@
+# whatrobot taxonomy — zh-Hans term evidence
+# Licence: CC BY 4.0. Not loaded by the taxonomy tooling; a record of where each Chinese term was seen.
+# Keys: attribute.<key>, value.<key>, category.<id>, matching attributes.yml, values.yml and categories.yml.
+# status: confirmed (term seen on the sources) | changed (draft replaced on this evidence) | open (needs a decision).
+# Sources are manufacturer catalogues and datasheets, standards drafts, journals and trade articles in Chinese,
+# read 2026-11-18. They are evidence of usage only: no text is copied from them and no specifications are taken
+# from them. Terms without an entry have not been checked yet.
+---
+attribute.payload:
+  term: 负载
+  status: confirmed
+  also: [有效负载]
+  sources:
+    - https://www.worldrobotconference.com/profile/robot/download/2025/07/03/KUKA选型手册-中文_20250703164527A701.pdf
+    - https://damodev.csdn.net/6ae20d7be5f4ca4eff8cf61c.html
+attribute.reach:
+  term: 臂展
+  status: confirmed
+  also: [工作半径, 可达半径]
+  sources:
+    - https://www.worldrobotconference.com/profile/robot/download/2025/07/03/KUKA选型手册-中文_20250703164527A701.pdf
+    - https://damodev.csdn.net/6ae20d7be5f4ca4eff8cf61c.html
+    - https://fanuc.co.jp/en/product/catalog/pdf/robot/RCRALL(C)-06.pdf
+  note: 臂展 in KUKA's Chinese selection guide; 工作半径 in a selection article; 可达半径 in FANUC's Chinese catalogue.
+attribute.repeatability:
+  term: 重复定位精度
+  status: confirmed
+  sources:
+    - https://www.worldrobotconference.com/profile/robot/download/2025/07/03/KUKA选型手册-中文_20250703164527A701.pdf
+    - https://www.ttbz.org.cn/upload/file/20250806/6389007505326570672508182.pdf
+attribute.mass:
+  term: 重量
+  status: changed
+  was: 质量
+  also: [自重]
+  sources:
+    - https://www.pololu.com:443/file/0J1270/FS5115M-specs.pdf
+    - https://a.storyblok.com/f/298593/x/6f8ff5a6f5/z-efg-8s-_v-2022-03-25.pdf
+    - https://www.worldrobotconference.com/profile/robot/download/2025/07/03/KUKA选型手册-中文_20250703164527A701.pdf
+  note: Datasheets label it 重量 (FEETECH servos, an electric gripper) or 自重 (KUKA). 质量 is the physics term and was not seen as a spec label.
+attribute.mounting:
+  term: 安装方式
+  status: confirmed
+  sources:
+    - https://www.worldrobotconference.com/profile/robot/download/2025/07/03/KUKA选型手册-中文_20250703164527A701.pdf
+    - https://fanuc.co.jp/en/product/catalog/pdf/robot/RCRALL(C)-06.pdf
+attribute.ip_rating:
+  term: 防护等级
+  status: confirmed
+  sources:
+    - https://www.worldrobotconference.com/profile/robot/download/2025/07/03/KUKA选型手册-中文_20250703164527A701.pdf
+    - https://a.storyblok.com/f/298593/x/6f8ff5a6f5/z-efg-8s-_v-2022-03-25.pdf
+attribute.dof:
+  term: 自由度
+  status: confirmed
+  sources:
+    - https://damodev.csdn.net/6ae20d7be5f4ca4eff8cf61c.html
+attribute.collaborative:
+  term: 协作
+  status: confirmed
+  sources:
+    - https://www.ttbz.org.cn/upload/file/20250806/6389007505326570672508182.pdf
+    - https://fanuc.co.jp/en/product/catalog/pdf/robot/RCRALL(C)-06.pdf
+  note: Seen as 协作机器人.
+attribute.grip_force:
+  term: 夹持力
+  status: confirmed
+  sources:
+    - https://cn.onrobot.com/sites/default/files/documents/Datasheet_RG6_v1.1_CN.pdf
+    - https://robotiq.com/zh-cn/tactile-sensor-fingertips-robotiq
+attribute.stroke:
+  term: 行程
+  status: confirmed
+  sources:
+    - https://cn.onrobot.com/sites/default/files/documents/Datasheet_RG6_v1.1_CN.pdf
+    - https://a.storyblok.com/f/298593/x/6f8ff5a6f5/z-efg-8s-_v-2022-03-25.pdf
+attribute.rated_torque:
+  term: 额定扭矩
+  status: confirmed
+  sources:
+    - https://www.bilibili.com/read/cv47823651
+    - https://docs.sunfounder.com/projects/galaxy-rvr/zh-cn/latest/hardware/cpn_servo.html
+attribute.peak_torque:
+  term: 峰值扭矩
+  status: confirmed
+  sources:
+    - https://www.bilibili.com/read/cv47823651
+attribute.stall_torque:
+  term: 堵转扭矩
+  status: open
+  also: [最大扭矩]
+  sources:
+    - https://www.mouser.com/datasheet/2/813/FS5106B_specs-2488602.pdf
+    - https://docs.sunfounder.com/projects/galaxy-rvr/zh-cn/latest/hardware/cpn_servo.html
+  note: Servo sheets use 堵转 for stall (堵转电流, stall current), so 堵转扭矩 is consistent, but the torque label itself was seen as 最大扭矩. Needs a servo maker page that prints 堵转扭矩.
+attribute.wheel_feet:
+  term: 轮足
+  status: confirmed
+  sources:
+    - https://robot.sia.cn/cn/article/pdf/preview/10.13973/j.cnki.robot.190524.pdf
+  note: Seen as 轮足机器人 and 轮足式 in Chinese robotics journals.
+value.reducer_type__harmonic:
+  term: 谐波
+  status: confirmed
+  sources:
+    - https://www.chinabaogao.com/market/202602/778243.html
+    - https://www.bilibili.com/read/cv47823651
+  note: Seen as 谐波减速器.
+value.reducer_type__rv:
+  term: RV
+  status: confirmed
+  sources:
+    - https://www.chinabaogao.com/market/202602/778243.html
+  note: Seen as RV减速器.
+value.reducer_type__planetary:
+  term: 行星
+  status: confirmed
+  sources:
+    - https://www.chinabaogao.com/market/202602/778243.html
+  note: Seen as 行星减速器.
+value.reducer_type__cycloidal:
+  term: 摆线
+  status: confirmed
+  also: [摆线针轮]
+  sources:
+    - https://www.bilibili.com/read/cv47823651
+  note: Seen as 摆线针轮.
+value.application__palletizing:
+  term: 码垛
+  status: confirmed
+  sources:
+    - https://kawasakirobotics.com/uploads/sites/2/2022/01/CH2611-CH-lineup2.pdf
+value.application__welding:
+  term: 焊接
+  status: confirmed
+  sources:
+    - https://kawasakirobotics.com/uploads/sites/2/2022/01/CH2611-CH-lineup2.pdf
+value.application__assembly:
+  term: 装配
+  status: confirmed
+  sources:
+    - https://kawasakirobotics.com/uploads/sites/2/2022/01/CH2611-CH-lineup2.pdf
+value.application__handling:
+  term: 搬运
+  status: confirmed
+  sources:
+    - https://kawasakirobotics.com/uploads/sites/2/2022/01/CH2611-CH-lineup2.pdf
+value.application__machine-tending:
+  term: 机床上下料
+  status: confirmed
+  also: [上下料]
+  sources:
+    - https://kawasakirobotics.com/uploads/sites/2/2022/01/CH2611-CH-lineup2.pdf
+  note: Kawasaki's Chinese catalogue lists the application as 上下料.
+category.rb-3-1:
+  term: 四足机器人
+  status: confirmed
+  sources:
+    - https://castjournals.cast.org.cn/joweb/kjdb/CN/PDF/1242134091525599941
+category.cp-1-1:
+  term: 夹爪
+  status: confirmed
+  also: [电动夹爪]
+  sources:
+    - https://a.storyblok.com/f/298593/x/6f8ff5a6f5/z-efg-8s-_v-2022-03-25.pdf
+    - https://robotiq.com/zh-cn/tactile-sensor-fingertips-robotiq
+category.cp-1-2:
+  term: 灵巧手
+  status: confirmed
+  sources:
+    - https://damodev.csdn.net/6afab939e5f4ca4eff91c2e5.html
+    - https://www.bilibili.com/read/cv47823651
+category.cp-2-1:
+  term: 关节模组
+  status: confirmed
+  sources:
+    - https://damodev.csdn.net/6a75a725662f9a54cb99720a.html
+category.cp-2-2:
+  term: 舵机
+  status: confirmed
+  sources:
+    - https://www.pololu.com:443/file/0J1270/FS5115M-specs.pdf
+    - https://docs.sunfounder.com/projects/galaxy-rvr/zh-cn/latest/hardware/cpn_servo.html
+category.cp-2-4:
+  term: 减速器
+  status: confirmed
+  sources:
+    - https://www.chinabaogao.com/market/202602/778243.html
+category.rb-5:
+  term: 移动操作机器人
+  status: open
+  also: [复合机器人]
+  sources: []
+  note: No maker page checked yet. 复合机器人 is listed as a search term; which of the two buyers use as the category name is a language doubt.
+category.cp-1-4:
+  term: 快换装置
+  status: open
+  sources: []
+  note: Not yet seen on a maker page.
+category.cp-3-3:
+  term: 力/力矩传感器
+  status: open
+  also: [六维力传感器]
+  sources: []
+  note: Not yet seen on a maker page.

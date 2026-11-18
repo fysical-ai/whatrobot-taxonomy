@@ -1,0 +1,193 @@
+# whatrobot taxonomy — de term evidence
+# Licence: CC BY 4.0. Not loaded by the taxonomy tooling; a record of where each German term was seen.
+# Keys: attribute.<key>, value.<key>, category.<id>, matching attributes.yml, values.yml and categories.yml.
+# status: confirmed (term seen on the sources) | changed (draft replaced on this evidence) | open (needs a decision).
+# Sources are manufacturer, reseller or trade-press pages in German, read 2026-11-18. They are evidence of usage
+# only: no text is copied from them and no specifications are taken from them.
+# Terms without an entry have not been checked yet.
+---
+attribute.payload:
+  term: Traglast
+  status: confirmed
+  also: [Nutzlast]
+  sources:
+    - https://library.e.abb.com/public/1641a3fdfe9d455cad757d9d91aa5f4a/Datenblatt_CRB1300_lowres.pdf
+    - https://www.universal-robots.com/de/produkte/ur18-cb5/
+    - https://a.storyblok.com/f/298593/x/4b540c8d21/de_igus_factsheet_lca_rebel-6dof.pdf
+    - https://www.welectron.com/Fairino-FR5-Roboterarm
+  note: Traglast on ABB, Universal Robots and igus datasheets. Nutzlast is also common (Comau, Unchained Robotics, one Universal Robots page).
+attribute.reach:
+  term: Reichweite
+  status: confirmed
+  sources:
+    - https://library.e.abb.com/public/1641a3fdfe9d455cad757d9d91aa5f4a/Datenblatt_CRB1300_lowres.pdf
+    - https://www.universal-robots.com/de/produkte/ur18-cb5/
+    - https://unchainedrobotics.de/produkte/roboter/cobot/omron-tm5-900
+attribute.repeatability:
+  term: Wiederholgenauigkeit
+  status: confirmed
+  sources:
+    - https://www.universal-robots.com/de/produkte/ur18-cb5/
+    - https://unchainedrobotics.de/produkte/roboter/cobot/omron-tm5-900
+    - https://www.welectron.com/Fairino-FR5-Roboterarm
+attribute.axes:
+  term: Achsen
+  status: confirmed
+  also: [Anzahl der Achsen]
+  sources:
+    - https://library.e.abb.com/public/1641a3fdfe9d455cad757d9d91aa5f4a/Datenblatt_CRB1300_lowres.pdf
+    - https://www.fruitcore-robotics.com/konfigurator
+attribute.dof:
+  term: Freiheitsgrade
+  status: confirmed
+  sources:
+    - https://uploads.unchainedrobotics.de/media/file_upload/11_2023_Factsheet_UR30_Product_Web_DE_fa838d90.pdf
+    - https://www.welectron.com/Fairino-FR5-Roboterarm
+    - https://a.storyblok.com/f/298593/x/4b540c8d21/de_igus_factsheet_lca_rebel-6dof.pdf
+attribute.ip_rating:
+  term: Schutzart (IP)
+  status: confirmed
+  sources:
+    - https://library.e.abb.com/public/1641a3fdfe9d455cad757d9d91aa5f4a/Datenblatt_CRB1300_lowres.pdf
+    - https://www.welectron.com/Fairino-FR5-Roboterarm
+    - https://www.fruitcore-robotics.com/konfigurator
+attribute.mass:
+  term: Gewicht
+  status: confirmed
+  also: [Robotergewicht, Eigengewicht]
+  sources:
+    - https://www.universal-robots.com/de/produkte/ur18-cb5/
+    - https://unchainedrobotics.de/produkte/roboter/cobot/omron-tm5-900
+attribute.mounting:
+  term: Montageart
+  status: changed
+  was: Montage
+  sources:
+    - https://library.e.abb.com/public/1641a3fdfe9d455cad757d9d91aa5f4a/Datenblatt_CRB1300_lowres.pdf
+    - https://library.e.abb.com/public/34fb934aac714875a5c51fa85d43ce2e/Datenblatt_CRB15000_lowres.pdf
+  note: ABB datasheets label it Montageart. "Montage" alone is also the draft for the application "Assembly", so the two filters would have shown the same word.
+attribute.collaborative:
+  term: Kollaborativ
+  status: confirmed
+  sources:
+    - https://www.comau.com/wp-content/uploads/2025/07/Comau_Robotik_Kompakter_Katalog2025_DE.pdf
+  note: Makers write "kollaborative Roboter". The ISO 10218 wording "kollaborierende Anwendungen" stays in the description.
+attribute.grip_force:
+  term: Greifkraft
+  status: confirmed
+  also: [Haltekraft]
+  sources:
+    - https://www.festo.com/de/en/e/products/landing-pages-id_326973
+    - https://content2.smcetech.com/pdf/RMH-B_DE.pdf
+attribute.stroke:
+  term: Hub
+  status: confirmed
+  sources:
+    - https://content2.smcetech.com/pdf/RMH-B_DE.pdf
+attribute.reducer_type:
+  term: Getriebeart
+  status: confirmed
+  sources:
+    - https://www.kollmorgen.com/sites/default/files/2023-12/Building%20Humanoid%20Robots-%20From%20Design%20to%20Delivery_WP_Final_de-DE.pdf
+attribute.stall_torque:
+  term: Blockiermoment
+  status: open
+  also: [Stellkraft, Stillstandsdrehmoment]
+  sources:
+    - https://lindinger.at/de/RC-Elektronik/Servos-Zubehoer/Servos-Digital-Low-Voltage/SAVOEX-SH-0255MG-6V-3-9KG-0-13s-Digital-Micro-Servo/9795255
+    - https://roboter-bausatz.de/media/pdf/15/f5/87/RBS10997-MG996R-Datenblatt.pdf
+  note: Hobby servo shops label this value "Stellkraft" (in kg/cm) and use "Blockierstrom" for stall current. "Blockiermoment" itself was not found on a product page. The trial reviewer proposed "Stillstandsdrehmoment" (Beckhoff, industrial servo motors). Language doubt for the translator session.
+attribute.wheel_feet:
+  term: Räder an den Füßen
+  status: open
+  sources:
+    - https://www.auto-motor-und-sport.de/verkehr/bis-zu-21-km-h-schnell-dieser-lauf-und-roll-roboter-kennt-keine-hindernisse/
+  note: No established spec label found. The press describes such robots as "Hybrid aus Rad- und Laufroboter". Language doubt for the translator session.
+value.reducer_type__harmonic:
+  term: Wellgetriebe
+  status: changed
+  was: Harmonic Drive (Wellgetriebe)
+  also: [Spannungswellengetriebe]
+  sources:
+    - https://www.kollmorgen.com/sites/default/files/2023-12/Building%20Humanoid%20Robots-%20From%20Design%20to%20Delivery_WP_Final_de-DE.pdf
+    - https://www.industrial-production.de/antriebstechnik/antriebstechnik-fuer-humanoide-roboter--nabtesco-bietet-wellgetriebe-und-aktuatoren-fuer-robotergelenke.htm
+    - https://harmonicdrive.de/fileadmin/user_upload/Robotik_DE_2022_final.pdf
+  note: Wellgetriebe is the generic term used by Kollmorgen and Nabtesco. "Harmonic Drive" is the name and registered mark of one maker, so it is not used as the generic label. It stays as a search term on the Reducer category.
+value.reducer_type__cycloidal:
+  term: Zykloidgetriebe
+  status: confirmed
+  sources:
+    - https://www.computer-automation.de/mechanik/planeten-und-zykloidgetriebe-im-vergleich.htm
+    - https://www.kollmorgen.com/sites/default/files/2023-12/Building%20Humanoid%20Robots-%20From%20Design%20to%20Delivery_WP_Final_de-DE.pdf
+value.reducer_type__planetary:
+  term: Planetengetriebe
+  status: confirmed
+  sources:
+    - https://www.computer-automation.de/mechanik/planeten-und-zykloidgetriebe-im-vergleich.htm
+value.reducer_type__rv:
+  term: RV-Getriebe
+  status: confirmed
+  sources:
+    - https://trends.directindustry.de/list/suzhou-honpine-precision-industry-co-ltd-4614476-_2.html
+value.application__machine-tending:
+  term: Maschinenbeschickung
+  status: confirmed
+  sources:
+    - https://unchainedrobotics.de/produkte/roboter/cobot/omron-tm5-900
+value.application__inspection-qc:
+  term: Prüfung und Qualitätskontrolle
+  status: confirmed
+  sources:
+    - https://unchainedrobotics.de/produkte/roboter/cobot/omron-tm5-900
+  note: The page uses "Qualitätskontrolle".
+value.hands_included__dexterous-hand:
+  term: Roboterhand
+  status: changed
+  was: Geschickte Hand
+  also: [Fünf-Finger-Hand, Greifhand]
+  sources:
+    - https://www.industrial-production.de/handhabungstechnik/wie-geschickte-haende-das-greifen-veraendern.htm
+  note: The trade press writes Roboterhand, Fünf-Finger-Hand and Greifhand for Schunk's hands; "geschickte Hände" appears only as a headline phrase. Roboterhand also matches the name of the Hand category.
+category.rb-3:
+  term: Laufroboter
+  status: confirmed
+  sources:
+    - https://www.dlr.de/de/rm/forschung/robotersysteme/laufroboter/bert
+    - https://www.wissenschaft.de/technik-digitales/vierbeiner-auf-kontrollgang/
+category.rb-3-1:
+  term: Vierbeiniger Roboter
+  status: confirmed
+  also: [Roboterhund]
+  sources:
+    - https://www.dlr.de/de/rm/forschung/robotersysteme/laufroboter/bert
+    - https://www.wissenschaft.de/technik-digitales/vierbeiner-auf-kontrollgang/
+category.cp-1-2:
+  term: Roboterhand
+  status: confirmed
+  sources:
+    - https://www.industrial-production.de/handhabungstechnik/wie-geschickte-haende-das-greifen-veraendern.htm
+category.cp-1-4:
+  term: Werkzeugwechsler
+  status: confirmed
+  sources:
+    - https://content2.smcetech.com/pdf/RMH-B_DE.pdf
+category.cp-2:
+  term: Aktor
+  status: open
+  also: [Aktuator]
+  sources:
+    - https://www.industrial-production.de/antriebstechnik/antriebstechnik-fuer-humanoide-roboter--nabtesco-bietet-wellgetriebe-und-aktuatoren-fuer-robotergelenke.htm
+    - https://harmonicdrive.de/fileadmin/user_upload/Robotik_DE_2022_final.pdf
+  note: Nabtesco and Harmonic Drive write Aktuator / Servoaktuator on product material; Aktor is the engineering-textbook form. Aktuator and Aktuatoren were added as search terms; the name is a language doubt for the translator session. The same applies to Linearaktor (cp-2-5).
+category.cp-2-4:
+  term: Getriebe
+  status: confirmed
+  sources:
+    - https://www.kollmorgen.com/sites/default/files/2023-12/Building%20Humanoid%20Robots-%20From%20Design%20to%20Delivery_WP_Final_de-DE.pdf
+category.cp-3-3:
+  term: Kraft-Momenten-Sensor
+  status: open
+  also: [Kraft-Moment-Sensor, Kraft-Drehmoment-Sensor]
+  sources:
+    - https://patents.google.com/patent/AT395124B/de
+  note: Only the variant "Kraft-Moment-Sensor" was found (a patent text). Needs a maker page (Schunk, ATI, Bota) before it counts as confirmed.

@@ -1,0 +1,61 @@
+# whatrobot taxonomy 2026-01 — CC BY 4.0
+gid://whatrobot/TaxonomyCategory/cp : Komponent
+gid://whatrobot/TaxonomyCategory/cp-1 : Komponent > Endeeffektor
+gid://whatrobot/TaxonomyCategory/cp-1-1 : Komponent > Endeeffektor > Griber
+gid://whatrobot/TaxonomyCategory/cp-1-1-1 : Komponent > Endeeffektor > Griber > Fingergriber
+gid://whatrobot/TaxonomyCategory/cp-1-1-2 : Komponent > Endeeffektor > Griber > Vakuumgriber
+gid://whatrobot/TaxonomyCategory/cp-1-1-3 : Komponent > Endeeffektor > Griber > Magnetgriber
+gid://whatrobot/TaxonomyCategory/cp-1-1-4 : Komponent > Endeeffektor > Griber > Blød griber
+gid://whatrobot/TaxonomyCategory/cp-1-2 : Komponent > Endeeffektor > Robothånd
+gid://whatrobot/TaxonomyCategory/cp-1-3 : Komponent > Endeeffektor > Værktøj
+gid://whatrobot/TaxonomyCategory/cp-1-4 : Komponent > Endeeffektor > Værktøjsskifter
+gid://whatrobot/TaxonomyCategory/cp-2 : Komponent > Aktuator
+gid://whatrobot/TaxonomyCategory/cp-2-1 : Komponent > Aktuator > Ledmodul
+gid://whatrobot/TaxonomyCategory/cp-2-2 : Komponent > Aktuator > Servo
+gid://whatrobot/TaxonomyCategory/cp-2-3 : Komponent > Aktuator > Motor
+gid://whatrobot/TaxonomyCategory/cp-2-4 : Komponent > Aktuator > Reduktionsgear
+gid://whatrobot/TaxonomyCategory/cp-2-5 : Komponent > Aktuator > Lineær aktuator
+gid://whatrobot/TaxonomyCategory/cp-3 : Komponent > Sensor
+gid://whatrobot/TaxonomyCategory/cp-3-1 : Komponent > Sensor > Kamera
+gid://whatrobot/TaxonomyCategory/cp-3-2 : Komponent > Sensor > Lidar
+gid://whatrobot/TaxonomyCategory/cp-3-3 : Komponent > Sensor > Kraft-/momentsensor
+gid://whatrobot/TaxonomyCategory/cp-3-4 : Komponent > Sensor > Taktil sensor
+gid://whatrobot/TaxonomyCategory/cp-3-5 : Komponent > Sensor > Inertisensor / encoder
+gid://whatrobot/TaxonomyCategory/cp-3-6 : Komponent > Sensor > Afstands-/positionssensor
+gid://whatrobot/TaxonomyCategory/cp-4 : Komponent > Computer
+gid://whatrobot/TaxonomyCategory/cp-5 : Komponent > Strøm
+gid://whatrobot/TaxonomyCategory/cp-6 : Komponent > Struktur
+gid://whatrobot/TaxonomyCategory/cp-7 : Komponent > Fjernstyring
+gid://whatrobot/TaxonomyCategory/rb : Robot
+gid://whatrobot/TaxonomyCategory/rb-1 : Robot > Robotarm
+gid://whatrobot/TaxonomyCategory/rb-1-1 : Robot > Robotarm > Leddelt robotarm
+gid://whatrobot/TaxonomyCategory/rb-1-2 : Robot > Robotarm > SCARA-arm
+gid://whatrobot/TaxonomyCategory/rb-1-3 : Robot > Robotarm > Parallelarm
+gid://whatrobot/TaxonomyCategory/rb-1-4 : Robot > Robotarm > Kartesisk arm
+gid://whatrobot/TaxonomyCategory/rb-1-5 : Robot > Robotarm > Cylindrisk og sfærisk arm
+gid://whatrobot/TaxonomyCategory/rb-1-6 : Robot > Robotarm > Kontinuumsarm
+gid://whatrobot/TaxonomyCategory/rb-2 : Robot > Humanoid
+gid://whatrobot/TaxonomyCategory/rb-2-1 : Robot > Humanoid > Tobenet humanoid
+gid://whatrobot/TaxonomyCategory/rb-2-2 : Robot > Humanoid > Humanoid på hjulbase
+gid://whatrobot/TaxonomyCategory/rb-2-3 : Robot > Humanoid > Humanoid på fast base
+gid://whatrobot/TaxonomyCategory/rb-3 : Robot > Robot med ben
+gid://whatrobot/TaxonomyCategory/rb-3-1 : Robot > Robot med ben > Firbenet robot
+gid://whatrobot/TaxonomyCategory/rb-3-2 : Robot > Robot med ben > Tobenet robot
+gid://whatrobot/TaxonomyCategory/rb-3-3 : Robot > Robot med ben > Flerbenet robot
+gid://whatrobot/TaxonomyCategory/rb-4 : Robot > Kørende robot
+gid://whatrobot/TaxonomyCategory/rb-4-1 : Robot > Kørende robot > Robot på hjul
+gid://whatrobot/TaxonomyCategory/rb-4-2 : Robot > Kørende robot > Bælterobot
+gid://whatrobot/TaxonomyCategory/rb-5 : Robot > Mobil manipulator
+gid://whatrobot/TaxonomyCategory/rb-6 : Robot > Flyvende robot
+gid://whatrobot/TaxonomyCategory/rb-6-1 : Robot > Flyvende robot > Multirotor
+gid://whatrobot/TaxonomyCategory/rb-6-2 : Robot > Flyvende robot > Fastvinget
+gid://whatrobot/TaxonomyCategory/rb-6-3 : Robot > Flyvende robot > Hybrid VTOL
+gid://whatrobot/TaxonomyCategory/rb-7 : Robot > Vandrobot
+gid://whatrobot/TaxonomyCategory/rb-7-1 : Robot > Vandrobot > ROV
+gid://whatrobot/TaxonomyCategory/rb-7-2 : Robot > Vandrobot > AUV
+gid://whatrobot/TaxonomyCategory/rb-7-3 : Robot > Vandrobot > USV
+gid://whatrobot/TaxonomyCategory/rb-8 : Robot > Kropsbåren robot
+gid://whatrobot/TaxonomyCategory/rb-8-1 : Robot > Kropsbåren robot > Exoskelet
+gid://whatrobot/TaxonomyCategory/rb-8-2 : Robot > Kropsbåren robot > Protese
+gid://whatrobot/TaxonomyCategory/rb-9 : Robot > Stationær robot
+gid://whatrobot/TaxonomyCategory/rb-10 : Robot > Byggesæt
