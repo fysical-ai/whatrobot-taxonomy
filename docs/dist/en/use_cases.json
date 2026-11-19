@@ -242,6 +242,13 @@
           "profile": "env-indoor"
         },
         {
+          "attribute": "segment",
+          "op": "has",
+          "value": "professional",
+          "level": "hard",
+          "rationale": "The job is commercial work, so the robot must be one its maker sells to professional users."
+        },
+        {
           "attribute": "autonomy",
           "op": "in",
           "value": [
@@ -384,6 +391,13 @@
       ],
       "environment": [],
       "requirements": [
+        {
+          "attribute": "segment",
+          "op": "has",
+          "value": "professional",
+          "level": "hard",
+          "rationale": "The job is commercial work, so the robot must be one its maker sells to professional users."
+        },
         {
           "attribute": "environment",
           "op": "has",
@@ -750,6 +764,13 @@
           "profile": "env-indoor"
         },
         {
+          "attribute": "segment",
+          "op": "has",
+          "value": "professional",
+          "level": "hard",
+          "rationale": "The job is commercial work, so the robot must be one its maker sells to professional users."
+        },
+        {
           "attribute": "collaborative",
           "op": "eq",
           "value": true,
@@ -924,6 +945,13 @@
           "rationale": "Chips and dust. A first digit of 5 means dust-protected.",
           "source": "IEC 60529",
           "profile": "env-machine-shop"
+        },
+        {
+          "attribute": "segment",
+          "op": "has",
+          "value": "professional",
+          "level": "hard",
+          "rationale": "The job is commercial work, so the robot must be one its maker sells to professional users."
         },
         {
           "attribute": "payload",

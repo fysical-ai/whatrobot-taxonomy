@@ -67,6 +67,11 @@
       note: Wheeled cleaning machines that drive themselves along a taught or mapped route.
   environment: [env-indoor]
   requirements:
+    - attribute: segment
+      op: has
+      value: professional
+      level: hard
+      rationale: The job is commercial work, so the robot must be one its maker sells to professional users.
     - attribute: autonomy
       op: in
       value: [semi-autonomous, autonomous]
@@ -110,6 +115,11 @@
       note: Loose or soft ground, ramps and pipes.
   related_applications: [application__security, application__search-rescue, application__mapping-surveying, application__research-platform, application__general-purpose]
   requirements:
+    - attribute: segment
+      op: has
+      value: professional
+      level: hard
+      rationale: The job is commercial work, so the robot must be one its maker sells to professional users.
     - attribute: environment
       op: has
       param: site
@@ -252,6 +262,11 @@
   related_applications: [application__handling, application__machine-tending, application__assembly, application__general-purpose]
   environment: [env-indoor]
   requirements:
+    - attribute: segment
+      op: has
+      value: professional
+      level: hard
+      rationale: The job is commercial work, so the robot must be one its maker sells to professional users.
     - attribute: collaborative
       op: eq
       value: true
@@ -310,6 +325,11 @@
   related_applications: [application__handling, application__assembly, application__palletizing, application__general-purpose]
   environment: [env-machine-shop]
   requirements:
+    - attribute: segment
+      op: has
+      value: professional
+      level: hard
+      rationale: The job is commercial work, so the robot must be one its maker sells to professional users.
     - attribute: payload
       op: ">="
       param: part_mass

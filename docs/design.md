@@ -730,7 +730,7 @@ A use case earns a record when it passes four tests:
 ```
 
 - **Operators:** `has` and `in` (enum values; a list means any of them), `eq`, `>=`, `<=`, and `ip_solids>=` / `ip_liquids>=` for the first and second digit of an IEC 60529 code in `ip_rating` (an `X` digit is unknown, not zero).
-- **Hard** is reserved for physics, geometry, law, a cited standard, or the definition of the use case itself. A robot that fails a hard requirement is excluded. Everything else is **soft**: shown as something to check, never excluding.
+- **Hard** is reserved for physics, geometry, law, a cited standard, or the definition of the use case itself. The definition includes who the job is for: a commercial job requires `segment` to include `professional`, which keeps hobby hardware out of industrial use cases. A robot that fails a hard requirement is excluded. Everything else is **soft**: shown as something to check, never excluding.
 - A requirement bound to a parameter is skipped while that parameter is not set.
 - Numbers are compared on the attribute's default measurement basis (§3.5) only. A figure on another basis is not converted; it counts as not published.
 
