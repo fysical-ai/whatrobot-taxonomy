@@ -91,3 +91,9 @@ medical_clearance: {name: 医疗器械准入, description: 制造商声明该机
 adhesion: {name: 附着方式, description: 地面机器人如何吸附在墙面、罐体、船体或天花板上进行攀爬。只在地面行驶的机器人为“无”。}
 construction: {name: 结构类型, description: 外骨骼是通过肢体旁的刚性框架传递助力，还是通过织物、绑带和拉索传递（柔性外骨骼服）。}
 outer_diameter: {name: 外径, description: 连续体机械臂或机器人导管弯曲段的外径，决定其能进入的开口大小。}
+operating_temp_min: {name: 最低工作温度, description: 制造商标称的最低工作环境温度。不包括存放和充电温度。}
+operating_temp_max: {name: 最高工作温度, description: 制造商标称的最高工作环境温度。不包括存放和充电温度。}
+max_slope: {name: 最大爬坡角度, description: 制造商标称机器人可攀爬或作业的最大坡度，单位为度。以百分比公布的数值按 度 = arctan(百分比 / 100) 换算。}
+max_step_height: {name: 最大越障高度, description: 制造商标称机器人可攀越的最高单级台阶、路缘或障碍物。}
+stairs: {name: 爬楼梯, description: 制造商声明机器人可以爬楼梯。仅在有声明时记录；只有越障高度不算。}
+coverage_area: {name: 作业面积, description: 制造商标称的作业面积：割草机器人可维护的草坪面积，清洁机器人可覆盖的地面面积。}

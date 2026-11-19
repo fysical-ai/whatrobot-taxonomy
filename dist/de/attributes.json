@@ -2249,6 +2249,83 @@
       "type": "number",
       "multi": false,
       "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/89",
+      "name": "Betriebstemperatur (min.)",
+      "friendly_id": "operating_temp_min",
+      "handle": "operating-temp-min",
+      "description": "Niedrigste Umgebungstemperatur, für die der Hersteller den Betrieb freigibt. Lager- und Ladetemperaturen werden hier nicht erfasst.",
+      "question": "What is the lowest rated operating temperature?",
+      "type": "number",
+      "multi": false,
+      "unit": "degC"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/90",
+      "name": "Betriebstemperatur (max.)",
+      "friendly_id": "operating_temp_max",
+      "handle": "operating-temp-max",
+      "description": "Höchste Umgebungstemperatur, für die der Hersteller den Betrieb freigibt. Lager- und Ladetemperaturen werden hier nicht erfasst.",
+      "question": "What is the highest rated operating temperature?",
+      "type": "number",
+      "multi": false,
+      "unit": "degC"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/91",
+      "name": "Maximale Steigung",
+      "friendly_id": "max_slope",
+      "handle": "max-slope",
+      "description": "Steilste Steigung, die der Roboter laut Hersteller bewältigt, in Grad. Prozentangaben werden umgerechnet (Grad = arctan(Prozent / 100)).",
+      "question": "What is the steepest rated slope?",
+      "type": "number",
+      "multi": false,
+      "unit": "deg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/92",
+      "name": "Maximale Stufenhöhe",
+      "friendly_id": "max_step_height",
+      "handle": "max-step-height",
+      "description": "Höchste einzelne Stufe, Bordsteinkante oder Hindernis, die der Roboter laut Hersteller überwindet.",
+      "question": "What is the tallest step or obstacle it is rated to climb?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/93",
+      "name": "Treppensteigen",
+      "friendly_id": "stairs",
+      "handle": "stairs",
+      "description": "Der Hersteller gibt an, dass der Roboter Treppen steigt. Nur erfasst, wenn angegeben; eine Stufenhöhe allein zählt nicht.",
+      "question": "Does the maker state that it climbs stairs?",
+      "type": "bool",
+      "multi": false
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/94",
+      "name": "Flächenleistung",
+      "friendly_id": "coverage_area",
+      "handle": "coverage-area",
+      "description": "Arbeitsfläche, für die der Hersteller den Roboter auslegt: die Rasenfläche eines Mähroboters, die Bodenfläche eines Reinigungsroboters.",
+      "question": "What working area does the maker rate it for?",
+      "type": "number",
+      "multi": false,
+      "unit": "m2",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "The largest area the maker states the robot can maintain (a mower's maximum lawn size; a cleaner's maximum area per shift or per day).",
+          "default": true
+        },
+        {
+          "handle": "per-charge",
+          "description": "Area covered on one battery charge, when only that figure is given.",
+          "default": false
+        }
+      ]
     }
   ]
 }

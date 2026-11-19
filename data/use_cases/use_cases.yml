@@ -1,0 +1,353 @@
+# whatrobot taxonomy — use cases (docs/design.md §11)
+# Source of truth. Licence: CC BY 4.0.
+# A use case is a job written as requirements against the taxonomy's attributes. No product is tagged with a use case:
+# which robots suit it is computed from product data. Ids are permanent and never reused.
+# A requirement is `hard` only for physics, geometry, law, a cited standard or the definition of the use case itself.
+# A parameter with `default: null` is "not set": requirements bound to it are skipped until the reader gives a value.
+---
+- id: uc-1
+  handle: residential-lawn-mowing
+  name: Mowing a private lawn
+  application: application__lawn-garden
+  aliases: [robot mower, robotic lawn mower, automatic lawn mower]
+  solution_type: turnkey
+  description: Keeping a private lawn cut without anyone pushing or driving a mower.
+  what_decides: "Lawn size and the steepest slope decide. How the mower finds the edge of the lawn (a buried wire, satellite positioning or cameras) decides how much work the installation is; makers describe that in different ways, so it is not compared here."
+  parameters:
+    - key: lawn_area
+      name: Lawn area
+      type: number
+      unit: m2
+      default: null
+    - key: slope
+      name: Steepest slope
+      type: number
+      unit: deg
+      default: null
+      description: "In degrees. 20 % is about 11°, 35 % about 19°, 45 % about 24°."
+  body_plans:
+    - category: rb-4-1
+      note: "Almost every robot mower: a wheeled, battery-driven mower that returns to its charger."
+    - category: rb-4-2
+      note: Tracked mowers, for steep or rough ground.
+  environment: [env-outdoor-all-weather]
+  requirements:
+    - attribute: autonomy
+      op: in
+      value: [semi-autonomous, autonomous]
+      level: hard
+      rationale: The mower works with nobody steering it. Remote-controlled slope mowers are a different job.
+    - attribute: coverage_area
+      op: ">="
+      param: lawn_area
+      level: hard
+      rationale: The area the maker rates the mower for must cover the lawn.
+    - attribute: max_slope
+      op: ">="
+      param: slope
+      level: hard
+      rationale: The slope the maker rates the mower for must cover the steepest part of the lawn.
+
+- id: uc-2
+  handle: commercial-floor-cleaning
+  name: Cleaning floors in commercial buildings
+  application: application__professional-cleaning
+  aliases: [robot scrubber, autonomous floor scrubber, cleaning robot, robot sweeper]
+  solution_type: turnkey
+  description: Scrubbing, sweeping or vacuuming the floors of shops, offices, warehouses and public buildings on a schedule.
+  what_decides: "The floor area to cover and how much supervision the robot needs. Whether it scrubs, sweeps or vacuums depends on the model; check that against the floor."
+  parameters:
+    - key: floor_area
+      name: Floor area
+      type: number
+      unit: m2
+      default: null
+  body_plans:
+    - category: rb-4-1
+      note: Wheeled cleaning machines that drive themselves along a taught or mapped route.
+  environment: [env-indoor]
+  requirements:
+    - attribute: segment
+      op: has
+      value: professional
+      level: hard
+      rationale: The job is commercial work, so the robot must be one its maker sells to professional users.
+    - attribute: autonomy
+      op: in
+      value: [semi-autonomous, autonomous]
+      level: hard
+      rationale: The machine cleans its route with nobody driving it.
+    - attribute: coverage_area
+      op: ">="
+      param: floor_area
+      level: hard
+      rationale: The area the maker rates the machine for must cover the floor.
+
+- id: uc-3
+  handle: site-inspection-rounds
+  name: Inspection rounds on an industrial site
+  application: application__inspection-maintenance
+  aliases: [substation inspection, plant inspection, autonomous inspection, inspection robot, patrol inspection]
+  solution_type: platform
+  description: Walking or driving the same route through a plant, substation or yard, and recording readings, images and anything that has changed.
+  what_decides: "The ground decides the body: stairs and kerbs call for legs, flat floors for wheels. After that come runtime per round, protection against weather, and which sensors the robot carries or can be fitted with. Inspection from the air and under water are separate jobs."
+  parameters:
+    - key: site
+      name: Site
+      type: enum
+      values: [indoor, outdoor]
+      default: outdoor
+    - key: stairs
+      name: Stairs on the route
+      type: bool
+      default: false
+    - key: round_minutes
+      name: Length of one round
+      type: number
+      unit: min
+      default: null
+  body_plans:
+    - category: rb-3-1
+      note: Stairs, kerbs, gratings and rough ground.
+    - category: rb-4-1
+      note: Flat, paved sites.
+    - category: rb-4-2
+      note: Loose or soft ground, ramps and pipes.
+  related_applications: [application__security, application__search-rescue, application__mapping-surveying, application__research-platform, application__general-purpose]
+  requirements:
+    - attribute: segment
+      op: has
+      value: professional
+      level: hard
+      rationale: The job is commercial work, so the robot must be one its maker sells to professional users.
+    - attribute: environment
+      op: has
+      param: site
+      level: hard
+      rationale: The maker must rate the robot for where the route runs.
+    - attribute: autonomy
+      op: in
+      value: [semi-autonomous, autonomous]
+      level: hard
+      rationale: A round is repeated with nobody steering.
+    - attribute: battery_runtime
+      op: ">="
+      param: round_minutes
+      level: hard
+      rationale: One round on one charge.
+    - attribute: stairs
+      op: eq
+      value: true
+      level: hard
+      when: {stairs: true}
+      rationale: The route includes stairs, so the maker must state that the robot climbs them.
+    - attribute: ip_rating
+      op: ip_liquids>=
+      value: 4
+      level: soft
+      when: {site: outdoor}
+      rationale: "Rain. A second digit of 4 means protection against water splashed from any direction."
+      source: IEC 60529
+    - attribute: ip_rating
+      op: ip_solids>=
+      value: 5
+      level: soft
+      when: {site: outdoor}
+      rationale: "Dust. A first digit of 5 means dust-protected."
+      source: IEC 60529
+  slots:
+    - role: thermal-imaging
+      name: Thermal camera
+      need: recommended
+      category: cp-3-1
+      where:
+        - {attribute: modality, op: has, value: thermal}
+      note: Finds hot spots on electrical and mechanical equipment.
+    - role: mapping-lidar
+      name: 3D lidar
+      need: recommended
+      category: cp-3-2
+      where:
+        - {attribute: scan_dimensions, op: eq, value: 3d}
+      note: Maps the site and keeps the robot on its route, when the robot has no lidar of its own.
+    - role: charging
+      name: Charging dock or spare battery
+      need: recommended
+      category: cp-5
+      note: A dock lets rounds repeat without anyone changing batteries.
+    - role: onboard-compute
+      name: Extra onboard computer
+      need: optional
+      category: cp-4
+      note: For analysing images on the robot rather than after the round.
+
+- id: uc-4
+  handle: imitation-learning-data-collection
+  name: Collecting demonstrations for imitation learning
+  application: application__research-platform
+  aliases: [teleoperation data collection, robot learning, behaviour cloning, VLA fine-tuning, demonstration data]
+  solution_type: platform
+  description: A person steers the robot through a task many times while cameras and joint positions are recorded. The recordings train a policy that then drives the same robot.
+  what_decides: "The robot must be controllable from your own software, and it needs a way to be steered: a leader arm, a VR rig or a handheld device. Payload matters less than hardware that repeats well and good camera views."
+  parameters:
+    - key: object_mass
+      name: Heaviest object handled
+      type: number
+      unit: kg
+      default: null
+  body_plans:
+    - category: rb-1-1
+      note: "The usual choice: one or two arms on a table."
+    - category: rb-5
+      note: When the task involves moving through a room.
+    - category: rb-2
+      note: When the policy is meant for a humanoid. The most demanding body to steer.
+  related_applications: [application__education, application__general-purpose, application__handling, application__assembly]
+  requirements:
+    - attribute: sdk
+      op: has
+      value: [ros1, ros2, python, cpp]
+      level: hard
+      rationale: Recording joint states and running a trained policy needs an open programming interface.
+    - attribute: payload
+      op: ">="
+      param: object_mass
+      level: hard
+      rationale: Must carry the objects in the task. Add the gripper's weight before comparing.
+  slots:
+    - role: teleoperation
+      name: Teleoperation device
+      need: required
+      category: cp-7
+      note: How the person steers the robot during recording.
+    - role: camera
+      name: Camera
+      need: required
+      category: cp-3-1
+      note: At least one view of the scene. A second camera on the wrist is common.
+    - role: gripper
+      name: Gripper
+      need: required
+      category: cp-1-1
+      note: Unless the arm is sold with one.
+    - role: policy-compute
+      name: Computer for the policy
+      need: recommended
+      category: cp-4
+      note: Runs the trained policy next to the robot.
+
+- id: uc-5
+  handle: cobot-palletizing
+  name: Palletizing boxes with a collaborative arm
+  application: application__palletizing
+  aliases: [cobot palletizer, collaborative palletizing, end-of-line palletizing]
+  solution_type: cell
+  description: Stacking boxes from the end of a line onto a pallet, with an arm that is rated to work without a fence.
+  what_decides: "Box weight plus the gripper's weight must stay within the arm's payload, and the arm must reach the far corner of the top layer. Stacking higher than the arm reaches needs a lifting column."
+  parameters:
+    - key: box_mass
+      name: Box weight
+      type: number
+      unit: kg
+      default: null
+    - key: min_reach
+      name: Reach needed
+      type: number
+      unit: mm
+      default: null
+      description: From the arm's base to the far corner of the top layer.
+  body_plans:
+    - category: rb-1-1
+      note: The usual choice, between one or two pallet positions.
+  related_applications: [application__handling, application__machine-tending, application__assembly, application__general-purpose]
+  environment: [env-indoor]
+  requirements:
+    - attribute: segment
+      op: has
+      value: professional
+      level: hard
+      rationale: The job is commercial work, so the robot must be one its maker sells to professional users.
+    - attribute: collaborative
+      op: eq
+      value: true
+      level: hard
+      rationale: "This use case is the fenceless cell; an industrial arm behind guarding is a different job. The finished cell still needs its own risk assessment."
+      source: ISO 10218-2:2025
+    - attribute: payload
+      op: ">="
+      param: box_mass
+      level: hard
+      rationale: The box. Add the gripper's weight before comparing.
+    - attribute: reach
+      op: ">="
+      param: min_reach
+      level: hard
+      rationale: The far corner of the top layer.
+  slots:
+    - role: gripper
+      name: Gripper
+      need: required
+      category: cp-1-1
+      note: Closed boxes are usually lifted with a vacuum gripper; bags and open crates need fingers or forks.
+    - role: lifting-column
+      name: Lifting column
+      need: optional
+      category: cp-2-5
+      note: Raises the arm so that it can stack higher than its own reach.
+
+- id: uc-6
+  handle: cnc-machine-tending
+  name: Loading and unloading a CNC machine
+  application: application__machine-tending
+  aliases: [machine tending robot, CNC loading, lathe tending, machine tool automation]
+  solution_type: cell
+  description: Putting raw parts into a machine tool and taking finished parts out, so that the machine runs without an operator standing at it.
+  what_decides: "Part weight plus gripper weight against payload, and reach into the machine through its door. Coolant and chips make ingress protection worth checking."
+  parameters:
+    - key: part_mass
+      name: Part weight
+      type: number
+      unit: kg
+      default: null
+    - key: min_reach
+      name: Reach needed
+      type: number
+      unit: mm
+      default: null
+      description: From the arm's base to the chuck or vice.
+  body_plans:
+    - category: rb-1-1
+      note: The usual choice, on a pedestal or cart beside the machine.
+    - category: rb-1-4
+      note: Gantry loaders above the machine, which leave the floor free.
+    - category: rb-5
+      note: One robot that drives between several machines.
+  related_applications: [application__handling, application__assembly, application__palletizing, application__general-purpose]
+  environment: [env-machine-shop]
+  requirements:
+    - attribute: segment
+      op: has
+      value: professional
+      level: hard
+      rationale: The job is commercial work, so the robot must be one its maker sells to professional users.
+    - attribute: payload
+      op: ">="
+      param: part_mass
+      level: hard
+      rationale: The part. Add the gripper's weight before comparing.
+    - attribute: reach
+      op: ">="
+      param: min_reach
+      level: hard
+      rationale: From the base to the chuck or vice, through the door.
+  slots:
+    - role: gripper
+      name: Gripper
+      need: required
+      category: cp-1-1
+      note: Often a double gripper, so that one visit swaps the finished part for a raw one.
+    - role: tool-changer
+      name: Tool changer
+      need: optional
+      category: cp-1-4
+      note: Lets one robot handle several families of parts.

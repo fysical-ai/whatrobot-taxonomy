@@ -37,7 +37,8 @@ def cmd_validate(_: argparse.Namespace) -> int:
         print(f"ERROR {e}")
     print(
         f"{len(tx.categories)} categories, {len(tx.attributes)} attributes, {len(tx.values)} values, "
-        f"{len(tx.examples)} examples, {len(tx.mappings)} mapping files, locales: {', '.join(tx.locales) or 'none'}"
+        f"{len(tx.examples)} examples, {len(tx.mappings)} mapping files, {len(tx.use_cases)} use cases, "
+        f"{len(tx.environment_profiles)} environment profiles, locales: {', '.join(tx.locales) or 'none'}"
     )
     print(f"{len(rep.errors)} errors, {len(rep.warnings)} warnings")
     return 0 if rep.ok else 1
@@ -72,6 +73,8 @@ def cmd_schema(_: argparse.Namespace) -> int:
         "example": models.Example,
         "mapping_file": models.MappingFile,
         "integration": models.Integration,
+        "use_case": models.UseCase,
+        "environment_profile": models.EnvironmentProfile,
     }.items():
         (sdir / f"{name}.schema.json").write_text(json.dumps(model.model_json_schema(), indent=2) + "\n", encoding="utf-8")
     print(f"wrote schemas to {sdir}")

@@ -184,6 +184,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -385,6 +397,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -601,6 +625,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -812,6 +848,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -1029,6 +1077,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -1241,6 +1301,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -1474,6 +1546,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -1692,6 +1776,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -1923,6 +2019,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -1975,6 +2083,12 @@
               "name": "Höchstgeschwindigkeit",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": []
@@ -2126,6 +2240,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -2178,6 +2304,12 @@
               "name": "Höchstgeschwindigkeit",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -2332,6 +2464,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -2384,6 +2528,12 @@
               "name": "Höchstgeschwindigkeit",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/38",
@@ -2545,6 +2695,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -2597,6 +2759,12 @@
               "name": "Höchstgeschwindigkeit",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -2760,6 +2928,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -2824,6 +3004,24 @@
               "name": "Arm optional",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximale Steigung",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximale Stufenhöhe",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": []
@@ -2977,6 +3175,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -3041,6 +3251,24 @@
               "name": "Arm optional",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximale Steigung",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximale Stufenhöhe",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -3196,6 +3424,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -3260,6 +3500,24 @@
               "name": "Arm optional",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximale Steigung",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximale Stufenhöhe",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -3414,6 +3672,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -3478,6 +3748,24 @@
               "name": "Arm optional",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximale Steigung",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximale Stufenhöhe",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -3644,6 +3932,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -3702,6 +4002,30 @@
               "name": "Haftprinzip",
               "friendly_id": "adhesion",
               "handle": "adhesion"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximale Steigung",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximale Stufenhöhe",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/94",
+              "name": "Flächenleistung",
+              "friendly_id": "coverage_area",
+              "handle": "coverage-area"
             }
           ],
           "examples": []
@@ -3857,6 +4181,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -3915,6 +4251,30 @@
               "name": "Haftprinzip",
               "friendly_id": "adhesion",
               "handle": "adhesion"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximale Steigung",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximale Stufenhöhe",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/94",
+              "name": "Flächenleistung",
+              "friendly_id": "coverage_area",
+              "handle": "coverage-area"
             }
           ],
           "examples": [
@@ -4070,6 +4430,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -4128,6 +4500,30 @@
               "name": "Haftprinzip",
               "friendly_id": "adhesion",
               "handle": "adhesion"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximale Steigung",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximale Stufenhöhe",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/94",
+              "name": "Flächenleistung",
+              "friendly_id": "coverage_area",
+              "handle": "coverage-area"
             }
           ],
           "examples": [
@@ -4279,6 +4675,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -4343,6 +4751,24 @@
               "name": "Anzahl Arme",
               "friendly_id": "arm_count",
               "handle": "arm-count"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximale Steigung",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximale Stufenhöhe",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Treppensteigen",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -4506,6 +4932,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -4713,6 +5151,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -4916,6 +5366,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -5135,6 +5597,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -5364,6 +5838,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -5549,6 +6035,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -5738,6 +6236,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -5924,6 +6434,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -6119,6 +6641,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -6310,6 +6844,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -6513,6 +7059,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -6710,6 +7268,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -6889,6 +7459,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -7042,6 +7624,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7205,6 +7799,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7383,6 +7989,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7564,6 +8182,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7760,6 +8390,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -7940,6 +8582,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -8118,6 +8772,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -8317,6 +8983,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -8514,6 +9192,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -8676,6 +9366,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -8868,6 +9570,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -9023,6 +9737,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9210,6 +9936,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -9386,6 +10124,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9566,6 +10316,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9752,6 +10514,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9957,6 +10731,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -10107,6 +10893,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -10274,6 +11072,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -10438,6 +11248,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -10612,6 +11434,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -10764,6 +11598,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -10941,6 +11787,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -11108,6 +11966,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -11262,6 +12132,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -11421,6 +12303,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open Source",
               "friendly_id": "open_source",
@@ -11569,6 +12463,18 @@
               "name": "Schutzart (IP)",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Betriebstemperatur (min.)",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Betriebstemperatur (max.)",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",

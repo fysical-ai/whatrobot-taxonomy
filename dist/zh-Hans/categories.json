@@ -183,6 +183,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -383,6 +395,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -597,6 +621,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -808,6 +844,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -1025,6 +1073,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -1235,6 +1295,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -1467,6 +1539,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -1685,6 +1769,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -1915,6 +2011,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -1967,6 +2075,12 @@
               "name": "最高速度",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": []
@@ -2118,6 +2232,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -2170,6 +2296,12 @@
               "name": "最高速度",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -2324,6 +2456,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -2376,6 +2520,12 @@
               "name": "最高速度",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/38",
@@ -2536,6 +2686,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -2588,6 +2750,12 @@
               "name": "最高速度",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -2750,6 +2918,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -2814,6 +2994,24 @@
               "name": "可选机械臂",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "最大爬坡角度",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "最大越障高度",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": []
@@ -2966,6 +3164,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -3030,6 +3240,24 @@
               "name": "可选机械臂",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "最大爬坡角度",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "最大越障高度",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -3185,6 +3413,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -3249,6 +3489,24 @@
               "name": "可选机械臂",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "最大爬坡角度",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "最大越障高度",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -3402,6 +3660,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -3466,6 +3736,24 @@
               "name": "可选机械臂",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "最大爬坡角度",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "最大越障高度",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -3631,6 +3919,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -3689,6 +3989,30 @@
               "name": "附着方式",
               "friendly_id": "adhesion",
               "handle": "adhesion"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "最大爬坡角度",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "最大越障高度",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/94",
+              "name": "作业面积",
+              "friendly_id": "coverage_area",
+              "handle": "coverage-area"
             }
           ],
           "examples": []
@@ -3842,6 +4166,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -3900,6 +4236,30 @@
               "name": "附着方式",
               "friendly_id": "adhesion",
               "handle": "adhesion"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "最大爬坡角度",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "最大越障高度",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/94",
+              "name": "作业面积",
+              "friendly_id": "coverage_area",
+              "handle": "coverage-area"
             }
           ],
           "examples": [
@@ -4055,6 +4415,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -4113,6 +4485,30 @@
               "name": "附着方式",
               "friendly_id": "adhesion",
               "handle": "adhesion"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "最大爬坡角度",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "最大越障高度",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/94",
+              "name": "作业面积",
+              "friendly_id": "coverage_area",
+              "handle": "coverage-area"
             }
           ],
           "examples": [
@@ -4263,6 +4659,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -4327,6 +4735,24 @@
               "name": "机械臂数量",
               "friendly_id": "arm_count",
               "handle": "arm-count"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "最大爬坡角度",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "最大越障高度",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "爬楼梯",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -4489,6 +4915,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -4695,6 +5133,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -4897,6 +5347,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -5115,6 +5577,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -5344,6 +5818,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -5528,6 +6014,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -5717,6 +6215,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -5903,6 +6413,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -6097,6 +6619,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -6288,6 +6822,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -6491,6 +7037,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -6687,6 +7245,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -6866,6 +7436,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -7018,6 +7600,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7181,6 +7775,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7362,6 +7968,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -7540,6 +8158,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7736,6 +8366,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -7916,6 +8558,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -8094,6 +8748,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -8293,6 +8959,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -8489,6 +9167,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -8651,6 +9341,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -8840,6 +9542,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -8994,6 +9708,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9180,6 +9906,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -9355,6 +10093,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9533,6 +10283,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9717,6 +10479,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9922,6 +10696,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -10072,6 +10858,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -10239,6 +11037,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -10402,6 +11212,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -10575,6 +11397,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -10726,6 +11560,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -10901,6 +11747,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -11067,6 +11925,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -11221,6 +12091,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -11378,6 +12260,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "开源",
               "friendly_id": "open_source",
@@ -11525,6 +12419,18 @@
               "name": "防护等级",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "最低工作温度",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "最高工作温度",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",

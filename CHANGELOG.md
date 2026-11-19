@@ -4,6 +4,13 @@ All notable changes to the taxonomy data are recorded here. Versions are CalVer 
 
 ## 2026-01 — unreleased (first release candidate)
 
+### Use cases (2026-11-19)
+- New root `uc`: use cases as requirement profiles over the attributes (`data/use_cases/use_cases.yml`), with reusable environment profiles (`environment_profiles.yml`). A use case names its application, the body plans that can do the job, the parameters a reader sets, hard and soft requirements with a rationale each, and the component roles ("slots") the job needs. No product is tagged with a use case; matching is computed by whoever holds product data. Design notes §11.
+- Six pilot use cases (`uc-1` to `uc-6`), two per solution type: mowing a private lawn, cleaning floors in commercial buildings, inspection rounds on an industrial site, collecting demonstrations for imitation learning, palletizing with a collaborative arm, loading a CNC machine. Three environment profiles: indoor; outdoor, all weather; machine shop.
+- 6 new attributes (ids 89–94): `operating_temp_min`, `operating_temp_max` (°C; robot and component roots), `max_slope` (deg), `max_step_height` (mm), `stairs` (legged, ground, mobile manipulator; `stairs` also on humanoid), `coverage_area` (m²; ground; bases `max`, `per-charge`). Conversion: a slope in per cent → degrees.
+- Distribution: `dist/en/use_cases.json` and `use_cases.txt` (English only for now). Schemas `use_case` and `environment_profile`. Validation and 23 tests for the new records.
+- `de` and `zh-Hans` machine drafts for the six new attributes (unreviewed, like the rest).
+
 ### Danish removed (2026-11-18)
 - Locale `da` removed: `data/localizations/da/` and its distribution files. The Danish text was an unreviewed machine draft from 2026-11-09 and was never published on whatro.bot. Danish may return later as a new locale; nothing else changes (ids, English data, `de`, `zh-Hans`).
 

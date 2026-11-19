@@ -98,6 +98,76 @@ def category_json(tx: Taxonomy, cid: str, locale: str) -> dict:
     }
 
 
+def _group_of(tx: Taxonomy, application: str) -> str | None:
+    return next((g for g, apps in tx.application_groups.items() if application in apps), None)
+
+
+def _application_json(tx: Taxonomy, fid: str) -> dict:
+    grp = _group_of(tx, fid)
+    return {
+        "friendly_id": fid,
+        "handle": fid.split("__", 1)[1],
+        "name": tx.values[fid].name,
+        "group": {"friendly_id": grp, "handle": grp.split("__", 1)[1], "name": tx.values[grp].name} if grp else None,
+    }
+
+
+def _condition_json(c) -> dict:
+    out = {"attribute": c.attribute, "op": c.op}
+    if c.param is not None:
+        out["param"] = c.param
+    else:
+        out["value"] = c.value
+    return out
+
+
+def _requirement_json(req, profile: str | None) -> dict:
+    out = _condition_json(req) | {"level": req.level, "rationale": req.rationale}
+    if req.source:
+        out["source"] = req.source
+    if req.when:
+        out["when"] = req.when
+    if profile:
+        out["profile"] = profile
+    return out
+
+
+def use_case_json(tx: Taxonomy, uc_id: str) -> dict:
+    """One use case with its environment profiles expanded into `requirements` (each tagged with its `profile`)."""
+    uc = tx.use_cases[uc_id]
+    return {
+        "id": uc.id,
+        "handle": uc.handle,
+        "name": uc.name,
+        "application": _application_json(tx, uc.application),
+        "aliases": uc.aliases,
+        "solution_type": uc.solution_type,
+        "description": uc.description,
+        "what_decides": uc.what_decides,
+        "parameters": [p.model_dump(exclude_none=True) | {"default": p.default} for p in uc.parameters],
+        "body_plans": [{"category_id": b.category, "name": tx.categories[b.category].name, "full_name": tx.full_name(b.category), "note": b.note} for b in uc.body_plans],
+        "related_applications": [_application_json(tx, a) for a in uc.related_applications],
+        "environment": uc.environment,
+        "requirements": [_requirement_json(req, env) for env, req in tx.requirements_of(uc_id)],
+        "slots": [
+            {"role": s.role, "name": s.name, "need": s.need, "category_id": s.category, "category_name": tx.categories[s.category].name, "where": [_condition_json(c) for c in s.where], "note": s.note}
+            for s in uc.slots
+        ],
+    }
+
+
+def use_cases_json(tx: Taxonomy) -> dict:
+    ordered = sorted(tx.use_cases, key=lambda i: int(i.split("-")[1]))
+    return {
+        "version": version(),
+        "environment_profiles": [
+            {"id": e.id, "name": e.name, "description": e.description, "requirements": [_requirement_json(r, None) for r in e.requirements]}
+            for e in tx.environment_profiles.values()
+        ],
+        "use_cases": [use_case_json(tx, i) for i in ordered],
+    }
+
+
 def build(tx: Taxonomy, out: Path = DIST) -> list[Path]:
     if out.exists():
         shutil.rmtree(out)
@@ -126,6 +196,13 @@ def build(tx: Taxonomy, out: Path = DIST) -> list[Path]:
             _write_txt(ldir / "attributes.txt", [f"{GID_ATTR.format(id=a.id)} : {_loc_attr(tx, a.friendly_id, locale)[0]}" for a in tx.attributes.values()]),
             _write_txt(ldir / "values.txt", [f"{GID_VALUE.format(id=v.id)} : {_loc_value(tx, v.friendly_id, locale)} [{_loc_attr(tx, v.attribute_friendly_id, locale)[0]}]" for v in tx.values.values()]),
         ]
+        # use cases are English only for now (docs/design.md §11.7), so they are written for the source locale alone
+        if locale == SOURCE_LOCALE and tx.use_cases:
+            ucs = use_cases_json(tx)
+            written += [
+                _write_json(ldir / "use_cases.json", ucs),
+                _write_txt(ldir / "use_cases.txt", [f"{u['id']} : {u['application']['name']} > {u['name']}" for u in ucs["use_cases"]]),
+            ]
     # integrations
     idir = out / "integrations"
     idir.mkdir()

@@ -149,6 +149,120 @@ class Integration(Strict):
     available_versions: list[str]
 
 
+# ---------------------------------------------------------------- use cases (docs/design.md §11)
+USE_CASE_ID_RE = re.compile(r"^uc-[1-9]\d*$")
+ENV_ID_RE = re.compile(r"^env-[a-z0-9][a-z0-9-]*$")
+
+RequirementOp = Literal["has", "in", "eq", ">=", "<=", "ip_solids>=", "ip_liquids>="]
+Scalar = str | int | float | bool
+
+
+class Condition(Strict):
+    """One test of one attribute. `value` is a literal; `param` names a use-case parameter whose current value is
+    used instead (the test is skipped while that parameter is not set). Exactly one of the two is given.
+
+    Operators: `has` (the attribute's value, or one of its values, is `value` or one of `value`), `in` (the same test,
+    written for single-select attributes), `eq`, `>=`, `<=` (numbers, compared on the attribute's default measurement
+    basis only), `ip_solids>=` / `ip_liquids>=` (first / second digit of an IEC 60529 code in `ip_rating`)."""
+    attribute: str = Field(pattern=SNAKE_RE.pattern)
+    op: RequirementOp
+    value: Scalar | list[Scalar] | None = None
+    param: str | None = Field(default=None, pattern=SNAKE_RE.pattern)
+
+    @model_validator(mode="after")
+    def _one_operand(self) -> Condition:
+        if (self.value is None) == (self.param is None):
+            raise ValueError(f"{self.attribute}: give exactly one of value / param")
+        if isinstance(self.value, list) and self.op not in ("has", "in"):
+            raise ValueError(f"{self.attribute}: only has / in take a list")
+        return self
+
+
+class Requirement(Condition):
+    """A condition a robot must (`hard`) or should (`soft`) meet for the use case. Hard is reserved for physics,
+    geometry, law, a cited standard or the definition of the use case itself; a failed hard requirement excludes the
+    robot. A soft requirement never excludes: it is shown as something to check. `when` limits the requirement to
+    parameter settings (all listed parameters must have the listed value)."""
+    level: Literal["hard", "soft"]
+    rationale: str = Field(min_length=1)
+    source: str | None = None
+    when: dict[str, Scalar] | None = None
+
+
+class Parameter(Strict):
+    """Something the reader sets (a load, an area, indoor or outdoor). `default: null` means "not set": requirements
+    bound to the parameter are skipped until the reader gives a value."""
+    key: str = Field(pattern=SNAKE_RE.pattern)
+    name: str = Field(min_length=1)
+    type: Literal["number", "enum", "bool"]
+    unit: str | None = None
+    values: list[str] | None = None
+    default: Scalar | None = None
+    description: str | None = None
+
+    @model_validator(mode="after")
+    def _type_rules(self) -> Parameter:
+        if self.type == "number" and not self.unit:
+            raise ValueError(f"{self.key}: number parameter needs a unit")
+        if self.type == "enum" and not self.values:
+            raise ValueError(f"{self.key}: enum parameter needs values")
+        if self.type != "enum" and self.values:
+            raise ValueError(f"{self.key}: values only on enum parameters")
+        if self.default is not None:
+            ok = {"number": isinstance(self.default, (int, float)) and not isinstance(self.default, bool), "bool": isinstance(self.default, bool), "enum": self.default in (self.values or [])}[self.type]
+            if not ok:
+                raise ValueError(f"{self.key}: default {self.default!r} does not fit type {self.type}")
+        return self
+
+
+class BodyPlan(Strict):
+    """A robot category that can do the job, with a one-line note on when it is the right kind."""
+    category: str = Field(pattern=CATEGORY_ID_RE.pattern)
+    note: str = Field(min_length=1)
+
+
+class Slot(Strict):
+    """A role the use case needs filled by a component (or by the robot itself): which component category, and
+    which of its attributes decide."""
+    role: str = Field(pattern=KEBAB_RE.pattern)
+    name: str = Field(min_length=1)
+    need: Literal["required", "recommended", "optional"]
+    category: str = Field(pattern=CATEGORY_ID_RE.pattern)
+    where: list[Condition] = []
+    note: str = Field(min_length=1)
+
+
+class EnvironmentProfile(Strict):
+    """A named, reusable bundle of requirements describing where the robot works."""
+    id: str = Field(pattern=ENV_ID_RE.pattern)
+    name: str = Field(min_length=1)
+    description: str = Field(min_length=1)
+    requirements: list[Requirement] = Field(min_length=1)
+
+
+class UseCase(Strict):
+    """A job, written as requirements against the taxonomy's attributes. Which robots suit it is computed from
+    product data by whoever holds a catalogue; no product is tagged with a use case."""
+    id: str = Field(pattern=USE_CASE_ID_RE.pattern, description="Permanent id; numbers are never reused")
+    handle: str = Field(pattern=KEBAB_RE.pattern)
+    name: str = Field(min_length=1)
+    application: str = Field(description="The application value this use case sits under, e.g. application__palletizing")
+    aliases: list[str] = []
+    solution_type: Literal["turnkey", "platform", "cell"] = Field(
+        description="turnkey: the robot is the whole solution; platform: robot + payload + software; cell: robot + tooling + safety + integration"
+    )
+    description: str = Field(min_length=1)
+    what_decides: str = Field(min_length=1, description="What decides the choice, in plain words")
+    parameters: list[Parameter] = []
+    body_plans: list[BodyPlan] = Field(min_length=1)
+    related_applications: list[str] = Field(
+        default=[], description="Applications whose robots are plausible platforms for this job although not marketed for it"
+    )
+    environment: list[str] = []
+    requirements: list[Requirement] = []
+    slots: list[Slot] = []
+
+
 L10N_FIELDS = Literal["name", "description", "aliases"]
 SOURCE_DESC = (
     "Review record: field -> fingerprint of the English text a native reader reviewed this field against "

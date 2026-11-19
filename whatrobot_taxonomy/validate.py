@@ -33,6 +33,7 @@ def validate(tx: Taxonomy) -> Report:
     _examples(tx, r)
     _mappings(tx, r)
     _localisation(tx, r)
+    _use_cases(tx, r)
     return r
 
 
@@ -269,3 +270,132 @@ def _localisation(tx: Taxonomy, r: Report) -> None:
         stale = [k for k, _ in fields(tx) if english(tx, k) and state(tx, code, k) == "stale"]
         for k in stale:
             r.warn(f"{code}: {k} was reviewed against older English; re-review (l10n export --only-needed)")
+
+
+# ---------------------------------------------------------------- use cases
+def _check_condition(tx: Taxonomy, r: Report, label: str, cond, params: dict | None) -> None:
+    """Attribute exists; operator fits its type; literal values exist; a parameter operand exists and fits."""
+    attr = tx.attributes.get(cond.attribute)
+    if attr is None:
+        r.error(f"{label}: attribute {cond.attribute} does not exist")
+        return
+    op = cond.op
+    if op in ("ip_solids>=", "ip_liquids>="):
+        if cond.attribute != "ip_rating":
+            r.error(f"{label}: {op} only applies to ip_rating")
+    elif op in (">=", "<="):
+        if attr.type != "number":
+            r.error(f"{label}: {op} needs a number attribute, {cond.attribute} is {attr.type}")
+    elif op in ("has", "in"):
+        if attr.type != "enum":
+            r.error(f"{label}: {op} needs an enum attribute, {cond.attribute} is {attr.type}")
+    elif op == "eq" and attr.type not in ("bool", "enum", "number"):
+        r.error(f"{label}: eq needs a bool, enum or number attribute, {cond.attribute} is {attr.type}")
+    numeric = op in (">=", "<=", "ip_solids>=", "ip_liquids>=") or (op == "eq" and attr.type == "number")
+    if cond.param is not None:
+        if params is None:
+            r.error(f"{label}: parameters are not available here (param {cond.param})")
+            return
+        par = params.get(cond.param)
+        if par is None:
+            r.error(f"{label}: parameter {cond.param} is not defined")
+            return
+        want = "number" if numeric else "bool" if attr.type == "bool" else "enum"
+        if par.type != want:
+            r.error(f"{label}: parameter {cond.param} is {par.type}, {cond.attribute} {op} needs {want}")
+        if want == "enum":
+            for v in par.values or []:
+                if f"{attr.friendly_id}__{v}" not in tx.values:
+                    r.error(f"{label}: parameter {cond.param} value {v} is not a value of {cond.attribute}")
+        return
+    vals = cond.value if isinstance(cond.value, list) else [cond.value]
+    for v in vals:
+        if numeric:
+            if isinstance(v, bool) or not isinstance(v, (int, float)):
+                r.error(f"{label}: {cond.attribute} {op} needs a number, got {v!r}")
+        elif attr.type == "bool":
+            if not isinstance(v, bool):
+                r.error(f"{label}: {cond.attribute} needs true or false, got {v!r}")
+        elif attr.type == "enum" and f"{attr.friendly_id}__{v}" not in tx.values:
+            r.error(f"{label}: {v!r} is not a value of {cond.attribute}")
+
+
+def _use_cases(tx: Taxonomy, r: Report) -> None:
+    app = tx.attributes.get("application")
+    app_values = set(app.values or []) if app else set()
+    for env in tx.environment_profiles.values():
+        for i, req in enumerate(env.requirements):
+            label = f"{env.id}: requirement {i + 1} ({req.attribute})"
+            _check_condition(tx, r, label, req, None)
+            if req.when:
+                r.error(f"{label}: an environment profile cannot depend on parameters (when)")
+    handles: dict[str, str] = {}
+    for uc in tx.use_cases.values():
+        if uc.handle in handles:
+            r.error(f"{uc.id}: handle {uc.handle} duplicates {handles[uc.handle]}")
+        handles[uc.handle] = uc.id
+        if uc.application not in app_values or uc.application.endswith("__other"):
+            r.error(f"{uc.id}: application {uc.application} is not an application value")
+        for a in uc.related_applications:
+            if a not in app_values:
+                r.error(f"{uc.id}: related application {a} is not an application value")
+            if a == uc.application:
+                r.error(f"{uc.id}: related_applications repeats the use case's own application")
+        if uc.solution_type == "turnkey" and uc.related_applications:
+            r.error(f"{uc.id}: a turnkey use case has no related applications (the robot must be built for the job)")
+        if len(set(uc.related_applications)) != len(uc.related_applications):
+            r.error(f"{uc.id}: duplicate related applications")
+        params = {p.key: p for p in uc.parameters}
+        if len(params) != len(uc.parameters):
+            r.error(f"{uc.id}: duplicate parameter keys")
+        # body plans: robot categories, none inside another
+        bound: set[str] = set()
+        plans = [b.category for b in uc.body_plans]
+        for cid in plans:
+            if cid not in tx.categories or tx.categories[cid].root != "rb" or cid == "rb":
+                r.error(f"{uc.id}: body plan {cid} is not a robot category below the root")
+                continue
+            bound |= tx.bound_in_subtree(cid)
+        for cid in plans:
+            if cid in tx.categories and any(a.id in plans for a in tx.ancestors(cid)):
+                r.error(f"{uc.id}: body plan {cid} lies inside another listed body plan")
+        if len(set(plans)) != len(plans):
+            r.error(f"{uc.id}: duplicate body plans")
+        for env in uc.environment:
+            if env not in tx.environment_profiles:
+                r.error(f"{uc.id}: environment profile {env} does not exist")
+        used_params: set[str] = set()
+        for i, (env, req) in enumerate(tx.requirements_of(uc.id)):
+            label = f"{uc.id}: requirement {i + 1} ({req.attribute}{' from ' + env if env else ''})"
+            _check_condition(tx, r, label, req, None if env else params)
+            if req.attribute in tx.attributes and req.attribute not in bound:
+                r.error(f"{label}: {req.attribute} is bound to none of the body plans")
+            if req.param:
+                used_params.add(req.param)
+            for k, v in (req.when or {}).items():
+                used_params.add(k)
+                par = params.get(k)
+                if par is None:
+                    r.error(f"{label}: when refers to parameter {k}, which is not defined")
+                elif par.type == "enum" and v not in (par.values or []):
+                    r.error(f"{label}: when {k}={v!r} is not a value of that parameter")
+                elif par.type == "bool" and not isinstance(v, bool):
+                    r.error(f"{label}: when {k} needs true or false")
+        for k in params:
+            if k not in used_params:
+                r.error(f"{uc.id}: parameter {k} is used by no requirement")
+        roles = [s.role for s in uc.slots]
+        if len(set(roles)) != len(roles):
+            r.error(f"{uc.id}: duplicate slot roles")
+        if uc.solution_type == "turnkey" and any(s.need == "required" for s in uc.slots):
+            r.error(f"{uc.id}: a turnkey use case cannot require a component")
+        for s in uc.slots:
+            if s.category not in tx.categories or tx.categories[s.category].root != "cp" or s.category == "cp":
+                r.error(f"{uc.id}: slot {s.role} category {s.category} is not a component category below the root")
+                continue
+            slot_bound = tx.bound_in_subtree(s.category)
+            for c in s.where:
+                label = f"{uc.id}: slot {s.role} ({c.attribute})"
+                _check_condition(tx, r, label, c, None)
+                if c.attribute in tx.attributes and c.attribute not in slot_bound:
+                    r.error(f"{label}: {c.attribute} is not bound in {s.category}")

@@ -22,6 +22,8 @@
     - country
     - mass
     - ip_rating
+    - operating_temp_min
+    - operating_temp_max
     - open_source
     - sdk
     - sources

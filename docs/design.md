@@ -248,8 +248,9 @@ Makers publish the same quantity on different bases: a quadruped's payload walki
 | `range` | `max` | `at-10pct` (lidar at 10 % reflectivity) |
 | `ai_tops` | `stated`: the maker's headline figure | `sparse` |
 | `stall_torque` | `nominal-voltage`: at the voltage recorded in `voltage` | — |
+| `coverage_area` | `max`: the largest area the maker states the robot can maintain | `per-charge` |
 
-**Conversions** (not bases; decided 2026-11-09: every figure is recorded in the taxonomy's ISO unit, with the published figure kept in the catalogue's notes): hours → minutes; km/h → m/s; mph → m/s (× 0.44704); knots → m/s (× 0.514444); lb → kg (× 0.45359237); oz → kg (× 0.028349523); in → mm (× 25.4); ft → m (× 0.3048); mi → km (× 1.609344); lbf → N (× 4.4482216); kgf → N (× 9.80665); kg·cm → Nm (× 0.0981); lbf·ft → Nm (× 1.3558179); a load published in N for an attribute in kg → ÷ 9.80665 (standard gravity); mAh → Wh only when the same source states the nominal voltage.
+**Conversions** (not bases; decided 2026-11-09: every figure is recorded in the taxonomy's ISO unit, with the published figure kept in the catalogue's notes): hours → minutes; km/h → m/s; mph → m/s (× 0.44704); knots → m/s (× 0.514444); lb → kg (× 0.45359237); oz → kg (× 0.028349523); in → mm (× 25.4); ft → m (× 0.3048); mi → km (× 1.609344); lbf → N (× 4.4482216); kgf → N (× 9.80665); kg·cm → Nm (× 0.0981); lbf·ft → Nm (× 1.3558179); a load published in N for an attribute in kg → ÷ 9.80665 (standard gravity); mAh → Wh only when the same source states the nominal voltage; a slope in per cent → degrees (arctan(per cent / 100)).
 
 **Not applicable.** A product can lack a quantity altogether (a corded pool robot has no battery runtime). Catalogues record that separately from "not published", so displays can show *n/a* rather than a gap.
 
@@ -424,6 +425,9 @@ whatrobot-taxonomy/                         # github.com/<fysical.ai org>/whatro
 │   ├── attributes.yml
 │   ├── values.yml
 │   ├── examples.yml                        # classification test set (§6)
+│   ├── use_cases/                          # use cases and environment profiles (§11)
+│   │   ├── use_cases.yml
+│   │   └── environment_profiles.yml
 │   ├── integrations/                       # mappings to other taxonomies (§9.5)
 │   │   ├── integrations.yml
 │   │   ├── ifr-industrial/<version>/mappings/{from_whatrobot,to_whatrobot}.yml
@@ -560,6 +564,7 @@ unmapped_category_ids:
 - Structural rules: max depth 3; no cycles; every leaf has a `description`, `inclusion_rule` and ≥1 example.
 - Classification tests: `data/examples.yml` entries resolve to the expected category under the tie-break rules.
 - Mapping completeness: every category is either mapped or listed as unmapped for each integration.
+- Use cases (§11.6): every attribute, value, category, parameter and profile a use case names exists; operators fit attribute types; requirements only use attributes bound to the listed body plans.
 - Localisation completeness: every `en` string has a counterpart in each locale (missing → CI warning, not failure, so English-first changes can land). A field reviewed against English that has since changed is reported as stale (warning).
 
 ### 9.9 Localisation (D11)
@@ -677,3 +682,94 @@ Raised by catalogue batch 5 (qb SoftHand Industry: 5 fingers, 1 motor; Prensilia
 | Classification example `underactuated-five-finger-hand` (5 fingers, opposable thumb, `dof: 1` → `cp-1-2`) | Guards the rule |
 
 The Shadow Dexterous Hand Extra Lite (3 digits) stays a finger gripper: the four-finger condition is unchanged.
+
+## 11. Use cases (2026-11-19)
+
+The tree answers "what is this thing?". Buyers also arrive from the other side: "what do I need it to do?". The `application` attribute (§3.4) records what a maker *markets* a robot for, but it is too coarse to choose with, and tagging every product with finer use cases by hand would be an opinion with no source, repeated for every new product.
+
+So a use case is its own record: **a job written as requirements against the attributes above.** No product is tagged with a use case. Whoever holds product data computes which robots meet the requirements, and can show the spec behind every match. The governing principle (§0) is unchanged: use cases are a layer over the attributes, not a branch and not a third level of the `application` vocabulary.
+
+Related work: Kirschner, Karacan, Melone and Haddadin, "Categorizing robots by performance fitness into the tree of robots", *Nature Machine Intelligence* 7, 459–470 (2025), classify manipulators by fitness measured in the laboratory. This is the published-specification counterpart: it uses only what makers state.
+
+### 11.1 Record
+
+`data/use_cases/use_cases.yml`. Root `uc`; ids `uc-<n>` are permanent and never reused.
+
+| Field | Meaning |
+|---|---|
+| `id`, `handle`, `name`, `aliases` | As for categories. `aliases` are the phrases people search for |
+| `application` | The `application` value the use case sits under |
+| `solution_type` | `turnkey`: the robot is the whole solution (a mower). `platform`: robot + payload + software (inspection). `cell`: robot + tooling + safety + integration (palletizing) |
+| `description`, `what_decides` | One or two plain sentences each |
+| `parameters` | What the reader sets: a load, an area, indoor or outdoor. `default: null` means not set |
+| `body_plans` | Robot categories that can do the job, each with a note on when it is the right kind. Matching is limited to these |
+| `related_applications` | Applications whose robots are plausible platforms for the job although not marketed for it (not allowed on `turnkey`) |
+| `environment` | Environment profiles (§11.3) |
+| `requirements` | §11.2 |
+| `slots` | §11.4 |
+
+A use case earns a record when it passes four tests:
+
+| Test | Question |
+|---|---|
+| Distinct | Does it differ from its sibling use cases in at least one hard requirement or slot? |
+| Searched | Do buyers or makers use this phrase? |
+| Served | Do at least three purchasable robots from two makers meet it? |
+| Sourced | Does every hard threshold have a rationale or a source? |
+
+### 11.2 Requirements
+
+```yaml
+- attribute: battery_runtime
+  op: ">="
+  param: round_minutes          # or value: <literal>
+  level: hard                   # hard | soft
+  rationale: One round on one charge.
+  source: <standard or reference, optional>
+  when: {stairs: true}          # optional: only for these parameter settings
+```
+
+- **Operators:** `has` and `in` (enum values; a list means any of them), `eq`, `>=`, `<=`, and `ip_solids>=` / `ip_liquids>=` for the first and second digit of an IEC 60529 code in `ip_rating` (an `X` digit is unknown, not zero).
+- **Hard** is reserved for physics, geometry, law, a cited standard, or the definition of the use case itself. The definition includes who the job is for: a commercial job requires `segment` to include `professional`, which keeps hobby hardware out of industrial use cases. A robot that fails a hard requirement is excluded. Everything else is **soft**: shown as something to check, never excluding.
+- A requirement bound to a parameter is skipped while that parameter is not set.
+- Numbers are compared on the attribute's default measurement basis (§3.5) only. A figure on another basis is not converted; it counts as not published.
+
+### 11.3 Environment profiles
+
+`data/use_cases/environment_profiles.yml`. A named, reusable bundle of requirements describing where the robot works (`env-outdoor-all-weather`: rated for outdoor use; IP second digit ≥ 4 and first digit ≥ 5 as soft requirements). Use cases refer to profiles and do not repeat thresholds. The `environment` attribute stays as the coarse statement of where a robot is rated to operate; profiles add the finer, published facts.
+
+New attributes for this, bound where makers publish them: `operating_temp_min`, `operating_temp_max` (°C; every robot and component), `max_slope` (degrees), `max_step_height` (mm) and `stairs` (legged, ground, mobile manipulator; `stairs` also on humanoid), `coverage_area` (m²; ground).
+
+### 11.4 Slots
+
+A slot is a role the use case needs filled by a component, or by the robot itself: a component category plus conditions on its attributes, and a `need` of `required`, `recommended` or `optional`. Components are chosen by category, specification and compatibility; they do not carry `application`.
+
+For a chosen robot, a consumer of the data fills each slot in a fixed order of trust and says which applied: built in → in the box (`includes`) → officially supported (`compatible_with`) → fits on paper (same flange standard, payload budget, supply voltage, a shared interface). The last is a calculation, not a maker's statement.
+
+### 11.5 Matching (for consumers of the data)
+
+Matching needs product data, which this repository does not hold. The rules a consumer should follow, so that results are comparable:
+
+1. Match each **variant** separately; a product is listed once with the variants that match.
+2. A failed hard requirement excludes the variant.
+3. **Missing data never excludes.** A hard requirement with no published value leaves the variant listed as *unverified*.
+4. A requirement whose attribute cannot apply to the product (not bound to its category, or recorded as not applicable) is skipped and shown as such.
+5. No inferred values and no conversion between measurement bases.
+6. Results are grouped by evidence, with no score and no "best":
+
+| Tier | Condition |
+|---|---|
+| Documented | Meets every hard requirement, and a named deployment for this job is on record with a source |
+| Marketed for it | Meets every hard requirement, and the maker's `application` includes the use case's application |
+| Fits on paper | Meets every hard requirement; marketed for one of the `related_applications` instead |
+| Unverified | Nothing fails, but at least one hard requirement has no published value |
+
+A robot marketed for neither the application nor a related one is not listed: a mower does not become an inspection robot because its specification happens to pass.
+
+### 11.6 Validation
+
+CI checks that every attribute, value, category, parameter and profile a use case names exists; that each operator fits its attribute's type and each parameter fits the requirement that uses it; that every requirement's attribute is bound to at least one listed body plan; that body plans are robot categories and do not contain one another; that slots name component categories and only attributes bound there; that every parameter is used; and that a `turnkey` use case has no related applications and no required component.
+
+### 11.7 Status
+
+Six pilot use cases, two per solution type: mowing a private lawn, cleaning floors in commercial buildings, inspection rounds on an industrial site, collecting demonstrations for imitation learning, palletizing with a collaborative arm, loading a CNC machine. English only: `dist/en/use_cases.json` and `.txt`; localisation follows once the wording has settled. Deployment records (the *Documented* tier) belong with product data and are not part of this repository.
