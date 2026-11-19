@@ -87,3 +87,9 @@ gid://whatrobot/TaxonomyAttribute/85 : 医疗器械准入
 gid://whatrobot/TaxonomyAttribute/86 : 附着方式
 gid://whatrobot/TaxonomyAttribute/87 : 结构类型
 gid://whatrobot/TaxonomyAttribute/88 : 外径
+gid://whatrobot/TaxonomyAttribute/89 : 最低工作温度
+gid://whatrobot/TaxonomyAttribute/90 : 最高工作温度
+gid://whatrobot/TaxonomyAttribute/91 : 最大爬坡角度
+gid://whatrobot/TaxonomyAttribute/92 : 最大越障高度
+gid://whatrobot/TaxonomyAttribute/93 : 爬楼梯
+gid://whatrobot/TaxonomyAttribute/94 : 作业面积

@@ -1,0 +1,58 @@
+# whatrobot taxonomy — environment profiles (docs/design.md §11.3)
+# Source of truth. Licence: CC BY 4.0.
+# A profile is a named, reusable bundle of requirements describing where a robot works. Use cases refer to profiles by
+# id and do not repeat the thresholds. Hard requirements exclude a robot; soft ones are shown as something to check.
+---
+- id: env-indoor
+  name: Indoor
+  description: Inside a building, on finished floors.
+  requirements:
+    - attribute: environment
+      op: has
+      value: indoor
+      level: hard
+      rationale: The maker must rate the robot for indoor use.
+
+- id: env-outdoor-all-weather
+  name: Outdoor, all weather
+  description: Outside all year, in rain and dust.
+  requirements:
+    - attribute: environment
+      op: has
+      value: outdoor
+      level: hard
+      rationale: The maker must rate the robot for outdoor use.
+    - attribute: ip_rating
+      op: ip_liquids>=
+      value: 4
+      level: soft
+      rationale: "Rain. A second digit of 4 means protection against water splashed from any direction."
+      source: IEC 60529
+    - attribute: ip_rating
+      op: ip_solids>=
+      value: 5
+      level: soft
+      rationale: "Dust. A first digit of 5 means dust-protected."
+      source: IEC 60529
+
+- id: env-machine-shop
+  name: Machine shop
+  description: Beside machine tools, with coolant mist and metal chips.
+  requirements:
+    - attribute: environment
+      op: has
+      value: indoor
+      level: hard
+      rationale: The maker must rate the robot for indoor use.
+    - attribute: ip_rating
+      op: ip_liquids>=
+      value: 4
+      level: soft
+      rationale: "Coolant. A second digit of 4 means protection against liquid splashed from any direction."
+      source: IEC 60529
+    - attribute: ip_rating
+      op: ip_solids>=
+      value: 5
+      level: soft
+      rationale: "Chips and dust. A first digit of 5 means dust-protected."
+      source: IEC 60529

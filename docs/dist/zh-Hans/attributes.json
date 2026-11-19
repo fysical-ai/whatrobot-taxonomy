@@ -2249,6 +2249,83 @@
       "type": "number",
       "multi": false,
       "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/89",
+      "name": "最低工作温度",
+      "friendly_id": "operating_temp_min",
+      "handle": "operating-temp-min",
+      "description": "制造商标称的最低工作环境温度。不包括存放和充电温度。",
+      "question": "What is the lowest rated operating temperature?",
+      "type": "number",
+      "multi": false,
+      "unit": "degC"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/90",
+      "name": "最高工作温度",
+      "friendly_id": "operating_temp_max",
+      "handle": "operating-temp-max",
+      "description": "制造商标称的最高工作环境温度。不包括存放和充电温度。",
+      "question": "What is the highest rated operating temperature?",
+      "type": "number",
+      "multi": false,
+      "unit": "degC"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/91",
+      "name": "最大爬坡角度",
+      "friendly_id": "max_slope",
+      "handle": "max-slope",
+      "description": "制造商标称机器人可攀爬或作业的最大坡度，单位为度。以百分比公布的数值按 度 = arctan(百分比 / 100) 换算。",
+      "question": "What is the steepest rated slope?",
+      "type": "number",
+      "multi": false,
+      "unit": "deg"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/92",
+      "name": "最大越障高度",
+      "friendly_id": "max_step_height",
+      "handle": "max-step-height",
+      "description": "制造商标称机器人可攀越的最高单级台阶、路缘或障碍物。",
+      "question": "What is the tallest step or obstacle it is rated to climb?",
+      "type": "number",
+      "multi": false,
+      "unit": "mm"
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/93",
+      "name": "爬楼梯",
+      "friendly_id": "stairs",
+      "handle": "stairs",
+      "description": "制造商声明机器人可以爬楼梯。仅在有声明时记录；只有越障高度不算。",
+      "question": "Does the maker state that it climbs stairs?",
+      "type": "bool",
+      "multi": false
+    },
+    {
+      "id": "gid://whatrobot/TaxonomyAttribute/94",
+      "name": "作业面积",
+      "friendly_id": "coverage_area",
+      "handle": "coverage-area",
+      "description": "制造商标称的作业面积：割草机器人可维护的草坪面积，清洁机器人可覆盖的地面面积。",
+      "question": "What working area does the maker rate it for?",
+      "type": "number",
+      "multi": false,
+      "unit": "m2",
+      "bases": [
+        {
+          "handle": "max",
+          "description": "The largest area the maker states the robot can maintain (a mower's maximum lawn size; a cleaner's maximum area per shift or per day).",
+          "default": true
+        },
+        {
+          "handle": "per-charge",
+          "description": "Area covered on one battery charge, when only that figure is given.",
+          "default": false
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,177 @@
+{
+  "$defs": {
+    "Requirement": {
+      "additionalProperties": false,
+      "description": "A condition a robot must (`hard`) or should (`soft`) meet for the use case. Hard is reserved for physics,\ngeometry, law, a cited standard or the definition of the use case itself; a failed hard requirement excludes the\nrobot. A soft requirement never excludes: it is shown as something to check. `when` limits the requirement to\nparameter settings (all listed parameters must have the listed value).",
+      "properties": {
+        "attribute": {
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "title": "Attribute",
+          "type": "string"
+        },
+        "op": {
+          "enum": [
+            "has",
+            "in",
+            "eq",
+            ">=",
+            "<=",
+            "ip_solids>=",
+            "ip_liquids>="
+          ],
+          "title": "Op",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "param": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Param"
+        },
+        "level": {
+          "enum": [
+            "hard",
+            "soft"
+          ],
+          "title": "Level",
+          "type": "string"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        },
+        "when": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "When"
+        }
+      },
+      "required": [
+        "attribute",
+        "op",
+        "level",
+        "rationale"
+      ],
+      "title": "Requirement",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "A named, reusable bundle of requirements describing where the robot works.",
+  "properties": {
+    "id": {
+      "pattern": "^env-[a-z0-9][a-z0-9-]*$",
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "description": {
+      "minLength": 1,
+      "title": "Description",
+      "type": "string"
+    },
+    "requirements": {
+      "items": {
+        "$ref": "#/$defs/Requirement"
+      },
+      "minItems": 1,
+      "title": "Requirements",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "description",
+    "requirements"
+  ],
+  "title": "EnvironmentProfile",
+  "type": "object"
+}

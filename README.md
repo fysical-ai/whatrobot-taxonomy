@@ -34,6 +34,7 @@ data/                       source of truth — CC BY 4.0
   values.yml                  enum values (friendly_id = <attribute>__<value>)
   application_groups.yml      application → application_group (derived)
   examples.yml                classification regression suite
+  use_cases/                  use cases as requirement profiles, and environment profiles (design notes §11)
   integrations/               mappings to ifr-industrial, ifr-service, iso-8373, google, shopify
   localizations/<locale>/     translations with a per-field review record (de and zh-Hans)
 dist/                       generated per locale: json + txt; integrations/all_mappings.json
@@ -43,6 +44,10 @@ whatrobot_taxonomy/         Python package: models, loader, validate, classify, 
 scripts/                    one-off maintenance helpers
 tests/                      pytest
 ```
+
+## Use cases
+
+The tree says what a robot is. `data/use_cases/` says what a job needs: each use case ("inspection rounds on an industrial site", "palletizing boxes with a collaborative arm") is a set of requirements written against the attributes, plus the component roles the job needs filled. Products are never tagged with a use case; anyone with product data can compute which robots meet the requirements and show why. The rules are in [design notes §11](docs/design.md), the distribution is `dist/en/use_cases.json`.
 
 ## Identifiers
 

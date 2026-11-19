@@ -91,3 +91,9 @@ medical_clearance: {name: Medizinische Zulassung, description: 'Märkte, in dene
 adhesion: {name: Haftprinzip, description: 'Wie sich ein Bodenroboter an Wänden, Tanks, Schiffsrümpfen oder Decken festhält, um daran zu klettern. „Keine“ bei Robotern, die nur auf dem Boden fahren.'}
 construction: {name: Bauweise, description: 'Ob ein Exoskelett seine Unterstützungskraft über einen starren Rahmen neben der Gliedmaße überträgt oder über Textilien, Gurte und Seilzüge (ein weicher Exosuit).'}
 outer_diameter: {name: Außendurchmesser, description: 'Außendurchmesser des biegsamen Abschnitts eines Kontinuumsroboters oder robotischen Katheters; begrenzt, in welche Öffnungen er eingeführt werden kann.'}
+operating_temp_min: {name: Betriebstemperatur (min.), description: 'Niedrigste Umgebungstemperatur, für die der Hersteller den Betrieb freigibt. Lager- und Ladetemperaturen werden hier nicht erfasst.'}
+operating_temp_max: {name: Betriebstemperatur (max.), description: 'Höchste Umgebungstemperatur, für die der Hersteller den Betrieb freigibt. Lager- und Ladetemperaturen werden hier nicht erfasst.'}
+max_slope: {name: Maximale Steigung, description: 'Steilste Steigung, die der Roboter laut Hersteller bewältigt, in Grad. Prozentangaben werden umgerechnet (Grad = arctan(Prozent / 100)).'}
+max_step_height: {name: Maximale Stufenhöhe, description: 'Höchste einzelne Stufe, Bordsteinkante oder Hindernis, die der Roboter laut Hersteller überwindet.'}
+stairs: {name: Treppensteigen, description: 'Der Hersteller gibt an, dass der Roboter Treppen steigt. Nur erfasst, wenn angegeben; eine Stufenhöhe allein zählt nicht.'}
+coverage_area: {name: Flächenleistung, description: 'Arbeitsfläche, für die der Hersteller den Roboter auslegt: die Rasenfläche eines Mähroboters, die Bodenfläche eines Reinigungsroboters.'}

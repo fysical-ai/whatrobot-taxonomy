@@ -183,6 +183,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -384,6 +396,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -599,6 +623,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -809,6 +845,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -1026,6 +1074,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -1237,6 +1297,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -1470,6 +1542,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -1689,6 +1773,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -1919,6 +2015,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -1971,6 +2079,12 @@
               "name": "Max speed",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": []
@@ -2122,6 +2236,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -2174,6 +2300,12 @@
               "name": "Max speed",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -2328,6 +2460,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -2380,6 +2524,12 @@
               "name": "Max speed",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/38",
@@ -2541,6 +2691,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -2593,6 +2755,12 @@
               "name": "Max speed",
               "friendly_id": "max_speed",
               "handle": "max-speed"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -2755,6 +2923,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -2819,6 +2999,24 @@
               "name": "Has arm",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximum slope",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximum step height",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": []
@@ -2971,6 +3169,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -3035,6 +3245,24 @@
               "name": "Has arm",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximum slope",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximum step height",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -3190,6 +3418,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -3254,6 +3494,24 @@
               "name": "Has arm",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximum slope",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximum step height",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -3409,6 +3667,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -3473,6 +3743,24 @@
               "name": "Has arm",
               "friendly_id": "has_arm",
               "handle": "has-arm"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximum slope",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximum step height",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -3638,6 +3926,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -3696,6 +3996,30 @@
               "name": "Adhesion",
               "friendly_id": "adhesion",
               "handle": "adhesion"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximum slope",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximum step height",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/94",
+              "name": "Coverage area",
+              "friendly_id": "coverage_area",
+              "handle": "coverage-area"
             }
           ],
           "examples": []
@@ -3850,6 +4174,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -3908,6 +4244,30 @@
               "name": "Adhesion",
               "friendly_id": "adhesion",
               "handle": "adhesion"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximum slope",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximum step height",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/94",
+              "name": "Coverage area",
+              "friendly_id": "coverage_area",
+              "handle": "coverage-area"
             }
           ],
           "examples": [
@@ -4063,6 +4423,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -4121,6 +4493,30 @@
               "name": "Adhesion",
               "friendly_id": "adhesion",
               "handle": "adhesion"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximum slope",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximum step height",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/94",
+              "name": "Coverage area",
+              "friendly_id": "coverage_area",
+              "handle": "coverage-area"
             }
           ],
           "examples": [
@@ -4271,6 +4667,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -4335,6 +4743,24 @@
               "name": "Arm count",
               "friendly_id": "arm_count",
               "handle": "arm-count"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/91",
+              "name": "Maximum slope",
+              "friendly_id": "max_slope",
+              "handle": "max-slope"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/92",
+              "name": "Maximum step height",
+              "friendly_id": "max_step_height",
+              "handle": "max-step-height"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/93",
+              "name": "Stairs",
+              "friendly_id": "stairs",
+              "handle": "stairs"
             }
           ],
           "examples": [
@@ -4498,6 +4924,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -4705,6 +5143,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -4908,6 +5358,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -5126,6 +5588,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -5355,6 +5829,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -5540,6 +6026,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -5729,6 +6227,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -5915,6 +6425,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -6109,6 +6631,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -6300,6 +6834,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -6503,6 +7049,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -6700,6 +7258,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -6879,6 +7449,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -7032,6 +7614,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7195,6 +7789,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7373,6 +7979,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7554,6 +8172,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -7750,6 +8380,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -7930,6 +8572,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -8108,6 +8762,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -8307,6 +8973,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -8504,6 +9182,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -8666,6 +9356,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -8856,6 +9558,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -9011,6 +9725,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9198,6 +9924,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -9374,6 +10112,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9554,6 +10304,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9738,6 +10500,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -9943,6 +10717,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -10093,6 +10879,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -10260,6 +11058,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -10424,6 +11234,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -10597,6 +11419,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -10749,6 +11583,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -10926,6 +11772,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -11093,6 +11951,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -11247,6 +12117,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
@@ -11406,6 +12288,18 @@
               "handle": "ip-rating"
             },
             {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
+            },
+            {
               "id": "gid://whatrobot/TaxonomyAttribute/23",
               "name": "Open source",
               "friendly_id": "open_source",
@@ -11554,6 +12448,18 @@
               "name": "IP rating",
               "friendly_id": "ip_rating",
               "handle": "ip-rating"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/89",
+              "name": "Operating temperature, minimum",
+              "friendly_id": "operating_temp_min",
+              "handle": "operating-temp-min"
+            },
+            {
+              "id": "gid://whatrobot/TaxonomyAttribute/90",
+              "name": "Operating temperature, maximum",
+              "friendly_id": "operating_temp_max",
+              "handle": "operating-temp-max"
             },
             {
               "id": "gid://whatrobot/TaxonomyAttribute/23",

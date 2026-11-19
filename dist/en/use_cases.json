@@ -1,0 +1,965 @@
+{
+  "version": "2026-01",
+  "environment_profiles": [
+    {
+      "id": "env-indoor",
+      "name": "Indoor",
+      "description": "Inside a building, on finished floors.",
+      "requirements": [
+        {
+          "attribute": "environment",
+          "op": "has",
+          "value": "indoor",
+          "level": "hard",
+          "rationale": "The maker must rate the robot for indoor use."
+        }
+      ]
+    },
+    {
+      "id": "env-outdoor-all-weather",
+      "name": "Outdoor, all weather",
+      "description": "Outside all year, in rain and dust.",
+      "requirements": [
+        {
+          "attribute": "environment",
+          "op": "has",
+          "value": "outdoor",
+          "level": "hard",
+          "rationale": "The maker must rate the robot for outdoor use."
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_liquids>=",
+          "value": 4,
+          "level": "soft",
+          "rationale": "Rain. A second digit of 4 means protection against water splashed from any direction.",
+          "source": "IEC 60529"
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_solids>=",
+          "value": 5,
+          "level": "soft",
+          "rationale": "Dust. A first digit of 5 means dust-protected.",
+          "source": "IEC 60529"
+        }
+      ]
+    },
+    {
+      "id": "env-machine-shop",
+      "name": "Machine shop",
+      "description": "Beside machine tools, with coolant mist and metal chips.",
+      "requirements": [
+        {
+          "attribute": "environment",
+          "op": "has",
+          "value": "indoor",
+          "level": "hard",
+          "rationale": "The maker must rate the robot for indoor use."
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_liquids>=",
+          "value": 4,
+          "level": "soft",
+          "rationale": "Coolant. A second digit of 4 means protection against liquid splashed from any direction.",
+          "source": "IEC 60529"
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_solids>=",
+          "value": 5,
+          "level": "soft",
+          "rationale": "Chips and dust. A first digit of 5 means dust-protected.",
+          "source": "IEC 60529"
+        }
+      ]
+    }
+  ],
+  "use_cases": [
+    {
+      "id": "uc-1",
+      "handle": "residential-lawn-mowing",
+      "name": "Mowing a private lawn",
+      "application": {
+        "friendly_id": "application__lawn-garden",
+        "handle": "lawn-garden",
+        "name": "Lawn & garden",
+        "group": {
+          "friendly_id": "application_group__consumer",
+          "handle": "consumer",
+          "name": "Consumer"
+        }
+      },
+      "aliases": [
+        "robot mower",
+        "robotic lawn mower",
+        "automatic lawn mower"
+      ],
+      "solution_type": "turnkey",
+      "description": "Keeping a private lawn cut without anyone pushing or driving a mower.",
+      "what_decides": "Lawn size and the steepest slope decide. How the mower finds the edge of the lawn (a buried wire, satellite positioning or cameras) decides how much work the installation is; makers describe that in different ways, so it is not compared here.",
+      "parameters": [
+        {
+          "key": "lawn_area",
+          "name": "Lawn area",
+          "type": "number",
+          "unit": "m2",
+          "default": null
+        },
+        {
+          "key": "slope",
+          "name": "Steepest slope",
+          "type": "number",
+          "unit": "deg",
+          "description": "In degrees. 20 % is about 11°, 35 % about 19°, 45 % about 24°.",
+          "default": null
+        }
+      ],
+      "body_plans": [
+        {
+          "category_id": "rb-4-1",
+          "name": "Wheeled robot",
+          "full_name": "Robot > Ground robot > Wheeled robot",
+          "note": "Almost every robot mower: a wheeled, battery-driven mower that returns to its charger."
+        },
+        {
+          "category_id": "rb-4-2",
+          "name": "Tracked robot",
+          "full_name": "Robot > Ground robot > Tracked robot",
+          "note": "Tracked mowers, for steep or rough ground."
+        }
+      ],
+      "related_applications": [],
+      "environment": [
+        "env-outdoor-all-weather"
+      ],
+      "requirements": [
+        {
+          "attribute": "environment",
+          "op": "has",
+          "value": "outdoor",
+          "level": "hard",
+          "rationale": "The maker must rate the robot for outdoor use.",
+          "profile": "env-outdoor-all-weather"
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_liquids>=",
+          "value": 4,
+          "level": "soft",
+          "rationale": "Rain. A second digit of 4 means protection against water splashed from any direction.",
+          "source": "IEC 60529",
+          "profile": "env-outdoor-all-weather"
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_solids>=",
+          "value": 5,
+          "level": "soft",
+          "rationale": "Dust. A first digit of 5 means dust-protected.",
+          "source": "IEC 60529",
+          "profile": "env-outdoor-all-weather"
+        },
+        {
+          "attribute": "autonomy",
+          "op": "in",
+          "value": [
+            "semi-autonomous",
+            "autonomous"
+          ],
+          "level": "hard",
+          "rationale": "The mower works with nobody steering it. Remote-controlled slope mowers are a different job."
+        },
+        {
+          "attribute": "coverage_area",
+          "op": ">=",
+          "param": "lawn_area",
+          "level": "hard",
+          "rationale": "The area the maker rates the mower for must cover the lawn."
+        },
+        {
+          "attribute": "max_slope",
+          "op": ">=",
+          "param": "slope",
+          "level": "hard",
+          "rationale": "The slope the maker rates the mower for must cover the steepest part of the lawn."
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "uc-2",
+      "handle": "commercial-floor-cleaning",
+      "name": "Cleaning floors in commercial buildings",
+      "application": {
+        "friendly_id": "application__professional-cleaning",
+        "handle": "professional-cleaning",
+        "name": "Professional cleaning",
+        "group": {
+          "friendly_id": "application_group__professional-service",
+          "handle": "professional-service",
+          "name": "Professional service"
+        }
+      },
+      "aliases": [
+        "robot scrubber",
+        "autonomous floor scrubber",
+        "cleaning robot",
+        "robot sweeper"
+      ],
+      "solution_type": "turnkey",
+      "description": "Scrubbing, sweeping or vacuuming the floors of shops, offices, warehouses and public buildings on a schedule.",
+      "what_decides": "The floor area to cover and how much supervision the robot needs. Whether it scrubs, sweeps or vacuums depends on the model; check that against the floor.",
+      "parameters": [
+        {
+          "key": "floor_area",
+          "name": "Floor area",
+          "type": "number",
+          "unit": "m2",
+          "default": null
+        }
+      ],
+      "body_plans": [
+        {
+          "category_id": "rb-4-1",
+          "name": "Wheeled robot",
+          "full_name": "Robot > Ground robot > Wheeled robot",
+          "note": "Wheeled cleaning machines that drive themselves along a taught or mapped route."
+        }
+      ],
+      "related_applications": [],
+      "environment": [
+        "env-indoor"
+      ],
+      "requirements": [
+        {
+          "attribute": "environment",
+          "op": "has",
+          "value": "indoor",
+          "level": "hard",
+          "rationale": "The maker must rate the robot for indoor use.",
+          "profile": "env-indoor"
+        },
+        {
+          "attribute": "autonomy",
+          "op": "in",
+          "value": [
+            "semi-autonomous",
+            "autonomous"
+          ],
+          "level": "hard",
+          "rationale": "The machine cleans its route with nobody driving it."
+        },
+        {
+          "attribute": "coverage_area",
+          "op": ">=",
+          "param": "floor_area",
+          "level": "hard",
+          "rationale": "The area the maker rates the machine for must cover the floor."
+        }
+      ],
+      "slots": []
+    },
+    {
+      "id": "uc-3",
+      "handle": "site-inspection-rounds",
+      "name": "Inspection rounds on an industrial site",
+      "application": {
+        "friendly_id": "application__inspection-maintenance",
+        "handle": "inspection-maintenance",
+        "name": "Inspection maintenance",
+        "group": {
+          "friendly_id": "application_group__professional-service",
+          "handle": "professional-service",
+          "name": "Professional service"
+        }
+      },
+      "aliases": [
+        "substation inspection",
+        "plant inspection",
+        "autonomous inspection",
+        "inspection robot",
+        "patrol inspection"
+      ],
+      "solution_type": "platform",
+      "description": "Walking or driving the same route through a plant, substation or yard, and recording readings, images and anything that has changed.",
+      "what_decides": "The ground decides the body: stairs and kerbs call for legs, flat floors for wheels. After that come runtime per round, protection against weather, and which sensors the robot carries or can be fitted with. Inspection from the air and under water are separate jobs.",
+      "parameters": [
+        {
+          "key": "site",
+          "name": "Site",
+          "type": "enum",
+          "values": [
+            "indoor",
+            "outdoor"
+          ],
+          "default": "outdoor"
+        },
+        {
+          "key": "stairs",
+          "name": "Stairs on the route",
+          "type": "bool",
+          "default": false
+        },
+        {
+          "key": "round_minutes",
+          "name": "Length of one round",
+          "type": "number",
+          "unit": "min",
+          "default": null
+        }
+      ],
+      "body_plans": [
+        {
+          "category_id": "rb-3-1",
+          "name": "Quadruped",
+          "full_name": "Robot > Legged robot > Quadruped",
+          "note": "Stairs, kerbs, gratings and rough ground."
+        },
+        {
+          "category_id": "rb-4-1",
+          "name": "Wheeled robot",
+          "full_name": "Robot > Ground robot > Wheeled robot",
+          "note": "Flat, paved sites."
+        },
+        {
+          "category_id": "rb-4-2",
+          "name": "Tracked robot",
+          "full_name": "Robot > Ground robot > Tracked robot",
+          "note": "Loose or soft ground, ramps and pipes."
+        }
+      ],
+      "related_applications": [
+        {
+          "friendly_id": "application__security",
+          "handle": "security",
+          "name": "Security",
+          "group": {
+            "friendly_id": "application_group__professional-service",
+            "handle": "professional-service",
+            "name": "Professional service"
+          }
+        },
+        {
+          "friendly_id": "application__search-rescue",
+          "handle": "search-rescue",
+          "name": "Search & rescue",
+          "group": {
+            "friendly_id": "application_group__professional-service",
+            "handle": "professional-service",
+            "name": "Professional service"
+          }
+        },
+        {
+          "friendly_id": "application__mapping-surveying",
+          "handle": "mapping-surveying",
+          "name": "Mapping and surveying",
+          "group": {
+            "friendly_id": "application_group__professional-service",
+            "handle": "professional-service",
+            "name": "Professional service"
+          }
+        },
+        {
+          "friendly_id": "application__research-platform",
+          "handle": "research-platform",
+          "name": "Research platform",
+          "group": {
+            "friendly_id": "application_group__knowledge",
+            "handle": "knowledge",
+            "name": "Knowledge"
+          }
+        },
+        {
+          "friendly_id": "application__general-purpose",
+          "handle": "general-purpose",
+          "name": "General purpose",
+          "group": {
+            "friendly_id": "application_group__general",
+            "handle": "general",
+            "name": "General"
+          }
+        }
+      ],
+      "environment": [],
+      "requirements": [
+        {
+          "attribute": "environment",
+          "op": "has",
+          "param": "site",
+          "level": "hard",
+          "rationale": "The maker must rate the robot for where the route runs."
+        },
+        {
+          "attribute": "autonomy",
+          "op": "in",
+          "value": [
+            "semi-autonomous",
+            "autonomous"
+          ],
+          "level": "hard",
+          "rationale": "A round is repeated with nobody steering."
+        },
+        {
+          "attribute": "battery_runtime",
+          "op": ">=",
+          "param": "round_minutes",
+          "level": "hard",
+          "rationale": "One round on one charge."
+        },
+        {
+          "attribute": "stairs",
+          "op": "eq",
+          "value": true,
+          "level": "hard",
+          "rationale": "The route includes stairs, so the maker must state that the robot climbs them.",
+          "when": {
+            "stairs": true
+          }
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_liquids>=",
+          "value": 4,
+          "level": "soft",
+          "rationale": "Rain. A second digit of 4 means protection against water splashed from any direction.",
+          "source": "IEC 60529",
+          "when": {
+            "site": "outdoor"
+          }
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_solids>=",
+          "value": 5,
+          "level": "soft",
+          "rationale": "Dust. A first digit of 5 means dust-protected.",
+          "source": "IEC 60529",
+          "when": {
+            "site": "outdoor"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "role": "thermal-imaging",
+          "name": "Thermal camera",
+          "need": "recommended",
+          "category_id": "cp-3-1",
+          "category_name": "Camera",
+          "where": [
+            {
+              "attribute": "modality",
+              "op": "has",
+              "value": "thermal"
+            }
+          ],
+          "note": "Finds hot spots on electrical and mechanical equipment."
+        },
+        {
+          "role": "mapping-lidar",
+          "name": "3D lidar",
+          "need": "recommended",
+          "category_id": "cp-3-2",
+          "category_name": "Lidar",
+          "where": [
+            {
+              "attribute": "scan_dimensions",
+              "op": "eq",
+              "value": "3d"
+            }
+          ],
+          "note": "Maps the site and keeps the robot on its route, when the robot has no lidar of its own."
+        },
+        {
+          "role": "charging",
+          "name": "Charging dock or spare battery",
+          "need": "recommended",
+          "category_id": "cp-5",
+          "category_name": "Power",
+          "where": [],
+          "note": "A dock lets rounds repeat without anyone changing batteries."
+        },
+        {
+          "role": "onboard-compute",
+          "name": "Extra onboard computer",
+          "need": "optional",
+          "category_id": "cp-4",
+          "category_name": "Compute",
+          "where": [],
+          "note": "For analysing images on the robot rather than after the round."
+        }
+      ]
+    },
+    {
+      "id": "uc-4",
+      "handle": "imitation-learning-data-collection",
+      "name": "Collecting demonstrations for imitation learning",
+      "application": {
+        "friendly_id": "application__research-platform",
+        "handle": "research-platform",
+        "name": "Research platform",
+        "group": {
+          "friendly_id": "application_group__knowledge",
+          "handle": "knowledge",
+          "name": "Knowledge"
+        }
+      },
+      "aliases": [
+        "teleoperation data collection",
+        "robot learning",
+        "behaviour cloning",
+        "VLA fine-tuning",
+        "demonstration data"
+      ],
+      "solution_type": "platform",
+      "description": "A person steers the robot through a task many times while cameras and joint positions are recorded. The recordings train a policy that then drives the same robot.",
+      "what_decides": "The robot must be controllable from your own software, and it needs a way to be steered: a leader arm, a VR rig or a handheld device. Payload matters less than hardware that repeats well and good camera views.",
+      "parameters": [
+        {
+          "key": "object_mass",
+          "name": "Heaviest object handled",
+          "type": "number",
+          "unit": "kg",
+          "default": null
+        }
+      ],
+      "body_plans": [
+        {
+          "category_id": "rb-1-1",
+          "name": "Articulated arm",
+          "full_name": "Robot > Arm > Articulated arm",
+          "note": "The usual choice: one or two arms on a table."
+        },
+        {
+          "category_id": "rb-5",
+          "name": "Mobile manipulator",
+          "full_name": "Robot > Mobile manipulator",
+          "note": "When the task involves moving through a room."
+        },
+        {
+          "category_id": "rb-2",
+          "name": "Humanoid",
+          "full_name": "Robot > Humanoid",
+          "note": "When the policy is meant for a humanoid. The most demanding body to steer."
+        }
+      ],
+      "related_applications": [
+        {
+          "friendly_id": "application__education",
+          "handle": "education",
+          "name": "Education",
+          "group": {
+            "friendly_id": "application_group__knowledge",
+            "handle": "knowledge",
+            "name": "Knowledge"
+          }
+        },
+        {
+          "friendly_id": "application__general-purpose",
+          "handle": "general-purpose",
+          "name": "General purpose",
+          "group": {
+            "friendly_id": "application_group__general",
+            "handle": "general",
+            "name": "General"
+          }
+        },
+        {
+          "friendly_id": "application__handling",
+          "handle": "handling",
+          "name": "Handling",
+          "group": {
+            "friendly_id": "application_group__manufacturing",
+            "handle": "manufacturing",
+            "name": "Manufacturing"
+          }
+        },
+        {
+          "friendly_id": "application__assembly",
+          "handle": "assembly",
+          "name": "Assembly",
+          "group": {
+            "friendly_id": "application_group__manufacturing",
+            "handle": "manufacturing",
+            "name": "Manufacturing"
+          }
+        }
+      ],
+      "environment": [],
+      "requirements": [
+        {
+          "attribute": "sdk",
+          "op": "has",
+          "value": [
+            "ros1",
+            "ros2",
+            "python",
+            "cpp"
+          ],
+          "level": "hard",
+          "rationale": "Recording joint states and running a trained policy needs an open programming interface."
+        },
+        {
+          "attribute": "payload",
+          "op": ">=",
+          "param": "object_mass",
+          "level": "hard",
+          "rationale": "Must carry the objects in the task. Add the gripper's weight before comparing."
+        }
+      ],
+      "slots": [
+        {
+          "role": "teleoperation",
+          "name": "Teleoperation device",
+          "need": "required",
+          "category_id": "cp-7",
+          "category_name": "Teleoperation",
+          "where": [],
+          "note": "How the person steers the robot during recording."
+        },
+        {
+          "role": "camera",
+          "name": "Camera",
+          "need": "required",
+          "category_id": "cp-3-1",
+          "category_name": "Camera",
+          "where": [],
+          "note": "At least one view of the scene. A second camera on the wrist is common."
+        },
+        {
+          "role": "gripper",
+          "name": "Gripper",
+          "need": "required",
+          "category_id": "cp-1-1",
+          "category_name": "Gripper",
+          "where": [],
+          "note": "Unless the arm is sold with one."
+        },
+        {
+          "role": "policy-compute",
+          "name": "Computer for the policy",
+          "need": "recommended",
+          "category_id": "cp-4",
+          "category_name": "Compute",
+          "where": [],
+          "note": "Runs the trained policy next to the robot."
+        }
+      ]
+    },
+    {
+      "id": "uc-5",
+      "handle": "cobot-palletizing",
+      "name": "Palletizing boxes with a collaborative arm",
+      "application": {
+        "friendly_id": "application__palletizing",
+        "handle": "palletizing",
+        "name": "Palletizing",
+        "group": {
+          "friendly_id": "application_group__manufacturing",
+          "handle": "manufacturing",
+          "name": "Manufacturing"
+        }
+      },
+      "aliases": [
+        "cobot palletizer",
+        "collaborative palletizing",
+        "end-of-line palletizing"
+      ],
+      "solution_type": "cell",
+      "description": "Stacking boxes from the end of a line onto a pallet, with an arm that is rated to work without a fence.",
+      "what_decides": "Box weight plus the gripper's weight must stay within the arm's payload, and the arm must reach the far corner of the top layer. Stacking higher than the arm reaches needs a lifting column.",
+      "parameters": [
+        {
+          "key": "box_mass",
+          "name": "Box weight",
+          "type": "number",
+          "unit": "kg",
+          "default": null
+        },
+        {
+          "key": "min_reach",
+          "name": "Reach needed",
+          "type": "number",
+          "unit": "mm",
+          "description": "From the arm's base to the far corner of the top layer.",
+          "default": null
+        }
+      ],
+      "body_plans": [
+        {
+          "category_id": "rb-1-1",
+          "name": "Articulated arm",
+          "full_name": "Robot > Arm > Articulated arm",
+          "note": "The usual choice, between one or two pallet positions."
+        }
+      ],
+      "related_applications": [
+        {
+          "friendly_id": "application__handling",
+          "handle": "handling",
+          "name": "Handling",
+          "group": {
+            "friendly_id": "application_group__manufacturing",
+            "handle": "manufacturing",
+            "name": "Manufacturing"
+          }
+        },
+        {
+          "friendly_id": "application__machine-tending",
+          "handle": "machine-tending",
+          "name": "Machine tending",
+          "group": {
+            "friendly_id": "application_group__manufacturing",
+            "handle": "manufacturing",
+            "name": "Manufacturing"
+          }
+        },
+        {
+          "friendly_id": "application__assembly",
+          "handle": "assembly",
+          "name": "Assembly",
+          "group": {
+            "friendly_id": "application_group__manufacturing",
+            "handle": "manufacturing",
+            "name": "Manufacturing"
+          }
+        },
+        {
+          "friendly_id": "application__general-purpose",
+          "handle": "general-purpose",
+          "name": "General purpose",
+          "group": {
+            "friendly_id": "application_group__general",
+            "handle": "general",
+            "name": "General"
+          }
+        }
+      ],
+      "environment": [
+        "env-indoor"
+      ],
+      "requirements": [
+        {
+          "attribute": "environment",
+          "op": "has",
+          "value": "indoor",
+          "level": "hard",
+          "rationale": "The maker must rate the robot for indoor use.",
+          "profile": "env-indoor"
+        },
+        {
+          "attribute": "collaborative",
+          "op": "eq",
+          "value": true,
+          "level": "hard",
+          "rationale": "This use case is the fenceless cell; an industrial arm behind guarding is a different job. The finished cell still needs its own risk assessment.",
+          "source": "ISO 10218-2:2025"
+        },
+        {
+          "attribute": "payload",
+          "op": ">=",
+          "param": "box_mass",
+          "level": "hard",
+          "rationale": "The box. Add the gripper's weight before comparing."
+        },
+        {
+          "attribute": "reach",
+          "op": ">=",
+          "param": "min_reach",
+          "level": "hard",
+          "rationale": "The far corner of the top layer."
+        }
+      ],
+      "slots": [
+        {
+          "role": "gripper",
+          "name": "Gripper",
+          "need": "required",
+          "category_id": "cp-1-1",
+          "category_name": "Gripper",
+          "where": [],
+          "note": "Closed boxes are usually lifted with a vacuum gripper; bags and open crates need fingers or forks."
+        },
+        {
+          "role": "lifting-column",
+          "name": "Lifting column",
+          "need": "optional",
+          "category_id": "cp-2-5",
+          "category_name": "Linear actuator",
+          "where": [],
+          "note": "Raises the arm so that it can stack higher than its own reach."
+        }
+      ]
+    },
+    {
+      "id": "uc-6",
+      "handle": "cnc-machine-tending",
+      "name": "Loading and unloading a CNC machine",
+      "application": {
+        "friendly_id": "application__machine-tending",
+        "handle": "machine-tending",
+        "name": "Machine tending",
+        "group": {
+          "friendly_id": "application_group__manufacturing",
+          "handle": "manufacturing",
+          "name": "Manufacturing"
+        }
+      },
+      "aliases": [
+        "machine tending robot",
+        "CNC loading",
+        "lathe tending",
+        "machine tool automation"
+      ],
+      "solution_type": "cell",
+      "description": "Putting raw parts into a machine tool and taking finished parts out, so that the machine runs without an operator standing at it.",
+      "what_decides": "Part weight plus gripper weight against payload, and reach into the machine through its door. Coolant and chips make ingress protection worth checking.",
+      "parameters": [
+        {
+          "key": "part_mass",
+          "name": "Part weight",
+          "type": "number",
+          "unit": "kg",
+          "default": null
+        },
+        {
+          "key": "min_reach",
+          "name": "Reach needed",
+          "type": "number",
+          "unit": "mm",
+          "description": "From the arm's base to the chuck or vice.",
+          "default": null
+        }
+      ],
+      "body_plans": [
+        {
+          "category_id": "rb-1-1",
+          "name": "Articulated arm",
+          "full_name": "Robot > Arm > Articulated arm",
+          "note": "The usual choice, on a pedestal or cart beside the machine."
+        },
+        {
+          "category_id": "rb-1-4",
+          "name": "Cartesian arm",
+          "full_name": "Robot > Arm > Cartesian arm",
+          "note": "Gantry loaders above the machine, which leave the floor free."
+        },
+        {
+          "category_id": "rb-5",
+          "name": "Mobile manipulator",
+          "full_name": "Robot > Mobile manipulator",
+          "note": "One robot that drives between several machines."
+        }
+      ],
+      "related_applications": [
+        {
+          "friendly_id": "application__handling",
+          "handle": "handling",
+          "name": "Handling",
+          "group": {
+            "friendly_id": "application_group__manufacturing",
+            "handle": "manufacturing",
+            "name": "Manufacturing"
+          }
+        },
+        {
+          "friendly_id": "application__assembly",
+          "handle": "assembly",
+          "name": "Assembly",
+          "group": {
+            "friendly_id": "application_group__manufacturing",
+            "handle": "manufacturing",
+            "name": "Manufacturing"
+          }
+        },
+        {
+          "friendly_id": "application__palletizing",
+          "handle": "palletizing",
+          "name": "Palletizing",
+          "group": {
+            "friendly_id": "application_group__manufacturing",
+            "handle": "manufacturing",
+            "name": "Manufacturing"
+          }
+        },
+        {
+          "friendly_id": "application__general-purpose",
+          "handle": "general-purpose",
+          "name": "General purpose",
+          "group": {
+            "friendly_id": "application_group__general",
+            "handle": "general",
+            "name": "General"
+          }
+        }
+      ],
+      "environment": [
+        "env-machine-shop"
+      ],
+      "requirements": [
+        {
+          "attribute": "environment",
+          "op": "has",
+          "value": "indoor",
+          "level": "hard",
+          "rationale": "The maker must rate the robot for indoor use.",
+          "profile": "env-machine-shop"
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_liquids>=",
+          "value": 4,
+          "level": "soft",
+          "rationale": "Coolant. A second digit of 4 means protection against liquid splashed from any direction.",
+          "source": "IEC 60529",
+          "profile": "env-machine-shop"
+        },
+        {
+          "attribute": "ip_rating",
+          "op": "ip_solids>=",
+          "value": 5,
+          "level": "soft",
+          "rationale": "Chips and dust. A first digit of 5 means dust-protected.",
+          "source": "IEC 60529",
+          "profile": "env-machine-shop"
+        },
+        {
+          "attribute": "payload",
+          "op": ">=",
+          "param": "part_mass",
+          "level": "hard",
+          "rationale": "The part. Add the gripper's weight before comparing."
+        },
+        {
+          "attribute": "reach",
+          "op": ">=",
+          "param": "min_reach",
+          "level": "hard",
+          "rationale": "From the base to the chuck or vice, through the door."
+        }
+      ],
+      "slots": [
+        {
+          "role": "gripper",
+          "name": "Gripper",
+          "need": "required",
+          "category_id": "cp-1-1",
+          "category_name": "Gripper",
+          "where": [],
+          "note": "Often a double gripper, so that one visit swaps the finished part for a raw one."
+        },
+        {
+          "role": "tool-changer",
+          "name": "Tool changer",
+          "need": "optional",
+          "category_id": "cp-1-4",
+          "category_name": "Tool changer",
+          "where": [],
+          "note": "Lets one robot handle several families of parts."
+        }
+      ]
+    }
+  ]
+}

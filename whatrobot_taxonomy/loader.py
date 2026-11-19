@@ -10,12 +10,14 @@ from . import DATA
 from .models import (
     Attribute,
     Category,
+    EnvironmentProfile,
     Example,
     Integration,
     LocalizedAttribute,
     LocalizedCategory,
     LocalizedValue,
     MappingFile,
+    UseCase,
     Value,
 )
 
@@ -57,6 +59,8 @@ class Taxonomy:
     mappings: list[Mapping]
     locales: dict[str, Locale]
     data_dir: Path
+    use_cases: dict[str, UseCase] = field(default_factory=dict)  # by id
+    environment_profiles: dict[str, EnvironmentProfile] = field(default_factory=dict)  # by id
 
     # ---- convenience -------------------------------------------------
     def children_of(self, cid: str) -> list[Category]:
@@ -100,6 +104,30 @@ class Taxonomy:
 
     def leaves(self) -> list[Category]:
         return [c for c in self.categories.values() if not c.children]
+
+    def subtree(self, cid: str) -> list[str]:
+        """The category and everything below it."""
+        out = [cid]
+        for child in self.categories[cid].children:
+            out.extend(self.subtree(child))
+        return out
+
+    def bound_in_subtree(self, cid: str) -> set[str]:
+        """Attributes bound to the category (own and inherited) or to any category below it."""
+        out: set[str] = set()
+        for c in self.subtree(cid):
+            out.update(self.effective_attributes(c))
+        return out
+
+    def requirements_of(self, uc_id: str) -> list[tuple[str | None, "object"]]:
+        """A use case's requirements with its environment profiles expanded: (profile id or None, requirement)."""
+        uc = self.use_cases[uc_id]
+        out: list[tuple[str | None, object]] = []
+        for env in uc.environment:
+            if env in self.environment_profiles:
+                out.extend((env, r) for r in self.environment_profiles[env].requirements)
+        out.extend((None, r) for r in uc.requirements)
+        return out
 
 
 def load(data_dir: Path = DATA) -> Taxonomy:
@@ -153,4 +181,20 @@ def load(data_dir: Path = DATA) -> Taxonomy:
                 loc.values = {k: LocalizedValue.model_validate(v) for k, v in (read_yaml(ldir / "values.yml") or {}).items()}
             locales[ldir.name] = loc
 
-    return Taxonomy(categories, attributes, values, application_groups, examples, integrations, mappings, locales, data_dir)
+    use_cases: dict[str, UseCase] = {}
+    environment_profiles: dict[str, EnvironmentProfile] = {}
+    uc_dir = data_dir / "use_cases"
+    if (uc_dir / "environment_profiles.yml").exists():
+        for rec in read_yaml(uc_dir / "environment_profiles.yml") or []:
+            env = EnvironmentProfile.model_validate(rec)
+            if env.id in environment_profiles:
+                raise ValueError(f"duplicate environment profile {env.id}")
+            environment_profiles[env.id] = env
+    if (uc_dir / "use_cases.yml").exists():
+        for rec in read_yaml(uc_dir / "use_cases.yml") or []:
+            uc = UseCase.model_validate(rec)
+            if uc.id in use_cases:
+                raise ValueError(f"duplicate use case {uc.id}")
+            use_cases[uc.id] = uc
+
+    return Taxonomy(categories, attributes, values, application_groups, examples, integrations, mappings, locales, data_dir, use_cases, environment_profiles)

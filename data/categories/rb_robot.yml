@@ -32,6 +32,8 @@
     - payload
     - battery_runtime
     - ip_rating
+    - operating_temp_min
+    - operating_temp_max
     - open_source
     - sdk
     - ai_tops
@@ -126,7 +128,7 @@
   aliases: [humanoid robot, android, general-purpose humanoid]
   inclusion_rule: Designed to look human, with a torso, two arms and a head or face (a screen face counts). Legs that end in wheels are still legs. Locomotion decides the child category.
   children: [rb-2-1, rb-2-2, rb-2-3]
-  attributes: [height, dof_total, hands_included, max_speed]
+  attributes: [height, dof_total, hands_included, max_speed, stairs]
   examples: []
 
 - id: rb-2-1
@@ -171,7 +173,7 @@
   aliases: [walking robot, legged robot]
   inclusion_rule: Articulated legs; wheels on the feet or an add-on arm do not change the category.
   children: [rb-3-1, rb-3-2, rb-3-3]
-  attributes: [height, dof_total, hands_included, max_speed, wheel_feet, has_arm]
+  attributes: [height, dof_total, hands_included, max_speed, wheel_feet, has_arm, max_slope, max_step_height, stairs]
   examples: []
 
 - id: rb-3-1
@@ -216,7 +218,7 @@
   aliases: [mobile robot, mobile base, rover, AMR, AGV, UGV, inspection crawler, pipe crawler, wall-climbing robot]
   inclusion_rule: Moves itself on wheels or tracks; no legs; no arm sold as part of the product (an add-on arm is attribute has_arm). Wheels or tracks count only when the robot moves itself on them as part of its task, including between work stations; wheels or casters on which people move it between jobs (a surgical patient cart, a cobot on a trolley), even with power assist, do not count, and nor do passive wheels on a robot that moves by bending its body. Wheeled or tracked crawlers, including snake-shaped ones on driven tracks, are ground robots; inchworm and peristaltic pipe robots are not (unplaced).
   children: [rb-4-1, rb-4-2]
-  attributes: [has_arm, drive_config, navigation, max_speed, adhesion]
+  attributes: [has_arm, drive_config, navigation, max_speed, adhesion, max_slope, max_step_height, stairs, coverage_area]
   examples: []
 
 - id: rb-4-1
@@ -250,7 +252,7 @@
   aliases: [mobile manipulator, MoMa, arm on wheels]
   inclusion_rule: Base that moves itself on wheels or tracks (including between work stations, then parks while the arm works) and arm(s), sold together as one product. A base and an arm sold separately are two entries linked by compatible_with. An arm on casters or a cart that people move between jobs, even with power assist (a surgical patient cart, a cobot on a trolley), is an arm (rb-1).
   children: []
-  attributes: [drive_config, navigation, max_speed, axes, reach, arm_count]   # base + arm specs apply; payload is already universal on rb
+  attributes: [drive_config, navigation, max_speed, axes, reach, arm_count, max_slope, max_step_height, stairs]   # base + arm specs apply; payload is already universal on rb
   examples: [hello-robot-stretch-3, tiago-pro]
 
 # -------------------------------------------------------------- rb-6 aerial

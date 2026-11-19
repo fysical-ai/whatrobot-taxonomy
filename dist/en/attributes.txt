@@ -87,3 +87,9 @@ gid://whatrobot/TaxonomyAttribute/85 : Medical clearance
 gid://whatrobot/TaxonomyAttribute/86 : Adhesion
 gid://whatrobot/TaxonomyAttribute/87 : Construction
 gid://whatrobot/TaxonomyAttribute/88 : Outer diameter
+gid://whatrobot/TaxonomyAttribute/89 : Operating temperature, minimum
+gid://whatrobot/TaxonomyAttribute/90 : Operating temperature, maximum
+gid://whatrobot/TaxonomyAttribute/91 : Maximum slope
+gid://whatrobot/TaxonomyAttribute/92 : Maximum step height
+gid://whatrobot/TaxonomyAttribute/93 : Stairs
+gid://whatrobot/TaxonomyAttribute/94 : Coverage area

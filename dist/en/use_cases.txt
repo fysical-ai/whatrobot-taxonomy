@@ -1,0 +1,7 @@
+# whatrobot taxonomy 2026-01 — CC BY 4.0
+uc-1 : Lawn & garden > Mowing a private lawn
+uc-2 : Professional cleaning > Cleaning floors in commercial buildings
+uc-3 : Inspection maintenance > Inspection rounds on an industrial site
+uc-4 : Research platform > Collecting demonstrations for imitation learning
+uc-5 : Palletizing > Palletizing boxes with a collaborative arm
+uc-6 : Machine tending > Loading and unloading a CNC machine
